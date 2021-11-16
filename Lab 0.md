@@ -230,6 +230,16 @@ grep PCA short_pca.txt | wc -l
 Try it for the full article as well!
 **Question 2:** Write down how many times `PCA` appears in both the full `PCA.txt` and the `short_pca.txt` files.
 
+## Using Git
+
+Git is an open source distributed version control system that allows us to keep track of the changes we do in a project folder (and all the files within). It is the software [GitHub](www.github.com), [BitBucket](https://bitbucket.org/)  and other online repositories use for people to upload and download code. We don't have enough time to cover how `git` works, but as all our data, scripts and protocols are stored on GitHub, we could use `git` to download them as follow (do this only if you are working on your local computer):
+
+```bash
+git clone https://github.com/Hjorvik/1MB438.git
+```
+
+Once the download is done, you should see a new folder called 1MB438, and all the labs protocols, scripts and data. 
+
 --
 
 ### Hidden word exercise 
@@ -253,13 +263,24 @@ ssh your_user_name@rackham.uppmax.uu.se
 
 After entering that command you will be prompted to enter your password.
 
-Our teaching project is called `g2021007`
+Once we are connected to Uppmax, we will be in our  `$Home` folder. Here, we want to add the folder where all our scripts and programs are going to be to the Path (or list of folders the computer is going to check while looking for programs). We can do it like this:
+
+```bash
+#Open the settings file .bashrc
+nano .bashrc
+#Once nano opens the file, go to the end and add this
+export PATH=/proj/uppmax2021-2-12/private/1MB438/SRC:$PATH
+```
+
+This will make it easier for us to run our scripts.
+
+Our teaching project is called `uppmax2021-2-12`
 
 Navigate to the RESULTS folder (using `cd`):
 to:
 
 ```
-/proj/g2021007/private/RESULTS
+/proj/uppmax2021-2-12/private/1MB438/RESULTS
 ```
 
 There you need to make a directory for you to work in. Call it your first name underscore your last name:
@@ -294,7 +315,7 @@ module load samtools/1.9
 The **BAM** file and corresponding **SAM** file can be found here:
 
 ```
-/proj/g2021007/private/DATA/BAM
+/proj/uppmax2021-2-12/private/1MB438/DATA/Lab0/
 ```
 
 Before using it have a look at the file sizes of the two different formats.
