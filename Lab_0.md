@@ -2,6 +2,10 @@
 
 Original lab by Rickard Hammaren at [1MB335](https://github.com/Hammarn/1MB335/blob/master/Lab1.md). Modified by Pedro Morell Miranda.
 
+##### Goals of the practical session
+
+*The goal of this practical lesson is to set up our UNIX envirnoment locally and/or on Uppmax, and become familiar with some basic commands in the UNIX terminal.*
+
 ### What is UNIX?
 Unix is an operating system that was originally developed at Bell Labs in the 1970s. It is based around a "modular design" 
 where tools do very distinct and narrow tasks. To complete more complex tasks multiple modules are then combined through the use of"pipes" 
