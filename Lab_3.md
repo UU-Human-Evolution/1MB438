@@ -20,11 +20,16 @@ module load bioinfo-tools emboss artemis BioPerl
 
 For this session and the next, we are going to work with a sample retrieved from a real patient in the context of an Enterohemorrhagic Escherichia coli (EHEC) outbreak. The sequence contains the complete plasmid sequence. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and, this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize this sequence, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
 
+<figure>
+    <img src="/Figures/bacterial_conjugation.png" >
+    <figcaption>Steps of the bacterial conjugation</figcaption>
+</figure>
 
 
-![Diagram of the process of bacterial conjugation.](/Figures/DNA-processing-during-bacterial-conjugation-1-The-relaxase-R-cleaves-plasmid-DNA-at.png)
 
-*Steps of the bacterial conjugation*
+
+
+
 
 ## Gene identification tools
 
@@ -118,7 +123,14 @@ second section is a close-in look at the sequence, with the amino acid codes in 
 third section is a list of all features. Under the Display menu, you can hide/show the lower sections 
 (same as clicking the small double-arrows at the top left of each section). 
 
-![Artemis](/Figures/Artemis.png)
+<figure>
+    <img src="/Figures/Artemis.png">
+    <figcaption>Fig.2 - Artemis interface.</figcaption>
+</figure>
+
+
+
+
 
 Each black horizontal line in the frame lines of the overview section represents a potential stop 
 codon. This information can be useful for finding coding genes, since coding genes are found in long 
@@ -178,6 +190,5 @@ and 40bp, and rarely more than 150bp.
       <img src="/Figures/MendozaVargas2009.jpg">
       <figcaption> Fig.3 - The distances of each TSS mapped to the ATG translation initiation codon is plotted (5′ UTR). Dataset obtained in Mendoza-Vargas et al. 2009 (solid line), and in all the previously mapped TSSs in RegulonDB (dashed line; Mendoza-Vargas et al. 2009)</figcaption>
   </figure>
-
 
 
