@@ -22,7 +22,7 @@ For this session and the next, we are going to work with a sample retrieved from
 
 
 
-![Diagram of the process of bacterial conjugation.](C:\Users\pedmo131\Documents\GitHub\1MB438\Figures\DNA-processing-during-bacterial-conjugation-1-The-relaxase-R-cleaves-plasmid-DNA-at.png)
+![Diagram of the process of bacterial conjugation.](/Figures/DNA-processing-during-bacterial-conjugation-1-The-relaxase-R-cleaves-plasmid-DNA-at.png)
 
 *Steps of the bacterial conjugation*
 
@@ -118,7 +118,7 @@ second section is a close-in look at the sequence, with the amino acid codes in 
 third section is a list of all features. Under the Display menu, you can hide/show the lower sections 
 (same as clicking the small double-arrows at the top left of each section). 
 
-![Artemis](C:\Users\pedmo131\Documents\GitHub\1MB438\Figures\Artemis.png)
+![Artemis](/Figures/Artemis.png)
 
 Each black horizontal line in the frame lines of the overview section represents a potential stop 
 codon. This information can be useful for finding coding genes, since coding genes are found in long 
@@ -175,7 +175,7 @@ and 40bp, and rarely more than 150bp.
 
 
   <figure>
-      <img src="C:\Users\pedmo131\Documents\GitHub\1MB438\Figures\MendozaVargas2009.jpg">
+      <img src="/Figures/MendozaVargas2009.jpg">
       <figcaption> Fig.3 - The distances of each TSS mapped to the ATG translation initiation codon is plotted (5′ UTR). Dataset obtained in Mendoza-Vargas et al. 2009 (solid line), and in all the previously mapped TSSs in RegulonDB (dashed line; Mendoza-Vargas et al. 2009)</figcaption>
   </figure>
 
