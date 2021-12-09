@@ -1,0 +1,1088 @@
+<html>
+
+<HEAD>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<TITLE>Seaview on-line help</TITLE>
+</HEAD>
+<body bgcolor=white>
+<center><b><u>Help items</u></b></center>
+<table border=2>
+<tr>
+<td><a href="#File Menu">File Menu</a></td>
+<td><a href="#Edit Menu">Edit Menu</a></td>
+<td><a href="#Align Menu">Align Menu</a></td>
+<td><a href="#Props Menu">Props Menu</a></td>
+<td><a href="#Sites Menu">Sites Menu</a></td>
+<td><a href="#Species Menu">Species Menu</a></td>
+</tr>
+<tr>
+<td><a href="#Footers Menu">Footers Menu</a></td>
+<td><a href="#Search">Search</a></td>
+<td><a href="#Goto">Goto</a></td>
+<td><a href="#Trees Menu">Trees Menu</a></td>
+<td><a href="#Alignment panel">Alignment panel</a></td>
+<td><a href="#Tree windows">Tree windows</a></td>
+</tr>
+<tr>
+<td><a href="#Dot plot">Dot plot</a></td>
+<td><a href="#Mase file format">Mase file format</a></td>
+<td><a href="#Program arguments">Program arguments</a></td>
+<td><a href="#Sequence coloring">Sequence coloring<a></td>
+<td><a href="#Miscellaneous options">Miscellaneous options<a></td>
+<td><a href="#Customization">Customization<a></td>
+</tr>
+</table>
+
+<a name="About seaview"></a>
+<center><u><b>About seaview</b></u></center>
+<p>
+Program seaview was published in:
+<br>Gouy, M. Guindon, S. &amp; Gascuel., O. (2010) <a href=http://dx.doi.org/10.1093/molbev/msp259>SeaView version 4 : 
+a multiplatform graphical user interface for sequence alignment and phylogenetic tree building.</a> 
+Molecular Biology and Evolution 27(2):221-224.
+<br>Galtier, N., Gouy, M. &amp; Gautier, C. (1996) <a href=http://bioinformatics.oxfordjournals.org/content/12/6/543.abstract>
+SEAVIEW and PHYLO_WIN: two graphic tools for sequence alignment and molecular phylogeny.</a> 
+Comput. Appl. Biosci., 12:543-548.
+<p>
+Version 5.0.4
+
+<p>Binaries and full source code available from <a href=http://doua.prabi.fr/software/seaview>http://doua.prabi.fr/software/seaview</a>
+
+<p>© 1996-2020 Manolo Gouy
+<br>Laboratoire de Biométrie et Biologie Evolutive
+<br>CNRS / Université de Lyon
+<p>Licensed under the GNU <a href=http://www.gnu.org/licenses/gpl.txt>General Public Licence</a>.
+
+<p>Seaview drives the Muscle, Clustal Omega, Gblocks, PhyML and Treerecs programs and uses code from the PHYLIP
+package for parsimony. Please quote:
+<ul><li>Edgar R.C. (2004) <a href=http://dx.doi.org/10.1093/nar/gkh340>MUSCLE: multiple sequence alignment with high accuracy and 
+    high throughput.</a> <i>Nucleic Acids Res.</i> 32(5):1792-1797.
+<li>Sievers F. et al. (2011) <a href=http://dx.doi.org/10.1038/msb.2011.75>Fast, scalable generation of high-quality protein 
+multiple sequence alignments using Clustal Omega.</a>
+    <i>Molecular Systems Biology</i> 7:539.
+<li>Castresana J. (2000) <a href=http://mbe.oxfordjournals.org/content/17/4/540.full>Selection of conserved blocks from multiple alignments for their 
+  use in phylogenetic analysis.</a> <i>Molecular Biology and Evolution</i> 17(4):540-552.
+<li>Guindon S., Dufayard J.F., Lefort V., Anisimova M., Hordijk W., Gascuel O. (2010) 
+  <a href=http://dx.doi.org/10.1093/sysbio/syq010>New Algorithms and Methods to Estimate Maximum-Likelihood 
+  Phylogenies: Assessing the Performance of PhyML 3.0</a>. <i>Systematic Biology</i> 59(3):307-321.
+<li>Felsenstein J. (2013) <a href=http://evolution.genetics.washington.edu/phylip.html>PHYLIP</a> version 3.696.
+<li>Lemoine F., Domelevo Entfellner J.-B., Wilkinson E., Correia D., Dávila Felipe M., De Oliveira T. & Gascuel O. (2018) <a href=http://dx.doi.org/10.1038/s41586-018-0043-0>Renewing Felsenstein’s phylogenetic bootstrap in the era of big data.</a> <i>Nature</i> 556:452-456.
+</ul>
+Seaview uses the <a href=http://www.fltk.org>FLTK</a> project for its user interface.
+
+<p>Some seaview versions use the <a href=http://www.pdflib.com>PDFlib</a> Lite library for pdf output
+under the "Open Source Developer Exemption" of the PDFlib Lite License Agreement.
+
+<hr>
+<a name="Alignment panel"></a>
+<center><u><b>Alignment panel</b></u></center>
+<p>Mouse Use:
+<ul>
+<li> Click on a site to position cursor (current cursor position -- sequence
+  number, positions in alignment and in sequence -- appears at panel top center)
+<li> Click or drag mouse on several sequence names to select them (names will appear
+  in black background). Alignment operations (gap insertions/deletions) will 
+  operate on all selected sequences simultaneously.
+<li> Click with middle mouse button or Ctrl-Click somewhere in sequence names to move 
+  selected sequences to another place in alignment.
+<li> Click with right mouse button or Shift-Click to deactivate the current selection.
+<li> Cmd-Click(Mac), Alt-Click(PC), or Meta-Click (unix) on sequence name to select from last selected sequence to here.
+</ul>
+Active keys:
+<ul>
+<li> The 4 keyboard arrows move the cursor. Page up/down keys move it one pageful.
+<li> &gt; &lt; move the view by 50 sites to right and left (other keys can be used)
+<li> ] [ move the view by 5 sites to right and left (other keys can be used)
+  see <a href="#Miscellaneous options">Miscellaneous options</a> for how to use other keys for same purpose
+<li> - or &lt;space&gt; insert a gap in the cursor sequence and members of its group if any
+<li> &lt;delete&gt; or &lt;backspace&gt; delete a gap at left of cursor
+<li> + inserts a gap in all sequences but that under the cursor and members of its
+    group if any
+<li> _ ("underscore") deletes a gap in all sequences but that under the cursor 
+    and members of its group if any
+<li> 1234567890 (digit keys) allow to compose a number (appearing under
+  mult=number at bottom left of panel) used as a multiplier to an operation
+  to follow (e.g., keys 4, 5, and - in sequence will insert 45 gaps)
+<li> ctrl/cmd+S (according to platform) saves the alignment in the current 
+  filename using its current format. 
+</ul>
+<a name="Mouse use on the site line"></a>
+Mouse use on the site line (when there is one, white line at bottom):
+<ul>
+<li>  Click mouse to select/unselect a site.
+<li>  Drag with the mouse button an extremity of a block of sites to extend or 
+   reduce it.
+<li>  Click with the middle mouse button or Ctrl-Click to extend the block of sites at left.
+<li>  Click with the right mouse button or Shift-Click on a block of sites to delete it.
+</ul>
+<hr>
+<a name="File Menu"></a>
+<center><u><b>File Menu</b></u></center>
+
+<p><u>Open:</u> opens a sequence alignment file in any of the supported formats, 
+or a <a href=http://evolution.genetics.washington.edu/phylip/newicktree.html>Newick</a>-formatted tree file.
+<br><u>Open Mase, Open Phylip, Open Clustal, Open MSF, Open Fasta, Open NEXUS:</u>
+to load an alignment in one of these formats.
+<br>Formats Phylip, Clustal and Fasta use _ instead of 
+space in names. Only the interleaved version of the Phylip format is supported. 
+<a href="#Mase file format">Mase</a> and 
+<a href=http://dx.doi.org/10.1093/sysbio/46.4.590>Nexus</a>
+formats have the useful feature of allowing extra data beyond sequences and names (comments, 
+accession numbers are really useful!). They can also store trees, site sets 
+[see <a href="#Sites Menu">Sites Menu</a>], 
+species sets, footers, genetic code information.
+<p>
+<u>Import from DBs: </u>
+to import one or several sequences from various databases (EMBL, GenBank, 
+SwissProt/UniProt) into the alignment window.
+<b>Importation requires an internet connection that allows outbound access to 
+port # 5558.</b> 
+See <a href=#DBTroubleshooting>Troubleshooting Importation from Databases</a> 
+if you experience problems with this function.
+Imported sequences will be named in the alignment window either
+by the name of their ID or LOCUS record or by their species. Sequences
+can be identified by two means:
+<br> 1. By name, accession number or keyword. Protein IDs, without their extension
+(e.g., CAA06608 from /protein_id="CAA06608.1"),
+are processed as keywords attached to sequences, so can also be used. Because imported sequences are
+named with information taken from their ID/LOCUS record, the protein ID won't be used to name the sequence.
+<br> 2. By a local text file of names or accession nos (one per line, strict text file, e.g., not
+a .doc or .odt file).
+<br>
+In case 1. and for nucleotide databases, it is also possible to import 
+sequence fragments corresponding to a specified feature key (e.g., CDS, rRNA, tRNA) and, 
+optionally, to require a given string to be present in the feature's 
+annotations. If no matching string is specified, only the first matching
+feature key is imported.
+CDSs are imported with their correct genetic code and reading frame. 
+Access to a series of other databases is also possible.
+<p>
+<u>Save:</u>          when active, saves the alignment in the current file (which
+               name appears as window title). The shortcut for this operation
+               is ctrl-S (cmd-S on Mac).
+<p>
+<u>Save as...:</u>    to save the alignment under a name and a format to be chosen
+in the file selector appearing next. This item is unavailable when a nucleotide 
+alignment is translated to proteins. Use "Save prot alignmt" below instead.
+<p>
+<a name="Save selection"></a>
+<u>Save selection:</u>
+only active when some sequences are selected or when a site line is displayed; 
+allows to save in a file selected sites, or selected sequences, or selected sites of selected sequences.
+  <p>
+<u>Save prot alignmt:</u>
+only active when a nucleotide alignment is translated to proteins; allows to save resulting protein sequences in any format.
+
+<p>
+<u>Save bootstrap replicates:</u> allows to store in a PHYLIP-formatted output file bootstrap replicates
+of the sequences of the alignment window. This command operates on selected sequences, and on selected sites
+if a sequence or site selection is currently active. It operates with protein sequences when a nucleotide
+alignment is translated to proteins. It asks for the desired output filename and number of
+bootstrap replicates. The "phylip names width" item of the "Props/Customize" dialog window allows to control
+the maximum name length used in the output file.
+
+<p>
+<u>Prepare PDF/PostScript and PDF/PostScript options:</u>    
+Writes the alignment as a PDF/PostScript file with optional choices set through  
+the "PDF/PostScript options..." menu item (or the save dialog on Mac OS):
+<ul><li>font size:      sets the fontsize (font is Courier)
+<li>block size:     alignment lines may be divided in blocks (e.g., of size 10
+                       for DNA/RNA sequences or 3 for protein coding sequences)
+                       separated by one space to ease alignment reading.
+<li>paper size:    two paper formats can be used: A4 or LETTER
+<li>landscape:  select to use the Landscape page layout
+<li>color/B&amp;W/Text File:      choose between colored alignment, or one with all black letters,
+or to write the alignment as a text-only file.
+<li>variable sites only:    available only in reference mode (see <a href="#Props Menu">Props</a> menu), 
+allows to output only variable sites of the alignment and their positions.
+</ul>
+<p><u>Concatenate:</u>    
+To add one alignment (source) to the end of another (target).
+               Can be done "by name" (seqs with same name are concatenated) or 
+               "by rank" (seqs with same rank in alignments are concatenated).
+               Option "add gaps" replaces names absent in either alignment
+               by gap-only sequences ("by name" only).
+<p><u>New window:</u>     
+Opens a new, empty alignment window.
+<p><u>Close window: </u>
+Closes the alignment window.
+<p><u>Quit:</u>
+guess what?
+<hr>
+<a name="Edit Menu"></a>
+<center><b><u>Edit Menu</u></b></center>
+<p>
+<u>Copy selected seqs:</u>       only active when some sequences are selected; copies in
+                         clipboard these sequences, or only their selected sites if
+                         a site line is displayed.
+<br><u>Paste alignment data:</u>     To paste sequence data from the clipboard to the bottom of
+the current alignment window (inactive in "View as protein" mode). The clipboard can either contain sequences that were previously copied 
+in seaview using "Copy selected seqs", or sequence data in Fasta format copied from anywhere.
+In the latter case, the user is asked for confirmation before adding sequences to the alignment.
+<br><u>Select all:</u>     Selects all sequences from the alignment.
+<br><u>Rename sequence:</u>          To rename the currently selected (= name in black 
+                         background) sequence.
+
+<br><u>Edit comments:</u>            To see or change comments of the currently selected
+                         sequence (Comments can only be saved in mase/NEXUS formats).
+						 
+<br><u>Edit sequence:</u>            To edit the selected sequence, typically by pasting
+                         external data, or by opening two edit sequence 
+                         windows and transferring sequence data between them.
+			 The edit window is limited to sequences of length &lt; 32000.
+
+<br><u>Delete sequence(s):</u>       Deletes all selected sequences from the alignment.
+
+<br><u>Create sequence:</u>          Allows to create a new, empty sequence in the alignment;
+                         set "Allow seq. edition" from <a href="#Props Menu">Props</a> menu ON 
+                         to be able to type the sequence in.
+
+<br><u>Load sequence:</u>            Allows to load a new sequence in the alignment.
+                         The sequence can be typed in or pasted from a
+                         selection made in another window.
+			 The "Sequence loading window" is limited to sequences of length &lt; 32000.
+
+<br><u>Duplicate sequence:</u>       Duplicates the currently selected sequence
+                         with prefix D_ in its name.
+
+<br><u>Complement sequence:</u>      Creates a new sequence equal to the complementary 
+                         strand of the currently selected sequence with prefix 
+                         C_ in its name.
+
+<br><u>Reverse sequence:</u>         Creates a new sequence by reading 3' -> 5' the 
+                         currently selected sequence and named with prefix R_
+
+<br><u>Exchange Us and Ts:</u>       Exchange bases Us and Ts in all currently selected 
+                         sequences.
+                         
+<br><u>Dot plot:</u>                 Performs a <a href="#Dot plot">dot plot</a> analysis of the two selected 
+                         sequences.
+
+<br><u>Consensus sequence:</u>       Computes the consensus of all currently selected
+sequences. The consensus sequence is added to the alignment with the name "Consensus##" below all 
+selected sequences.
+At any site, the consensus residue is the most frequent one if its frequency is above a 
+threshold value. Below threshold, N or X is used. See <u>Consensus options</u>
+of menu <a href="#Props Menu">Props</a> for more details.
+                         
+
+<br><u>Del gap-only sites:</u>       Deletes all gap-only sites from the alignment.
+
+<br><u>Set genetic code:</u>         Allows to specify the genetic code used to translate
+                         to protein the selected sequence(s). Active only with
+                         nucleotide alignments. Genetic codes are saved if the
+                         mase, NEXUS, or FASTA file formats are used.
+
+<hr>
+<a name="Align Menu"></a>
+<center><u><b>Align Menu</b></u></center>
+<p>
+<u>Align all      
+<br>Align selected sequences:</u>      
+Runs the chosen alignment program on all or on selected sequences. Alignment program is chosen with Alignment options of menu Align.
+With MSWindows and Unix, the chosen alignment program is searched in the directory
+of the seaview program and in directories of your PATH.
+
+<br><u>Align selected sites:</u>  
+                    Runs the chosen alignment program on the block of 
+                    selected sites and the set of selected sequences.
+                    A window will ask for choosing the reference sequence:
+                    gaps present before alignment in the chosen 
+                    sequence will be preserved in the new alignment.
+
+<br><u>Profile alignment:</u>   Align selected sequences against a profile, that is, a group
+                    of pre-aligned sequences. 
+<br>Possible operations for making a profile alignment:<ol>
+
+<li> select members of the profile group; 
+
+<li> do 'Create group' of menu <a href="#Species Menu">Species</a>; 
+<li> select sequences you want to align against the
+profile group;  
+<li> do 'Profile alignment' of menu Align;
+<li> choose the profile group in the dialog menu;
+<li> choose alignment algorithm; 
+<li> if using clustalo, choose 
+between "each sequence to profile" and "profile to profile"
+(with "profile to profile", selected sequences are expected to be 
+pre-aligned to each other.
+<li> Uncheck "Propagate gaps to sites" if you don't want gaps created in the profile group
+by the profile alignment to be propagated to all your site selections (menu "Sites").
+</ol>
+<br><u>De-align selection:</u>  Remove all gaps from selected sequences.
+
+<br><u>Alignment options:</u><ul>
+<li>clustalo, muscle, ...: Allows to choose the desired alignment method.
+<li>Edit options: Without options, the algorithm's default parameter settings, 
+adequate for many problems, are used. This item allows to define 
+custom alignment parameter settings by listing a series of options 
+(e.g., -verbose  -maxiters=5
+for muscle) that will be transmitted to the alignment algorithm.
+<ul>
+<li>clustalo options are fully described in 
+<a href=http://www.clustal.org/omega/README>README</a>.
+<li>Muscle options are fully described in 
+<a href=http://www.drive5.com/muscle/muscle.html#_Toc81224859>Muscle command line reference</a>.
+</ul>
+Options are active unless you switch them off by unchecking the check box. 
+Thus a set of options can be memorized and turned on and off.
+<li>Add external method:
+Interfaces seaview with an external multiple sequence alignment method.
+Any external alignment program able to read a fasta file and output a fasta file
+and that can be run by a 'name + arguments' command line is usable.
+Select the external program from your computer or enter its name.
+Under MSWindows and Unix, the name is searched in seaview's directory and in all PATH directories. 
+Under Mac OS, the name is searched in all PATH directories, and in directory 
+&lt;seaview-bundle&gt;/Contents/Resources.
+Enter its arguments replacing the method's input and output filenames
+by <tt>%f.pir</tt> and <tt>%f.out</tt>, respectively. Under MSWindows, it's recommended to bracket filenames
+by double quotes (<i>e.g.</i>, <tt>"%f.out"</tt>).
+The yellow tip message that appears when the mouse
+remains on the "Arguments" field gives three examples of external program interfacing.
+Standard output redirection to a file with <tt>&gt;</tt> is possible.
+<li>    Delete method:
+To delete currently selected alignment method. clustalo and muscle can't be deleted.
+</ul>
+
+<hr>
+<a name="Props Menu"></a>
+<center><u><b>Props Menu</b></u></center>
+<p>
+<u>Fontsize:</u>   8, 10, ..., 36: Sets the font size used to display sequences.
+<a name="View as proteins"></a>
+<br><u>View as proteins:</u>
+When ON, DNA sequences are displayed as translated to protein sequences.
+This allows to align them, and to go back to the DNA level by
+unselecting this item. Items Save/Save as of menu <a href="#File Menu">File</a> 
+and sequence edition are impossible when ON.
+             
+<br><u>Colors:</u>  <ul>
+<li>DNA/RNA colors:
+             Forces sequences to be colored as DNA/RNA in case they were
+             erroneously recognized as protein data.
+       <li>    Protein colors:
+             Forces sequences to be colored as proteins in case they were
+             erroneously recognized as DNA/RNA data.
+        <li>    Alt. colors:
+             Uses alternate coloring rules defined for protein sequences
+             [see <a href="#Sequence coloring">Sequence coloring</a> help topic].
+        <li>    Codon colors:   
+             Each codon gets colored according to its corresponding aminoacid.
+        <li>    Inverted colors:
+             Display residues as black letters on colored background instead
+             of as colored letters on grey background.
+</ul>
+<br><u>Allow seq. editing:</u>
+             When ON, residues can be deleted/inserted.
+             When OFF (normally), only gaps can be deleted/inserted.
+
+<br><u>by Reference:</u> To display the alignment by reference to a particular sequence:
+             residues identical to that of the ref. seq. are displayed as dots.
+             Possible only when one sequence, the reference, is selected.
+             Alignment edition is impossible while in the reference mode.
+             When used, item "Prepare pdf" of menu <a href="#File Menu">"File"</a> produces an output by reference.
+             Combination ctrl/cmd+R is a shortcut for calling/exiting this mode.
+
+<br><u>DNA keys:</u>     Allows to use keys "hjkl" to enter DNA sequences.
+             "Allow seq. edition" should be ON for this item to be usable.
+             Choose in the submenu what bases will be mapped to these keys: 
+             hjkl => GATC, hjkl => TCGA, hjkl => ACGT.
+             Also, the space bar will be mapped to base N.
+
+<br><u>Consensus options:</u>
+             Allows to set the threshold fraction of identical residues needed to define
+             a residue when building a consensus sequence (the default value is 60 %). Sites where this
+             fraction is not reached are filled with N or X (or, for DNA, with 
+	     nucleotide ambiguity symbols if "Use IUPAC symbols" is on).
+If "allow gaps" is <u>off</u>, gaps are ignored to compute which residue will appear in the consensus;
+this option in effect treats gaps as missing information.
+If "allow gaps" is <u>on</u>, gaps are treated as another character state to compute consensus.
+<center>
+<table border=2>
+<tr><th colspan=11> IUPAC nucleotide ambiguity symbols</th></tr>
+<tr>
+<td>Symbol</td><td align=center>M</td><td align=center>R</td><td align=center>W</td><td align=center>S</td>
+<td align=center>Y</td><td align=center>K</td> 
+<td align=center>V</td><td align=center>H</td><td align=center>D</td><td align=center>B</td>
+</tr>
+<tr>
+<td>Nucleotides</td><td>AC</td><td>AG</td><td>ATU</td><td>GC</td><td>CTU</td><td>GTU</td>
+<td>ACG</td><td>ACTU</td><td>AGTU</td><td>CGTU</td>
+</tr>
+</table>
+</center>
+<br><u>Allow lowercase:</u>
+             If set, lowercase residues will be apparent. If not set, lowercase
+             residues in sequence files display as uppercase.
+
+<br><u>Customize:</u>    To change, possibly permanently, various display settings. See 
+<a href="#Miscellaneous options">Miscellaneous options</a> and 
+<a href="#Sequence coloring">Sequence coloring</a> help items. 
+<b>Apply</b>: applies changes in current program session.
+<b>Set changes permanent</b>: applies changes in current and future program sessions. <b>Close</b>: ignores changes.
+
+<br><u>Statistics:</u> Displays base or amino acid sequence compositions, and transition and transversion counts. 
+These statistics apply to all sequences or to selected sequences only. When two nucleotide sequences
+are selected, the frequency of all pairs of homologous bases is also computed. Statistics can also be saved
+to a user-chosen text file.
+
+<hr>
+<a name="Sites Menu"></a>
+<center><u><b>Sites Menu</b></u></center>
+<p>
+Site sets allow to specify parts of a multiple alignment to be retained for
+further analyses (e.g., those parts of the alignment taken as 
+reliably aligned). Retained sites are depicted as series of Xs on a special 
+line at bottom of the alignment panel. Mouse clicks and drags on this line allow to
+construct/alter the set (see <a href="#Mouse use on the site line">Mouse use on the site line</a>).
+
+<p>Several sets of sites can be created and stored with the alignment if the Mase
+or NEXUS formats of alignment files are used. Each set has a name chosen by the 
+user. One set of sites at most can be displayed at any time through this menu.
+
+<p>Item <a href="#Save selection">Save selection</a> of menu "File" allows to save in an alignment
+file only those sites of the alignment pertaining to the currently displayed site set.
+
+<p><u>Create set:</u>      Several kinds of sets of sites are possible:
+<ul>
+<li>custom site set: should be named by the user. It is initially defined to contain all alignment sites, and
+can be manually modified by mouse operations on the site line at the bottom of the alignment.
+<li>Gblocks: the <a href=http://mbe.oxfordjournals.org/content/17/4/540.full>Gblocks</a> program is 
+run to compute a set of sites suitable for phylogenetic analysis.
+A dialog window presents several optional choices to control the stringency level of site selection.
+Further information can be found in the Gblocks
+<a href=http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>online documentation</a>. 
+Some seaview versions don't include the Gblocks program. It can be downloaded from its 
+ <a href=http://molevol.cmima.csic.es/castresana/Gblocks.html>web site</a>.
+<li>codon position masks (not available for protein alignments).
+<li>variable sites.
+</ul>
+Non-custom site sets are better used once alignment operations are completed.
+
+<br><u>Duplicate set:</u>      duplicates the current set of sites under a new name
+
+<br><u>Hide set:</u>        hides (but remembers) the current set of sites
+
+<br><u>Delete set:</u>      removes the currently displayed set of sites from list of known sets
+
+<br><u><i>name</i>:</u></font> shows the site line of name <i>name</i>. It can have been
+read in together with the alignment data, or previously created by "Create set".
+
+<hr>
+<a name="Species Menu"></a>
+<center><u><b>Species Menu</b></u></center>
+<p>Species sets can be created and stored with the alignment if the Mase or NEXUS
+formats of alignment files are used.
+
+<p>To select one or several species, click or drag on their names; they will
+appear in black background.
+
+<p>To memorize the current set of selected species, choose "Create set" from
+this menu. The program will ask for a name for this set.
+
+<p><u>Delete set:</u>	deletes (just from memory) the current set of species.
+
+<br><u><i>name</i>:</u></font>		displays with black background the set of species memorized
+		under that name.
+
+<hr>
+<a name="Footers Menu"></a>
+<center><b><u>Footers Menu</u></b></center>
+<p>
+Comment lines can be created and displayed at bottom of the screen. These
+lines can contain any text and the program will maintain the vertical
+alignment between this text and sequences. This text can be saved using the
+<a href="#Mase file format">mase</a> or NEXUS file formats only.
+
+<p>To edit this text, click on the line name, position the cursor, and type text.
+<br>Click again on the line name to stop editing this text.
+<p>
+<u>Show / Hide footers:</u> To show / hide all footer lines
+
+<br><u>Create footer:</u> To create a new footer line
+
+<br><u>Delete footer:</u> To delete the currently selected footer line
+
+<hr>
+<a name=Search></a>
+<center><b><u>Search</u></b></center>
+<p>Type a string in box at right and strike &lt;return&gt; key or push button to position the cursor in the next occurence of this string from its current place.
+
+<p>Push button to position the cursor at next occurence of the current search string.
+
+<p>Sequence gaps are ignored by the search procedure.
+<p>
+<hr>
+<a name=Goto></a>
+<center><b><u>Goto</u></b></center>
+
+<p>Moves the cursor to desired position or sequence:
+<ul>
+<li><u>position</u>:
+type a number in box at right and hit &lt;return&gt; key or push button to
+position the cursor at that position of the alignment.
+
+<li><u>sequence</u>:
+type a (fragment of) sequence name in box at right and hit &lt;return&gt; key or 
+push button to position the cursor in that sequence. Case is not significant.
+</ul>
+
+<hr>
+<a name="Trees Menu"></a>
+<center><u><b>Trees Menu</b></u></center>
+<p>This menu allows to compute, draw, save, and import DNA or protein phylogenetic trees. 
+<br>Protein-coding DNA sequences displayed as protein sequences 
+(item <a href="#View as proteins">"View as proteins"</a>
+of menu <a href="#Props Menu">Props</a>) are treated as protein sequences.
+<br>All tree computations apply to selected sequences (or all if none) and selected sites
+(or complete alignment if none).
+<br>All trees, sequence, and site selections can be saved together with the alignment data in either 
+the <a href="#Mase file format">mase</a> or 
+<a href=http://dx.doi.org/10.1093/sysbio/46.4.590>Nexus</a> formats.
+
+<p><u><b>Parsimony:</b></u></font>
+<br>Computes parsimony trees using <a href=http://evolution.genetics.washington.edu/phylip.html>PHYLIP</a>'s v3.696
+<a href=http://evolution.genetics.washington.edu/phylip/doc/dnapars.html>dnapars</a> or 
+<a href=http://evolution.genetics.washington.edu/phylip/doc/protpars.html>protpars</a> algorithms 
+and returns the consensus of all most parsimonious trees found.
+<ul><li>The DNA-level algorithm (<b>dnapars</b>) computes most parsimonious trees with branch lengths equal to 
+the average of the number of reconstructed changes of state over all sites 
+and over all possible most parsimonious placements of the changes of state among branches.
+A branch exists only if some site has a most parsimonious reconstruction that would involve change in that branch.
+Dnapars can thus return a multifurcated tree even if a single most parsimonious tree is found.
+When several most parsimonious trees are found, their consensus tree is computed, and its branch lengths are recomputed, 
+thus they can differ from their values in any most parsimonious tree.
+<li>The protein-level algorithm (<b>protpars</b>) returns the consensus of all most parsimonious trees found without branch lengths.
+</ul>
+<br><u>Randomize seq. order:</u> to repeat <i>n</i> times the search for shortest trees with randomized sequence order.
+<br><u>Ignore all gap sites:</u> if on, all gap-containing sites are excluded from analysis.
+<br><u>Gaps as unknown states:</u> if on, gap-containing sites are coded as unknown states so don't 
+introduce parsimony steps; if off, they are treated as an additional character state. The interface forbids
+the meaningless configuration that would ignore gaps and treat them as unknown states.
+<br><u>More/Less thorough tree search/Rearrange on best tree:</u> (DNA only) these 3 options control, in decreasing order, how, and how much, rearrangement 
+is done on the tied trees to find shorter trees. 
+<ul><li>More thorough: rearrange on all parts of all currently found equally best trees to find better ones.
+<li>Less thorough: collapse all branches that have no evidence that there is any change on that branch before attempting rearrangements.
+<li>Rearrange on best tree: only the first of the tied best trees is used for rearrangement.
+</ul>
+It may be necessary to select the second or third option when the data set contains many (near-)identical sequences.
+<br><u>Equally best trees retained (DNA only):</u> maximum number of equally best trees retained in search.
+<br><u>% level for consensus tree building:</u> Parsimony often identifies several most parsimonious trees, and seaview
+computes their consensus and displays it. The default 100% consensus level corresponds to the strict consensus rule.
+The 50% level corresponds to the majority rule consensus. Intermediate values <i>v</i> include in the consensus tree
+all species groups present in at least a fraction <i>v</i>  of the most parsimonious trees.
+<br><u>Bootstrap:</u> performs bootstrap evaluation of clade statistical support (can be interrupted).
+Furthermore, if "Show bootstrap trees" is checked,
+individual bootstrap trees will appear in a second tree window, in addition to the main parsimony tree window.
+Each bootstrap tree has a weight that appears at the top left of the tree window when this tree is displayed.
+The weights of all equally parsimonious trees add up to 1 for each bootstrap replicate.
+
+<br><u>User tree:</u> computes the number of steps of a user-given tree taken from those in the "Trees"
+      menu. Such trees can have been previously computed or imported from an external source in Newick format.
+
+<p><u><b>Distance methods:</b></u></font>
+<br>Computes NJ or BioNJ trees on a variety of pairwise phylogenetic distances.
+  <br><u> NJ/BioNJ:</u> to select the tree-building algorithm
+  <br><u> Save to file:</u> does not compute any tree but saves sequence pairwise distances to a local file.
+ <br><u>  Distance:</u> select one among a variety of evolutionary distances: J-C: Jukes &amp; Cantor (1969); 
+      K2P: Kimura (1980) <a href=http://dx.doi.org/10.1007/BF01731581>JME 16:111</a>; 
+      HKY: Rzhetsky &amp; Nei (1995) <a href=http://mbe.oxfordjournals.org/content/12/1/131.abstract>MBE 12:131</a>; 
+      LogDet: Lake (1994) <a href=http://www.ncbi.nlm.nih.gov/pmc/articles/PMC43178/?tool=pubmed>PNAS 91:1455</a>; 
+      Lockhart et al. (1994) <a href=http://mbe.oxfordjournals.org/content/11/4/605.short>MBE 11:605</a>; 
+      Ka/Ks: Li (1993) <a href=http://dx.doi.org/10.1007/BF02407308>JME 36:96</a>.
+  <br><u> ignore all gap sites:</u> if on, all gap-containing sites are excluded from analysis;
+      if off, not all sequence pairs use the same set of sites for computation of distances.
+  <br><u> Bootstrap:</u> performs bootstrap evaluation of clade statistical support (can be interrupted).
+  Bootstrap supports can be optionally computed with the <a href=https://doi.org/10.1038/s41586-018-0043-0>Transfer Bootstrap Expectation</a> method.
+  Furthermore, if "Show bootstrap trees" is checked,
+  individual bootstrap trees will appear in a second tree window, in addition to the main distance tree window.
+  <br><u> User tree:</u> computes least squares branch lengths for selected user tree topology.
+
+<p><u><b>PhyML:</b></u></font>
+<br>Computes trees using PhyML v3.0 as an external program.
+  <br>  If needed, PhyML can be downloaded from its <a href=http://www.atgc-montpellier.fr/phyml/binaries.php>web site</a>
+  <br>  Under Unix, file $HOME/.seaviewrc may contain the name of the PhyML executable used by seaview.
+<br>    Please quote: Guindon S., Dufayard J.F., Lefort V., Anisimova M., Hordijk W., Gascuel O. (2010) 
+<a href=http://dx.doi.org/10.1093/sysbio/syq010>New Algorithms and Methods to Estimate Maximum-Likelihood 
+Phylogenies: Assessing the Performance of PhyML 3.0</a>. 
+Systematic Biology 59(3):307-321. 
+ <br><u>   Model:</u> select one among a variety of evolutionary models.
+ <br><u>   Branch support:</u> can be omitted (None) or estimated either by the approximate likelihood 
+ ratio test approach (aLRT) or by bootstrap. The bootstrap branch support can be computed by
+ two methods:
+ <ul><li> The 'standard' method (Felsenstein's) counts the fraction of replicates containing each internal
+   branch of the reference tree.
+   <li> The 'Transfer Bootstrap Expectation' method (TBE) proposed by Lemoine <i>et al.</i>:
+     <a href=https://doi.org/10.1038/s41586-018-0043-0>Renewing Felsenstein’s phylogenetic bootstrap in the era of big data</a>.
+     </ul>
+ If "Transfer Bootstrap Expectation method" is checked, both methods for computing
+ bootstrap supports are used and displayed in two tree windows.
+ With both bootstrap methods, if "Show bootstrap trees" is checked,
+ individual bootstrap trees will appear in yet another tree window.
+ <br><u> Nucleotide/Amino acid equilibrium frequencies:</u> Residue frequencies can be estimated by counting
+ their frequencies in the sequence alignment ("Empirical" option). Alternatively, they can be optimized by 
+ maximum likelihood ("Optimized" option for DNA data) or fixed to a set of model-given values ("Model-given"
+ option for protein data).
+ <br><u>   Ts/Tv ratio:</u> (applies to some nucleotide models only) optimize or fix a priori this ratio.
+ <br><u>   Invariable sites:</u> ignore (None), optimize, or set to an a priori value (Fixed) the fraction
+       of invariable sites.
+ <br><u>   Across site rate variation:</u> ignore (None), optimize, or set to an a priori value (Fixed) the
+       alpha parameter of the gamma distribution of rates across sites. If not ignored, the # of 
+       rate categories must also be set.
+ <br><u>   Tree searching operations:</u> NNI (nearest-neighbor interchange), SPR (subtree pruning and 
+       regrafting) and 'best of NNI &amp; SPR' are options improving the search for the most likely
+       tree but requiring increasing computation time.
+<br><u>    Starting tree:</u> controls the tree used to start tree-space search; can be BioNJ, a user-given
+       tree from the trees menu, or a number of random trees (possible only with SPR).
+       Turn off "Optimize tree topology" to compute the likelihood of a user-given tree.
+<br><u> Quiet:</u> If ON, no indication of the computation progression will appear. Turning this ON also
+ensures that runs requiring large memory don't block with the "WARNING: this analysis requires at least ## Mo 
+of memory space." message.
+
+<p><u>Import tree:</u> to import an external, 
+<a href=http://evolution.genetics.washington.edu/phylip/newicktree.html>Newick</a>-formatted tree.
+
+<p><u>New tree window:</u> opens a new, empty tree window.
+
+<hr>
+<a name="Tree windows"></a>
+<center><u><b>Tree windows</u></b></center>
+Plots/saves/prints/copies phylogenetic trees that can be rooted or unrooted, with or without branch 
+lengths, binary or multibranched, with or without branch support values.
+<br>A tree window can contain several trees. In that case, left and right arrows at top right of the window
+allow to circulate around them. Multiple-tree windows can occur after these operations:
+<ul><li>open a Newick file containing several trees consecutively;
+<li>paste to an empty tree window a clipboard containing several Newick strings consecutively;
+<li>a parsimony analysis yielded several equally parsimonious trees: the tree window
+    contains first their consensus, and then each single equally parsimonious tree.
+</ul>
+
+<p><b>File menu</b><p>
+<br><u>Save to Trees menu:</u> to save in menu <a href="#Trees Menu">Trees</a> of alignment window a previously computed tree.
+<br><u>Remove from Trees menu:</u> removes a tree from menu <a href="#Trees Menu">Trees</a> of alignment window.
+<br><u>Save rooted (unrooted) (sub)tree:</u> saves displayed tree or subtree to a local file as rooted or unrooted form.
+<br><u>Save all trees:</u> writes all trees attached to the tree window to a single file (active only when several trees are attached to the tree window and arrows at window top-right allow to circulate around them).
+<br><u>Save patristic distances:</u> writes in a file the patristic distances for all pairs of tree leaves (= sum of the lengths
+of branches connecting the two leaves). Computes also the tree length equal to the sum of all tree branch lengths.
+Computations are restricted to the subtree if the tree display is currently limited to a subtree.
+For trees without branch lengths, the computation is run as if all branch lengths 
+were equal to 1, except the two branches that stem from the root of length taken as equal to 0.5.
+<br><u>Print:</u> prints displayed tree (see also 'Page count' below).
+<br><u>Save as PDF/PostScript:</u> saves displayed tree to PDF (or PostScript) local file (see Page Count).
+<br><u>A4 - Letter:</u> controls the page format for PDF/PostScript operations.
+<br><u>Landscape:</u> controls the page layout for PDF/PostScript operations.
+<br><u>Page count&gt;#:</u> controls the # of pages used for print/PDF/PostScript operations.
+<br><u>Save as SVG:</u> saves displayed (sub)tree to a scalable vector graphics (SVG) local file suitable
+to be edited using appropriate programs (e.g., Inkscape).
+<br><u>Reorder following tree:</u> reorders sequences of alignment window as in displayed tree.
+<br><u>Select in alignment:</u> selects in alignment window all members of subtree (active when only a subtree
+is plotted).
+<br><u>Open tree or alignment:</u> opens a new tree 
+(<a href=http://evolution.genetics.washington.edu/phylip/newicktree.html>Newick</a> format;
+the file can contain several trees consecutively) or alignment file (any format).
+<br><u>New window:</u> opens a new, empty tree window where a Newick-formatted tree can be pasted from clipboard.
+<br><u>Close window:</u> closes the displayed tree that gets lost unless it had been saved to Trees menu.
+
+<p>
+<a name=TREE_EDIT><b>Edit menu</b><p></a>
+<br><u>Copy:</u> (Mac OS and MSWindows only) copies tree plot to clipboard for pasting to external programs.
+<br><u>Paste tree:</u> (only if window is empty) to paste a
+<a href=http://evolution.genetics.washington.edu/phylip/newicktree.html>Newick</a>-formatted
+tree contained in the clipboard. The clipboard may contain several trees.
+<br><u>Find:</u> finds sequence names in tree that contain a user-given string, and red-colors them in tree 
+display (case insensitive).
+<br><u>Again:</u> repeats 'Find' operation with same matching rules.
+<br><u>Edit tree header:</u> to change the tree's brief descriptive header line.
+<br><u>Branch support threshold:</u> only branch support values above given threshold become displayed.
+<br><u>Root at tree center:</u> roots the tree in the middle of the largest path between two leaves (when branch lengths exist).
+<br><u>Get or Set window size:</u> to control the size of the current tree window.
+<br><u>Edit tree shape:</u> to alter tree shape by moving or deleting sequence groups. A new window displays
+the tree without branch lengths. Clicking on a square selects a sequence group that appears in red.
+It can be moved to another branch of tree by clicking on another square, or deleted ("Delete group" 
+button). "Select group" button allows to select another group for further move or delete operations.
+Complete edits by pressing "End edit" button, and, possibly, "File/Save to Trees menu".
+<br><u>Default name trimming rule</u>: allows to set and change the rule used to trim long
+sequence names when displaying trees. Use an empty rule not to trim sequence names.
+See <a href=#TRIM>Trim rule</a> for details about how trimming rules work.
+
+<p><u>Reconcile menu:</u>:
+See <a href=#TREERECS>Treerecs</a> for details about how gene/species tree reconciliation works.
+
+<br>
+
+
+<p><u>Font menu:</u> to control font, style and size of all text in tree display.
+
+<p><u>Br lengths:</u> toggles display of branch length values next to each branch (very small values are not displayed).
+<br><u>Br support:</u> toggles display of support values (typically, bootstrap, posterior probabilities, or aLRT) next to branches.
+
+<p><u>squared/circular/cladogram:</u> toggles display between squared plot convenient for rooted trees,  
+circular plot convenient for unrooted trees, and cladogram which displays trees with 
+all branch lengths a multiple of a unit length and all leaves aligned at right. Cladogram is not
+available for branch length-free trees because it is equivalent to the squared display for them.
+
+<p><u>counter</u>:Appears when the loaded treefile contains several trees (e.g., after a bootstrap
+analysis in which the "Show bootstrap trees" option was selected), and allows to navigate around those trees.
+
+<a name=TRIM><p><u>Trim rule</u></a>: Allows to enter a rule for trimming long sequence names.
+Click on the white area. A dialog window allows to enter the desired sequence name <b>trimming rule</b>.
+<br><b>Trim by content</b>: enter one or more characters; each sequence name will be trimmed
+after all these characters have been found in the name.
+<br><b>Trim by length</b>: enter a number; each sequence name longer than this number will by cut.
+<br>Examples:
+<ul><li>rule '~' trims names at their first ~
+<li>rule '~@' trims names at the first @ located after a ~
+<li>rule '25'  trims names longer than 25 characters
+</ul>
+Use an empty trimming rule to go back to full sequence names.
+<p>The default trimming rule can be set with the <a href=#TREE_EDIT>Edit menu</a>.
+
+<p><u>Full:</u> normal, full tree display.
+<br><u>Swap:</u> to swap branches around a node. Click on relevant square that appears.
+<br><u>Re-root:</u> to set tree outgroup. Click on relevant square that appears.
+<br><u>Select:</u> to select/unselect alignment sequences from a tree. Click in the tree on a square at 
+a sequence name or at a node to select/unselect it in the corresponding alignment window. 
+Conversely, click on sequence names in the alignment window to select/unselect them in the tree.
+Selected sequences appear with a red square in the tree, and with their name on black background 
+in the alignment.
+<br><u>Subtree:</u> to limit display to a subtree.  Click on relevant square that appears.
+<br><u>Subtree up:</u> when a subtree is being displayed, adds one more node towards tree root to display.
+
+<p><u>Zoom:</u> vertical zoom for tree display; one or two scrollers appear. The tree can be moved 
+by the scrollers, the mouse wheel, or by clicking on and dragging the plot.
+
+<a name=TREERECS><p><u><b>Treerecs:</b></u></font>
+    <br>Use the <a href=https://project.inria.fr/treerecs>Treerecs</a> method to rearrange, root and/or correct
+    a gene tree according to a species tree.
+    <br>If needed, Treerecs sources can be <a href=https://gitlab.inria.fr/Phylophile/Treerecs>downloaded</a>.
+    <br><u>   Species tree:</u> select the full-binary species tree associated with your genes.
+    <br><u>   Branch support threshold:</u> change to contract/remove branches with a support lower than this value. With -1 there is no branch contraction.
+    <br><u>   Duplication cost:</u> define the cost associated with a gene duplication event
+    <br><u>   Loss cost:</u> define the cost associated with a gene loss event
+    <br><u>   Find best root:</u> check the box to ask Treerecs to root or reroot the tree
+    <br><u>   Use gene names:</u> associate gene with species according to gene names (which contains the associated species name).
+There is two methods: the Auto method and the manual. The manual needs to give a character as a separator and a position to define species name location in gene.
+    <br><u>   Use file: </u> use Smap file to associate genes with  species.
+    <br><u>   Output tree:</u> check <i>Full reconciliation</i> to view the tree with all duplication and loss events found by Treerecs.
+    <p><u>N.B.</u> On the macOS platform, tree reconciliation requires macOS version 10.9 or higher.
+<hr>
+<a name="Dot plot"></a>
+<center><u><b>Dot Plot</b></u></center>
+              <center>Performs a "dot plot" analysis of two sequences</center>
+
+<p>Enter desired values for the window size and # of matches/window, and click on button "Compute", the dot plot will appear.
+
+<p>Click in the dot plot, the corresponding sequence regions appear in the alignment panel above the dot plot. Use "Magnify" to take a close look.
+<br>Click on arrows at left to move the hit point by one residue in either of six directions.
+<br>Move the slider below the alignment panel to control the number of displayedresidues.
+
+<p>Fit to window, Reduce, Magnify: perform zoom in and out operations
+<br>Write PDF/ps: saves the dot plot to a PDF or PostScript file.
+<br>Close: closes the dot plot window
+
+                   <center>To perform a dot plot-guided alignment</center>
+<br>Click on a diagonal representing two sequence parts to be aligned, then click on button "align". Repeat this for each sequence parts you want to be aligned to each other.
+<br>To transfer into the multiple alignment the result of these operations, click on button "Record alignment".
+<br>Most often, one of the two compared sequences is already aligned to other sequences of the multiple alignment, while the other one is not. Choose which of the two sequences is already aligned by clicking on the arrow next to "Ref. sequence".
+
+<hr>
+<a name="Mase file format"></a>
+<center><u><b>Mase file format</b></u></center>
+Mase files follow the following format:
+
+<p>Zero or more header lines each beginning with ;;
+<br>Next, for each sequence in the alignment:
+<br>One or more comment lines each beginning with ;
+<br>Sequence name alone on a line (may be long and may contain spaces)
+<br>Sequence data in free form, possibly with numbers and spaces ignored while 
+reading the file. Dashes denote gaps.
+
+<p>Header lines may contain any text and also contain descriptions of trees, site sets and
+species groups when such data have been defined.
+
+<p>Trees are as in this example:<pre><tt>
+;;$ BioNJ tree
+;;[BioNJ 658 sites J-C](((boli_haplo_03:0.00146,boli_haplo_06:0.00159)
+;;:0.00159,boli_haplo_05:0.00146):0.02886,boli_haplo_01:0.03142);
+</tt></pre>
+
+<p>Site sets are written as in this example:<pre><tt>
+;;# of segments=10  mychoice
+;; 14,74 221,256 416,449 990,1148 1363,1384 1474,1483 1556,1668 
+;; 2034,2062 2114,2139 2756,2859
+</tt></pre>where "mychoice" is the name of the set of sites and where the series of pairs
+of numbers lists the endpoints of successive block of sites.
+
+<p>Species groups are written as in this example:<pre><tt>
+;;@ of species = 4 distant outgroup
+;; 2, 3, 4, 5
+</tt></pre>where "distant outgroup" is the name of the species group and where the series
+of numbers lists the ranks of sequences members of the species group.
+
+<hr>
+<a name="Program arguments"></a>
+<center><u><b>Program arguments</b></u></center>
+Seaview can be run by using a command line:
+<br><tt>seaview</tt> [<i>options</i>] [<i>alignment-or-tree-file</i>]
+<br>where  <i>alignment-or-tree-file</i> is an optional sequence alignment or tree file to be read (always the last argument)
+and <i>options</i> are as in the following table:
+<table  border=2>
+<tr><td><tt>-h</tt></td><td>   display all program options and exit</td></tr>
+<tr><td><tt>-fast</tt></td><td>   sequences will be displayed faster but less smoothly</td></tr>
+<tr><td><tt>-fontsize</tt> <i>n</i></td><td>   font size used for the tree or alignment windows</td></tr>
+<tr><td colspan=2 align=center>           <b>Options for non-interactive usage driven by command-line arguments</b>
+<br>Use exactly one of these options to get a non-interactive seaview run. Add any of the sub-options described below.</td></tr>
+<tr><td><tt><a href=#CONVERT>-convert</a></tt></td><td>      convert an input alignment to another format (no window creation)</td></tr>
+<tr><td><tt><a href=#CONCATENATE>-concatenate</a></tt></td><td>  concatenate alignment(s) to the end of an input alignment (no window creation)</td></tr>
+<tr><td><tt><a href=#ALIGN>-align</a></tt></td><td>  align an input sequence file (no window creation)</td></tr>
+<tr><td><tt><a href=#BUILD_TREE>-build_tree</a></tt></td><td>   compute a phylogenetic tree from an input alignment file (no window creation)</td></tr>
+<tr><td><tt><a href=#PRINTOUT>-printout</a></tt></td><td>     draw a multiple sequence alignment to PDF/SVG (no window creation)</td></tr>
+<tr><td><tt><a href=#REROOT>-reroot</a></tt></td><td>       modify the rooting of, or process otherwise, an input tree (no window creation)</td></tr>
+<tr><td><tt><a href=#PLOTONLY>-plotonly</a></tt></td><td>     draw an input tree in a pdf or svg file (no window creation)</td></tr>
+
+<a name="CONVERT"></a><tr><td colspan=2 align=center> <br>    <b>Sub-options for</b> <tt>-convert</tt></td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read alignment from standard input</td></tr>
+<tr><td><tt>-output_format</tt> <i>fmt</i></td><td> format of the converted alignment file (<tt>mase, phylip, clustal, msf, fasta</tt>, 
+or <tt>nexus</tt>). The format of the input file is the default.</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>      use <i>fname</i> as name of the converted alignment (default is built from input filename)</td></tr>
+<tr><td><tt>-o</tt> -</td><td>          write the output alignment to standard output</td></tr>
+<tr><td><tt>-translate</tt></td><td>    translate input sequences to protein before outputting them (don't use the <tt>-sites</tt> option)
+  <br>Add <tt>/transl_table=</tt># (where # is a genetic code number) to sequence comments to use variant genetic codes.
+  If the input file is in FASTA format, put this after each sequence name.
+</td></tr>
+<tr><td><tt>-no_terminal_stop</tt></td><td> translate terminal stop codons as a gap (with <tt>-translate</tt> option)</td></tr>
+<tr><td><tt>-del_gap_only_sites</tt></td><td> remove all gap-only sites from alignment (don't use the <tt>-sites</tt> option)</td></tr>
+<tr><td><tt>-def_species_group</tt> <i>group_name,group_members</i></td><td>   create a species group of given name and members
+                  (species group members are expressed with their ranks as in this example: 3-8,12,19)</td></tr>
+<tr><td><tt>-def_site_selection</tt> <i>name,endpoints</i></td><td>   create a selection of sites of given name and endpoints
+                  (site selection endpoints are expressed as in this example: 10-200,305,310-342)</td></tr>
+<tr><td><tt>-gblocks</tt></td><td>      create under the name 'Gblocks' a set of blocks of conserved sites with the Gblocks program. Requires the <tt>nexus</tt> or <tt>mase</tt> output formats: the output file contains a new site selection called 'Gblocks'. A second command line with <tt>-convert -sites Gblocks</tt> allows to extract the set of conserved sites identified by Gblocks.
+      Further options can be used to modify the Gblocks run:<br>
+              <tt>-b4</tt> allow smaller final blocks<br>
+              <tt>-b5</tt> allow gaps within final blocks <br>
+              <tt>-b2</tt> less strict flanking positions <br>
+              <tt>-b3</tt> don't allow many contiguous nonconserved positions</td></tr>
+<tr><td><tt>-sites</tt> <i>selection_name</i></td><td>    use the named selection of sites from the input alignment </td></tr>
+<tr><td><tt>-species</tt> <i>group_name</i></td><td>    use the named group of species from the input alignment </td></tr>
+<tr><td><tt>-bootstrap</tt> <i>n</i></td><td>    writes <i>n</i> bootstrap replicates of the input sequence alignment
+  to the output file. Can be combined with the species and sites selection options, <tt>-translate</tt>
+  (<tt>-no_terminal_stop</tt> is implied), and <tt>-del_gap_only_sites</tt>.
+  The <tt>-output_format</tt> option is not necessary because the output file is always in <tt>phylip</tt> format.</td></tr>
+
+<a name="CONCATENATE"></a><tr><td colspan=2 align=center>  <br>          <b>Sub-options for</b> <tt>-concatenate</tt></td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read alignment from standard input</td></tr>
+<tr><td><tt>-concatenate</tt> <i>align1,...</i></td><td>name(s) of alignment files to add at the end of the input alignment</td></tr>
+<tr><td><tt>-by_rank</tt></td><td>identify sequences by their rank in alignments, <i>i.e.</i>, the 1st seq. of <i>align1</i> will be added
+at the end of the 1st seq of the input file, the 2nd with the 2nd, and so on. 
+Without this option, sequences with the same name in alignment files are concatenated.</td></tr>
+
+<tr><td><tt>-record_partition</tt></td><td>  record as 'site sets' the locations of the concatenated pieces in the final concatenate</td></tr>
+
+
+<tr><td><tt>-output_format</tt> <i>fmt</i></td><td>format of the concatenated alignment file 
+(<tt>mase, phylip, clustal, msf, fasta</tt>, or <tt>nexus</tt>). Default is the format of the input alignment.</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>     use <i>fname</i> as name of the concatenated alignment 
+(default is built from input filename)</td></tr>
+<tr><td><tt>-o</tt> -</td><td>          write the concatenated alignment to standard output</td></tr>
+
+<a name="ALIGN"></a><tr><td colspan=2 align=center> <br>           <b>Sub-options for</b> <tt>-align</tt></td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read sequence file from standard input</td></tr>
+<tr><td><tt>-align_algo</tt> <i>n</i></td><td>      rank (in seaview, from 0) of alignment algorithm. 0 is clustalo, 1 is muscle.
+Other algorithms can be used after having been added as external alignment method in seaview.
+Without this option, seaview's default alignment algorithm is used. This can be changed using seaview's GUI.</td></tr>
+<tr><td><tt>-align_extra_args</tt> <i>"option1 ..."</i></td><td>additional options to use when running the alignment algorithm</td></tr>
+<tr><td><tt>-align_at_protein_level</tt></td><td> input sequences are translated to protein; those protein sequences are aligned;
+and the resulting alignment is reproduced at the DNA level.</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>      use <i>fname</i> as name of the output alignment</td></tr>
+<tr><td><tt>-o -</tt></td><td>          write the output alignment to standard output</td></tr>
+<tr><td><tt>-output_format</tt> <i>fmt</i></td><td> format of the output alignment 
+(<tt>mase, phylip, clustal, msf, fasta</tt>, or <tt>nexus</tt>)</td></tr>
+
+<a name="BUILD_TREE"></a><tr><td colspan=2 align=center> <br>           <b>Sub-options for</b> <tt>-build_tree</tt>
+(either <tt>-distance</tt> or <tt>-parsimony</tt> is required and <tt>-o</tt> or <tt>-distance_matrix</tt>)</td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read alignment from standard input</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>      use <i>fname</i> as name of the output tree</td></tr>
+<tr><td><tt>-o -</tt></td><td>          write the output tree to standard output</td></tr>
+<tr><td><tt>-distance </tt><i>dist_name</i></td><td>   computes the tree with a distance method using the named distance 
+(one among <tt>observed, JC, K2P, logdet, Ka, Ks, Poisson</tt> or <tt>Kimura</tt>)</td></tr>
+
+<tr><td><tt>-usertree </tt><i>tree_file_name</i></td><td> <i>tree_file_name</i> is the name of a user-given tree file (in Newick format). In association with <tt>-distance</tt>, branch lengths of the user tree are computed. In association with <tt>-parsimony</tt>, the length of the tree is computed (and its branch lengths too for DNA sequences).</td></tr>
+
+<tr><td><tt>-distance_matrix</tt> <i>fname</i></td><td>  don't compute the tree, but write to file <i>fname</i> the matrix of pairwise distances</td></tr>
+<tr><td><tt>-NJ</tt></td><td>           compute the distance tree by the Neighbor-Joining method (default is BioNJ)</td></tr>
+<tr><td><tt>-parsimony</tt></td><td>    compute the tree by the parsimony method</td></tr>
+<tr><td><tt>-search  more|less|one</tt></td><td>for parsimony on DNA only: controls, in decreasing order, how much rearrangement is done to find better trees
+    (<tt>more</tt> is the default, corresponds to the S option of the <a href=http://evolution.genetics.washington.edu/phylip/doc/dnapars.html>dnapars</a> program)</td></tr>
+<tr><td><tt>-nogaps</tt></td><td>       remove all gap-containing sites before computations</td></tr>
+<tr><td><tt>-replicates</tt> <i>n</i></td><td> use <i>n</i> bootstrap replicates to compute tree branch support</td></tr>
+<tr><td><tt>-jumbles</tt> <i>n</i></td><td>    jumble input sequence order <i>n</i> times (parsimony only)</td></tr>
+<tr><td><tt>-gaps_as_unknown</tt></td><td>  encode gaps as unknown character state (parsimony only, by default they are encoded
+    as an extra character state)</td></tr>
+<tr><td><tt>-sites</tt> <i>selection_name</i></td><td>    use the named selection of sites from the input alignment </td></tr>
+<tr><td><tt>-species</tt> <i>group_name</i></td><td>    use the named group of species from the input alignment </td></tr>
+
+<a name="PRINTOUT"></a><tr><td colspan=2 align=center> <br><b>Sub-options for</b> <tt> -printout (-o</tt> is required, available only in seaview versions able to create PDF files)</td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read alignment from standard input</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>     use <i>fname</i> as name of the output PDF/SVG file</td></tr>
+<tr><td><tt>-o -</tt></td><td>          send the printout to standard output</td></tr>
+<tr><td><tt>-fontsize</tt> <i>n</i></td><td>  font size used for the alignment printout (10 by default)</td></tr>
+<tr><td><tt>-blocksize</tt> <i>n</i></td><td> divide sequences in blocks of size <i>n</i> (10 by default) separated by one space</td></tr>
+<tr><td><tt>-svg</tt> <i>w</i></td><td>      produce a file in SVG format of width <i>w</i> pixels (without this option, the output is in PDF format)</td></tr>
+<tr><td><tt>-landscape</tt></td><td>   write the alignment in landscape orientation (PDF output only)</td></tr>
+<tr><td><tt>-letter</tt></td><td>      write the alignment using Letter-sized pages (A4 by default, PDF output only)</td></tr>
+
+
+<a name="REROOT"></a><tr><td colspan=2 align=center> <br>           <b>Sub-options for</b> <tt>-reroot</tt> (available only in seaview versions able to create PDF files)</td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read input tree from standard input</td></tr>
+<tr><td><tt>-outnewick</tt> <i>filename</i></td><td>   write the resulting tree to named file in 
+<a href=http://evolution.genetics.washington.edu/phylip/newicktree.html>Newick</a> format</td></tr>
+<tr><td><tt>-outgroup</tt> <i>name</i></td><td>   use tree leaf labelled 'name' as tree outgroup</td></tr>
+<tr><td><tt>-outgroup</tt> <i>"name1,name2,name3"</i></td><td> use node at center of the 3 named leaves as tree center
+               and <i>name3</i>-containing clade as outgroup</td></tr>
+<tr><td><tt>-ingroup</tt> <i>"name1,name2,name3"</i></td><td> use node at center of the 3 named leaves as tree center
+               and <i>name1</i>-containing clade as ingroup</td></tr>
+<tr><td><tt>-root_at_center</tt></td><td>   reroot the tree at its center</td></tr>
+<tr><td><tt>-unroot</tt></td><td>       remove the root from the input tree, if any</td></tr>
+<tr><td><tt>-trim <i>trim_rule</i></tt></td><td>  trim long leaf names using the given <a href=#TRIM>trim rule</a></td></tr>
+<tr><td><tt>-patristic_distances</tt> <i>fname</i></td><td>    write to named file patristic distances between leaves of input tree</td></tr>
+<tr><td><tt>-remove_bootstrap</tt></td><td>  remove branch support values present in input tree</td></tr>
+
+<a name="PLOTONLY"></a><tr><td colspan=2 align=center> <br>           <b>Sub-options for</b> <tt>-plotonly</tt> (available only in seaview versions able to create PDF files)</td></tr>
+<tr><td colspan=2 align=left>options <tt>-outgroup, -ingroup, -outnewick</tt> above can be used as well as the following ones:</td></tr>
+<tr><td colspan=2 align=left>           Use '-' as last argument to read tree from standard input</td></tr>
+<tr><td><tt>-o</tt> <i>fname</i></td><td>      use <i>fname</i> as name of the output plot (.pdf or .svg)</td></tr>
+<tr><td><tt>-o -</tt></td><td>          write the output plot to standard output (svg only)</td></tr>
+<tr><td><tt>-svg</tt></td><td>          draw the input tree in a .svg file (default is .pdf file)</td></tr>
+<tr><td><tt>-unrooted</tt></td><td>     draw the input tree in unrooted (circular) form</td></tr>
+<tr><td><tt>-pagecount</tt> <i>n</i></td><td>  number of pages used for the tree plot (pdf only)</td></tr>
+<tr><td><tt>-letter</tt></td><td>       use letter-sized paper for the tree plot</td></tr>
+<tr><td><tt>-landscape</tt></td><td>    draw in landscape orientation</td></tr>
+<tr><td><tt>-fontsize</tt> <i>n</i></td><td>   font size used in the tree plot</td></tr>
+<tr><td><tt>-lengths</tt></td><td>      display branch lengths in the tree plot</td></tr>
+<tr><td><tt>-bootstrap</tt> </td><td>   display branch support values in the tree plot</td></tr>
+<tr><td><tt>-bootstrap_threshold</tt> <i>x</i></td><td>    display branch supports if they are ≥ <i>x</i></td></tr>
+<tr><td><tt>-size</tt> <i>W</i>x<i>H</i></td><td>     pixel Width and Height of tree plot (svg only) (default is 595x842)</td></tr>
+<tr><td><tt>-match</tt> <i>text</i></td><td>   display in color (red by default) tree labels containing this text (case is not significant)</td></tr>
+<tr><td><tt>-color</tt> <i>RRGGBB</i></td><td> hexadecimal color used for matching labels (example: 00FF00 means green)</td></tr>
+<tr><td><tt>-branch_width_as_support</tt></td><td>  draw plot with branches of increasing widths with increasing support</td></tr>
+<tr><td><tt>-support_threshold_high</tt> <i>f</i></td><td> support above which a branch is drawn with maximal width (def=.95)</td></tr>
+<tr><td><tt>-support_threshold_low</tt> <i>f</i></td><td> support below which a branch is drawn with minimal width (def=.8)</td></tr>
+<tr><td><tt>-trim <i>trim_rule</i></tt></td><td>  trim long leaf names using the given <a href=#TRIM>trim rule</a></td></tr>
+
+</table>
+
+<p>Use item "Customize" of menu <a href="#Props Menu">Props</a> to further customize the program.
+
+<hr>
+<a name="Sequence coloring"></a>
+<center><u><b>Sequence Coloring</b></u></center>
+The item "Customize" of menu <a href="#Props Menu">Props</a> allows to control colors.
+<p>
+                 <center>SETTING DNA/RNA SEQUENCE COLORING</center>
+A,C,G,T/U buttons show the colors that are in use for the corresponding nucleotide.
+<br>Click on a button to open a color chooser and select the desired color 
+    (OK will accept the new choice; reset will use the starting shade).
+<br>"reset" will use default colors.
+<br>"Apply" or "Set changes permanent" will apply new shades to current alignment.
+
+<p>
+                 <center>SETTING PROTEIN SEQUENCE COLORING</center>
+<u>aa coloring scheme</u>: by default, amino acids are split in 8 families each displayed 
+in a different color. These families can be customized, up to a maximum of 10.
+Also, an alternative coloring scheme can be defined, and seaview will
+allow to switch between the first and the alternative coloring schemes.
+
+<p><u>catalog of amino acid colors</u>: colors used for each amino acid family. 
+Click on any to control the desired shade, as explained above.
+White is used for gaps and for unlisted residues.
+
+<p>Example: with the default coloring scheme, groups of amino acids KR and AFILMVW 
+are displayed with the first and second catalog colors starting from left, respectively.
+
+<p>Click "reset" to use default amino acid families and color catalog.
+"Apply" or "Set changes permanent" to apply new shades to current alignment.
+
+<p>
+                 <center>SETTING SYNONYMOUS CODON COLORING</center>
+Click on "Change" button. A window with a series of color cells appear. The 21 sets of synonymous codons 
+and of stop codons can be colored with any of these colors. Click on a color cell and type a one-letter
+amino acid (or * to refer to stop codons) to reaffect a codon set to a new color. Repeat these operations
+as many times as necessary. Click on "OK" button when color re-assignments are complete.
+<br>Back to "Customization" window, "Apply" applies color re-assignments to this session's windows,
+"Set changes permanent" applies them to future seaview sessions as well.
+<p>
+<hr>
+<a name="Miscellaneous options"></a>
+<center><u><b>Miscellaneous options</b></u></center>
+The item "Customize" of menu <a href="#Props Menu">Props</a> allows to set these options:
+<ul>                     
+<li><u>[sites] background grey</u>: move the slider to change the grey shade of the alignment
+panel background; the "sites" shade applies to selected sites only; "reset" gives
+default values to both shades.
+
+<li><u>right-left movement keys</u>: define 4 keys that move cursor right and left 
+by 5 or 50 residues; reset uses default keys.
+
+<li><u>display lowercase</u>: select so that lowercase characters present in sequence data
+are not displayed as uppercase.
+
+<li><u>inverted</u>: select to display sequences as black letters on colored background.
+
+<li><u>spaces in FASTA names</u>: If on, all characters after the '>' will be interpreted
+as sequence name in FASTA files. If off, the name ends at the first encountered space and the rest
+of the line (if any, e.g., length information) is interpreted as sequence annotation data.
+
+<li><u>alignment algorithm</u>: to set the default alignment algorithm used by 
+menu <a href="#Align Menu">Align</a>.
+
+<li><u>default save format</u>: sets the default format of the "File:save as" menu item.
+
+<li><u>pdf/ps page</u>: sets the page format used by all PDF- or PostScript-producing operations.
+
+<li><u>pdf/ps fontsize</u> sets the font size used by item 
+"Prepare pdf/ps" of menu <a href="#File Menu">File</a>.
+
+<li><u>max name width</u>: the maximum width at which sequence names are displayed; names longer
+than that are accepted but aren't entirely displayed.
+
+<li><u>phylip names width</u>: sequence names longer than this value are truncated when
+saving PHYLIP-formatted alignments. Value 10 should be used to interface with
+the PHYLIP package. Larger values are more convenient for, e.g., PhyML, PAML.
+
+<li><u>sequence font size</u>: the default fontsize used to display sequence alignments.
+</ul>
+<hr>
+<a name=Customization></a>
+<center><u><b>Customization</b></u></center>
+<ul>
+<li>Mac OS:
+Custom settings are stored in file <tt>fr.cnrs.seaview.plist</tt> of the user's <tt>Library/Preferences</tt> folder.
+<li>MSWindows: 
+Custom settings are stored in file <tt>seaview.ini</tt> in the same folder as the seaview program itself.
+<li>Unix/Linux:
+Custom settings are stored in file <tt>.seaviewrc</tt> in the user's home directory.
+</ul>
+<u>Note for users of Mac OS 10.9 and above</u>: deleting the file <tt>$HOME/Library/Preferences/fr.cnrs.seaview.plist</tt>
+is no longer enough to reset seaview's preferences. You can enter this in a terminal:<br>
+<tt>defaults delete fr.cnrs.seaview</tt>
+<br>You may also force using a given fr.cnrs.seaview.plist file with this command:<br>
+<tt>defaults read fr.cnrs.seaview</tt>
+<hr>
+<a name=DBTroubleshooting></a>
+<center><u><b>Troubleshooting Importation from Databases</b></u></center>
+If you experience problems importing sequences from databases with the 
+"Import from DBs" item of the File menu, open a terminal (or command prompt) window, and type in it:
+<pre><tt>telnet pbil.univ-lyon1.fr 5558
+</tt></pre>
+If you see this :
+<pre><tt>OK acnuc socket started
+</tt></pre>
+then sequence importation will work.
+<br>If the terminal remains blocked for some time and the above 
+OK message does not appear, your
+communication to the database server is most probably blocked by your firewall. 
+Please, contact your local network administrators, and ask them to allow 
+outbound communications to the port number 5558.
+
+</BODY>
+</html>

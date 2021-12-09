@@ -1,0 +1,20 @@
+#================================================
+# Copyright Georgia Institute of Technology, Atlanta, Georgia, USA
+# Distributed by GeneProbe Inc., Atlanta, Georgia, USA
+#================================================
+
+Installation instructions for GeneMarkS-2 software
+
+Install key file "gmhmmp2_key" into users home directory as
+
+  cp  gmhmmp2_key   ~/.gmhmmp2_key
+
+Attention, key file is renamed into hidden system file by above command.
+
+Copy the content of distribution to desired location.
+Program is ready for execution.
+
+Perl scripts are configured with default Perl location at "/usr/bin/perl"
+
+#================================================
+
