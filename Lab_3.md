@@ -39,9 +39,15 @@ Gene finding is a central aspect of bioinformatics, and a key issue when trying 
 
 The most simple and naïve way to search for genes is to search your input sequence for the initiation codon ATG followed by a stretch of DNA free from an in-frame stop codon. Since almost all gene products are larger than 50 amino acids, it is reasonable to set the minimum length of your ORFs to 150 nucleotides.  
 
-You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf) In order to use getorf with a minimum ORF size of 150 nucleotides and a search from ATG to stop, type  `% getorf XXX.fna -minsize 150 -find 3`  on the command line. Genes might be located on the opposite strand to the sequenced one, but this is not a problem since getorf will still find it and note the direction of the gene in its output. Note that STOP codons are not included in the output. That issue, however, will be fixed by the script that 
-parses program output to a format that can be used in the visualization tool Artemis (more details 
-below).
+You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf) In order to use getorf with a minimum ORF size of 150 nucleotides and a search from ATG to stop, type  
+
+`getorf YOUR_FILE.fna -minsize 150 -find 3`  
+
+on the command line. Genes might be located on the opposite strand to the sequenced one, but this is not a problem since getorf will still find it and note the direction of the gene in its output. Note that STOP codons are not included in the output. That issue, however, will be fixed by the script that parses program output to a format that can be used in the visualization tool Artemis:
+
+`perl /1MB438/SRC/GenePrediction2Artemis.pl -i getorf.file -o outputname.artemis -getorf`
+
+
 
 **Now, run getorf on your plasmid. Save the result.** 
 
@@ -76,10 +82,10 @@ it like this:
    called `GeneMark_hmm.mod`. In order for this command to work, you need to execute this 
    command: 
 
-   `% cp  /proj/uppmax2021-2-12/private/SRC/gms2_linux_64/gmhmmp2_key ~/.gmhmmp2_key`  
+   `cp /1MB438/SRC/gms2_linux_64/gmhmmp2_key ~/.gmhmmp2_key`  
 
 2. Now we are ready to search for orfs in the genome:  
-   `% perl /proj/uppmax2021-2-12/private/SRC/gms2_linux_64/gms2.pl --seq plasmid.fna --genome-type bacteria --output SOME_OUTPUT_NAME.gff --format gff `
+   `perl /1MB438/SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.gff --format gff `
 
 **Exercise: run the Genemark suite on the provided genome. Save the result.**
 
@@ -104,7 +110,7 @@ which tells Artemis to color bases between 1000 and 1500 cyan (5) and bases betw
 11000 on the complementary strand magenta (6).
 
 To start Artemis on Linux, type 
-`% art`  
+`art`  
 
 In Windows or MacOS, do as prompted on the [Artemis web page](https://www.sanger.ac.uk/tool/artemis/).  
 
@@ -169,15 +175,10 @@ questions.
 How many putative genes do each method find?   
 
 #### Question 2   
-Look at the feature (here a feature is a putative gene )  between positions 93737 and 94594. What method found this gene ? Why didn't the other find it?   
+Look at the feature (here a feature is a putative gene )  between positions 72704 and 23573. Did both methods found this gene? Is there any difference?    
 
 Hint: What is the most common start codon in bacteria? What is the start codon in this 
 particular gene?  
-
-#### Question 3   
-
-Look at the feature starting at position 4077 3  (the gene is on the complementary strain, so 
-in the reverse). What are the differences between the methods? Why do they differ?  
 
 ## Promoter prediction tools  
 
@@ -216,7 +217,7 @@ In order to visualize the different promoter predictions, use Artemis as describ
 
 1. **Convert BPROM output to Artemis format   with the PromoterPrediction2Artemis.pl  
    script.** 
-   ``% perl /proj/uppmax2021-2-12/private/SRC/PromoterPrediction2Artemis.pl  -i Buchnera_aphidicola_part.BPROM -o Buchnera_aphidicola_part.artemis -bprom -l 5` 
+   `perl 1MB438/SRC/PromoterPrediction2Artemis.pl  -i EHEC_plasmid1.BPROM -o EHEC_plasmid1.artemis -bprom -l 5` 
 2. **Visualize results in Artemis.**  
 
 ## Questions 
@@ -236,7 +237,7 @@ To get a feeling for what kind of numbers you can use as cutoff, inspect the fil
 
 #### Question 6   
 
-Look at the promoter at 66376.   
+Look at the promoter at 19720.   
 
 a) When comparing it to the gene prediction, does it seem like a probable promoter and why?   
 
