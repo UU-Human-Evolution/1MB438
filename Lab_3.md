@@ -146,7 +146,7 @@ other. To select many features, you might want to use the menus. For example, to
 If you want to select a specific region (and not a particular feature), just click and drag your mouse on 
 either the + or the - strand. This will highlight the selected region.  
 
-**Exercise :  open the provided genome and the gene predictions and answer the questions on the next   page**.   
+**Exercise :  open the provided genome and the gene predictions and answer the questions**.   
 
 ##### Viewing bug  
 If you want to view the DNA sequence of a gene, do not use the visible sequence line that Artemis 
@@ -165,18 +165,19 @@ Use your knowledge about the strengths and weaknesses of the methods to answer t
 questions.  
 
 #### Question   1   
+
+How many putative genes do each method find?   
+
+#### Question 2   
 Look at the feature (here a feature is a putative gene )  between positions 93737 and 94594. What method found this gene ? Why didn't the other find it?   
 
 Hint: What is the most common start codon in bacteria? What is the start codon in this 
-particular gene?   
-
-#### Question 2   
-Look at the feature starting at position 4077 3  (the gene is on the complementary strain, so 
-in the reverse). What are the differences between the methods? Why do they differ?   
+particular gene?  
 
 #### Question 3   
 
-Look at the putative genes between positions 68000 and 72500. What are the differences between the two methods? Why   do you think they differ?   
+Look at the feature starting at position 4077 3  (the gene is on the complementary strain, so 
+in the reverse). What are the differences between the methods? Why do they differ?  
 
 ## Promoter prediction tools  
 
