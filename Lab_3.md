@@ -18,13 +18,13 @@ module load bioinfo-tools emboss artemis BioPerl
 
 ## The problem:
 
-For this session and the next, we are going to work with a sample retrieved from a real patient in the context of an Enterohemorrhagic Escherichia coli (EHEC) outbreak. The sequence contains the complete plasmid sequence. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and, this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize this sequence, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
+For this session and the next, we are going to work with samples retrieved from real patients in the context of an Enterohemorrhagic Escherichia coli (EHEC) outbreak. The files we are going to work with contain the complete sequence of a plasmid. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize these sequences, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
 
 <figure>
     <img src="/Figures/bacterial_conjugation.png" >
     <figcaption>Steps of the bacterial conjugation</figcaption>
 </figure>
-
+Choose one of the available sequences in `/1MB438/DATA/Lab3/` and copy it into your personal folder. 
 
 
 
@@ -175,10 +175,9 @@ questions.
 How many putative genes do each method find?   
 
 #### Question 2   
-Look at the feature (here a feature is a putative gene )  between positions 72704 and 23573. Did both methods found this gene? Is there any difference?    
+Look at the features (here a feature is a putative gene ) . Did both methods found the same genes? Is there any difference?  Choose 3 examples and explain why you believe the predictions of both programs differ.   
 
-Hint: What is the most common start codon in bacteria? What is the start codon in this 
-particular gene?  
+
 
 ## Promoter prediction tools  
 
@@ -237,8 +236,10 @@ To get a feeling for what kind of numbers you can use as cutoff, inspect the fil
 
 #### Question 6   
 
-Look at the promoter at 19720.   
+Search for a promoter that is placed before a predicted gene.    
 
-a) When comparing it to the gene prediction, does it seem like a probable promoter and why?   
+a) How many bases away it is from it? 
 
-b) What would that mean for the gene prediction?   
+b) When comparing it to the gene prediction, does it seem like a probable promoter and why?   
+
+c) What would that mean for the gene prediction?   
