@@ -1,4 +1,4 @@
->CP027441.1 Escherichia coli strain 2012C-4502 plasmid unnamed, complete sequen 
+>unknown_plasmid4
  Length of sequence-    173714
  Threshold for promoters -  0.20
  Number of predicted promoters -    393

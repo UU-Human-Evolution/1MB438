@@ -1,4 +1,4 @@
->CM016514.1 Escherichia coli strain L113 plasmid pL113_R, complete sequence, wh 
+>unknown_plasmid2
  Length of sequence-    101234
  Threshold for promoters -  0.20
  Number of predicted promoters -    227

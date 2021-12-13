@@ -1,4 +1,4 @@
->MG014722.1 Escherichia coli strain P2-3 plasmid pP2-3T, complete sequence      
+>unknown_plasmid3      
  Length of sequence-    392275
  Threshold for promoters -  0.20
  Number of predicted promoters -    892

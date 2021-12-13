@@ -1,4 +1,4 @@
->unknown_plasmid                                                                
+>unknown_plasmid1                                                                
  Length of sequence-     92722
  Threshold for promoters -  0.20
  Number of predicted promoters -    216

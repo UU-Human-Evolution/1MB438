@@ -85,9 +85,9 @@ it like this:
    `cp /1MB438/SRC/gms2_linux_64/gmhmmp2_key ~/.gmhmmp2_key`  
 
 2. Now we are ready to search for orfs in the genome:  
-   `perl /1MB438/SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.gff --format gff `
+   `perl /1MB438/SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
 
-**Exercise: run the Genemark suite on the provided genome. Save the result.**
+**Exercise: run the Genemark suite on the provided genome. Save the result and run the conversion script we also used with getorf to change the format. **
 
 
 
