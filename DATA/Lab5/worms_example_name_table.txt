@@ -1,0 +1,2 @@
+XB	Xenoturbella_bocki	gi|116875668:8059-9201
+DN	Diphyllobothrium_nihonkaiense	gi|147742967:3244-4350

@@ -16,7 +16,7 @@ For today’s lab we are going to work on Uppmax, so we’ll need to log in on o
 module load bioinfo-tools ABINIT/8.10.3 BLAST+ sqlite/3.34.0 BioPerl artemis biopython 
 ```
 
-## 
+
 
 
 
