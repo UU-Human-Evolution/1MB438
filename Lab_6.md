@@ -101,7 +101,7 @@ Once you have the alignment loaded, we need to specify the settings we are going
 However, as we are only interested on reconstructing the phylogeny of our sequences, we are going to modify only a few of the settings.
 The first one is the Evolution Model, which can be done through the Site Model tab. As we are going to use the same model IQTree selected, and BEAST only have integrated models for JC69, TN93, HKY and GTR, you may need to modify one of these to adapt it to your actual model. This can be done by modifying the XML file (explained here: https://beast.community/custom_substitution_models) or from BEAUTi by following this table (source: https:// justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/)
 
-![BEAST Model Setup table](Figures\BEAST2-model-setup.png)
+![BEAST Model Setup table](https://github.com/Hjorvik/1MB438/blob/main/Figures/BEAST2-model-setup.png)
 
 If your model has some other letters, like "+I" or "+R", you can find what they mean here: http:// www.iqtree.org/doc/Substitution-Models and modify the settings accordingly.
 Once we have everything set up in the Site Model, we move to the Priors tab, select Calibrated Yule Model, and as a birth rate a Gamma distribution with an Alpha (shape) of 0.001 and a Beta (scale) of 1000.
