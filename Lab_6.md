@@ -108,21 +108,10 @@ Once we have everything set up in the Site Model, we move to the Priors tab, sel
 The last step is to go to the MCMC tab to specify how many steps the MCM chain will take before stopping. This should be set to, at least, 100000.
 Once this is done, we can save the XML file and close BEAUTi.
 
-##### Running BEAST2
-Once we have our XML file, we can run BEAST2. Once the window pop, select the XML file, set a random seed (keep seeds consistent for reproducibility) and check the "Use BEAGLE library if available". This last step will make your analysis faster.
-Then click on "Run" to start.
-Once your analysis is done (it may take a while), we can visualize it through different approaches. BEAST creates a posterior sample of phylogenetic "time-trees", which need to be summarized in some way before we can check the quality of the posterior estimate.
-
-This can be done in 2 ways with the software included with BEAST2:
-• TreeAnnotator: this program looks inside the "forest" of trees estimated by the *MCMC* to find the best supported version and then it will annotate it with the best supported estimates for ages of the nodes in the tree. It will also calculate de posterior clade probability for each node, which is useful as a measure of certainty in the depicted division. We start by opening `TreeAnnotator` and setting up the *Burning rate* to 10% and the *Posterior Probability Limit* to 0. Then, we have to choose the
-*Target tree* type, so we will select "Maximum clade credibility tree" (aka MCC tree), and them "Mean Heights" from the Node Heights menu. Finally, we select our input and output files (for the output, just write the name, our it will force you to overwrite an existing file). Once we have out tree annotated, we can visualize it with *FigTree*.
-You can run TreeAnnotator with this command:
-`treeannotator`
-• DensiTree: an alternative to visualizing the MCC tree, this program allows us to visualize all the estimates at the same time. This means we don't need to annotate the tree file. DensiTree can be called with this command:
-`densitree`
-Use both methods to visualize your results, and compare the FigTree representation with your results from the Maximum Likelyhood analysis.
-
 **Question 4: Which setup did you use in BEAST2?** 
+
+
+
 
 ####OPTIONAL:
 BEAST offers many other options and tools to be sure our estimates are appropriate that were left out from this tutorial because the fall out of our scope, but if anyone is interested, you can check the tutorials in the software webpage or this great introduction https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/
