@@ -50,7 +50,12 @@ At the end of the last lab session we will meet each group individually for shor
 
 ### Gathering the data 
 
-The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species. When selecting the species, be sure to make a good selection, not too wide and not too narrow. The Taxonomy browser might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
+The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species (a species we know for sure that is basal to anything else in the dataset). When selecting the species, be sure to make a good selection, not too wide and not too narrow. The Taxonomy browser might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
+
+![](Figures/Outgroup.jpg)
+_By Ngilbert202 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=63950569_
+
+
 
 - [ ] **Write a few sentences on the selection of species and outgroup in your dataset. This will help you later to reflect upon the question and your results.**
 
