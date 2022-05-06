@@ -48,7 +48,7 @@ Now let's look at the .iqtree file.
 
 **Question 5:** In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?
 
-### Step 3a: Create a visual representation of your Maximum Likelihood trees
+### Step 3a: Create a visual representation of your  Neighbour Joining and Maximum Likelihood trees
 
 In the .iqtree file, you have a representation of the trees. However, it is an unrooted tree. You can root the tree, and do many other things, with the program FigTree. You have two options to work with FigTree:
 
@@ -63,7 +63,7 @@ The three important things you have to do are:
   2. Show the bootstrap values (using `Branch labels` or `Node labels` and selecting the right thing to display)
   3. Make sure the tree can be easily understood. For example, you might need to change the name of the species, if you are using the short names that you created in [Session 6](Lab6.md). 
 
-You can use this script to change the names in your treefiles: (its's also under `SCRIPTS` on Rackham.)
+You can use this script to change the names in your treefiles: (its's also under `SCRIPTS`.)
 
 [treefile\_rename\_from\_conv\_table.py](python_scripts/treefile_rename_from_conv_table.py)
 
