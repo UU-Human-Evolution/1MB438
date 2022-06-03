@@ -5,7 +5,7 @@
 Most biologists who are not bioinformaticians would think of databases, particularly sequence databases, when they hear the word Bioinformatics. And without the potential that lies in the public sequence databases, the surge in (or actually the emergence of) the bioinformatics field in the late 1990-ties would had been very different.
 Figure 1 shows the number of entries in the first public sequence databases, EMBL. The increase in available data makes the resource more useful in itself, but also drives the need for better tools (read software) to handle and analyze the data.
 
-![The number of entries in the EMBL sequence database](Figures\Introduction_to_biologica-000.png)
+![The number of entries in the EMBL sequence database](1MB438/Figures/Introduction_to_biologica-000.png)
 Figure 1: The number of entries in the EMBL sequence database.
 
 The ability to access data of different kinds, from different studies, through databases and combine them to be able to make new inferences is indeed one of the cornerstones of bioinformatics.
@@ -41,7 +41,7 @@ One should always be critical to the information in the databases - it is certai
 Another distinction is between databases that contain primary data, i.e. data that are produced in experiments or observations, and those that contain secondary date, which are data that have been produced by some kind of computation or analysis of primary data. In many cases we find that primary databases are also repositories and secondary databases are curated databases, but this is not always the case. The two examples above (GenBank and SwissProt) are examples of primary and secondary databases that are repositories and curated, respectively, but for example TreeBase, which contains data sets and results from phylogenetic analyzes can be viewed as a repository of secondary data.
 
 ##Some example of biological databases with different contents
-![Figure 2. A schematic overview of some bioinformatics activities in a genome project. Note that databases play an important role in many, if not all, of these.](D:\Documents\GitHub\1MB438\Figures\Introduction_to_biologica-001.png)
+![Figure 2. A schematic overview of some bioinformatics activities in a genome project. Note that databases play an important role in many, if not all, of these.](1MB438/Figures/Introduction_to_biologica-001.png)
 Figure 2. A schematic overview of some bioinformatics activities in a genome project. Note that databases play an important role in many, if not all, of these.
 
 ##Structure databases
@@ -141,5 +141,5 @@ Note that [UniParc](https://www.uniprot.org/uniparc/) (as well as UniProtKB) is 
 
 ####UniProt Knowlegebase
 This database do carry information on annotations. It contains two main sections: one containing entries that have been manually annotated based on literature and evaluated computational analyses, and one section with computer analyzed entries, still awaiting manual annotations. The former corresponds, and is also referred to as Swiss-Prot, whereas the latter are referred to as TrEMBL. In addition, all entries found in PIR-PSD that are not in Swiss-Prot or TrEMBL are also incorporated. The effect of this difference (being one between a curated database and a repository) can be seen in the number of entries they contain (figure 3).
-![Figure 3. The number of entries in Swiss-Prot and TrEMBL over time. Note that the difference in scales, and that the manually annotated Swiss-Prot grows much more slowly.](D:\Documents\GitHub\1MB438\Figures\Introduction_to_biologica-002.png)
+![Figure 3. The number of entries in Swiss-Prot and TrEMBL over time. Note that the difference in scales, and that the manually annotated Swiss-Prot grows much more slowly.](1MB438/Figures/Introduction_to_biologica-002.png)
 Figure 3. The number of entries in Swiss-Prot and TrEMBL over time. Note that the difference in scales, and that the manually annotated Swiss-Prot grows much more slowly.
