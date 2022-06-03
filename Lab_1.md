@@ -2,7 +2,7 @@
 
 ##### Goals of the practical session
 
-In this exercise you will search in the NCBI sequence databases using the search system [ENTREZ](https://www.ncbi.nlm.nih.gov/search/) (see [Using_Entrez](extra/Using_Entrez.md) for information about how to perform searches). Also have a look at the [introduction_to_biological_databases](extra/introduction_to_biological_databases.md) to get some background to this area.
+In this exercise you will search in the NCBI sequence databases using the search system [ENTREZ](https://www.ncbi.nlm.nih.gov/search/) (see [Using_Entrez](extra/using_entrez.md) for information about how to perform searches). Also have a look at the [introduction_to_biological_databases](extra/introduction_to_biological_databases.md) to get some background to this area.
 
 ##### Assessment of the practical session: 
 
