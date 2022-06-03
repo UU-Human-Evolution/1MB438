@@ -1,4 +1,4 @@
-#Using Entrez
+# Using Entrez
 
 Entrez is a search and retrieval system that integrates information from databases at NCBI. These databases include nucleotide sequences, protein sequences, macromolecular structures, whole genomes, and MEDLINE, through PubMed. GenBank is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences.
 
