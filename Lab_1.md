@@ -1,4 +1,4 @@
-# X1.a Sequence retrieval using Entrez
+# Session 1 - Sequence retrieval using Entrez
 
 ##### Goals of the practical session
 
