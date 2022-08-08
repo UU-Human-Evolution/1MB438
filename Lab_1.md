@@ -33,7 +33,7 @@ At the top of the entry, under the search box, you can choose different ways to 
 ###### Question 2
 Report the sequence in FASTA format.
 
-##Search by using Organism name
+## Search by using Organism name
 
 In most of the cases you would probably not know the accession number of the sequence that you are looking for. This means that you have to use other search terms to get your sequence from the database. 
 
@@ -43,7 +43,7 @@ You want to find a protein in the bacterium *Bartonella henselae*. Search the **
 1. How many entries do you get?
 2. Are all of them from *Bartonella henselae*?
 
-##Search with Limits
+## Search with Limits
 
 Searching the database as done in in the previous step is not very efficient since in almost all cases you will get sequences that you don't want. This is because you are searching against all the words in the **GenBank** record for your query. This means that if, in this case, *Bartonella henselae* is present anywhere in the entry we will pick it up. As a result, we get a lot of false positives. To get a better result you can limit your search so that you only search for a word in a specific field in the GenBank record.
 Since *Bartonella henselae* is the name of an organism, the field *Organism* in the GenBank record should contain the name *Bartonella henselae* to be a true positive.
