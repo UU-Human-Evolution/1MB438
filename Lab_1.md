@@ -15,7 +15,7 @@ Use this server for the online part: [Entrez](https://www.ncbi.nlm.nih.gov/searc
 
 Search the **Protein** database for the sequence with accession number *Q9ZAW3*. Take a look at the entry page from your search (see a GenBank entry for some help to understand the structure of the entry).
 
-######Question 1
+###### Question 1
 1.  **From what organism is the sequence?**
 2.  **What is the name of the protein?**
 3.  **What is the function of the protein?**
@@ -39,7 +39,7 @@ In most of the cases you would probably not know the accession number of the seq
 
 You want to find a protein in the bacterium *Bartonella henselae*. Search the **Protein** database for *Bartonella henselae*.
 
-######Question 3
+###### Question 3
 1. How many entries do you get?
 2. Are all of them from *Bartonella henselae*?
 
@@ -54,7 +54,7 @@ Redo the same search as in **“Search by using Organism name"** but limit the s
 1. How many entries do you get?
 2. Are all of them from *Bartonella henselae*?
 
-##Combining searches
+## Combining searches
 
 You have now learnt how to limit your search, but for an even better result you can combine different searches. Let's say that you want to find a particular gene or protein in Bartonella henselae, in that case you can't use the limit organism and at the same time write both Bartonella henselae and the name of the gene or protein. You have to combine two different searches using two different limits.
 
@@ -62,19 +62,19 @@ You have already made a search using '*Bartonella henselae* Field: Organism'. No
 Alternatively, you can combine searches directly in the 'Search details' box on the right, once you know the names of the fields and how to combine them.
 **Hint: Use Display Settings on the search hit page to sort the hits by 'Date Released'. It's then sorted from latest to earliest.**
 
-######Question 5
+###### Question 5
 1. What is the accession number of the earliest submitted protein record for ftsA from
 *Bartonella henselae*?
 2. What is the name of the first author of the article where that sequence was published?
 
-##Using the links between the different databases
+## Using the links between the different databases
 
 As mentioned earlier one of the best things with Entrez is that all databases have links between each other. Up until now you have used the protein database, but now you want to have the nucleotide sequence for the ftsA gene from *Bartonella henselae*.
 
 In the entrez page do a search for ftsA. Now select 'Nucleotide' database under the “Genomes” header.
 Alternative: If you have already done a protein search for ftsA you can in the search results pages change database in the dropdown menu to “Nucleotide”.
 
-######Question 6
+###### Question 6
 1. What is the accession number of the earliest submitted nucleotide record for ftsA from *Bartonella henselae*?
 2. What other genes are included in the same nucleotide sequence?
 
