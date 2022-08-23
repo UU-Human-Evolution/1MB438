@@ -9,16 +9,16 @@
 ###Online-based BLAST exercise
 
 Use the NCBI server for the online part: [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
-Search the protein database SwissProt for [orf_x.fasta](DATA/Lab2/orf_x.fasta)
+Search the protein database SwissProt for [orf_x.fasta](./DATA/Lab2/orf_x.fasta)
 
 **Question 1**
 a) What is the name of the gene that is the top hit and what is its function?
 
 ##### Search for homologs
 
-You have sequenced a stretch of DNA [orf_serratia.fasta](DATA/Lab2/orf_serratia.fasta) from Serratia marcescens found in the gut of an insect. You identified an open reading frame and translated it in to a protein and now you want to see if this gene has any homologs in the SwissProt database.
+You have sequenced a stretch of DNA [orf_serratia.fasta](./DATA/Lab2/orf_serratia.fasta) from Serratia marcescens found in the gut of an insect. You identified an open reading frame and translated it in to a protein and now you want to see if this gene has any homologs in the SwissProt database.
 
-Search SwissProt database with [orf_serratia.fasta](DATA/Lab2/orf_serratia.fasta)
+Search SwissProt database with [orf_serratia.fasta](./DATA/Lab2/orf_serratia.fasta)
 
 **Question 2**
 1. What protein do you think it is and what is its function?
@@ -28,9 +28,9 @@ browser for the real answer.
 
 ##### Search for coding regions
 
-Suppose that you have sequenced the stretch of DNA in [sequence.txt](DATA/Lab2/sequence.txt). Now you want to see if you have any coding regions in your sequence.
+Suppose that you have sequenced the stretch of DNA in [sequence.txt](./DATA/Lab2/sequence.txt). Now you want to see if you have any coding regions in your sequence.
 
-Search for open reading frames with Transeq (see [Using_transeq](extra/Using_transeq.md)), using the standard genetic code. When you search for proteins in a DNA sequence, it is often difficult to know where it starts. It should cover most of the nucleotide sequence when you have found the right frame.
+Search for open reading frames with Transeq (see [Using_transeq](./extra/Using_transeq.md)), using the standard genetic code. When you search for proteins in a DNA sequence, it is often difficult to know where it starts. It should cover most of the nucleotide sequence when you have found the right frame.
 
 **Question 3**
 1. What is the name of the protein?
@@ -38,12 +38,12 @@ Search for open reading frames with Transeq (see [Using_transeq](extra/Using_tra
 
 ###Running BLAST locally
 
-The program for local blast searches is called blastall and includes all the different blast programs. You specify the blast program with the option -p. In the following section you will use the file [prokaryotes_db](DATA/Lab2/prokariotes_db) which contains prokaryotic protein sequences in FASTA format.
+The program for local blast searches is called blastall and includes all the different blast programs. You specify the blast program with the option -p. In the following section you will use the file [prokaryotes_db](./DATA/Lab2/prokariotes_db) which contains prokaryotic protein sequences in FASTA format.
 
 
 1. Make a database of the file using formatdb
 `makeblastdb -in prokariotes_db -dbtype prot`
-2. Blast the anthrax protein sequence [anthrax.fasta](DATA/Lab2/anthrax.fasta) against prokaryotes_db.txt. You need to specify at least the following options:
+2. Blast the anthrax protein sequence [anthrax.fasta](./DATA/Lab2/anthrax.fasta) against prokaryotes_db.txt. You need to specify at least the following options:
 `BLAST_TYPE db DB_NAME query QUERY_NAME out OUT_NAME`
    Where DB_NAME is the name of your database, QUERY_NAME the file that
 contains your query sequence, BLAST_TYPE the type of blast program you
@@ -70,7 +70,7 @@ You can find a brief introduction, and further link, on how to use MAFFT [here](
 mafft --help
 muscle`
 
-Align the two datasets independently, EPHX1 ([ephx1.fasta](DATA/Lab2/ephx1.fasta)) and 16S ([16s.fasta](DATA/Lab2/16s.fasta)), using two of the alignment programs (Of course it is recommended to have a look at the input file so that you know what you are aligning!). If you are using MAFFT you will need to pipe the output to a new file, this
+Align the two datasets independently, EPHX1 ([ephx1.fasta](./DATA/Lab2/ephx1.fasta)) and 16S ([16s.fasta](./DATA/Lab2/16s.fasta)), using two of the alignment programs (Of course it is recommended to have a look at the input file so that you know what you are aligning!). If you are using MAFFT you will need to pipe the output to a new file, this
 can be done with the command “>”.The full command should then look something like this:
 `mafft (infile) > (outfile)`
 
