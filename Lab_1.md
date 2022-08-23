@@ -78,5 +78,16 @@ Alternative: If you have already done a protein search for ftsA you can in the s
 1. What is the accession number of the earliest submitted nucleotide record for ftsA from *Bartonella henselae*?
 2. What other genes are included in the same nucleotide sequence?
 
+## Pairwise alignment 
 
-**Submit the answers to all 6 questions to the Studium assignment.**
+![Example of a pairwise alignment scoring method](D:\Documents\GitHub\1MB438\Figures\Scoring-a-pairwise-alignment-a-detailed-example.png)
+
+Pairwise alignment consist on the comparation of two sequences from different individuals/species, with the goal of finding regions similar between the two. This regions may reflect conserved regions with functional, structural or evolutionary relevance. 
+
+You can find a detailed tutorial on Pairwise alignment [here](https://teaching.healthtech.dtu.dk/teaching/index.php/ExPairwiseAlignment)
+
+###### Question 7
+1. Submit all the answer to the questions in the tutorial. 
+
+**Submit the answers to all 7 questions to the Studium assignment.**
+
