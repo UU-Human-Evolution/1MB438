@@ -80,7 +80,7 @@ Alternative: If you have already done a protein search for ftsA you can in the s
 
 ## Pairwise alignment 
 
-![Example of a pairwise alignment scoring method](D:\Documents\GitHub\1MB438\Figures\Scoring-a-pairwise-alignment-a-detailed-example.png)
+![Example of a pairwise alignment scoring method](.\Figures\Scoring-a-pairwise-alignment-a-detailed-example.png)
 
 Pairwise alignment consist on the comparation of two sequences from different individuals/species, with the goal of finding regions similar between the two. This regions may reflect conserved regions with functional, structural or evolutionary relevance. 
 
