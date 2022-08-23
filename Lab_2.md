@@ -38,7 +38,7 @@ Search for open reading frames with Transeq (see [Using_transeq](./extra/Using_t
 
 ###Running BLAST locally
 
-The program for local blast searches is called blastall and includes all the different blast programs. You specify the blast program with the option -p. In the following section you will use the file [prokaryotes_db](./DATA/Lab2/prokariotes_db) which contains prokaryotic protein sequences in FASTA format.
+The program for local blast searches is called blastall and includes all the different blast programs. You specify the blast program with the option -p. In the following section you will use the file [prokaryotes_db](./DATA/Lab2/prokaryotes_db) which contains prokaryotic protein sequences in FASTA format.
 
 
 1. Make a database of the file using formatdb
@@ -67,23 +67,25 @@ Kalign, MAFFT and Muscle are three different fast alignment programs for protein
 You can find a brief introduction, and further link, on how to use MAFFT [here](https://mafft.cbrc.jp/alignment/software/). For Muscle you can find a short introduction [here](http://www.drive5.com/muscle/manual/basic_alignment.html), and the more extensive documentation [here](http://www.drive5.com/muscle/manual/). You can also type the following for each program in the terminal to get basic help on how to use them:
 
 `kalign
+
 mafft --help
+
 muscle`
 
-Align the two datasets independently, EPHX1 ([ephx1.fasta](./DATA/Lab2/ephx1.fasta)) and 16S ([16s.fasta](./DATA/Lab2/16s.fasta)), using two of the alignment programs (Of course it is recommended to have a look at the input file so that you know what you are aligning!). If you are using MAFFT you will need to pipe the output to a new file, this
+Align the two datasets independently, EPHX1 ([ephx1.fasta](./DATA/Lab2/ephx1.fasta)) and 16S ([16S.fasta](./DATA/Lab2/16S.fasta)), using two of the alignment programs (Of course it is recommended to have a look at the input file so that you know what you are aligning!). If you are using MAFFT you will need to pipe the output to a new file, this
 can be done with the command “>”.The full command should then look something like this:
 `mafft (infile) > (outfile)`
 
 ### Converting between alignment formats
 Unfortunately, there is no standard alignment format that can be read by all programs. Therefore, a sequence-oriented bioinformatician needs some format-converting skills. Readseq is a useful program for converting between alignment formats. For information on how to use readseq type:
-`java –cp /proj/Uppmax2021-2-12/private/SRC/readseq --help`
+`java jar ./SRC/readseq.jar --help`
 
 Use readseq to convert the files you aligned in the previous exercise (default output from kalign is in fasta format - caution! you need to redirect the output from the screen to a file) to the format nexus.
 
 #### Visualizing alignments
 You can look at alignments with the program Jalview.
 
-`java jar /proj/Uppmax2021 2 12/private/SRC/j alview .jar`
+`java jar ./SRC/jalview.jar`
 
 The software package [SuiteMSA](http://bioinfolab.unl.edu/~canderson/SuiteMSA/) is also a good tool for more advanced alignment viewing, for example comparing two alignments. However, for ordinary alignment viewing and editing it is unnecessarily complex.
 
