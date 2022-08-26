@@ -128,4 +128,78 @@ sqlite> SELECT AVG(length) FROM orfs; -- Extract the average length of all orfs
 sqlite> SELECT orf_id, length FROM orfs WHERE length > 100; -- print orfs with length above 500  
 ```
 
+#### Similarity search using BLAST
+The next step will be to determine what is encoded in these genes. We will use BLAST to try to find putative functions, and we will do so using 2 different databases: one for virulence (genes that make the bacteria more dangerous) and resistance (genes that make the bacteria resistant to antibiotics). You'll find both **.fsa** files in `./DATA/Lab4/`, each one under their own folder. In addition, you will find a **notes.txt** file with a description of each of the genes included.
+
+**Exercise**
+1. Index the .fsa files for the virulence and resistance genes using `formatdb`.
+2. Blast your ORF nucleotide sequences against both files using the output format XML*, save the output to a new file. 
+
+*Hint: If you run blastall without arguments you will see the different output formats
+under the –m parameter.
+
+#### Inserting the results in a SQLite-database
+Now you will run Blast2SQLite.py which takes your blast results and puts it in a datbase table (run this for both contig blast files). The first argument should contain the contig blast xml-file and the second the blast table name for the config (which you can pick freely) like this:
+
+ `% python Blast2SQLite.py <xml-file> <blast_table_name>`
+ 
+ The script will create a table for the blast file which contains the following:
+ 
+ * Reference to query gene in the first table
+ * Name of BLAST hit
+ * E-Value
+ * Length of hit sequence
+ * Percent identity between the two sequences
+
+### Annotation file
+#### Visualization
+To visualize the comparison between the finished genome and your contigs of choice you will use ACT (Artemis Comparison Tool). Artemis allows you to not only work with one sequence but also load in more sequences at the same time. This is very useful both for annotation and for comparative analysis, for example looking at the rearrangements. The principle is very similar to the 'art' program you have already used and you have to use 'act' in this case.
+
+If you do not have it installed, start by downloading and installing ACT. If you have JAVA
+installed, you could use a web based launch.To start ACT on Linux, type:
+ 
+ `% act &`
+ 
+In Windows or MacOS, do as prompted on the ACT web page.
+
+#### How to compare sequences: step by step instruction
+
+ACT takes information about sequence similarity from BLAST file and the important difference to a
+'normal' BLAST run it to use output format compatible with ACT (-m 8). Usually you want to read in at
+least one annotated sequence, so you have to remember to run blast on fasta file but open the embl
+(or genbank) file in ACT.
+
+The order of files does not matter as long as they are of different length (that's where you get the flip
+comment from).
+
+1. For this analysis we will use the antibiotic resistance genes in **.fsa** format that we have already indexed and the annotation in **.gbk**. 
+3. Run BLAST again, but this time using the whole plasmid
+
+	`blastall -p blastn -i <contig.fasta> -d <resistance.fasta> -m 8 -o <contig_vs_resistance.blastn>`
+4. Run ACT
+	
+	either open an act window and use the menus "File->Open..." or specify the files to open in the command line:
+	`act <contig.fasta> <contig_vs_resistance.blastn> <resistance.gbk> &`
+
+Like in Artemis you see the sequences with the annotated features (if any), except now you look at more than one at the same time. Scroll the bars to move along the genome, you might want to 'unlock' the positions to be able to move the two sequences independently. Try right-click and then find lock in the drop-down menu and turn it off.
+
+The window in the middle shows you the similarity between sequences. Intensity of the color corresponds to similarity. Red blocks have the same orientation (collinear parts) and blue ones have opposite orientations (rearranged). Click on the bars to check the details (score, length, evalue). You can filter out poor similarities by moving the middle bar and setting higher sScore. The broad overview immediately gives you an idea about large rearrangements or co-linearity of the two sequences.
+
+Note the difference between BLAST blocks and genes. You can see similarity of a block shorter than one gene or containing several genes. You can read more in ACT manual [here](https://www.sanger.ac.uk/science/tools/artemis-comparison-tool-act).
+
+#####Question 1
+1. Describe the two contigs you chose. How long are they? How many genes were found?
+You can either use Artemis or the script fastaNamesSizes.py to figure out the contig
+lengths. Do not use Artemis to count genes, as this can be quite confusing.
+2. Compare the contigs with the genome of Bartonella grahammi using ACT and describe
+what you see: are they co-linear? Are there any rearrangements?
+
+#####Question 2
+Does your sample contain any gene associated with antibiotic resistance? Validate your results using [ResFinder](https://cge.cbs.dtu.dk/services/ResFinder/). Just select the appropiate species name and upload your plasmid sequence. 
+#####Question 3
+Does your sample contain any gene associated with a virulence factor that the doctors should be aware of? Validate your results using [VirulenceFinder](https://cge.food.dtu.dk/services/VirulenceFinder/) with standard settings and the proper species. 
+
+	
+
+**Submit your answers to Lab 4 Assignment on Studium**
 
