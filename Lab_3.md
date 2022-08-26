@@ -10,14 +10,14 @@ Work alone or in pairs during this lab. As you progress, take notes of answers t
 
 ## The problem:
 
-For this session and the next, we are going to work with samples retrieved from real patients in the context of an Enterohemorrhagic Escherichia coli (EHEC) outbreak. The files we are going to work with contain the complete sequence of a plasmid. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize these sequences, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
+For this session and the next, we are going to work with samples retrieved from real patients in the context of an Escherichia coli outbreak. The files we are going to work with contain the complete sequence of a plasmid. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize these sequences, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
 
 <figure>
     <img src="/Figures/bacterial_conjugation.png" >
     <figcaption>Steps of the bacterial conjugation</figcaption>
 </figure>
 
-Choose one of the available sequences in `DATA/Lab3/` and copy it into your personal folder. 
+Choose **two** of the available sequences in `DATA/Lab3/` and copy them into your personal folder. 
 
 
 ## Gene identification tools
