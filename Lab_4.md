@@ -193,9 +193,14 @@ You can either use Artemis or the script fastaNamesSizes.py to figure out the co
 lengths. Do not use Artemis to count genes, as this can be quite confusing.
 2. Compare the contigs with the genome of Bartonella grahammi using ACT and describe
 what you see: are they co-linear? Are there any rearrangements?
+3. For each contig what is the average blast length hit sequence?
+*Hint: use AVG()
+4. Which of the contigs have most significant blast hits?( eval >1e-10)?
+*Hint: look at the queries of the orfs-table, use COUNT()
+
 
 #####Question 2
-Does your sample contain any gene associated with antibiotic resistance? Validate your results using [ResFinder](https://cge.cbs.dtu.dk/services/ResFinder/). Just select the appropiate species name and upload your plasmid sequence. 
+Does your sample contain any gene associated with antibiotic resistance? Validate your results using [ResFinder](https://cge.cbs.dtu.dk/services/ResFinder/). Just select `Acquired antimicrobial resistance genes` the appropiate species name and upload your plasmid sequence. 
 #####Question 3
 Does your sample contain any gene associated with a virulence factor that the doctors should be aware of? Validate your results using [VirulenceFinder](https://cge.food.dtu.dk/services/VirulenceFinder/) with standard settings and the proper species. 
 
