@@ -160,3 +160,9 @@ files. Save the trees as well as your PAUP* logfiles. In order to run *FigTree*:
 `figtree <tree.file>`
 
 
+#####Question 1
+* Which is the most parsimonious tree? Explain what it means to your phylogenetic question.
+
+**Submit your answer and the PAUP log file to Studium** 
+
+
