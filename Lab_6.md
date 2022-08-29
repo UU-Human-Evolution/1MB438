@@ -18,23 +18,17 @@ Each tree is a hypothesis of the relationship between our sequences, and our goa
 So, with this in our minds, let's get going. 
 
 ## Goals 
-+ Test which substitution model works better with our data
-+ Work with IQTree and learn how to extract information from its output
-+ Understand substitution models and how to export them between tools
-+ Run a basic model in BEAST
++ Work with PAUP and learn how to extract information from its output
 + Create phylogenetic trees meaningful for our project's question
 
 ## Input
 + Aligned sequences of the complete mitochondrial DNA and CytB that we curated on Lab 6
 
 ## Output(s)
-+ IQTree file with relevant info on out tree
 + Several tree files 
 
 ## Tools
-+ Maximum Likelihood  program: [IQTree](http://www.iqtree.org/)
-+ Bayesian Phylogenetic Inference program: [BEAST](https://www.beast2.org/)
-
++ [PAUP](https://paup.phylosolutions.com/) 
 ## Details
 
 For this Session, we are going to use the files that we created in the previous one. Make sure you followed the instructions properly and that you have all the files located. 
@@ -42,81 +36,127 @@ For this Session, we are going to use the files that we created in the previous 
 
 ### Step 1:
 
-As we performed the alignment of our sequences in the previous session, we can proceed to inferring which of all the possible trees is the most likely. We have several methods to do this:
+As we performed the alignment of our sequences in the previous session, we can proceed to inferring which of all the possible trees is the most likely. We may use several methods to do this:
 
 + [Parsimony](https://www.mun.ca/biology/scarr/2900_Parsimony_Analysis.htm): "the simplest explanation that can explain the data is to be preferred", so the hypothesis with the smallest number of changes is the most likely. However, this method has plenty of assumptions that we know are false, so it is not used anymore.
 + [Neighbour-joining](https://academic.oup.com/mbe/article/4/4/406/1029664): A slightly more refined version of parsimony in which we chose the best tree by minimizing branch lengths in the tree. More computationally intensive than parsimony, but still something that a modern computer can do fairly quickly.
 + [Maximum Likelihood](http://ib.berkeley.edu/courses/ib200a/lect/ib200a_lect11_Will_likelihood.pdf): "Likelihood is defined to be a quantity proportional to the probability of observing the data given the model". This means that, by providing a model of how DNA sequences change, we can determine which tree is the most probable to be true. 
 + [Bayesian Inference](https://www.sciencemag.org/site/feature/data/1050262.pdf): This method uses Bayesian Statistics to combine prior information that we know about our data (also known as Prior Probability Distribution) with the likelihood, in order to transform it into a more accurate probability distribution, known as the Posterior.
+
 ![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5624502/bin/emss-73449-f001.jpg)
 
 *Prior, likelihood and posterior distribution for a two-parameter phylogenetic example in Nascimento et al. 2017: https://dx.doi.org/10.1038%2Fs41559-017-0280-x*
 
-The last two are the state-of-the-art methods for phylogenetic analysis, and have become more and more popular as computing power has increased, as both methods are very demanding in that regard. 
+The last two are the state-of-the-art methods for phylogenetic analysis, and have become more and more popular as computing power has increased, as both methods are very demanding in that regard. However, for today's session we are going to focus on the 'naive' method: Parsimony. 
 
-For our project, we are going to use an implementation of the Maximum Likelihood approach called [IQ-TREE](http://www.iqtree.org/doc/Tutorial#first-running-example). This software offers several methods to speed up the analysis. 
+### An introduction to PAUP*
+PAUP* is an abbreviation for *Phylogenetic Analysis Using Parsimony* and other methods.
+PAUP is now a rather old program but is still the most flexible program for parsimony and maximum likelihood analyses. So even if it is slow it is still often use for non standard tasks and it is good for learning phylogenetics. PAUP* also work very well for parsimony for all but very large (thousands of taxa) datasets, for those it is possible to use TNT. Since maximum likelihood is more computationally heavy it gets unreasonable to run PAUP* on also fairly small datasets and it has been superseded by software like *RAxML*, *Garli*, *PHYML* or *iqTree*. Since PAUP* was the dominating software for phylogenetic
+analyses for a long time it has also been influential on the syntax to give commands in many other programs, most notable *MrBayes*.
 
-As we mentioned earlier, any Maximum Likelihood approach is based on a substitution model. In phylogenetics, this model describes the probability of each substitution (or mutation) to happen. [Here](http://evomics.org/resources/substitution-models/nucleotide-substitution-models/) you can find a list of the more common models, and [here](http://www.iqtree.org/doc/Substitution-Models) the ones that are implemented in IQ-TREE. 
+Input files for PAUP* are text files with blocks of data or PAUP commands in the NEXUS format. The file [primate-mtDNA-interleaved.nex](./DATA/Lab6/primate-mtDNA-interleaved.nex) is an example of a data matrix (or alignment) in NEXUS format and [primate-tree.nex](./DATA/Lab6/primate-tree.nex) is an example of a tree in nexus format. Take a look at them in a text editor. A NEXUS file is built up of a number of different blocks; the alignment is in a data block, the tree is in a trees block and so on.
 
-![Substitution model representation](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrg3186/MediaObjects/41576_2012_Article_BFnrg3186_Fig1_HTML.jpg?as=webp)
+You start PAUP from the command line:
 
+ `paup`
+ 
+At the PAUP prompt `>`, you type commands to PAUP. To get a list of all available commands, type
 
-*Graphical representation of some substitution models from Yang & Rannala, 2012. Nature Reviews Genetics: https://doi.org/10.1038/nrg3186*
+ `help`
+ 
+For example, the command for executing a data file (in nexus format) is
 
-Now that we have a small picture of what we are doing, lets start working with IQ-TREE. The basic syntax for this software is:
+ `execute primate-mtDNA-interleaved.nex`
+ 
+PAUP* commands can be abbreviated as long as they are unambiguous
 
-```
-iqtree -s ALIGNMENT -o OUTGROUP -m MODEL -pre OUTPUT_PREFIX -bb 1000
-```
+ `exe primate-mtDNA-interleaved.nex`
+ 
+You can also execute a datafile at startup:
 
-Under OUTGROUP you should put the name of your outrgroup as they appear in the alignment file. If you have multiple outgroups you can separate them with a comma (no spaces!) eg;
+ `paup primate-mtDNA-interleaved.nex`
+ 
+After you have read in a data block, you can read in a trees block. PAUP* complains if you try to execute a trees block without having first executed a data block.
+A PAUP* command usually has a range of options, which each can have a type. The command set for example, has an option criterion, which has three types: Parsimony, Likelihood and Distance. These are the three criteria for selecting a tree that PAUP* implements. To specify a type of an option, use '=':
 
-```
--o c_Vurs,H_sap
+  `set criterion=parsimony`
 
-```
+####Calculate scores
+If you have trees in memory (i.e. if you have executed a trees block or have searched for one), you can evaluate them using parsimony (pscores) or likelihood (lscores).
+pscores calculates the tree lengths of trees in memory lscores calculates the likelihoods of trees in memory
+ `exec primate-mtDNA-interleaved.nex
+ 
+ exec primate_tree.nxs
+ 
+ pscores`
+gives you the following tree length:
+`Tree # 1
 
-Now run IQ-TREE in your interactive session with the CytB data, and set your model to *-m MFP*. *MFP* stands for ModelFinder Plus, and is an algorithm that automatically considers a list of substitution models and estimates which is the one that fits our data better. *-bb 1000* means that we want our algorithm to use [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).Remember to adapt the code above to run IQ-TREE  and be careful to not over-write your files. 
+Length 1153
 
-All the questions below refer only to the CytB output.
+whereas lscores gives you the log likelihood of observing the data for the given model and 
 
-**Question 1: Which files do IQ-TREE output? Explain briefly what each of them is.** 
+tree:
 
-Now let's look at the *.iqtree* file. 
+Tree 1
 
-**Question 2: Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
+-ln L 5988.05924`
 
-**Question 3: Briefly explain the best-fitting model.**
+To set options for parsimony and likelihood, use the commands pset (set options for parsimony
+analysis), lset (set options for likelihood analysis). For example to specify parameters that correspond
+to the Jukes-Cantor substitution model:
 
-### Step 2:
-BEAST2 is a program for doing Bayesian phylogenetic analysis. The program uses a Markov Chain Monte Carlo (MCMC) method for exploring the parameter space in a stepwise fashion. Each new step is either accepted or rejected based on the change in likelihood. The posterior probability for each parameter is based on the frequency with which the parameter values are observed.
-Its input files are in the NEXUS or FASTA alignment format. You will work on your own two datasets (in nexus format).
-BEAST2 uses different GUI apps for the different steps, so we will need to change the name of the app accordingly.
-The first step is to create an XML file with the settings for our BEAST run. This is done with BEAUTi
-`beauti`
+`lset nst=1 basefreq=equal rates=equal pinv=0`
 
-Once the new window pop up, you have to import the alignment file. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
-Once you have the alignment loaded, we need to specify the settings we are going to run BEAST with. BEAUTi offers a lot of different options, and we can even subdivide our alignment to apply different models to different regions, estimate split times, etc.
+Where nst is number of substitution types, basefreq is base frequencies, rates is the among-site rate variation and pinv is the proportion of invariable sites.
 
-However, as we are only interested on reconstructing the phylogeny of our sequences, we are going to modify only a few of the settings.
-The first one is the Evolution Model, which can be done through the Site Model tab. As we are going to use the same model IQTree selected, and BEAST only have integrated models for JC69, TN93, HKY and GTR, you may need to modify one of these to adapt it to your actual model. This can be done by modifying the XML file (explained here: https://beast.community/custom_substitution_models) or from BEAUTi by following this table (source: https:// justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/)
+In summary, given a data set for a number of taxa, and a set of possible trees, we can select a best hypothesis (a
+tree) using some kind of criterion, by which we can evaluate how good the tree is for this particular
+data. Today we will evaluate trees using the **maximum parsimony** criterion. The most parsimonious
+solution is the one that requires the **least amount of change**. Therefore, according to the maximum
+parsimony criterion, the best hypothesis is the tree that requires the fewest changes, that is, the
+shortest tree.
 
-![BEAST Model Setup table](https://github.com/Hjorvik/1MB438/blob/main/Figures/BEAST2-model-setup.png)
+### Applying Maximum Parsimony to our data
 
-If your model has some other letters, like "+I" or "+R", you can find what they mean here: http:// www.iqtree.org/doc/Substitution-Models and modify the settings accordingly.
-Once we have everything set up in the Site Model, we move to the Priors tab, select Calibrated Yule Model, and as a birth rate a Gamma distribution with an Alpha (shape) of 0.001 and a Beta (scale) of 1000.
-The last step is to go to the MCMC tab to specify how many steps the MCM chain will take before stopping. This should be set to, at least, 100000.
-Once this is done, we can save the XML file and close BEAUTi.
+Use the format conversion tool you used in Session 2 to convert your alignments for 16S and
+cytB to nexus format.
 
-**Question 4: Which setup did you use in BEAST2?** 
+`readseq -a -f17 in_file > out_file.nxs`
 
+2. Use PAUP* to obtain a maximum parsimony tree for each of your genes.
+Run the following file in PAUP* (replacing input and output names!):
 
+`begin paup;
 
+exec input.nxs;
 
-####OPTIONAL:
-BEAST offers many other options and tools to be sure our estimates are appropriate that were left out from this tutorial because the fall out of our scope, but if anyone is interested, you can check the tutorials in the software webpage or this great introduction https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/
+set criterion=parsimony;
 
-# REPORT
+hsearch;
 
-Submit a file with the answers to all the questions and the *.iqtree* file for the CytB run. 
+savetrees file=output_pars.tre format=phylip brlens;
+
+end;
+
+quit;`
+
+You can run the code from above as a script if you save it into a file and then run:
+
+`paup <script_from_above>`
+
+The trees are now in newick (also called phylip) format in the file output_pars.tre. In case you need
+to convert the names in the output tree files you can use the tab-delimited file you generated in Session 5
+and use the script called [x6_fix_names.pl](./SRC/Lab6/x6_fix_names.pl) to convert the taxon names. 
+
+* Change the names in you output tree
+
+`perl x6_fix_names.pl <tree tile> <name_table>`
+
+* There can be more than one tree. Next, put each tree in one file and look at them
+using *FigTree*. **Reroot the trees** with your outgroup species. Save them as pdf
+files. Save the trees as well as your PAUP* logfiles. In order to run *FigTree*:
+
+`figtree <tree.file>`
+
 

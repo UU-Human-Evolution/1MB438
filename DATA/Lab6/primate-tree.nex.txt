@@ -1,0 +1,6 @@
+#NEXUS 
+Begin trees;
+	tree humanchimp = [&U] (Lemur_catta,(((((((Homo_sapiens,Pan),Gorilla),Pongo),Hylobates),((Macaca_fuscata,(M._mulatta,M._fascicularis)),M._sylvanus)),Saimiri_sciureus),Tarsius_syrichta));
+	tree chimpgorilla = [&U] (Lemur_catta,(((((((Gorilla,Pan),Homo_sapiens),Pongo),Hylobates),((Macaca_fuscata,(M._mulatta,M._fascicularis)),M._sylvanus)),Saimiri_sciureus),Tarsius_syrichta));
+
+End;
