@@ -58,6 +58,12 @@ Now let's look at the *.iqtree* file.
 1. **Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
 
 2. **Briefly explain the best-fitting model.**
+3. 
+#####Question 4:
+1. **Now look at both your Maximum Likelihood tree and Consensus Tree. Are they the same? If not, where do they differ?**
+
+2. **In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?**
+
 
 ### Step 2:
 BEAST2 is a program for doing Bayesian phylogenetic analysis. The program uses a Markov Chain Monte Carlo (MCMC) method for exploring the parameter space in a stepwise fashion. Each new step is either accepted or rejected based on the change in likelihood. The posterior probability for each parameter is based on the frequency with which the parameter values are observed.
@@ -78,7 +84,7 @@ Its input files are in the NEXUS or FASTA alignment format. You will work on you
 
 `./SRC/beast/bin/beauti`
 
-Once the new window pop up, you have to import the alignment file. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
+Once the new window pop up, you have to import the alignment file. We want to do this for **both our alignments**. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
 Once you have the alignment loaded, we need to specify the settings we are going to run BEAST with. BEAUTi offers a lot of different options, and we can even subdivide our alignment to apply different models to different regions, estimate split times, etc.
 
 However, as we are only interested on reconstructing the phylogeny of our sequences, we are going to modify only a few of the settings.
@@ -91,27 +97,16 @@ Once we have everything set up in the Site Model, we move to the Priors tab, sel
 The last step is to go to the MCMC tab to specify how many steps the MCM chain will take before stopping. This should be set to, at least, 100000.
 Once this is done, we can save the XML file and close BEAUTi.
 
-Once we have our XML file, we can run BEAST2. Once the window pop, select the XML file, set a
+Once we have our XML file, we can run BEAST2. For this session, we are **only going to run it on the cytB alignment**. Once the window pop, select the XML file, set a
 random seed (keep seeds consistent for reproducibility) and check the "Use BEAGLE library if
 available". This last step will make your analysis faster.
 Then click on "Run" to start.
 
-Once your analysis is done (it may take a while), we can visualize it through different approaches.
-BEAST creates a posterior sample of phylogenetic "time-trees", which need to be summarized in some
-way before we can check the quality of the posterior estimate.
-This can be done in 2 ways with the software included with BEAST2:
-
-• TreeAnnotator: this program looks inside the "forest" of trees estimated by the MCMC to find the best supported version and then it will annotate it with the best supported estimates for ages of the nodes in the tree. It will also calculate de posterior clade probability for each node, which is usefull as a measure of certainty in the depicted division. We start by oppening TreeAnnotator and setting up the Burning rate to 10% and the Posterior Probability Limit to 0. Then, we have to choose the Target tree type, so we will select "Maximum clade credibility tree" (aka MCC tree), and them "Mean Heights" from the Node Heightsmenu. Finally, we select our input and output files (for the output, just write the name, our it will force you to overwrite an existing file). Once we have out tree annotated, we can visualize it with FigTree.
-
-• DensiTree: an alternative to visualizing the MCC tree, this program allows us to visualize all the estimates at the same time. This means we don't need to annotate the tree file.
-
-Use both methods to visualize your results, and compare the FigTree representation with your results from the Maximum Likelyhood analysis. 
-
-#####Question 4: 
-**Which setup did you use in BEAST2?** 
+We'll run the mitochondrial alignment and check the results for both in the next session. 
 
 #####Question 5: 
-**Does the DensiTree and FigTree plots agree on the results?**
+**Which setup did you use in BEAST2?** 
+
 
 ####OPTIONAL:
 BEAST offers many other options and tools to be sure our estimates are appropriate that were left out from this tutorial because the fall out of our scope, but if anyone is interested, you can check the tutorials in the software webpage or this great introduction https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/
