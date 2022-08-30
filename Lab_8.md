@@ -69,9 +69,9 @@ Once you are done with those, you can play around with the other options (for ex
 Before you export your tree, think on what else you can do to show your results better. Look on Google for actual published trees, like this ones.
  
 <p float ="left">
-	<img src="./Figures/The-phylogenetic-tree-was-based-on-the-chloroplast.png" width="100">
-	<img src="./Figures/Phylogenetic-tree-of-the-species-used-for-the-evolutionary-analysis-of-Hox-genes.png" width="100">
-	<img src="./Figures/fig-3-corrected.png" width="100">
+	<img src="./Figures/The-phylogenetic-tree-was-based-on-the-chloroplast.png" width="500">
+	<img src="./Figures/Phylogenetic-tree-of-the-species-used-for-the-evolutionary-analysis-of-Hox-genes.png" width="500">
+	<img src="./Figures/fig-3-corrected.jpg" width="500">
 </p>	
 
 
