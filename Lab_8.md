@@ -72,6 +72,7 @@ Before you export your tree, think on what else you can do to show your results 
 	<img src="./Figures/Phylogenetic-analysis-of-orchids-The-phylogenetic-tree-was-based-on-the-chloroplast.png" width="500">
 	<img src="./Figures/Phylogenetic-tree-of-the-species-used-for-the-evolutionary-analysis-of-Hox-genes.png" width="500">
 	<img src="./Figures/fig-3-corrected.png" width="500">
+	<img src="./Figures/41598_2020_70287_Fig1_HTML.png" width="500">
 </p>	
 
 
