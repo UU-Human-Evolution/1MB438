@@ -66,6 +66,15 @@ The three important things you have to do are:
 You can use the script we used in Session 6 to change the names in your treefiles.
 Once you are done with those, you can play around with the other options (for example Rotate & Different type of trees).
 
+Before you export your tree, think on what else you can do to show your results better. Look on Google for actual published trees, like this ones.
+ 
+<p float ="left">
+	<img src="./Figures/The-phylogenetic-tree-was-based-on-the-chloroplast.png" width="100">
+	<img src="./Figures/Phylogenetic-tree-of-the-species-used-for-the-evolutionary-analysis-of-Hox-genes.png" width="100">
+	<img src="./Figures/fig-3-corrected.png" width="100">
+</p>	
+
+
 ### Step 3b: Create a visual representation of your Bayesian Inference trees
 
 Once your analysis is done (it may take a while), we can visualize it through different approaches. BEAST creates a posterior sample of phylogenetic "time-trees", which need to be summarized in some way before we can check the quality of the posterior estimate.
@@ -82,7 +91,9 @@ Try to follow the same guidelines as with the *iqtree* output.
 Use both methods to visualize your results, and compare the FigTree representation with your results from the Maximum Likelyhood analysis.
 
 **Do not forget to export your trees as `.pdf`. You will have to show them during the presentation.**
-  
+
+
+
 ### Step 4: Reflect on your results
 
 By now you have assembled a dataset to answer the question from Session 5; you collected *cytB* sequences and entire mitochondrial genomes for all species in the dataset; you aligned the species; you performed Maximum Parsimony, Neighbour Joining, Maximum Likelihood and Bayesian Phylogenetic analysis and looked at some aspects of it, for example the model chosen; and you obtained a visual representation of your rooted trees.
