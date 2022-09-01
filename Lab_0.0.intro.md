@@ -1,0 +1,578 @@
+# Linux introduction
+
+## Getting the files for the course
+
+Your first task in this lab is to download all the files you need for this course. This will be done by using a program called `git` which is a tool to manage and collaborate working with files. Kind of like Dropbox or Google Drive, but in a terminal and with loads of extra features. We don't have enough time to cover how git works, but as all our data, scripts and protocols are stored on [GitHub](https://github.com), we could use git to download them as follow:
+
+```bash
+# first, make sure you are standing in your own home folder
+# by typing cd in the terminal and pressing enter.
+cd
+
+# then run the git command to download the files
+git clone https://github.com/Hjorvik/1MB438.git
+```
+
+Once the download is done, you should see a new folder called `1MB438`, and all the labs protocols, scripts and data.
+
+
+## Navigation
+
+It is good to know how to move around in the file system. I'm sure you all have experienced this using a graphical user interface (**GUI**) before, Windows Explorer in Windows and Finder in OSX. Using the command line can be confusing at first, but the more your do it, the easier it gets.
+
+When you start up a Linux terminal, you will start out in your home folder. The absolute path to your home folder is usually `/home/your_username`
+
+Start with looking at what you have in your home folder. The command for this `ls`, and it stand for **L**i**S**t (list).
+
+```bash
+ls -l
+```
+
+This is how my home folder looks like, and yours should look somewhat similar:
+
+```bash
+[12:56:32] dahlo@rackham1 ~ $ ls -l
+total 4384
+drwxr-xr-x  3 dahlo b2014068    2048 Apr 27  2017 1MB438
+-rw-rw-r--  1 dahlo dahlo      49042 Sep 23  2016 bad.png
+drwxr-xr-x  2 dahlo dahlo       2048 Mar 18  2016 data
+-rw-rw-r--  1 dahlo dahlo      60944 Sep 23  2016 good.png
+drwxr-xr-x  4 dahlo b2014209    2048 Oct 30  2014 igv
+drwxrwxr-x  5 dahlo dahlo       2048 Sep 20  2016 ngsintro
+drwx--S---  2 dahlo dahlo       2048 May  4  2010 private
+drwxr-xr-x 26 dahlo dahlo       4096 May 18 10:43 uppmaxScripts
+drwxrwxr-x  5 dahlo dahlo    2201600 May 14 14:02 work
+[12:57:36] dahlo@rackham1 ~ $
+```
+
+As seen in the lecture, the command for moving around is `cd`. The command stands for **C**hange **D**irectory and does exactly that. It is the equivalent of double clicking a folder in a GUI.
+
+To enter the course folder you just downloaded, simply type
+
+```bash
+cd 1MB438
+```
+
+Have a look around and see which folders there are. Since we'll be creating a bunch of files during these labs, we will create a new folder where all of your files will be stored to avoid making a big mess of files.
+
+Create the folder:
+
+```bash
+# create a new folder called RESULTS
+mkdir RESULTS
+
+# check that it was created
+ls -l
+```
+
+and then go into it:
+```bash
+cd RESULTS
+```
+
+We can easily see that this is a relative path, since it does not start with a **`/`**. That means that this command will only work when you are standing in course folder. If you are standing somewhere else and say that you want to enter a folder named `RESULTS`, the computer will tell you that there is no folder named `RESULTS` where you are located at the moment.
+
+The absolute path to this folder would be `/home/your_username/1MB438/RESULTS`
+
+It is the exact same thing as if you are using a GUI. If you are standing on your desktop, you can double click a folder which is located on your desktop. But if you are standing in another folder, you can't double click on that same folder, because it is just not located there. You have to move to your desktop first, and then double click it.
+
+Typing `ls -l` all the time is.. more annoying than one would think, so someone came up with the good idea to add a shortcut here. If you type `ll`, it is the same as typing `ls -l`. Use it from now on.
+
+If `ll` does not work, it is because that shortcut is not defined yet, it depends on which flavour of Linux you are running. In that case you can fix it by defining it yourself. You will only need to do this once, and only if it does not work.
+
+```bash
+# shortcuts in Linux are called aliases.
+# this will make the output of ls a bit more human friendly.
+# -lh will give you the (l)ong format and writing file sizes in a (h)uman readable format.
+# --group-directories-first will, as the name implies, group directories first in the list.
+alias ll='ls -lh --color --group-directories-first'
+
+# aliases are only remembered by the computer until you close down the terminal.
+# to make it remember this forever, we can add it to the autostart file in Linux, called .bashrc
+echo -e "\nalias ll='ls -lh --color --group-directories-first'" >> ~/.bashrc
+```
+
+Now we have practised moving around and looking at what we have in folders. The next step will show you how to do the same thing, but without the moving around part.
+
+If we want to look at what we have in our home folder, while standing in the `RESULTS` folder, we type `ll /home/your_username/` and remember to substitute `your_username` with your own user name.
+
+```bash
+ll /home/your_username
+```
+
+Since most programmers are lazy (efficient), there is a shortcut to your home folder so that you don't have to write it all the time. If you write **`~/`** it means the same as if you would write /home/your_username/
+
+Try using it with `ls`:
+
+```bash
+ll /home/your_username
+```
+
+or
+
+```bash
+ll ~/
+```
+
+## Copy lab files
+
+The files are located in the folder `/home/your_username/1MB438/DATA/Lab0/linux_tutorial/`
+
+For structures sake, first create a folder called `linux_tutorial` inside your `RESULTS` folder, where you can put all the file for this part of the lab.
+
+```bash
+mkdir linux_tutorial
+```
+
+Next, copy the lab files to this folder.
+
+:bulb: Remember to use tab-complete to avoid typos and too much writing.
+
+```bash
+# syntax for cp is:
+# cp -r <source-folder> <destination-folder>
+
+cp -r /home/your_username/1MB438/DATA/Lab0/linux_tutorial/*  linux_tutorial/
+```
+
+`-r` tells `cp` to copy everything recursively, which means all the files including sub-folders of the source folder. Without it, only files directly in the source folder would be copied, NOT sub-folders and files in sub-folders.
+
+## Unpack files
+
+Go to the folder you just created and see what is in it.
+
+```bash
+cd linux_tutorial
+ll
+```
+
+**tar.gz** is a file ending given to compressed files, something you will encounter quite often. Compression decreases the size of the files which is good when downloading, and it can take thousands of files and compress them all into a single compressed file. This is both convenient for the person downloading and speeds up the transfer more than you would think.
+
+To unpack the `files.tar.gz` file use the following line while standing in the newly copied `linux_tutorial` folder.
+
+```bash
+tar -xzvf files.tar.gz
+```
+
+The command will always be the same for all tar.gz files you want to unpack. `-xzvf` means e<b>X</b>tract from a **Z**ipped file, **V**erbose (prints the name of the file being unpacked), from the specified **F**ile. `f` must always be the last of the letters as it will expect the name of a file directly following it. In this case the name of the file is `files.tar.gz`
+
+Look in the folder again and see what we just unpacked:
+
+```bash
+[user@milou2 linux_tutorial]$ ll
+total 512
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 a_strange_name
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 backed_up_proj_folder
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 external_hdd
+-rwxrwxr-x  1 user g20XXXXX  17198 Sep 24 13:19 files.tar.gz
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 important_results
+drwxrwsr-x  2 user g20XXXXX 129024 Sep 19  2012 many_files
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 old_project
+-rwxrwxr-x  1 user g20XXXXX      0 Sep 24 13:19 other_file.old
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 part_1
+drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 part_2
+drwxrwsr-x  2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x  2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x  1 user g20XXXXX      0 Sep 19  2012 useless_file
+[user@milou2 linux_tutorial]$
+```
+
+## Copying and moving files
+
+Let's move some files. Moving files might be one of the more common things you do, after `cd` and `ls`. You might want to organize your files in a better way or move important result files, who knows?
+
+We will start with moving our important result to a backed-up folder. When months of analysis is done, the last thing you want is to lose your files.
+Typically this would mean that you move the final results to a backed up folder somewhere.
+
+In this example, we want to move the result files only, located in the folder `important_results`, to our fake backed up folder, called `backed_up_proj_folder`.
+
+The syntax for the move command is:
+
+```bash
+mv <source> <destination>
+```
+
+First, take a look inside the `important_results` folder:
+
+```bash
+[user@milou2 linux_tutorial]$ ll important_results/
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-1
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-2
+[user@milou2 linux_tutorial]$
+```
+
+You see that there are some unimportant temporary files that you have no interest in. Just to demonstrate the move command, I will show you how to move one of these temporary files to your backed-up project folder:
+
+```bash
+mv important_results/temp_file-1  backed_up_proj_folder/
+```
+
+:clipboard: Now you do the same, but move the important DNA data file!
+
+Look in the backed-up project folder to make sure you moved the file correctly.
+
+```bash
+[user@milou2 linux_tutorial]$ ll backed_up_proj_folder/
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 last_years_data
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-1
+[user@milou2 linux_tutorial]$
+```
+
+Another use for the `move` command is to rename things. When you think of it, renaming is just a special case of moving. You move the file to a location and give the file a new name in the process. The location you move the file **to** can very well be the same folder the file already is in. To give this a try, we will rename the folder `a_strange_name` to a better name.
+
+```bash
+mv a_strange_name  a_better_name
+```
+
+Look around to see that the name change worked.
+
+```bash
+[user@milou2 linux_tutorial]$ mv a_strange_name  a_better_name
+[user@milou2 linux_tutorial]$ ll
+total 448
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 a_better_name
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 backed_up_proj_folder
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 external_hdd
+-rwxrwxr-x 1 user g20XXXXX  17198 Sep 24 13:36 files.tar.gz
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 important_results
+drwxrwsr-x 2 user g20XXXXX 129024 Sep 19  2012 many_files
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 old_project
+-rwxrwxr-x 1 user g20XXXXX      0 Sep 24 13:36 other_file.old
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_1
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_2
+drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x 1 user g20XXXXX      0 Sep 19  2012 useless_file
+[user@milou2 linux_tutorial]$
+```
+
+Sometimes you don't want to move things, you want to copy them. Moving a file will remove the original file, whereas copying the file will leave the original untouched. An example when you want to do this could be that you want to give a copy of a file to a friend. Imagine that you have a external hard drive that you want to place the file on. The file you want to give to your friend is data from last years project, which is located in your backed up project folder, `backed_up_proj_folder/last_years_data`
+
+As with the move command, the syntax is
+
+```bash
+cp <source> <destination>
+cp backed_up_proj_folder/last_years_data  external_hdd/
+```
+
+Take a look in the `external_hdd` to make sure the file got copied.
+
+```bash
+[user@milou2 linux_tutorial]$ cp backed_up_proj_folder/last_years_data  external_hdd/
+[user@milou2 linux_tutorial]$ ll external_hdd/
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 24 13:46 last_years_data
+[user@milou2 linux_tutorial]$
+```
+
+## Deleting files
+
+Sometimes you will delete files. Usually this is when you know that the file or files are useless to you, and they only take up space on your hard drive.
+
+To delete a file, we use the **R**e<b>M</b>ove command, **`rm`**.
+Syntax:
+
+```bash
+rm <file_to_remove>
+```
+
+If you want, you can also specify multiple files at once, as many as you want!
+
+```bash
+rm <file_to_remove> <file_to_remove> <file_to_remove> <file_to_remove> <file_to_remove>
+```
+
+:heavy_exclamation_mark: **IMPORTANT: There is no trash bin in Linux. If you delete a file, it is gone. So be careful when deleting stuff.**
+
+Try it out by deleting the useless file in the folder you are standing in. First, look around in the folder to see the file.
+
+```bash
+[user@milou2 linux_tutorial]$ ll
+total 448
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 a_better_name
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 backed_up_proj_folder
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:46 external_hdd
+-rwxrwxr-x 1 user g20XXXXX  17198 Sep 24 13:36 files.tar.gz
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 important_results
+drwxrwsr-x 2 user g20XXXXX 129024 Sep 19  2012 many_files
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 old_project
+-rwxrwxr-x 1 user g20XXXXX      0 Sep 24 13:36 other_file.old
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_1
+drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_2
+drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x 1 user g20XXXXX      0 Sep 19  2012 useless_file
+[user@milou2 linux_tutorial]$
+```
+
+Now remove it.
+
+```bash
+rm useless_file
+```
+
+Similarly, folders can be removed too. There is even a special command for removing folders, `rmdir`. They work similar to `rm`, except that they can't remove files. There are two folders, `this_is_empty` and `this_has_a_file`, that we now will delete.
+
+```bash
+rmdir this_is_empty
+rmdir this_has_a_file
+```
+
+If you look inside `this_has_a_file`,
+
+```bash
+[user@milou2 linux_tutorial]$ ll this_has_a_file
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Jan 28  2012 file
+[user@milou2 linux_tutorial]$
+```
+
+you see that there is a file in there! Only directories that are completely empty can be deleted using `rmdir`. To be able to delete `this_has_a_file`, either delete the file manually and then remove the folder
+
+```bash
+rm this_has_a_file/file
+rmdir this_has_a_file
+```
+
+or delete the directory recursively, which will remove `this_has_a_file` and everything inside:
+
+```bash
+rm -r this_has_a_file
+```
+
+## Open files
+
+So what happens if you give your files bad names like `file1` or `results`? You take a break in a project and return to it 4 months later, and all those short names you gave your files doesn't tell you at all what the files actually contain.
+
+Of course, this never happens because you **ALWAYS** name your files so that you definitely know what they contain. But let's say it did happen. Then the only way out is to look at the contents of the files and try to figure out if it is the file you are looking for.
+
+:clipboard: Now, we are looking for that really good script we wrote a couple of months ago in that other project. Look in the project's folder, `old_project` and find the script.
+
+```bash
+[user@milou2 linux_tutorial]$ ll old_project/
+total 96
+-rwxrwxr-x 1 user g20XXXXX 39904 Sep 19  2012 a
+-rwxrwxr-x 1 user g20XXXXX     0 Sep 19  2012 stuff_1
+-rwxrwxr-x 1 user g20XXXXX  1008 Sep 19  2012 the_best
+[user@milou2 linux_tutorial]$
+```
+
+Not so easy with those names.. We will have to use `less` to look at the files and figure out which is which.
+
+```bash
+less <filename>
+```
+
+:bulb: Press `q` to close it down, use arrow keys to scroll up/down.
+
+Have a look at `the_best`, that must be our script, right?
+
+```bash
+less old_project/the_best
+```
+
+I guess not. Carrot cakes might be the bomb, but they won't solve bioinformatic problems. Have a look at the file `a` instead.
+
+That's more like it!
+
+Now imagine that you had hundreds of files with weird names, and you really needed to find it. **Lesson learned**: name your files so that you know what they are! And don't be afraid to create folders to organise files.
+
+Another thing to think about when opening files in Linux is which program should you open the file in? The programs we covered during the lectures are `nano` and `less`. The main difference between these programs in that **less can't edit files**, only view them. Another difference is that **less doesn't load the whole file** into the RAM memory when opening it.
+
+So, why care about how the program works? I'll show you why. This time we will be opening a larger file, located in the `a_better_name` folder. It's 65 megabytes, so it is a tiny file compared with bio-data. Normal sequencing files can easily be 100-1000 times larger than this.
+
+First, open the file with `nano`.
+
+```bash
+nano <filename>
+nano a_better_name/large_file
+```
+
+:bulb: Press `Ctrl`+`X` to close it down, use arrows to scroll up/down).
+
+Is the file loaded yet? Now take that waiting time and multiply it with 100-1000. Now open the file with less. Notice the difference?
+
+`head` and `tail` works the same was as `less` in this regard. They don't load the whole file into RAM, they just take what they need.
+
+To view the first rows of the large file, use `head`.
+
+```bash
+head <filename>
+
+head a_better_name/large_file
+```
+
+Remember how to view an arbitrary number of first rows in a file?
+
+```bash
+head -n <number of rows to view> <filename>
+
+head -n 23 a_better_name/large_file
+```
+
+The same syntax for viewing the last rows of a file with tail:
+
+```bash
+tail <filename>
+
+tail a_better_name/large_file
+
+tail -n <number of rows to view> <filename>
+
+tail -n 23 a_better_name/large_file
+```
+
+## Wildcards
+
+Sometimes (most of the time really) you have many files. So many that it would take you a day just to type all their names. This is where **wildcards** saves the day. The wildcard symbol in Linux is the star sign, `*` , and it means literally **anything**. Say that you want to move all the files which has names starting with `sample_1_` and the rest of the name doesn't matter. You want all the files belonging to `sample_1`. Then you could use the wildcard to represent the rest of the name.
+
+```bash
+# this is just an example, do not actually run this command
+mv  sample_1_*  my_other_folder
+```
+
+We can try it out on the example files I have prepared. There are two folders called `part_1` and `part_2`. We want to collect all the `.txt` files from both these folders in one of the folders. Look around in both the folders to see what they contain.
+
+```bash
+[user@milou2 linux_tutorial]$ ll part_1/
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_1.txt
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_2.txt
+[user@milou2 linux_tutorial]$ ll part_2
+total 0
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_3.txt
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_4.txt
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 garbage.tmp
+-rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 incomplete_datasets.dat
+[user@milou2 linux_tutorial]$
+```
+
+We see that `part_1` only contains `.txt` files, and that `part_2` contains some other files as well. The best option seems to be to move all `.txt` files from `part_2` info `part_1`.
+
+```bash
+mv part_2/*.txt part_1/
+```
+
+The wildcard works with most, if not all, Linux commands. We can try using wildcards with `ls`. Look in the folder `many_files`. Yes, there are hundreds of `.docx` files in there. But, there are a couple of `.txt` files in there as well. Find out how many `.txt` files exist.
+
+:clipboard: Try to figure out the solution on your own. Then check the answer below.
+
+<details>
+  <summary>Solution</summary>
+
+```bash
+ll many_files/*.txt
+```
+
+</details>
+
+## Utility commands
+
+Ok, the last 2 commands for now are `top` and `man`.
+
+`top` can be useful when you want to look at which programs are being run on the computer, and how hard the computer is working. Type `top` and have a look.
+
+```bash
+top
+```
+
+:bulb: Press `q` to exit.
+
+```bash
+Tasks: 376 total,   2 running, 290 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.7 us,  1.3 sy,  0.0 ni, 95.3 id,  0.1 wa,  0.0 hi,  0.6 si,  0.0 st
+KiB Mem : 32590776 total, 16233548 free,  8394804 used,  7962424 buff/cache
+KiB Swap: 99999744 total, 99999744 free,        0 used. 22658832 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                       
+ 3286 roy       20   0 4557248 522400 170808 R  12.3  1.6  62:49.20 gnome-shell                   
+ 3113 roy       20   0 1282356 385012 290540 S   8.0  1.2  42:00.49 Xorg                          
+22213 roy       20   0 5474576 544848 101592 S   5.6  1.7 102:55.33 zoom                          
+ 6186 roy       20   0  710140  60504  35836 S   3.0  0.2   0:00.62 terminator                    
+ 4248 roy       20   0 2737604 556212 140580 S   2.7  1.7  54:51.48 QtWebEngineProc               
+ 4632 roy       20   0 4866068 0.993g 281532 S   2.7  3.2  69:18.68 firefox                       
+ 6548 roy       20   0 3703060 509340 189452 S   2.7  1.6  15:26.80 Web Content                   
+ 9338 roy       20   0 4407324 846700 213324 S   2.7  2.6  15:53.71 Web Content                   
+ 4776 roy       20   0 3310524 318364 102700 S   2.0  1.0   8:53.07 WebExtensions                 
+ 6595 roy       20   0 4133152 992224 187540 S   1.3  3.0  18:51.05 Web Content                   
+  952 root     -51   0       0      0      0 S   1.0  0.0   2:40.89 irq/51-SYNA2393               
+ 7800 roy       20   0 1213744 238536 129392 S   1.0  0.7  11:15.74 atom                          
+    1 root      20   0  226080   9836   6692 S   0.7  0.0   2:07.87 systemd                       
+ 6690 roy       20   0 3492596 560304 166588 S   0.7  1.7   8:08.77 Web Content                   
+12895 roy       20   0 3320332 294820 172212 S   0.7  0.9   7:05.93 Web Content                   
+   10 root      20   0       0      0      0 I   0.3  0.0   2:43.21 rcu_sched                     
+ 1052 root      20   0 2505296  36228  22444 S   0.3  0.1   3:45.16 containerd                    
+ 2631 gdm       20   0 4044492 198480 142328 S   0.3  0.6   1:55.32 gnome-shell
+```
+
+Each row in top corresponds to one program running on the computer, and the column describe various information about the program. **The right-most column** (`COMMAND`) shows you which program the row is about.
+
+There are mainly 2 things that are interesting when looking in top. The column `%CPU` describes how much cpu is used by each program. If you are doing calculations, which is what bioinformatics is mostly about, the cpu usage should be high. The numbers in the column is how many percent of a core the program is running. If you have a computer with 8 cores, you can have 8 programs using 100% of a core each running at the same time without anything slowing down. As soon as you start a 9th program, it will have to share a core with another program and those 2 programs will run at half-speed since a core can only work that fast. In the example above, program `gnome-shell` is using 12.3% of a core.
+
+The column `%MEM` describes how much memory each program uses. The numbers mean how many percent of the total memory a program uses. In the example above, the program firefox is using 3.2% of the total memory.
+
+The area in the top describes the overall memory usage. **Total** tells you how much memory the computer has, **used** tells you how much of the memory is being used at the moment, and **free** tells you how much memory is free at the moment.
+
+Total = Used + Free
+
+A warning sign you can look for in top is when you are running an analysis which seems to take forever to complete, and you see that there is almost no cpu usage on the computer. That means that the computer is not doing any calculation, which could be bad. If you look at the memory usage at the same time, and see that it's maxed out (used 100% of total), you can more or less abort the analysis.
+
+When the memory runs out, the computer more or less stops. Since it can't fit everything into the RAM memory, it will start using the hard drive to store the things it can't fit in the RAM. Since the hard drive is ~1000 times slower than the RAM, things will be going in slow-motion. The solution could be to either change the settings of the program you are running to decrease the memory usage (if the program has that functionality), or just get a computer with more memory.
+
+You might wonder how the heck are you supposed to be able to remember all these commands, options and flags? The simple answer is that you won't. Not all of them at least. You might remember `ls`, but was it `-l` or `-a` you should use to see hidden files? You might wish that there was a manual for these things.
+
+Good news everyone, there is a manual! To get all the nitty-gritty details about `ls`, you use the `man` command.
+
+```bash
+man <command you want to look at>
+
+man ls
+```
+
+```bash
+LS(1)                            User Commands                            LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the  FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor  --sort  is  speci‐
+       fied.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              scale  sizes by SIZE before printing them; e.g., '--block-size=M'
+ Manual page ls(1) line 1 (press h for help or q to quit)
+```
+
+This will open a less window (remember, `q` to close it down, arrows to scroll) with the manual page about `ls`. Here you will be able to read everything about `ls`. You'll see which flag does what (`-a` is to show the hidden files, which in linux are files with a name starting with a dot `.`), which syntax the program has, etc. If you are unsure about how to use a command, look it up using `man`.
+
+The `man` pages can be a bit tricky to understand at first, but you get used to it with time. If it is still unclear, try searching for it on the internet. You are bound to find someone with the exact same question as you, that has already asked on a forum, and gotten a good answer, 5 years ago.
+
+## Extra material
+If you still have time left on the lab and you finished early, check out the extra material for [Linux file permissions](Lab_0.extra.permissions.md) if you want to learn more about how file permissions work.
+
+
+***
+
