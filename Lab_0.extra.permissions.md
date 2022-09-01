@@ -36,7 +36,7 @@ Directory: Whether the directory can be entered using `cd`.
 Start your terminal, go to the folder where we store the lab files, make an empty directory we can work in and make a file.
 
 ```bash
-cd /home/your_username/1MB438/RESULTS/
+cd ~/1MB438/RESULTS/
 mkdir linux_permissions
 cd linux_permissions
 touch  filename

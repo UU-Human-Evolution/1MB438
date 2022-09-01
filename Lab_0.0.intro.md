@@ -132,7 +132,7 @@ ll ~/
 
 ## Copy lab files
 
-The files are located in the folder `/home/your_username/1MB438/DATA/Lab0/linux_tutorial/`
+The files are located in the folder `~/1MB438/DATA/Lab0/linux_tutorial/`
 
 For structures sake, first create a folder called `linux_tutorial` inside your `RESULTS` folder, where you can put all the file for this part of the lab.
 
@@ -148,7 +148,7 @@ Next, copy the lab files to this folder.
 # syntax for cp is:
 # cp -r <source-folder> <destination-folder>
 
-cp -r /home/your_username/1MB438/DATA/Lab0/linux_tutorial/*  linux_tutorial/
+cp -r ~/1MB438/DATA/Lab0/linux_tutorial/*  linux_tutorial/
 ```
 
 `-r` tells `cp` to copy everything recursively, which means all the files including sub-folders of the source folder. Without it, only files directly in the source folder would be copied, NOT sub-folders and files in sub-folders.
