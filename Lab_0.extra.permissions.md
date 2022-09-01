@@ -131,7 +131,14 @@ chmod a=- filename
 chmod a+w directoryname
 ```
 
-* In no more than two commands, change the file permissions from
+:clipboard: First, let's remove all permissions of `filename`:
+
+```bash
+chmod a-rwx filename
+ll
+```
+
+Now, in no more than two commands, change the file permissions from
 
 ```bash
 ----------
@@ -152,7 +159,7 @@ Notice also that we here gave everyone writing permission to the file, that mean
 chmod ug+rw filename  
 chmod o=wx filename
 
-# or, by using something called octal notation (google it)
+# or, by using something called octal notation ([google it](https://lmgtfy.app/?q=chmod+octal+notation))
 chmod 663 filename
 ```
 

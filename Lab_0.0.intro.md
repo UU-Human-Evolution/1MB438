@@ -1,8 +1,24 @@
 # Linux introduction
 
+This lab assumes you are already have a Linux terminal up and running. If you are on a computer that is already connected to the server the course is run at, great! You can now proceed to the next part, [Getting the files for the course](#getting-the-files-for-the-course).
+
+If you are on a computer that only runs Windows you will have to get a terminal program. Depending on which version of Windows you are running, it should be possible to use `ssh` to connect to a Linux computer so that you can do the rest of the lab. See if you have either `Windows Terminal` or `PowerShell` installed by searching for them in the start menu. 
+
+If you have neither of them, or if the `ssh` command below does not work for some reason, try downloading and installing a program called [PuTTY](https://www.putty.org/)
+
+Once you have a terminal open, type this command to connect to the Linux system where we will run the course, and remember to replace `username` with your **Linux** username (not your uppsala university id) you have been sent before the course started.
+
+```bash
+ssh username@solander.ibg.uu.se
+```
+
+If you are using `PuTTY` you will not type this command yourself. You will only enter the hostname `solander.ibg.uu.se` and enter your user details when prompted.
+
+If it is the first time you connect to a Linux computer you might think there is something wrong when the terminal gives no feedback, like stars, when you enter your password. This is normal and a security feature so that nobody can see how long your password is. Just type it out and press enter.
+
 ## Getting the files for the course
 
-Your first task in this lab is to download all the files you need for this course. This will be done by using a program called `git` which is a tool to manage and collaborate working with files. Kind of like Dropbox or Google Drive, but in a terminal and with loads of extra features. We don't have enough time to cover how git works, but as all our data, scripts and protocols are stored on [GitHub](https://github.com), we could use git to download them as follow:
+Ok, now you should have a Linux terminal upp and running. Your first task in this lab is to download all the files you need for this course. This will be done by using a program called `git` which is a tool to manage and collaborate working with files. Kind of like Dropbox or Google Drive, but in a terminal and with loads of extra features. We don't have enough time to cover how git works, but as all our data, scripts and protocols are stored on [GitHub](https://github.com), we could use git to download them as follow:
 
 ```bash
 # first, make sure you are standing in your own home folder
@@ -10,7 +26,7 @@ Your first task in this lab is to download all the files you need for this cours
 cd
 
 # then run the git command to download the files
-git clone https://github.com/Hjorvik/1MB438.git
+git clone https://github.com/UU-Human-Evolution/1MB438.git
 ```
 
 Once the download is done, you should see a new folder called `1MB438`, and all the labs protocols, scripts and data.
