@@ -12,7 +12,7 @@ Once you have a terminal open, type this command to connect to the Linux system 
 ssh username@solander.ibg.uu.se
 ```
 
-If you are using `PuTTY` you will not type this command yourself. You will only enter the hostname `solander.ibg.uu.se` and enter your user details when prompted.
+:bulb: If you are using `PuTTY` you will not type this command yourself. You will only enter the hostname `solander.ibg.uu.se` and enter your user details when prompted.
 
 If it is the first time you connect to a Linux computer you might think there is something wrong when the terminal gives no feedback, like stars, when you enter your password. This is normal and a security feature so that nobody can see how long your password is. Just type it out and press enter.
 
