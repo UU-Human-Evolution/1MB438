@@ -94,10 +94,10 @@ It is the exact same thing as if you are using a GUI. If you are standing on you
 
 Typing `ls -l` all the time is.. more annoying than one would think, so someone came up with the good idea to add a shortcut here. If you type `ll`, it is the same as typing `ls -l`. Use it from now on.
 
-If `ll` does not work, it is because that shortcut is not defined yet, it depends on which flavour of Linux you are running. In that case you can fix it by defining it yourself. You will only need to do this once, and only if it does not work.
+If `ll` does not work, it is because that macro/shortcut-command is not defined yet, it depends on which flavour of Linux you are running. In that case you can fix it by defining it yourself. You will only need to do this once, and only if it does not work.
 
 ```bash
-# shortcuts in Linux are called aliases.
+# macros in Linux are called aliases.
 # this will make the output of ls a bit more human friendly.
 # -lh will give you the (l)ong format and writing file sizes in a (h)uman readable format.
 # --group-directories-first will, as the name implies, group directories first in the list.
