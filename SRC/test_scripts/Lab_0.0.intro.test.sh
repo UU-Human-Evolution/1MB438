@@ -22,7 +22,8 @@ cd RESULTS
 
 ll ~/
 
-mkdir -p linux_tutorial
+rm -rf linux_tutorial
+mkdir linux_tutorial
 cp -r ~/1MB438/DATA/Lab0/linux_tutorial/*  linux_tutorial/
 
 cd linux_tutorial

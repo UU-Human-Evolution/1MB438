@@ -32,8 +32,9 @@ Start with moving to the folder with all the course files so that we keep everyt
 # go to the course folder
 cd ~/1MB438/RESULTS
 
-# create a new folder for today's lab
+# create a new folder for today's lab and enter it
 mkdir linux_pipes
+cd linux_pipes
 ```
 
 Now we will need files to experiment with. Let's download a text we can work with from Wikipedia using a program called `w3m`. It is a terminal-based web browser that can save the HTML as plain text. It will by default print the text to the terminal, so we have to tell `bash` to redirect the output to a file using the `>` character.
@@ -66,7 +67,17 @@ Counting is hard and slow for humans but easy for machines. Use the word count c
 
 :clipboard: What did you get? How many lines and words?
 
+<details>
+  <summary>Solution</summary>
 
+```bash
+wc PCA.txt
+
+  2395  17076 126443 PCA.txt
+
+# 2395 lines, 17076 words, 126443 characters
+```
+</details>
 
 Hmm, it's not that clear, is it? Have a look at the manual for `wc` to try and figure it out. 
 All core UNIX commands have an inbuilt manual you can access it through the `man` command:
@@ -75,10 +86,15 @@ All core UNIX commands have an inbuilt manual you can access it through the `man
 man wc 
 ```
 
+Now that you figured that out, use the manual for `head` to figure out how to save the first 100 lines of `PCA.txt` and save them into `short_pca.txt`.
+
+You can use `wc` to figure out if you did it correctly.
+
 <details>
   <summary>Solution</summary>
 
 ```bash
+head -n 100 PCA.txt > short_pca.txt
 wc short_pca.txt
 
  100  703 4758 short_pca.txt
@@ -88,10 +104,6 @@ wc short_pca.txt
 
 </details>
 
-Now that you figured that out, use the manual for `head` to figure out how to save the first 100 lines of `PCA.txt` and save them into `short_pca.txt`.
-
-You can use `wc` to figure out if you did it correctly.
-
 #### grep
 `grep` is a useful tool that prints lines matching a provided pattern.
 In our example we can use it to figure out how many lines contain the word `PCA`:
@@ -99,7 +111,6 @@ In our example we can use it to figure out how many lines contain the word `PCA`
 ```
 grep PCA short_pca.txt
 ```
-
 
 ### Pipes and multiple commands
 One of the fundamental concepts behind UNIX from the beginning was an emphasis on small task-specific programs. These programs could then be chained together into pipelines to perform more complex tasks.
@@ -142,7 +153,7 @@ grep PCA PCA.txt | wc -l
 
 ### Hidden word exercise 
 
-:clipboard: Now that you have some basic UNIX tools at your disposal go and do the [hidden word_exercise](hidden_word_exercise_instructions.md).
+:clipboard: Now that you have some basic UNIX tools at your disposal go and do the [hidden word_exercise](Lab_0.1.hidden_words.md).
 Submit the hidden word and the commands used to find it as described in the [hand-in instructions](#hand-in-instructions).
 
 Do not continue with the next part until you are done with the hidden word exercise. 
@@ -174,7 +185,8 @@ The main tool for working with SAM/BAM files is called `samtools` and it's alrea
 Let's convert the `sam` file from the `linux_tutorial` exercise to a `bam` file and see why you should never have files in the `sam` format. First, we want to create a **hard link** to the `sam` file so it will look like we have that file in the same folder as we are standing now. [This answer](https://stackoverflow.com/a/29786294) on stackoverflow explains the difference between symbolic links and hard link way better than i could, so please read that one instead :) It is useful in this example since we will see the size of the file, unlink a symbolic link which will just show us the size of the linkfile instead (you **can** get around this by giving `ls` the `-L` option as well, but let's use the hard link approach instead).
 
 ```bash
-ln ../linux_tutorial/a_better_name/sample_1.sam .
+# link the file
+ln ../../linux_tutorial/a_better_name/sample_1.sam .
 ```
 
 Now convert the `sam` file to a `bam` file using `samtools`:
@@ -188,8 +200,9 @@ The `-b` option tells `samtools` to print its output in `bam` format, which we t
 Have a look at the file sizes of the two different formats:
 
 ```
-ls -lh 
+ll -h 
 ```
+:bulb: The `-h` option to `ll` tells it to print file sizes in a human readable format.
 
 With that information, you can probably see why it's a generally good idea to store data in binary formats as much as possible. Usually the `bam` file is ~25% of the `sam` file's size. In this lab it's a bit more extreme difference, only 2% of `sam` file's size, because I created a `sam` file with lots of repetition in it to keep down the size of the course material (more repetition = better compression).
 

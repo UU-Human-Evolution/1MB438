@@ -18,15 +18,17 @@ You will have to:
 Before starting, the [hidden\_word\_exercise.zip](DATA/Lab0/linux_pipes/hidden_word_exercise.zip) file with the exercise material must be unpacked into your lab folder. The file is located here `~/1MB438/DATA/Lab0/linux_pipes/hidden_word_exercise.zip` Use `unzip` on the command line to extract it to the folder you are standing in.
 
 ```
+# make sure you are standing in the correct directory
+cd ~/1MB438/RESULTS/linux_pipes
+
 # using a relative path
 unzip ../../DATA/Lab0/linux_pipes/hidden_word_exercise.zip  
 
 # or using an absolute path
 unzip ~/1MB438/DATA/Lab0/linux_pipes/hidden_word_exercise.zip
-
 ```
 
-This will create the folder `unix_tutorial_modified` which contains the files we will be working with, so `cd` your way into that directory.
+This will create the folder `hidden_words` which contains the files we will be working with, so `cd` your way into that directory.
 
 ### Task
 In this exercise, you will be searching for 12 characters making two words. All characters are hidden in the exercises below. All exercises should be solved using the Unix command line only.
@@ -76,6 +78,7 @@ rm data/junk*
 ```
 
  will remove all the files in `data/` which filenames start with `junk`, all at once.
+
 **WARNING**: On the command line, it is not possible to recover files once deleted. Use the `rm` command wisely!
 To get characters number nine and ten, run the Perl program `check_junk.pl` after removing all the files.
 ## 4 Find text and combine commands

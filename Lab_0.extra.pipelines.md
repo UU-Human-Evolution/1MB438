@@ -48,7 +48,7 @@ The `$PATH` variable specifies directories where the computer should look for pr
 For instance, when you type
 
 ```bash
-$ nano
+nano
 ```
 
 how does the computer know which program to start? You gave it the name `nano`, but that could refer to any file named `nano` in the computer, yet it starts the correct one every time. The answer is that it looks in the directories stored in the `$PATH` variable and start the first program it finds that is named `nano`.
@@ -56,13 +56,13 @@ how does the computer know which program to start? You gave it the name `nano`, 
 To see which directories that are available by default, type
 
 ```bash
-$ echo $PATH
+echo $PATH
 ```
 
 It should give you something like this, a list of directories, separated by colon signs:
 
 ```bash
-$ echo $PATH
+echo $PATH
 /usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/bio/bin:/usr/share/bwa-0.7.13:/opt/mrtwig/
 ```
 
@@ -146,7 +146,7 @@ Right, so now you know how to figure out how to run programs (just type the prog
 First, go to the exome directory in the lab directory that you copied to your folder in step 2 in this lab:
 
 ```bash
-cd ~/1MB438/RESULTS/linux_pipelines/data/exome_seq/
+cd ~/1MB438/RESULTS/linux_pipelines/data/exomeSeq/
 ```
 
 In there, you will find a folder called `raw_data`, containing a fastq file: `my_reads.rawdata.fastq`. This file contains the raw data that you will analyse.
