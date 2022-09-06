@@ -1,5 +1,17 @@
 # Pipes exercise
 
+The first thing we're going to do is to update the git repo in case there has been any changes to the lab instructions since you downloaded the repo in the first lab. It should be as easy as running this command while standing anywhere inside the course repo:
+
+```bash
+# go to the course repo
+cd ~/1MB438
+
+# run the update command
+git pull
+```
+
+If you get any error message, raise your hand and an assistant will come and help you out.
+
 ## Hand-in instructions
 Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the [hidden word exersise](Lab_0.1.hidden_words.md) below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
 

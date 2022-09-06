@@ -1,5 +1,17 @@
 # Scripts exercis
 
+The first thing we're going to do is to update the git repo in case there has been any changes to the lab instructions since you updated the repo in the previous lab. It should be as easy as running this command while standing anywhere inside the course repo:
+
+```bash
+# go to the course repo
+cd ~/1MB438
+
+# run the update command
+git pull
+```
+
+If you get any error message, raise your hand and an assistant will come and help you out.
+
 # Copy files for lab
 
 Now, you will need some files. To keep your files organized, make your own copy of the needed files. The files are located in the folder `~/1MB438/DATA/Lab0/linux_scripts`.
