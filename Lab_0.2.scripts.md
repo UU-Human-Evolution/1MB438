@@ -366,7 +366,7 @@ echo The factorial of $n is $factorial
 
 Now, let's combine everything you've learned so far in this course.
 
-:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise.
+:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise. If you have not yet done the pipeline extra exercise, please follow the instructions in that lab up until you reach the section called "*Running the programs*". This will ensure you have all the files copied and the environment setup corretly to do the analysis. 
 
 When the analysis is done, only fastq files and called SNP files should be in your folder.
 
