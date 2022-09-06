@@ -1,79 +1,34 @@
----
-title:  'UPPMAX Pipeline'
----
-
-```{r,child="assets/header-lab.Rmd"}
-```
-
-```{r,eval=TRUE,include=FALSE}
-library(yaml)
-upid <- yaml::read_yaml("_site.yml")$uppmax_project
-upres <- yaml::read_yaml("_site.yml")$uppmax_res_1
-```
-
-<div class="boxy boxy-yellow boxy-exclamation">
-In code blocks, the dollar sign (`$`) is not to be printed. The dollar sign is usually an indicator that the text following it should be typed in a terminal window.
-</div>
-
-# Connect to UPPMAX
-
-The first step of this lab is to open a ssh connection to UPPMAX. Please go to the Contents page and click "Connecting to UPPMAX" under the "Additional content" topic. Once connected to UPPMAX, return here and continue reading the instructions below.
-
-# Logon to a node
-
-Usually you would do most of the work in this lab directly on one of the login nodes at UPPMAX, but we have arranged for you to have one core each for better performance. This was covered briefly in the lecture notes.
-
-Check which node you got when you booked resources this morning (replace **username** with your UPPMAX username)
-
-```bash
-$ squeue -u username
-```
-
-should look something like this
-
-```bash
-dahlo@rackham2 work $ squeue -u dahlo
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-           3132376      core       sh    dahlo  R       0:04      1 r292
-dahlo@rackham2 work $
-```
-
-where **r292** is the name of the node I got (yours will probably be different).
-Note the numbers in the Time column. They show for how long the job has been running. When it reaches the time limit you requested (7 hours in this case) the session will shut down, and you will lose all unsaved data. Connect to this node from within UPPMAX.
-
-```bash
-$ ssh -Y r292
-```
-
-If the list is empty you can run the allocation command again and it should be in the list:
-
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0("$ salloc -A ",upid," -t 03:30:00 -p core -n 1 --no-shell --reservation=",upres," &"))
-```
-
-<i class="fas fa-lightbulb"></i> There is a UPPMAX specific tool called `jobinfo` that supplies the same kind of information as `squeue` that you can use as well (`$ jobinfo -u username`).
-
 # Copy files for lab
 
-Now, you will need some files. To avoid all the course participants editing the same file all at once, undoing each other's edits, each participant will get their own copy of the needed files. The files are located in the folder **`/sw/courses/ngsintro/linux/uppmax_pipeline_exercise/data`**.
+Now that you are familiar with the command line it's time to start doing things you might do if you are running analysis for real. First, let's create a new folder for this part of the lab in your `RESULUTS` folder.
 
-Next, copy the lab files from this folder. `-r` means recursively, which means all the files including sub-folders of the source folder. Without it, only files directly in the source folder would be copied, NOT sub-folders and files in sub-folders.
+```bash
+# go to the course folder
+cd ~/1MB438/RESULTS
 
-<i class="fas fa-lightbulb"></i> Remember to use tab-complete to avoid typos and too much writing.
-
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat("$ cp -r <source> <destination>\n")
-cat(paste0("$ cp -r /sw/courses/ngsintro/linux/uppmax_pipeline_exercise/data/* /proj/",upid,"/nobackup/username/uppmax_pipeline_exercise"))
+# create a new folder for this lab
+mkdir linux_pipelines
+cd linux_pipelines
 ```
 
-Have a look in **`r paste0("/proj/",upid,"/nobackup/&lt;username&gt;/uppmax_pipeline_exercise")`**.
+Now we can copy the lab files to your folder.
 
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0("$ cd /proj/",upid,"/nobackup/username/uppmax_pipeline_exercise\n"))
-cat("ll")
+:bulb: Remember to use tab-complete to avoid typos and too much writing.
+
+```bash
+cp ~/1MB438/DATA/Lab0/linux_pipelines/linux_pipelines.tar.gz .
+
+# have a look at what was copied
+ll
+
+# unpack the tar.gz file
+tar -xzvf linux_pipelines.tar.gz
+
+# have a look at what was unpacked
+ll
 ```
 
-If you see files, the copying was successful.
+If you see files and folders, the copying and extraction was successful.
 
 # Running dummy pipelines
 
@@ -81,11 +36,11 @@ Most of the work you will do in the future will be about running multiple progra
 
 To avoid this, scripts can be used. First, we'll do an analysis manually without scripts, just to get the hang of it. Then we'll start writing scripts for it!
 
-## Load the module
+## "Installing" the programs
 
-In this exercise, we'll pretend that we are running analyses. This will give you a peek at what running programs in linux is like, and get you ready for the real stuff during the week!
+In this exercise, we'll pretend that we are running analyses. This will give you a peek at what running programs in linux is like, and get you ready for the real stuff later in the course!
 
-The first thing you usually do is to load the modules for the programs you want to run. During this exercise we'll only run my dummy scripts that don't actually do any analysis, so they don't have a module of their own. What we can do instead is to manually do what module loading usually does: to modify the **`$PATH variable`**.
+During this exercise we'll only run my dummy scripts that don't actually do any analysis, so they aren't installed by the sysadmins. What we can do instead is to temporarily tell the computer where to look for the programs, by modifying something called the `$PATH` variable.
 
 The `$PATH` variable specifies directories where the computer should look for programs whenever you type a command.
 For instance, when you type
@@ -94,7 +49,7 @@ For instance, when you type
 $ nano
 ```
 
-how does the computer know which program to start? You gave it the name `nano`, but that could refer to any file named nano in the computer, yet it starts the correct one every time. The answer is that it looks in the directories stored in the `$PATH` variable and start the first program it finds that is named `nano`.
+how does the computer know which program to start? You gave it the name `nano`, but that could refer to any file named `nano` in the computer, yet it starts the correct one every time. The answer is that it looks in the directories stored in the `$PATH` variable and start the first program it finds that is named `nano`.
 
 To see which directories that are available by default, type
 
@@ -106,62 +61,51 @@ It should give you something like this, a list of directories, separated by colo
 
 ```bash
 $ echo $PATH
-/home/dahlo/perl//bin/:/home/dahlo/.pyenv/shims:/home/dahlo/.pyenv/bin:
-/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:
-/sbin:/opt/thinlinc/bin:/sw/uppmax/bin:/home/dahlo/usr/bin
+/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/bio/bin:/usr/share/bwa-0.7.13:/opt/mrtwig/
 ```
 
-Try loading a module, and then look at the `$PATH` variable again. You'll see that there are a few extra directories there now, after the module has been loaded.
+We will just add a the directory containing my dummy scripts to the `$PATH` variable, and it will be like we have the programs installed. Now, when we type the name of one of my scripts, the computer will look in all the directories specified in the `$PATH` variable, which now includes the location where i keep my scripts. The computer will now find programs named as my scripts are and it will run them.
 
 ```bash
-$ module load bioinfo-tools samtools/1.6
-$ echo $PATH
-/sw/apps/bioinfo/samtools/1.6/rackham/bin:/home/dahlo/perl/bin:/home/dahlo/.pyenv/shims:
-/home/dahlo/.pyenv/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:
-/usr/sbin:/sbin:/opt/thinlinc/bin:/sw/uppmax/bin:/home/dahlo/usr/bin
-```
-
-To pretend that we are loading a module, instead of actually loading a module for them, we'll manually do what the module system would have done. We will just add a the directory containing my dummy scripts to the `$PATH` variable, and it will be like we loaded the module for them. Now, when we type the name of one of my scripts, the computer will look in all the directories specified in the `$PATH` variable, which now includes the location where i keep my scripts. The computer will now find programs named as my scripts are and it will run them.
-
-```bash
-$ export PATH=$PATH:/sw/courses/ngsintro/linux/uppmax_pipeline_exercise/dummy_scripts
+export PATH=$PATH:~/1MB438/RESULTS/linux_pipelines/dummy_scripts
 ```
 
 This will set the `$PATH` variable to whatever it is at the moment, and add a directory at the end of it. Note the lack of a dollar sign infront of the variable name directly after **export**. You don't use dollar signs when **assigning** values to variables, and you always use dollar signs when **getting** values from variables.
 
-<i class="fas fa-exclamation-circle"></i> **IMPORTANT:** The export command affects only the terminal you type it in. If you have 2 terminals open, only the terminal you typed it in will have a modified path. If you close that terminal and open a new one, it will not have the modified path.
+:exclamation: **IMPORTANT:** The export command affects only the terminal you type it in. If you have 2 terminals open, only the terminal you typed it in will have a modified path. If you close that terminal and open a new one, it will not have the modified path and you will have to run the whole `export` command again.
 
 Enough with variables now. Let's try the scripts out!
 
 # Running the programs
 
-Let's pretend that we want to run an exome analysis. You will learn how to do this for real later this week. This kind of analysis usually has the following steps:
+Let's pretend that we want to run an exome analysis using [high-throughput sequencing](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods) data, also called Next Generation Sequencing (NGS) data. This kind of sequencing takes DNA molecules, fragments them into smaller pieces (like 500bp), sequence these fragments individually (called *reads*), and then use the computer to assemble the fragmented sequences (*reads*) together to form the whole sequence of the original DNA molecule. The reason we have to fragment the pieces and lay this multi-million piece puzzle is that we don't yet have seqcuencing techniques that can read a whole genome from start to end.
+
+This kind of analysis usually has the following steps:
 
 1. Filter out low quality reads.
 2. Align the reads to a reference genome.
-3. Find all the SNPs in the data.
+3. Find all the [SNPs](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism) in the data.
 
 To simulate this, I have written 3 programs:
 
-* filter_reads
-* align_reads
-* find_snps
+* `filter_reads`
+* `align_reads`
+* `find_snps`
 
 To find out how to run the programs type
 
 ```bash
-$ <program name> -h
-```
+<program name> -h
 
-```bash
-or
+#or
+
 $ <program name> --help
 ```
 
 This is useful to remember, since most programs has this function. If you do this for the filter program, you get
 
 ```bash
-$ filter_reads -h
+filter_reads -h
 Usage: filter_reads -i <input file> -o <output file> [-c <cutoff>]
 
 Example runs:
@@ -197,25 +141,30 @@ Right, so now you know how to figure out how to run programs (just type the prog
 
 First, go to the exome directory in the lab directory that you copied to your folder in step 2 in this lab:
 
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0("$ cd /proj/",upid,"/nobackup/username/uppmax_pipeline_exercise/exomeSeq"))
+```basg
+cd ~/1MB438/RESULTS/linux_pipelines/data/exome_seq/
 ```
 
 In there, you will find a folder called `raw_data`, containing a fastq file: `my_reads.rawdata.fastq`. This file contains the raw data that you will analyse.
 
 * Filter the raw data using the program `filter_reads`, to get rid of low quality reads.
-* Align the filtered reads with the program `align_reads`, to the human reference genome located here:
-
-```bash
-/sw/data/uppnex/reference/Homo_sapiens/hg19/concat_rm/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
-```
+* Align the filtered reads with the program `align_reads`, to a fake human reference genome located here: `~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa`
 
 * Find SNPs in your aligned data with the program `find_snps`. To find SNPs we have to have a reference to compare our data with. The same reference genome as you aligned to is the one to use.
 
 Do one step at a time, and check the `--help` of the programs to find out how they are to be run. Remember to name your files logically so that you don't confuse them with each other.
 
 Most pipelines work in a way where the output of the current program is the input of the next program in the pipeline.
-In this pipeline, raw data gets filtered, the filtered data gets aligned, and the aligned data gets searched for SNPs. The intermediate steps are usually not interesting after you have reached the end of the pipeline. Then, only the raw data and the final result is important.
+In this pipeline, raw data gets filtered, the filtered data gets aligned, and the aligned data gets searched for SNPs. The intermediate steps are usually not interesting after you have reached the end of the pipeline. Then, only the raw data and the final result are worth keeping.
+
+<details>
+  <summary>Solution</summary>
+
+```bash
+
+```
+
+</details>
 
 # Scripting a dummy pipeline
 
@@ -226,7 +175,7 @@ The simplest way to work with scripts is to have 2 terminals open. One will have
 Start writing you script with `nano`:
 
 ```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0("$ cd /proj/",upid,"/nobackup/username/uppmax_pipeline_exercise/exomeSeq\n"))
+cat(paste0("$ cd /proj/",upid,"/nobackup/username/linux_pipelines/exomeSeq\n"))
 cat("nano exome_analysis_script.sh")
 ```
 
