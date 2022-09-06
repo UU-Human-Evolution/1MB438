@@ -366,13 +366,14 @@ echo The factorial of $n is $factorial
 
 Now, let's combine everything you've learned so far in this course.
 
-:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise. If you have not yet done the pipeline extra exercise, please follow the instructions in that lab up until you reach the section called "*Running the programs*". This will ensure you have all the files copied and the environment setup corretly to do the analysis. 
+:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise. If you have not yet done the pipeline extra exercise, please follow the instructions in that lab from the beginning and up until you reach the section called "*Running the programs*". This will ensure you have all the files copied and the environment setup corretly to do the analysis. 
 
 When the analysis is done, only fastq files and called SNP files should be in your folder.
 
 There is a bunch of `fastq` files in the directory `~/1MB438/RESULTS/linux_scripts/fastq/` that is to be used for this exercise. Once you have your loop running, make sure you don't get any error messages printed and that each of the 3 steps of the pipeline are carried out. Since there are 120 samples to be analyzed and it takes 12 seconds per sample, it will run for about 20 minutes. Once you see that it is running without errors and all the steps are carried out, feel free to terminate the program by holding `ctrl-c` until it stops.
 
-Basic solution:
+<details>
+  <summary>Basic solution</summary>
 
 ```bash
 # make the dummy pipeline available
@@ -399,8 +400,10 @@ done
 # remove intermediate files
 rm *.sam *.filtered
 ```
+</details>
 
-Advanced solution:
+<details>
+  <summary>Advanced solution</summary>
 
 ```bash
 # make the dummy pipeline available
@@ -433,6 +436,6 @@ done
 # remove intermediate files
 rm *.sam *.filtered.fastq
 ```
+</details>
 
-***
-
+Alright, all done! You should now know more than enough to complete the rest of the course.
