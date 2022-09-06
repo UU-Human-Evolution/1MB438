@@ -1,3 +1,5 @@
+# Pipes exercise
+
 ## Hand-in instructions
 Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the [hidden word exersise](Lab_0.1.hidden_words.md) below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
 

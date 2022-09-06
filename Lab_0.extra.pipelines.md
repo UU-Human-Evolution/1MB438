@@ -1,6 +1,8 @@
-# Copy files for lab
+# Pipelines exercise
 
-Now that you are familiar with the command line it's time to start doing things you might do if you are running analysis for real. First, let's create a new folder for this part of the lab in your `RESULUTS` folder.
+## Copy files for lab
+
+Now that you are familiar with the command line it's time to start doing things you might do if you are running analysis for real. First, let's create a new folder for this part of the lab in your `RESULTS` folder.
 
 ```bash
 # go to the course folder
@@ -78,7 +80,9 @@ Enough with variables now. Let's try the scripts out!
 
 # Running the programs
 
-Let's pretend that we want to run an exome analysis using [high-throughput sequencing](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods) data, also called Next Generation Sequencing (NGS) data. This kind of sequencing takes DNA molecules, fragments them into smaller pieces (like 500bp), sequence these fragments individually (called *reads*), and then use the computer to assemble the fragmented sequences (*reads*) together to form the whole sequence of the original DNA molecule. The reason we have to fragment the pieces and lay this multi-million piece puzzle is that we don't yet have seqcuencing techniques that can read a whole genome from start to end.
+Let's pretend that we want to run an exome sequencing analysis using [high-throughput sequencing](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods) data, also called Next Generation Sequencing (NGS) data. This kind of sequencing takes the DNA from many identical cells, fragments DNA molecules into smaller pieces (like 500-1000bp each), sequence these fragments individually (called *reads*), and then use the computer to assemble the fragmented sequences (*reads*) together to form the whole sequence of the original DNA molecules. The reason we have to fragment the pieces and lay this multi-million piece puzzle is that we don't yet have seqcuencing techniques that can read a whole genome from start to end.
+
+The only difference between a [exome sequencing](https://en.wikipedia.org/wiki/Exome_sequencing) and a [whole genome sequencing](https://en.wikipedia.org/wiki/Whole_genome_sequencing) is that we limit the DNA we sequence to the known exomes of the organism we sequence. In humans this is about 1% of the whole genome, making it much cheaper to sequence per sample. With the same amount of sequencing you can analyze 100 exome samples per whole genome sample. The downside is that we only look at the areas we think are exomes. Any differences between the samples outside of the exome areas we have defined will be missed. Other than that, they are analyzed pretty much the same way.
 
 This kind of analysis usually has the following steps:
 
@@ -141,13 +145,14 @@ Right, so now you know how to figure out how to run programs (just type the prog
 
 First, go to the exome directory in the lab directory that you copied to your folder in step 2 in this lab:
 
-```basg
+```bash
 cd ~/1MB438/RESULTS/linux_pipelines/data/exome_seq/
 ```
 
 In there, you will find a folder called `raw_data`, containing a fastq file: `my_reads.rawdata.fastq`. This file contains the raw data that you will analyse.
 
 * Filter the raw data using the program `filter_reads`, to get rid of low quality reads.
+
 * Align the filtered reads with the program `align_reads`, to a fake human reference genome located here: `~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa`
 
 * Find SNPs in your aligned data with the program `find_snps`. To find SNPs we have to have a reference to compare our data with. The same reference genome as you aligned to is the one to use.
@@ -161,6 +166,14 @@ In this pipeline, raw data gets filtered, the filtered data gets aligned, and th
   <summary>Solution</summary>
 
 ```bash
+# filter reads
+filter_reads -i raw_data/my_reads.rawdata.fastq -o my_reads.filtered.fastq
+
+# align reads
+align_reads -i my_reads.filtered.fastq -o my_reads.filtered.aligned.sam -r ../ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
+
+# SNP calling
+find_snps -i my_reads.filtered.aligned.sam -o my_reads.filtered.aligned.snpcalled.pileup -r ../ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
 
 ```
 
@@ -174,16 +187,16 @@ The simplest way to work with scripts is to have 2 terminals open. One will have
 
 Start writing you script with `nano`:
 
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0("$ cd /proj/",upid,"/nobackup/username/linux_pipelines/exomeSeq\n"))
-cat("nano exome_analysis_script.sh")
+```bash
+cd ~/1MB438/RESULTS/linux_pipelines/data/exomeSeq/
+nano exome_analysis_script.sh
 ```
 
-The `.sh` ending is commonly used for **sh**ell scripts which is what we are creating. The default shell at UPPMAX is as we know called bash, so whenever we write `sh` the computer will use bash. If the default shell at UPPMAX would change for some reason, maybe to **zsh** or any other type of shell, `sh` would point the the new shell instead.
+The `.sh` ending is commonly used for **sh**ell scripts which is what we are creating. The default shell at most Linux systems is called `bash`, so whenever we write `sh` the computer will use `bash`. If the default shell would change for some reason, maybe to `zsh` or any other type of shell, `sh` would point the the new shell instead.
 
-![](data/uppmax-pipeline/dualTerminals.png)
+![](DATA/Lab0/imgs/dualTerminals.png)
 
-Since our memory is far from perfect, try to **always comment your scripts**. The comments are rows that start with a hash sign `#`. These lines will not be interpreted as a command to be run, they will just be skipped. They are only meant for humans to read, and they are real lifesavers when you are reading old scripts you have forgotten what they do. Commands are hard for humans to read, so try to write a couple of words explaining what the command below does. You'll be thankful later!
+Since our memory is far from perfect, try to **always comment your scripts**. The comments are rows that start with a hash sign `#`. These lines will not be interpreted as a command to be run, they will just be skipped. They are only meant for us humans to read, and they are real lifesavers when you are reading old scripts you have forgotten what they do. Commands are hard for humans to read, so try to write a couple of words explaining what the command below does. You'll be thankful later!
 
 When you are finished with your script, you can test run it. To do that, use the program `sh`:
 
@@ -193,50 +206,15 @@ $ sh exome_analysis_script.sh
 
 If you got everything right, you should see the whole pipeline being executed without you having to start each program manually. If something goes wrong, look at the output and try to figure out which step in the pipeline that get the error, and solve it.
 
-A tip is to read the error list from the top-down. An error early in the pipeline will most likely cause a multitude of error further down the pipeline, so your best bet is to start from the top. Solve the problem, try the script again, until it works. The real beauty of scripts is that they can be re-run really easily. Maybe you have to change a variable or option in one of the early steps of the pipeline, just do it and re-run the whole thing.
-
-# Submitting a dummy pipeline
-
-The whole point with computer centres like UPPMAX is that you can run multiple programs at the same time to speed things up. To do this efficiently you will have to submit jobs to the queue system. As you saw in yesterday's exercise, it is ordinary shell scripts that you submit to the queue system, with a couple of extra options in the beginning. So to be able to submit our script to the queue system, the only thing we have to do is to add the queue system options in the beginning of the script.
-
-The options needed by the queue are, as we learned yesterday:
-
-* Who is paying for the job?
-* How long time will the job need?
-* How many cores does the job need?
-
-**SLURM** is also a bit strict when it comes formalities. It requires that you specify which program should be used to run the submitted script file. The standard program for this is bash, but we have to specify it on the first line of the script non the less. This is done by having the first line in the script looking link this:
-
-```bash
-#!/bin/bash -l
-```
-
-This is how Linux knows which program should open a file, since it does not care about the file ending like Windows commonly does (.ppt, .pdf, .html might be familiar file endings). The `#!` indicates that the next words will be the path to the program that should open the file. It could be `#!/bin/bash`, or `#!/bin/python`, or any other path to a executable program.
-
-The `-l` after bash is a flag that tells bash that the script should be treated as a login shell, so everything behaves as when you are logged in. Without it commands like `module` and some other would not work. If it's not a login shell, it's running as a script, and then it does not need to bother making the interface human friendly so it will skip things to make it start faster and consume less resources.
-
-The next couple of rows will contain all the options you want to give SLURM:
-
-```{r,echo=FALSE,comment="",class.output="bash"}
-cat(paste0('#!/bin/bash -l
-#SBATCH -A ',upid,'
-#SBATCH -t 00:05:00
-#SBATCH -p core'))
-```
-
-SLURM options always start with **`#SBATCH`** followed by a flag (`-A` for account, `-t` for time, `-p` for partition) and the value for that flag. Your script should now look something like this (ignore the old project id and path to the scripts):
-
-![](data/uppmax-pipeline/slurmScript.png)
-
-To submit this script to the queue:
-
-```bash
-$ sbatch exome_analysis_script.sh
-```
+A tip is to read the error list from the top-down. An error early in the pipeline will most likely cause a multitude of errors further down the pipeline, so your best bet is to start from the top. Solve the problem, try the script again, until it works. The real beauty of scripts is that they can be re-run really easily. Maybe you have to change a variable or option in one of the early steps of the pipeline, just do it and re-run the whole thing.
 
 # RNAseq Analysis
 
-The next step is to do a complete RNAseq analysis. The steps involved start off just like the exome analysis, but has a few extra steps. The goal of this part is to successfully run the pipeline using the queue system. To do this, you must construct the commands for each step, combine them in a script, include the `SLURM` options, and submit it. Much like what we did in the previous step, but with some complications.
+The next step is to do a complete RNAseq analysis. Just like the exome seq data, the RNAseq data is based on high-throuput sequencing, meaning the raw data will be millions of sequenced DNA fragments, called reads, and we will have to use the computer to piece them together. The main difference between exome seq and RNA seq is that in RNA seq, only [messenger RNA (mRNA)](https://en.wikipedia.org/wiki/Messenger_RNA) has been sequenced and not DNA like in exome sequencing.
+
+In exome sequencing you expect an even coverage of reads (the average number of times each basepair has been sequenced) over your whole exome. In RNA seq, the coverage will not be even, as all genes are not expressed to the same degree. Lots of coverage = lots of expression. This makes it interesting to do time series experiments when you can track how the coverage, or expression level, for genes change over time. This is called differential expression analysis, or [gene expression profiling](https://en.wikipedia.org/wiki/Gene_expression_profiling)
+
+The steps involved start off just like the exome analysis, but has a few extra steps. The goal of this part is to successfully run the pipeline using a script. To do this, you must construct the commands for each step, combine them in a script, and execute it. Much like what we did in the previous step, but using a differential expression analysis software as the last step instead of a SNP caller.
 
 Typical RNAseq analysis consists of multiple samples / time points:
 
@@ -244,7 +222,29 @@ Typical RNAseq analysis consists of multiple samples / time points:
 * Align the filtered reads for each sample to the same reference genome as before.
 * Do a differential expression analysis by comparing multiple samples.
 
-The difficulty here is that you have not just 1 sample, you have 3 of them. And they all need to be filtered and aligned separately, and then compared to each other. The program that does the differential expression analysis in this exercise is called `diff_exp` and is located in the same directory as the previous scripts. The samples are filtered and aligned individually.
+The difficulty here is that you have not just 1 sample, you have 3 of them. And they all need to be filtered and aligned separately, and then compared to each other. The program that does the differential expression analysis in this exercise is called `diff_exp`.
 
-***
 
+<details>
+  <summary>Solution</summary>
+
+```bash
+# go to the rna seq folder
+cd ~/1MB438/RESULTS/linux_pipelines/data/rnaSeq/
+
+# filter the samples one by one
+filter_reads -i raw_data/sample1.fastq -o sample1.filtered.fastq
+filter_reads -i raw_data/sample2.fastq -o sample2.filtered.fastq
+filter_reads -i raw_data/sample3.fastq -o sample3.filtered.fastq
+
+# align the samples one by one
+align_reads -i sample1.filtered.fastq -o sample1.filtered.aligned.sam -r ../ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
+align_reads -i sample2.filtered.fastq -o sample2.filtered.aligned.sam -r ../ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
+align_reads -i sample3.filtered.fastq -o sample3.filtered.aligned.sam -r ../ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa
+
+# do a differential expression on all samples together
+diff_exp -i sample1.filtered.aligned.sam,sample2.filtered.aligned.sam,sample3.filtered.aligned.sam -o sample.diff_exp.out
+
+```
+
+</details>
