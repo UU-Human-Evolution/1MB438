@@ -1,3 +1,5 @@
+# Scripts exercis
+
 # Copy files for lab
 
 Now, you will need some files. To keep your files organized, make your own copy of the needed files. The files are located in the folder `~/1MB438/DATA/Lab0/linux_scripts`.
@@ -88,7 +90,7 @@ echo The volume of the rectangular cuboid with the sides $x,$y,$z is $(($x*$y*$z
 
 First off, let's open another terminal so that you have 2 of them open. Scripting is a lot easier if you have one terminal on the command line ready to run commands and test things, and another one with a text editor where you write the actual code. That way you will never have to close down the text editor when you want to run the script you are writing on, and then open it up again when you want to continue editing the code.
 
-So open a new terminal window and make sure both terminals are in the `~/1MB438/RESULTS/linux_scripts` directory, and start editing a new file with gedit or nano where you write your script. Name the file whatever you want, but in the examples I will refer to it as `loop_01.sh`. Write your loops to this file (or create a new file for each new example) and test run it in the other terminal.
+So open a new terminal window and make sure both terminals are in the `~/1MB438/RESULTS/linux_scripts` directory, and start editing a new file with `nano` where you write your script. Name the file whatever you want, but in the examples I will refer to it as `loop_01.sh`. Write your loops to this file (or create a new file for each new example) and test run it in the other terminal.
 
 The most simple loops are the ones that loop over a predefined list. You saw examples of this in the lecture slides, for example:
 
@@ -152,18 +154,18 @@ echo Happy New Year everyone!!
 
 ## Exercise 2
 
-Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the Introduction to UPPMAX, we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
-In real life you will never do this, instead you will most likely always do it the other way around. SAM files take up ~4x more space on the hard drive compared to the same file in BAM format, so as soon as you see a SAM file you should convert it to a BAM file instead to conserve hard drive space. If you have many SAM files that needs converting you don't want to sit there and type all the commands by hand like a pleb.
+Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the [Pipes exercise](Lab_0.1.pipes.md), we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
+In real life you will never do this, instead you will most likely always do it the other way around. SAM files take up ~4x more space on the hard drive compared to the same file in BAM format, so as soon as you see a SAM file you should convert it to a BAM file instead to conserve hard drive space. If you have many SAM files that needs converting you don't want to sit there and type all the commands by hand like some kind of animal.
 
-:clipboard: Write a script that converts all the SAM files in a specified directory to BAM files. Incidentally, you can find 50 SAM files in need of conversion in the folder called `sam` in the folder you copied to your folder earlier in this lab `~/1MB438/RESULTS/linux_scripts/sam`. Bonus points if you make the program take the specified directory as an argument, and another bonus point if you get the program to name the resulting BAM file to the same name as the SAM file but with a `.bam` ending instead of `.sam`.
+:clipboard: Write a script that converts all the SAM files in a specified directory to BAM files. Incidentally, you can find 50 SAM files in need of conversion in the folder called `sam` in the folder you extracted to your folder earlier in this lab `~/1MB438/RESULTS/linux_scripts/sam`. Bonus points if you make the program take the specified directory as an argument, and another bonus point if you get the program to name the resulting BAM file to the same name as the SAM file but with a `.bam` ending instead of `.sam` (e.g. `sample_4.sam`).
 
 The way you get samtools to convert a SAM file to a BAM file is by typing the following command:
 
 ```bash
-samtools view -bS sample_1.sam > sample_1.bam
+samtools view -b sample_1.sam > sample_1.bam
 ```
 
-The `-b` option tells samtools to output BAM format, and the `-S` option tells samtools that the input is in SAM format.
+The `-b` option tells samtools to output BAM format.
 
 Remember, Google is a good place to get help. If you get stuck, google "bash remove file ending" or "bash argument to script" and look for hits from [StackOverflow/StackExchange](https://stackoverflow.com/) or similar pages. There are always many different way to solve a problem. Try finding one you understand what they do and test if you can get them to work the way you want. If not, look for another solution and try that one instead.
 
@@ -179,7 +181,7 @@ cd sam
 for file in *.sam;
 do
     # do the actual converting, just slapping on .bam at the end of the name
-    samtools view -bS $file > $file.bam
+    samtools view -b $file > $file.bam
 done
 ```
 </details>
@@ -202,7 +204,7 @@ do
     echo "Converting $file to $(basename $file .sam).bam"
 
     # do the actual converting
-    samtools view -bS $file > $(basename $file .sam).bam
+    samtools view -b $file > $(basename $file .sam).bam
 done
 ```
 </details>
@@ -241,9 +243,6 @@ fi
   <summary>Basic solution</summary>
 
 ```bash
-# load the modules needed for samtools
-module load bioinfo-tools samtools/1.3
-
 # move to the SAM files directory to start with.
 cd sam
 
@@ -254,7 +253,7 @@ do
     if [ ! -f $file.bam ];
     then
         # do the actual converting, just slapping on .bam at the end of the name
-        samtools view -bS $file > $file.bam
+        samtools view -b $file > $file.bam
     fi
 done
 ```
@@ -264,13 +263,10 @@ done
   <summary>Advanced solution</summary>
 
 ```bash
-# load the modules needed for samtools
-module load bioinfo-tools samtools/1.3
-
+# $1 contains the first argument given to the program
 cd $1
 
-# use ls to get the list to iterate over.
-# $1 contains the first argument given to the program
+# use a pattern to get the list to iterate over.
 for file in *.sam;
 do
 
@@ -288,7 +284,7 @@ do
         echo "Converting $file to $filename_bam"
 
         # do the actual converting
-        samtools view -bS $file > $filename_bam
+        samtools view -b $file > $filename_bam
 
     else
         # inform the user that the conversion is skipped
@@ -328,6 +324,9 @@ echo 1 2 3 4 5
 # set the number you want to calculate the factorial of
 n=10
 
+# could also be supplied through an argument to the program
+# n=$1
+
 # you have to initialize a variable before you can start using it.
 # Leaving this empty would lead to the first iteration of the loop trying
 # to use a variable that has no value, which would cause it to crash
@@ -355,20 +354,17 @@ echo The factorial of $n is $factorial
 
 Now, let's combine everything you've learned so far in this course.
 
-:clipboard: Write a script that runs the pipeline from the Bioinformatics filetypes lab for each fastq file in a specified directory, using the same reference genome as in the file type exercise. Navigate to the **Linux 2: File types in Bioinformatics** lab on the **Contents** page.
+:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise.
 
-When the analysis is done, only fastq files and sorted and indexed BAM files should be in your folder.
+When the analysis is done, only fastq files and called SNP files should be in your folder.
 
-There is a bunch of fastq files in the directory `RESULTS/linux_scripts/fastq/` that is to be used for this exercise.
+There is a bunch of `fastq` files in the directory `~/1MB438/RESULTS/linux_scripts/fastq/` that is to be used for this exercise. Once you have your loop running, make sure you don't get any error messages printed and that each of the 3 steps of the pipeline are carried out. Since there are 120 samples to be analyzed and it takes 12 seconds per sample, it will run for about 20 minutes. Once you see that it is running without errors and all the steps are carried out, feel free to terminate the program by holding `ctrl-c` until it stops.
 
 Basic solution:
 
 ```bash
 # make the dummy pipeline available
-export PATH=$PATH:/sw/courses/ngsintro/linux/uppmax_pipeline_exercise/dummy_scripts
-
-# index the reference genome
-reference_indexer -r /proj/',upid,'/nobackup/username/filetypes/0_ref/ad2.fa
+export PATH=$PATH:~/1MB438/RESULTS/linux_pipelines/dummy_scripts
 
 # go to the input files
 cd $1
@@ -377,111 +373,53 @@ cd $1
 for file in *.fastq;
 do
 
+    # filter the reads
+    filter_reads -i $file -o $file.filtered
+
     # align the reads
-    align_reads -r /proj/',upid,'/nobackup/username/filetypes/0_ref/ad2.fa -i $file -o $file.sam
+    align_reads -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered -o $file.filtered.aligned.sam
 
-    # convert the sam file to a bam file
-    sambam_tool -f bam -i $file.sam -o $file.bam
-
-    # sort the bam file
-    sambam_tool -f sort -i $file.bam -o $file.sorted.bam
-
-    # index the bam file
-    sambam_tool -f index -i $file.sorted.bam
+    # call SNPs
+    find_snps -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered.aligned.sam -o $file.filtered.aligned.snpcalled.pileup 
 
 done
+
+# remove intermediate files
+rm *.sam *.filtered
 ```
 
 Advanced solution:
 
 ```bash
-# make the dummy pipeline available in this script
-export PATH=$PATH:/sw/courses/ngsintro/linux/uppmax_pipeline_exercise/dummy_scripts
-
-# index the reference genome once, only if needed
-if [ ! -f /proj/',upid,'/nobackup/username/filetypes/0_ref/ad2.fa.idx ];
-then
-    reference_indexer -r /proj/',upid,'/nobackup/username/filetypes/0_ref/ad2.fa
-fi
+# make the dummy pipeline available
+export PATH=$PATH:~/1MB438/RESULTS/linux_pipelines/dummy_scripts
 
 
-# find out the absolute path to the input files
+# go to the input files
 cd $1
-input_absolute_path=$(pwd)
-
-# go back to the previous directory now that the absolute path has been saved
-cd -
-
-
 
 # loop over all the fastq files
-for file in $input_absolute_path/*.fastq;
+for file in *.fastq;
 do
 
     # print status report
     echo Processing $file
 
-    # save the file name without the path information for convenience
-    file_basename=$(basename $file)
-
     # save the file name without the file ending for convenience
     file_prefix=$(basename $file .fastq)
 
-    # print a temporary script file that will be submitted to slurm
-    echo "#!/bin/bash -l
-
-    #SBATCH -A ',upid,'
-    #SBATCH -p core
-    #SBATCH -n 1
-    #SBATCH -t 00:05:00
-    #SBATCH -J $file_basename
-
-    # make the dummy pipeline available on the calculation node
-    echo "Loading modules"
-    export PATH=$PATH:/sw/courses/ngsintro/linux/uppmax_pipeline_exercise/dummy_scripts
-
-    # copy the reference genome, index and sample file to the nodes local hard drive.
-    # You have to escape the dollar sign in SNIC_TMP to keep bash from resolving
-    # it to its value in the submitter script already.
-    echo "Copying data to node local hard drive"
-    cp /proj/',upid,'/nobackup/username/filetypes/0_ref/ad2.fa* $file $SNIC_TMP/
-
-    # go the the nodes local hard drive
-    echo "Changing directory to node local hard drive"
-    cd $SNIC_TMP
+    # filter the reads
+    filter_reads -i $file -o $file_prefix.filtered.fastq
 
     # align the reads
-    echo "Aligning the reads"
-    align_reads -r ad2.fa -i $file_basename -o $file_prefix.sam
+    align_reads -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file_prefix.filtered.fastq -o $file_prefix.filtered.aligned.sam
 
-    # convert the SAM file to a BAM file
-    echo "Converting sam to bam"
-    sambam_tool -f bam -i $file_prefix.sam -o $file_prefix.bam
-
-    # sort the BAM file
-    echo "Sorting the bam file"
-    sambam_tool -f sort -i $file_prefix.bam -o $file_prefix.sorted.bam
-
-    # index the BAM file
-    echo "Indexing the sorted bam file"
-    sambam_tool -f index -i $file_prefix.sorted.bam
-
-    # copy back the files you want to keep
-    echo "Copying results back to network storage"
-    cp $file_prefix.sorted.bam $input_absolute_path/
-    cp $file_prefix.sorted.bam.bai $input_absolute_path/$file_prefix.sorted.bai
-
-
-    echo "Finished"
-    " > tmp.sbatch
-
-    # submit the temporary script file
-    sbatch tmp.sbatch
-
+    # call SNPs
+    find_snps -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file_prefix.filtered.aligned.sam -o $file_prefix.filtered.aligned.snpcalled.pileup 
 done
 
-# remove the temporary file now that everything has been submitted
-rm tmp.sbatch
+# remove intermediate files
+rm *.sam *.filtered.fastq
 ```
 
 ***
