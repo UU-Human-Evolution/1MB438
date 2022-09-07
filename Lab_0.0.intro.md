@@ -200,13 +200,8 @@ Let's move some files. Moving files might be one of the more common things you d
 We will start with moving our important result to a backed-up folder. When months of analysis is done, the last thing you want is to lose your files.
 Typically this would mean that you move the final results to a backed up folder somewhere.
 
-In this example, we want to move the result files only, located in the folder `important_results`, to our fake backed up folder, called `backed_up_proj_folder`.
+In this example, we want to move one of the result files only, located in the folder `important_results`, to our fake backed up folder, called `backed_up_proj_folder`.
 
-The syntax for the move command is:
-
-```bash
-mv <source> <destination>
-```
 
 First, take a look inside the `important_results` folder:
 
@@ -222,6 +217,10 @@ total 0
 You see that there are some unimportant temporary files that you have no interest in. Just to demonstrate the move command, I will show you how to move one of these temporary files to your backed-up project folder:
 
 ```bash
+# syntax for the move command is:
+# mv <source> <destination>
+
+# move demonstration
 mv important_results/temp_file-1  backed_up_proj_folder/
 ```
 

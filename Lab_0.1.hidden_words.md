@@ -51,7 +51,7 @@ Some files are not visible immediately but are instead hidden. Hidden files are 
 Go back to the directory `exercise_1/directoryB/`. When listing its contents, you should see a Perl program. To find the next character, you need to execute the program. You can do this with the command `perl <program_name>` and the character should appear on your Terminal window.
 
 ### 1.4 Find out how big a file is
-Go now to `exercise_1/directoryC/`. To find the fourth character, you first need to find out how big the text file in the directory is. This is done with the command `ls -l`. This will produce a long format list, where you can see the file size (in bytes), the file's owner, permissions to read and modify it, and the date/time of the last modification. To obtain the fourth character, execute the Perl program `file_size_check.pl` - the program will ask you to enter the size of the file.
+Go now to `exercise_1/directoryC/`. To find the fourth character, you first need to find out how big the `text_file.txt` in the directory is. This is done with the command `ls -l`. This will produce a long format list, where you can see the file size (in bytes), the file's owner, permissions to read and modify it, and the date/time of the last modification. To obtain the fourth character, execute the Perl program `file_size_check.pl` - the program will ask you to enter the size of the file.
 
 **HINT**: When typing names of directories or files, try typing the first three characters, and press `<TAB>`. Unix will try to guess what you are typing.
 ## 2 Edit text files

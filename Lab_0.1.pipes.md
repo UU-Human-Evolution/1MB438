@@ -12,28 +12,6 @@ git pull
 
 If you get any error message, raise your hand and an assistant will come and help you out.
 
-## Hand-in instructions
-Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the [hidden word exersise](Lab_0.1.hidden_words.md) below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
-
-We won't judge the formatting of the file or anything, so don't sweat it if the file is ugly :)
-
-Example of how it could look:
-```bash
-# first letter
-cd folder1
-ls -la
-
-# letter: a
-
-# second letter
-cd ../folder2
-tail file1
-
-# letter: b
-
-
-# word formed: ab
-```
 
 
 ### Playing around with files
@@ -163,12 +141,34 @@ grep PCA PCA.txt | wc -l
 
 </details>
 
+## Hand-in instructions
+Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the hidden word exersise below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
+
+We won't judge the formatting of the file or anything, so don't sweat it if the file is ugly :)
+
+Example of how it could look:
+```bash
+# first letter
+cd folder1
+ls -la
+
+# letter: a
+
+# second letter
+cd ../folder2
+tail file1
+
+# letter: b
+
+
+# word formed: ab
+```
 ### Hidden word exercise 
 
 :clipboard: Now that you have some basic UNIX tools at your disposal go and do the [hidden word_exercise](Lab_0.1.hidden_words.md).
-Submit the hidden word and the commands used to find it as described in the [hand-in instructions](#hand-in-instructions).
+Submit the hidden word and the commands used to find it as described in the [hand-in instructions](#hand-in-instructions) above.
 
-Do not continue with the next part until you are done with the hidden word exercise. 
+Do not continue with the next part of this lab until you are done with the hidden word exercise. 
 
 ### BAM files
 
