@@ -66,13 +66,13 @@ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/bio/bin:/usr/share/bwa-0.7.13:/opt/mrtwig/
 ```
 
-We will just add a the directory containing my dummy scripts to the `$PATH` variable, and it will be like we have the programs installed. Now, when we type the name of one of my scripts, the computer will look in all the directories specified in the `$PATH` variable, which now includes the location where i keep my scripts. The computer will now find programs named as my scripts are and it will run them.
+We will just add the directory containing my dummy scripts to the `$PATH` variable, and it will be like we have the programs installed. Now, when we type the name of one of my scripts, the computer will look in all the directories specified in the `$PATH` variable, which now includes the location where i keep my scripts. The computer will now find programs named as my scripts are and it will run them.
 
 ```bash
 export PATH=$PATH:~/1MB438/RESULTS/linux_pipelines/dummy_scripts
 ```
 
-This will set the `$PATH` variable to whatever it is at the moment, and add a directory at the end of it. Note the lack of a dollar sign infront of the variable name directly after **export**. You don't use dollar signs when **assigning** values to variables, and you always use dollar signs when **getting** values from variables.
+This will set the `$PATH` variable to whatever it is at the moment, and add a directory at the end of it. Note the lack of a dollar sign in front of the variable name directly after **export**. You don't use dollar signs when **assigning** values to variables, and you always use dollar signs when **getting** values from variables.
 
 :exclamation: **IMPORTANT:** The export command affects only the terminal you type it in. If you have 2 terminals open, only the terminal you typed it in will have a modified path. If you close that terminal and open a new one, it will not have the modified path and you will have to run the whole `export` command again.
 
@@ -80,7 +80,7 @@ Enough with variables now. Let's try the scripts out!
 
 # Running the programs
 
-Let's pretend that we want to run an exome sequencing analysis using [high-throughput sequencing](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods) data, also called Next Generation Sequencing (NGS) data. This kind of sequencing takes the DNA from many identical cells, fragments DNA molecules into smaller pieces (like 500-1000bp each), sequence these fragments individually (called *reads*), and then use the computer to assemble the fragmented sequences (*reads*) together to form the whole sequence of the original DNA molecules. The reason we have to fragment the pieces and lay this multi-million piece puzzle is that we don't yet have seqcuencing techniques that can read a whole genome from start to end.
+Let's pretend that we want to run an exome sequencing analysis using [high-throughput sequencing](https://en.wikipedia.org/wiki/DNA_sequencing#High-throughput_methods) data, also called Next Generation Sequencing (NGS) data. This kind of sequencing takes the DNA from many identical cells, fragments DNA molecules into smaller pieces (like 500-1000bp each), sequence these fragments individually (called *reads*), and then use the computer to assemble the fragmented sequences (*reads*) together to form the whole sequence of the original DNA molecules. The reason we have to fragment the pieces and lay this multi-million piece puzzle is that we don't yet have sequencing techniques that can read a whole genome from start to end.
 
 The only difference between a [exome sequencing](https://en.wikipedia.org/wiki/Exome_sequencing) and a [whole genome sequencing](https://en.wikipedia.org/wiki/Whole_genome_sequencing) is that we limit the DNA we sequence to the known exomes of the organism we sequence. In humans this is about 1% of the whole genome, making it much cheaper to sequence per sample. With the same amount of sequencing you can analyze 100 exome samples per whole genome sample. The downside is that we only look at the areas we think are exomes. Any differences between the samples outside of the exome areas we have defined will be missed. Other than that, they are analyzed pretty much the same way.
 
@@ -192,7 +192,7 @@ cd ~/1MB438/RESULTS/linux_pipelines/data/exomeSeq/
 nano exome_analysis_script.sh
 ```
 
-The `.sh` ending is commonly used for **sh**ell scripts which is what we are creating. The default shell at most Linux systems is called `bash`, so whenever we write `sh` the computer will use `bash`. If the default shell would change for some reason, maybe to `zsh` or any other type of shell, `sh` would point the the new shell instead.
+The `.sh` ending is commonly used for **sh**ell scripts which is what we are creating. The default shell at most Linux systems is called `bash`, so whenever we write `sh` the computer will use `bash`. If the default shell would change for some reason, maybe to `zsh` or any other type of shell, `sh` would point the new shell instead.
 
 ![](DATA/Lab0/imgs/dualTerminals.png)
 
@@ -210,7 +210,7 @@ A tip is to read the error list from the top-down. An error early in the pipelin
 
 # RNAseq Analysis
 
-The next step is to do a complete RNAseq analysis. Just like the exome seq data, the RNAseq data is based on high-throuput sequencing, meaning the raw data will be millions of sequenced DNA fragments, called reads, and we will have to use the computer to piece them together. The main difference between exome seq and RNA seq is that in RNA seq, only [messenger RNA (mRNA)](https://en.wikipedia.org/wiki/Messenger_RNA) has been sequenced and not DNA like in exome sequencing.
+The next step is to do a complete RNAseq analysis. Just like the exome seq data, the RNAseq data is based on high-throughput sequencing, meaning the raw data will be millions of sequenced DNA fragments, called reads, and we will have to use the computer to piece them together. The main difference between exome seq and RNA seq is that in RNA seq, only [messenger RNA (mRNA)](https://en.wikipedia.org/wiki/Messenger_RNA) has been sequenced and not DNA like in exome sequencing.
 
 In exome sequencing you expect an even coverage of reads (the average number of times each basepair has been sequenced) over your whole exome. In RNA seq, the coverage will not be even, as all genes are not expressed to the same degree. Lots of coverage = lots of expression. This makes it interesting to do time series experiments when you can track how the coverage, or expression level, for genes change over time. This is called differential expression analysis, or [gene expression profiling](https://en.wikipedia.org/wiki/Gene_expression_profiling)
 

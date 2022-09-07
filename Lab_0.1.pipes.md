@@ -219,7 +219,7 @@ ll -h
 With that information, you can probably see why it's a generally good idea to store data in binary formats as much as possible. Usually the `bam` file is ~25% of the `sam` file's size. In this lab it's a bit more extreme difference, only 2% of `sam` file's size, because I created a `sam` file with lots of repetition in it to keep down the size of the course material (more repetition = better compression).
 
 ##### The `.bam` file is just for a small part of the genome, which one? 
-:clipboard: Use `samtools view` on the `bam` file together with `head` and `tail` to **figure out the first and last position in the file**. Have a look at [the wikipedia page for the sam format](https://en.wikipedia.org/wiki/SAM_(file_format))for an explaination of what the columns are.
+:clipboard: Use `samtools view` on the `bam` file together with `head` and `tail` to **figure out the first and last position in the file**. Have a look at [the wikipedia page for the sam format](https://en.wikipedia.org/wiki/SAM_(file_format))for an explanation of what the columns are.
 
 <details>
   <summary>Solution</summary>

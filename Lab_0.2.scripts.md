@@ -1,4 +1,4 @@
-# Scripts exercis
+# Scripts exercise
 
 The first thing we're going to do is to update the git repo in case there has been any changes to the lab instructions since you updated the repo in the previous lab. It should be as easy as running this command while standing anywhere inside the course repo:
 
@@ -113,7 +113,7 @@ do
 done
 ```
 
-which will print the value of `$i` in each iteration of the loop. Write this loop in the file you are editing with `gedit`/`nano`, save the file, and then run it in the other terminal you have open.
+which will print the value of `$i` in each iteration of the loop. Write this loop in the file you are editing with `nano`, save the file, and then run it in the other terminal you have open.
 
 ```bash
 bash loop_01.sh
@@ -169,7 +169,7 @@ echo Happy New Year everyone!!
 Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the [Pipes exercise](Lab_0.1.pipes.md), we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
 In real life you will never do this, instead you will most likely always do it the other way around. SAM files take up ~4x more space on the hard drive compared to the same file in BAM format, so as soon as you see a SAM file you should convert it to a BAM file instead to conserve hard drive space. If you have many SAM files that needs converting you don't want to sit there and type all the commands by hand like some kind of animal.
 
-:clipboard: Write a script that converts all the SAM files in a specified directory to BAM files. Incidentally, you can find 50 SAM files in need of conversion in the folder called `sam` in the folder you extracted to your folder earlier in this lab `~/1MB438/RESULTS/linux_scripts/sam`. Bonus points if you make the program take the specified directory as an argument, and another bonus point if you get the program to name the resulting BAM file to the same name as the SAM file but with a `.bam` ending instead of `.sam` (e.g. `sample_4.sam`).
+:clipboard: Write a script that converts all the SAM files in a specified directory to BAM files. Incidentally, you can find 50 SAM files in need of conversion in the folder called `sam` in the folder you extracted to your folder earlier in this lab `~/1MB438/RESULTS/linux_scripts/sam`. Bonus points if you make the program take the specified directory as an argument, and another bonus point if you get the program to name the resulting BAM file to the same name as the SAM file but with a `.bam` ending instead of `.sam` (e.g. `sample_4.sam` -> `sample_4.bam`).
 
 The way you get samtools to convert a SAM file to a BAM file is by typing the following command:
 
@@ -179,7 +179,7 @@ samtools view -b sample_1.sam > sample_1.bam
 
 The `-b` option tells samtools to output BAM format.
 
-Remember, Google is a good place to get help. If you get stuck, google "bash remove file ending" or "bash argument to script" and look for hits from [StackOverflow/StackExchange](https://stackoverflow.com/) or similar pages. There are always many different way to solve a problem. Try finding one you understand what they do and test if you can get them to work the way you want. If not, look for another solution and try that one instead.
+:bulb: Remember, Google is a good place to get help. If you get stuck, google "bash remove file ending" or "bash argument to script" and look for hits from [StackOverflow/StackExchange](https://stackoverflow.com/) or similar pages. There are always many different way to solve a problem. Try finding one you understand what they do and test if you can get them to work the way you want. If not, look for another solution and try that one instead.
 
 <details>
   <summary>Basic solution, without bonus points</summary>
@@ -308,7 +308,7 @@ done
 
 ## Bonus exercise 1  
 
-Maths and programming are usually a very good combination, so many of the examples of programming you'll see involve some kind of maths. Now we will write a loop that will calculate the factorial of a number. As [wikipedia will tell you](https://en.wikipedia.org/wiki/Factorial), "the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n", i.e. multiply all the integers, starting from 1, leading up to and including a number with each other.
+Math and programming are usually a very good combination, so many of the examples of programming you'll see involve some kind of math. Now we will write a loop that will calculate the factorial of a number. As [wikipedia will tell you](https://en.wikipedia.org/wiki/Factorial), *"the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n"*, i.e. multiply all the integers, starting from 1, leading up to and including a number with each other.
 
 The factorial of 5, written 5!, would be `1*2*3*4*5=120`. Doing this by hand would start taking its time even after a couple of steps, but since we know how to loop that should not be a problem anymore.
 
@@ -366,7 +366,7 @@ echo The factorial of $n is $factorial
 
 Now, let's combine everything you've learned so far in this course.
 
-:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise. If you have not yet done the pipeline extra exercise, please follow the instructions in that lab from the beginning and up until you reach the section called "*Running the programs*". This will ensure you have all the files copied and the environment setup corretly to do the analysis. 
+:clipboard: Write a script that runs the exome sequencing pipeline from the [Pipelines extra exercise](Lab_0.extra.pipelines.md#running-the-programs) for each `fastq` file in a specified directory, using the same reference genome as in the pipelines extra exercise. If you have not yet done the pipeline extra exercise, please follow the instructions in that lab from the beginning and up until you reach the section called "*Running the programs*". This will ensure you have all the files copied and the environment setup correctly to do the analysis. 
 
 When the analysis is done, only fastq files and called SNP files should be in your folder.
 

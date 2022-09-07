@@ -4,7 +4,7 @@ _This exercise was modifed from an original idea by Kristian Rother, see www.aca
 
 ## Introduction
 
-The goal of this exercice is to use and test what you have learned today about interacting with the command line on Unix/Linux.
+The goal of this exercise is to use and test what you have learned today about interacting with the command line on Unix/Linux.
 
 You will have to:
 

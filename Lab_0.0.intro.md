@@ -18,7 +18,7 @@ If it is the first time you connect to a Linux computer you might think there is
 
 ## Getting the files for the course
 
-Ok, now you should have a Linux terminal upp and running. Your first task in this lab is to download all the files you need for this course. This will be done by using a program called `git` which is a tool to manage and collaborate working with files. Kind of like Dropbox or Google Drive, but in a terminal and with loads of extra features. We don't have enough time to cover how git works, but as all our data, scripts and protocols are stored on [GitHub](https://github.com), we could use git to download them as follow:
+Ok, now you should have a Linux terminal up and running. Your first task in this lab is to download all the files you need for this course. This will be done by using a program called `git` which is a tool to manage and collaborate working with files. Kind of like Dropbox or Google Drive, but in a terminal and with loads of extra features. We don't have enough time to cover how git works, but as all our data, scripts and protocols are stored on [GitHub](https://github.com), we could use git to download them as follow:
 
 ```bash
 # first, make sure you are standing in your own home folder
