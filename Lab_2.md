@@ -66,11 +66,11 @@ Kalign, MAFFT and Muscle are three different fast alignment programs for protein
 
 You can find a brief introduction, and further link, on how to use MAFFT [here](https://mafft.cbrc.jp/alignment/software/). For Muscle you can find a short introduction [here](http://www.drive5.com/muscle/manual/basic_alignment.html), and the more extensive documentation [here](http://www.drive5.com/muscle/manual/). You can also type the following for each program in the terminal to get basic help on how to use them:
 
-kalign
+`kalign`
 
-mafft --help
+`mafft --help`
 
-muscle
+`muscle`
 
 Align the two datasets independently, EPHX1 ([ephx1.fasta](./DATA/Lab2/ephx1.fasta)) and 16S ([16S.fasta](./DATA/Lab2/16S.fasta)), using two of the alignment programs (Of course it is recommended to have a look at the input file so that you know what you are aligning!). If you are using MAFFT you will need to pipe the output to a new file, this
 can be done with the command “>”.The full command should then look something like this:
