@@ -44,7 +44,7 @@ The program for local blast searches is called blastall and includes all the dif
 1. Make a database of the file using formatdb
 `makeblastdb -in prokaryotes_db -dbtype prot`
 2. Blast the anthrax protein sequence [anthrax.fasta](./DATA/Lab2/anthrax.fasta) against prokaryotes_db.txt. You need to specify at least the following options:
-`BLAST_TYPE db DB_NAME query QUERY_NAME out OUT_NAME`
+`BLAST_TYPE -db DB_NAME -query QUERY_NAME -out OUT_NAME`
    Where DB_NAME is the name of your database, QUERY_NAME the file that
 contains your query sequence, BLAST_TYPE the type of blast program you
 want to use (e.g. "blastp" or "blastn") and OUT_NAME how you want to
