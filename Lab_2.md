@@ -78,14 +78,14 @@ can be done with the command “>”.The full command should then look something
 
 ### Converting between alignment formats
 Unfortunately, there is no standard alignment format that can be read by all programs. Therefore, a sequence-oriented bioinformatician needs some format-converting skills. Readseq is a useful program for converting between alignment formats. For information on how to use readseq type:
-`java jar ./SRC/readseq.jar --help`
+`java -jar ./SRC/Lab2/readseq.jar --help`
 
 Use readseq to convert the files you aligned in the previous exercise (default output from kalign is in fasta format - caution! you need to redirect the output from the screen to a file) to the format nexus.
 
 #### Visualizing alignments
 You can look at alignments with the program Jalview.
 
-`java jar ./SRC/jalview.jar`
+`java -jar ./SRC/Lab2/jalview.jar`
 
 The software package [SuiteMSA](http://bioinfolab.unl.edu/~canderson/SuiteMSA/) is also a good tool for more advanced alignment viewing, for example comparing two alignments. However, for ordinary alignment viewing and editing it is unnecessarily complex.
 
