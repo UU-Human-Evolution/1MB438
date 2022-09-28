@@ -71,7 +71,7 @@ If you have your new plasmid sequence in the file `plasmid.fna` and want to pred
    `cp ./SRC/Lab3/gm_key_64 ~/.gmhmmp2_key`  
 
 2. Now we are ready to search for orfs in the genome:  
-   `perl ./SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
+   `perl ./SRC/Lab3/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
 
 **Exercise: run the Genemark suite on the provided genome. Save the result and run the conversion script we also used with getorf to change the format. **
 
