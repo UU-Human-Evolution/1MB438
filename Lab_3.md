@@ -34,7 +34,7 @@ You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf) I
 
 on the command line. Genes might be located on the opposite strand to the sequenced one, but this is not a problem since getorf will still find it and note the direction of the gene in its output. Note that STOP codons are not included in the output. That issue, however, will be fixed by the script that parses program output to a format that can be used in the visualization tool Artemis:
 
-`perl ./SRC/GenePrediction2Artemis.pl -i getorf.file -o outputname.artemis -getorf`
+`perl ./SRC/Lab3/GenePrediction2Artemis.pl -i getorf.file -o outputname.artemis -getorf`
 
 
 
