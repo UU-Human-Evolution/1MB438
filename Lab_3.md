@@ -95,7 +95,7 @@ To start Artemis on Linux, type
 
 In Windows or MacOS, do as prompted on the [Artemis web page](https://www.sanger.ac.uk/tool/artemis/).  
 
-In Artemis, click **"Open ..."**, then choose your genome file (usually the *.fna). In the new window, click 
+In Artemis, click **"File"**, **"Open ..."**, then choose your genome file (usually the *.fna). In the new window, click 
 **"File"**, **"Read an Entry ..."** and then choose **"YourArtemisFile"** to see that gene search in the genome. Repeat this process for all the gene searches you want to compare. If you want to see them on 
 separate lines, click **"Display"** and check the box in front of **"Show One Line Per Entry View"** . 
 
