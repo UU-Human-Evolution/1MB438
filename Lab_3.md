@@ -58,6 +58,7 @@ starting point necessary to use trained models.  There is a third variant of `Ge
 ##### Example usage of the GeneMark suite  
 
 The first thing we need to do is untar (decompress) the folder in which the program is:
+
 `tar -xvf ./SRC/Lab3/gms2_linux_64.tar.gz`
 
 `gunzip ./SRC/Lab3/gm_key_64.gz`
