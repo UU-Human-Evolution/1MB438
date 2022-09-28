@@ -68,7 +68,7 @@ If you have your new plasmid sequence in the file `plasmid.fna` and want to pred
 1. Generate the HMM by training on the genome with `gmsn.pl`. This will generate a new file called `GeneMark_hmm.mod`.
    In order for this command to work, you need to execute this command: 
 
-   `cp ./SRC/gm_key_64 ~/.gmhmmp2_key`  
+   `cp ./SRC/Lab3/gm_key_64 ~/.gmhmmp2_key`  
 
 2. Now we are ready to search for orfs in the genome:  
    `perl ./SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
