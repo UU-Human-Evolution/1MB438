@@ -12,7 +12,7 @@ Try to work in the same pairs you had in Lab 3 (if you had one). As you progress
 
 ### Genome annotation
 
-In the context of genomics, an annotation is a definition of the genes, their characteristics and descriptions.   As raw sequencing data can't tell us what parts of it are functional or what function does each region plays, annotating a genome is, in its most basic sense, making our nucleotide sequence meaningful. As a process of identification of genes and coding regions' physical locations within the chromosome, genome annotation helps us have an insight on what these genes do  by stablishing structural aspects and relating them to functions of different proteins.  
+In the context of genomics, an annotation is a definition of the genes, their characteristics and descriptions.   As raw sequencing data can't tell us what parts of it are functional or what function each region plays, annotating a genome is, in its most basic sense, making our nucleotide sequence meaningful. As a process of identification of genes and coding regions' physical locations within the chromosome, genome annotation helps us have an insight on what these genes do  by establishing structural aspects and relating them to functions of different proteins.  
 
 We already started with this process in our previous session identifying putative coding regions and their associated promoters. In this session we will continue exploring those regions and try to end up with some useful information about our selected plasmids. 
 
