@@ -125,7 +125,7 @@ You can check your beautiful table in sqlite by something like this :
 sqlite> SELECT orf_id FROM orfs; -- you will print all the orf names listed in the table –  
 sqlite> SELECT * FROM orfs; -- you will print the entire table --  
 sqlite> SELECT AVG(length) FROM orfs; -- Extract the average length of all orfs                        
-sqlite> SELECT orf_id, length FROM orfs WHERE length > 100; -- print orfs with length above 500  
+sqlite> SELECT orf_id, length FROM orfs WHERE length > 500; -- print orfs with length above 500  
 ```
 
 #### Similarity search using BLAST
