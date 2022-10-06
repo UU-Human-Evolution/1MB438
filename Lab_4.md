@@ -113,7 +113,7 @@ create table orfs(orf_id CHAR, nucleotides CHAR, aminoacids CHAR, length INTEGER
    into peptides and insert the data into the table you just created. Inspect `Gene2SQLite.py` 
    to see what arguments the scripts takes as input. OBS! Name the peptide translation as `x_orfs_peptides.fas` (where x is the plasmid you are looking at).  
 
-3. **(Optional)**  Take a look at  `Gene2SQLite.py` and follow what the script do.  
+3. **(Optional)**  Take a look at  `Gene2SQLite.py` and follow what the script does.  
 
 Check the translation file, same way you were checking the correct translation from the 6 
 possible ones in Lab 2, to make sure nothing went wrong! When you have the data in a 
