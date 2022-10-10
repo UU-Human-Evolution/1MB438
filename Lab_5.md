@@ -29,7 +29,7 @@ In this project you will perform a complete phylogenetic analysis from gathering
 
 ##### Performing the analysis 
 
-You will start with compiling your datasets in lab X6. The following labs, X7 till X9, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built in error checking (hopefully you make different mistakes). OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.).
+You will start with compiling your datasets in lab 5. The following labs, 6 to 8, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built in error checking (hopefully you make different mistakes). OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.).
 
 ##### Work on your own dataset
 
