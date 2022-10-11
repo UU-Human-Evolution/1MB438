@@ -8,7 +8,7 @@
 
 In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial X6. You will try to answer a biological question by analyzing two mitochondrial genes:
 
-1. cytB, coding for the Cytochrome B protein (CYB), that is a hem-binding protein involved in the electron transport of the mitochondrial respiratory chain.
+1. cytB, coding for the Cytochrome B protein (CYB), that is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
 
 2. 16S, ribosomal 16S gene, a non-coding structual rRNA gene.
 
