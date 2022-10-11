@@ -130,7 +130,7 @@ After gathering the sequences you need to align them before doing the phylogenet
   3. If you can't see identical blocks you should inspect the situation, you might have:
      1. Highly diverged sequences - then it's ok
      2. Mixture of sequences from different genes - then you might have a problem...
-     3. Came gene in different orientations (+ and - strand instead of only +)
+     3. Same gene in different orientations (+ and - strand instead of only +)
      4. Poor alignment of correct sequences - sometimes kalign is not doing a very good job...
 
 *Technical hint: if you use `kalign` save the output in the default fasta format and then use your alignment converter to get it any other format you might need, like nexus for `Paup`.
