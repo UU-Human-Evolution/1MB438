@@ -98,6 +98,7 @@ Here is a small workflow for the data gathering. How many species you will find 
 4. ##### Create a name conversion file 
 
    - [ ] Create a tab-delimited file with three columns with the script called `X5_create_tab-delimited_file_from_fasta.py`
+   - [ ] 
      `python /SRC/Lab5/X5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta”`
 
    Either of the above should print a 3-column tab-separated output to the terminal. Write the output of one of the above to a file (e.g. cytB_all.tab). Each row contains information on each sequence in your data set, including: 
