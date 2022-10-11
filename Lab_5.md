@@ -43,7 +43,7 @@ This list can serve as a potential checklist for you to structure your results t
 
 ##### Wrapping-up the project 
 
-At the end of the last lab session we will meet each group individually for short oral examination. You will answer the question you were assigned with the help of results that you obtained during the project. No stress! The point is for you to get to work on a more complex project and to reflect on the results you obtained - caution, they can be contradictory (but not always). The most optimal way to answer your question would be a collection of key findings that led to this specific answer. OBS! This informal presentation is compulsory for us to validate X9, so if for some reason you cannot attend the class that day, let us know in advance and we will find a solution.
+At the end of the last lab session we will meet each group individually for short oral examination. You will answer the question you were assigned with the help of results that you obtained during the project. No stress! The point is for you to get to work on a more complex project and to reflect on the results you obtained - caution, they can be contradictory (but not always). The most optimal way to answer your question would be a collection of key findings that led to this specific answer. OBS! This informal presentation is compulsory for us to validate lab 8, so if for some reason you cannot attend the class that day, let us know in advance and we will find a solution.
 
 
 
