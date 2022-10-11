@@ -23,7 +23,7 @@ In this project you will perform a complete phylogenetic analysis from gathering
 5. What are the closest relatives of octopuses and squids?
 6. Is the guinea pig more closely related to rats than to pigs?
 7. What feline (cat-like animals) is most closely related to the cheetah?
-8. Are egg-laying mammals (platypus and echidna) more closely related to marsupials or placental mammals?
+8. Are egg-laying mammals (platypus and echidna) more closely related to marsupials than to placental mammals?
 
 
 
