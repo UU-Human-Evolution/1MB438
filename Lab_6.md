@@ -22,7 +22,7 @@ So, with this in our minds, let's get going.
 + Create phylogenetic trees meaningful for our project's question
 
 ## Input
-+ Aligned sequences of the complete mitochondrial DNA and CytB that we curated on Lab 6
++ Aligned sequences of the complete mitochondrial DNA and CytB that we curated on Lab 5
 
 ## Output(s)
 + Several tree files 
