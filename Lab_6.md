@@ -13,7 +13,7 @@ The basic idea behind it all is quite simple: as species diverge over time, they
 
 *Phylogenetic tree from Ersmark et al. 2016: https://doi.org/10.3389/fevo.2016.00134*
 
-Each tree is a hypothesis of the relationship between our sequences, and our goal is to identify, from all the possible trees, the one that is most likely to be true according to our data. This may vary depending on the region you are looking at, the models that you use or how you preprocess and align your sequences. 
+Each tree is a hypothesis of the relationship between our sequences, and our goal is to identify, from all the possible trees, the one that is most likely to be true according to our data. This may vary depending on the genomic region you are looking at, the models that you use or how you preprocess and align your sequences. 
 
 So, with this in our minds, let's get going. 
 
