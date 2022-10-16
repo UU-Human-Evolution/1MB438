@@ -84,7 +84,7 @@ Its input files are in the NEXUS or FASTA alignment format. You will work on you
 
 `./SRC/beast/bin/beauti`
 
-Once the new window pop up, you have to import the alignment file. We want to do this for **both our alignments**. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
+Once the new window pops up, you have to import the alignment file. We want to do this for **both our alignments**. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
 Once you have the alignment loaded, we need to specify the settings we are going to run BEAST with. BEAUTi offers a lot of different options, and we can even subdivide our alignment to apply different models to different regions, estimate split times, etc.
 
 However, as we are only interested on reconstructing the phylogeny of our sequences, we are going to modify only a few of the settings.
