@@ -58,7 +58,7 @@ Now let's look at the *.iqtree* file.
 1. **Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
 
 2. **Briefly explain the best-fitting model.**
-3. 
+
 #####Question 4:
 1. **Now look at both your Maximum Likelihood tree and Consensus Tree. Are they the same? If not, where do they differ?**
 
