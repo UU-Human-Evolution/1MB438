@@ -74,7 +74,7 @@ The first step is to decompress it.
 
 To start BEAST2 apps, type
 
-`PATH_TO_BEAST_FOLDER/beast/APP`
+`PATH_TO_BEAST_FOLDER/beast/bin/beast`
 
 BEAST2 uses different GUI apps for the different steps, so we will need to change
 the name of the app accordingly.
