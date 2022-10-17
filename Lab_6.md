@@ -127,13 +127,17 @@ cytB to nexus format.
 2. Use PAUP* to obtain a maximum parsimony tree for each of your genes.
 Run the following file in PAUP* (replacing input and output names!):
 
-`begin paup;
+`begin paup -l <name_log_file>;
 
 exec input.nxs;
 
 set criterion=parsimony;
 
+# Now that you have set all the parameters run this command to get the trees
+
 hsearch;
+
+# You will see an output, please save the parsimony score, you will need it for later
 
 savetrees file=output_pars.tre format=phylip brlens;
 
