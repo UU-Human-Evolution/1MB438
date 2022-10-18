@@ -82,7 +82,7 @@ Once your analysis is done (it may take a while), we can visualize it through di
 
 This can be done in 2 ways with the software included with BEAST2:
 • TreeAnnotator: this program looks inside the "forest" of trees estimated by the *MCMC* to find the best supported version and then it will annotate it with the best supported estimates for ages of the nodes in the tree. It will also calculate de posterior clade probability for each node, which is useful as a measure of certainty in the depicted division. We start by opening `TreeAnnotator` and setting up the *Burnin rate* to 10% (meaning that the first 10% of trees at the start of the run will be discarded) and the *Posterior Probability Limit* to 0. Then, we have to choose the
-*Target tree* type, so we will select "Maximum clade credibility tree" (aka MCC tree), and them "Mean Heights" from the Node Heights menu. Finally, we select our input and output files (for the output, just write the name, our it will force you to overwrite an existing file). Once we have out tree annotated, we can visualize it with *FigTree*.
+*Target tree* type, so we will select "Maximum clade credibility tree" (aka MCC tree), and then "Mean Heights" from the Node Heights menu. Finally, we select our input and output files (for the output, just write the name, or it will force you to overwrite an existing file). Once we have our tree annotated, we can visualize it with *FigTree*.
 You can run TreeAnnotator with this command:
 `treeannotator`
 Try to follow the same guidelines as with the *iqtree* output. 
