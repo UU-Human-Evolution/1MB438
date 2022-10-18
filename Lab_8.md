@@ -35,9 +35,9 @@ Repeat the steps followed on Session 7 to run BEAST2, but this time use the mito
 In Session 7 you performed a Maximum Likelihood and Bayesian analysis  on two alignments: *cytB* and entire *mitochondria*. You answered  questions relative to the *cytB* run. Now, answer these same questions for the mitochondria run. You might be asked about these during the presentation.
 
 #####Question 1:
-**Which files do IQ-TREE output? Explain briefly what each of them is.**
+**Which files does IQ-TREE output? Explain briefly what each of them is.**
 #####Question 2:
-**IQ-TREE creates several tipes of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
+**IQ-TREE creates several types of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
 
 Now let's look at the .iqtree file.
 
@@ -51,7 +51,7 @@ Now let's look at the .iqtree file.
 
 2. **In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?**
 
-### Step 3a: Create a visual representation of your  Neighbour Joining and Maximum Likelihood trees
+### Step 3a: Create a visual representation of your Neighbour Joining and Maximum Likelihood trees
 
 In the .iqtree file, you have a representation of the trees. However, it is an unrooted tree. You can root the tree, and do many other things, with the program FigTree.
   
