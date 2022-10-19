@@ -32,7 +32,7 @@ Repeat the steps followed on Session 7 to run BEAST2, but this time use the mito
 
 ### Step 2: Examine the IQTree and BEAST2 outputs for the mitochondria
 
-In Session 7 you performed a Maximum Likelihood and Bayesian analysis  on two alignments: *cytB* and entire *mitochondria*. You answered  questions relative to the *cytB* run. Now, answer these same questions for the mitochondria run. You might be asked about these during the presentation.
+In Session 7 you performed a Maximum Likelihood and Bayesian analysis  on two alignments: *cytB* and the *16 S mitochondria sequence*. You answered  questions relative to the *cytB* run. Now, answer these same questions for the mitochondria run. You might be asked about these during the presentation.
 
 #####Question 1:
 **Which files does IQ-TREE output? Explain briefly what each of them is.**
