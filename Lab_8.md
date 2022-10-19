@@ -120,7 +120,7 @@ We will also expect you to remind us briefly of the question you worked with, an
 ---
 ## Presentation
 
-Once you feel like you are ready to present (and not later than one hour before the end of the session), write your names on the board so the teaching assistants can come to listen to you. The presentation will last 5-10 minutes, at your desk.
+Once you feel like you are ready to present (and not later than one hour before the end of the session), the presentations will begin. You will present in front of everyone your results, be concise and show that you understand why there are differences between trees. You will also need to revise how you got all the trees and a general idea of what all the software does in case the TAs ask you. The presentation will last 5-10 minutes.
 
 You do not have to submit anything for this session (if you present orally).
 
