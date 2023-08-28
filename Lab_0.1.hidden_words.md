@@ -69,7 +69,7 @@ nano solution_2.2.txt
 ## 3 Copy and remove files
 Please go to the directory `exercise_3`.
 ### 3.1 Create a directory and copy a file to it
-To find the next two characters, you will have to create a subdirectory named `solution` in `exercise_3` and copy the file `codes.txt` to it. Use the command `mkdir` to make directories . For copying files, you can use the command `cp <filename from> <filename to>`. Use the command ls solution/ afterwards to verify that the file `codes.txt` is there. Finally, run the Perl program `check_code.pl` to find the characters.
+To find the next two characters, you will have to create a subdirectory named `solution` in `exercise_3` and copy the file `codes.txt` to it. Use the command `mkdir` to make directories . For copying files, you can use the command `cp <filename from> <filename to>`. Use the command `ls solution/` afterwards to verify that the file `codes.txt` is there. Finally, run the Perl program `check_code.pl` to find the characters.
 ### 3.2 Removing files
 In the same directory, there is a file `junk.txt` that does not contain anything useful, and we would like to delete it. To delete it, use the `rm <filename>` command. Also, there are more files to be deleted in the `data` directory. To remove more than one file at once, you can use the wildcard `*`, for example from the directory `exercise_3`:
 
