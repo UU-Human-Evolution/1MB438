@@ -150,13 +150,13 @@ for file in *.fastq;
 do
 
     # filter the reads
-    filter_reads -i $file -o $file.filtered
+    filter_reads -i $file -o $file.filtered -d
 
     # align the reads
-    align_reads -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered -o $file.filtered.aligned.sam
+    align_reads -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered -o $file.filtered.aligned.sam -d
 
     # call SNPs
-    find_snps -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered.aligned.sam -o $file.filtered.aligned.snpcalled.pileup
+    find_snps -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i $file.filtered.aligned.sam -o $file.filtered.aligned.snpcalled.pileup -d
 
 
     break
