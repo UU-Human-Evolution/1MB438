@@ -30,7 +30,7 @@ mkdir solution
 cp codes.txt solution/
 perl check_code.pl
 
-rm junk.txt data/junk_data_*
+rm junk.txt data/junk*
 perl check_junk.pl
 
 cd ../exercise_4/
