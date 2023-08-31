@@ -5,7 +5,8 @@ shopt -s expand_aliases
 
 alias ll='ls -lh'
 
-mkdir ~/1MB438/RESULTS/linux_pipes
+rm -r ~/1MB438/RESULTS/linux_pipes
+mkdir -p ~/1MB438/RESULTS/linux_pipes
 cd ~/1MB438/RESULTS/linux_pipes
 
 rm -rf hidden_words

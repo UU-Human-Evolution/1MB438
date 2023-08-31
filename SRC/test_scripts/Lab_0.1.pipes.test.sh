@@ -7,7 +7,7 @@ alias ll='ls -lh'
 
 cd ~/1MB438/RESULTS
 rm -rf linux_pipes
-mkdir linux_pipes
+mkdir -p linux_pipes
 cd linux_pipes
 
 w3m -dump https://en.wikipedia.org/wiki/Principal_component_analysis > PCA.txt
@@ -19,7 +19,7 @@ grep PCA short_pca.txt | wc -l
 grep PCA PCA.txt | wc -l
 
 cd ~/1MB438/RESULTS/linux_pipes
-mkdir sam
+mkdir -p sam
 cd sam
 ln ../../linux_tutorial/a_better_name/sample_1.sam .
 samtools view -b sample_1.sam > sample_1.bam
