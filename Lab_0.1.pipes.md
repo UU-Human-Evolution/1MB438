@@ -30,7 +30,7 @@ cd linux_pipes
 Now we will need files to experiment with. Let's download a text we can work with from Wikipedia using a program called `w3m`. It is a terminal-based web browser that can save the HTML as plain text. It will by default print the text to the terminal, so we have to tell `bash` to redirect the output to a file using the `>` character.
 
 ```bash
-w3m -dump https://en.wikipedia.org/wiki/Principal_component_analysis > PCA.txt
+w3m -dump https://en.wikipedia.org/w/index.php?title=Principal_component_analysis\&oldid=1171520282 > PCA.txt
 ```
 
 The above command reads the Wikipedia page for Principal Component Analysis and extracts the body text and saves it to the file `PCA.txt`.
@@ -63,9 +63,9 @@ Counting is hard and slow for humans but easy for machines. Use the word count c
 ```bash
 wc PCA.txt
 
-  2395  17076 126443 PCA.txt
+  2650  18063 134161 PCA.txt
 
-# 2395 lines, 17076 words, 126443 characters
+# 2650 lines, 18063 words, 134161 characters
 ```
 </details>
 
@@ -87,9 +87,9 @@ You can use `wc` to figure out if you did it correctly.
 head -n 100 PCA.txt > short_pca.txt
 wc short_pca.txt
 
- 100  703 4758 short_pca.txt
+ 100  298 2518 short_pca.txt
 
-# 100 lines, 703 words, 4758 characters
+# 100 lines, 298 words, 2518 characters
 ```
 
 </details>
@@ -132,17 +132,17 @@ Try it for the full article as well!
 ```bash
 # short file
 grep PCA short_pca.txt | wc -l
-15
+9
 
 # full file
 grep PCA PCA.txt | wc -l
-168
+179
 ```
 
 </details>
 
 ## Hand-in instructions
-Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the hidden word exersise below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
+:exclamation: **READ THIS PART:** Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the hidden word exersise below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
 
 We won't judge the formatting of the file or anything, so don't sweat it if the file is ugly :)
 

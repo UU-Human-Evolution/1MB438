@@ -66,10 +66,13 @@ To find character number six, you will need to create a text file in the `exerci
 nano solution_2.2.txt
 ```
  Add now the exact text `Please give me solution 2.2`, then save and quit `nano`. To save a file in `nano`, press `Ctrl+o`, to quit `Ctrl+x`. Afterwards, run the Perl program `text_file_check.pl`.
+
 ## 3 Copy and remove files
 Please go to the directory `exercise_3`.
+
 ### 3.1 Create a directory and copy a file to it
 To find the next two characters, you will have to create a subdirectory named `solution` in `exercise_3` and copy the file `codes.txt` to it. Use the command `mkdir` to make directories . For copying files, you can use the command `cp <filename from> <filename to>`. Use the command `ls solution/` afterwards to verify that the file `codes.txt` is there. Finally, run the Perl program `check_code.pl` to find the characters.
+
 ### 3.2 Removing files
 In the same directory, there is a file `junk.txt` that does not contain anything useful, and we would like to delete it. To delete it, use the `rm <filename>` command. Also, there are more files to be deleted in the `data` directory. To remove more than one file at once, you can use the wildcard `*`, for example from the directory `exercise_3`:
 
@@ -81,8 +84,10 @@ rm data/junk*
 
 **WARNING**: On the command line, it is not possible to recover files once deleted. Use the `rm` command wisely!
 To get characters number nine and ten, run the Perl program `check_junk.pl` after removing all the files.
+
 ## 4 Find text and combine commands
 To find the last 2 characters, move to the directory `exercise_4`.
+
 ### 4.1 grep and pipe
 `exercise_4` contains a text file, which corresponds to the Wikipedia page for Bioinformatics. Have a look at the content of this file with less. As you can
 see, it is a rather long file with 269 lines (you can run the command `wc -l text.txt` to convince yourself). You can also use the command grep to search this file, for example `grep bioinformatics text.txt` will output to your Terminal all the lines that contain the word `bioinformatics`.
