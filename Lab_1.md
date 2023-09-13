@@ -84,11 +84,11 @@ Alternative: If you have already done a protein search for ftsA you can in the s
 
 Pairwise alignment consist on the comparison of two sequences from different individuals/species, with the goal of finding regions similar between the two. This regions may reflect conserved regions with functional, structural or evolutionary relevance. 
 
-You can find a detailed tutorial on Pairwise alignment [here](https://teaching.healthtech.dtu.dk/teaching/index.php/ExPairwiseAlignment)
+You can find a detailed tutorial on Pairwise alignment [here](https://teaching.healthtech.dtu.dk/22111/index.php/ExPairwiseAlignment)
 
 
 ###### Question 7
 1. Submit all the answer to the questions in the tutorial. 
 
-**Submit the answers to all 7 questions to the Studium assignment.**
+**Submit the answers to all 14 questions to the Studium assignment.**
 
