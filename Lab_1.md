@@ -90,5 +90,5 @@ You can find a detailed tutorial on Pairwise alignment [here](https://teaching.h
 ###### Question 7
 1. Submit all the answer to the questions in the tutorial. 
 
-**Submit the answers to all 14 questions to the Studium assignment.**
+**Submit the answers to all 7 questions to the Studium assignment.**
 
