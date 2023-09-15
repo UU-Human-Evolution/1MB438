@@ -38,7 +38,7 @@ Search for open reading frames with Transeq (see [Using_transeq](./extra/Using_t
 
 ###Running BLAST locally
 
-The program for local blast searches is called blastall and includes all the different blast programs. You specify the blast program with the option -p. In the following section you will use the file [prokaryotes_db](./DATA/Lab2/prokaryotes_db) which contains prokaryotic protein sequences in FASTA format.
+The program for local blast searches is called BLAST+ and includes all the different blast programs. You specify the blast program with the option (blastn for nulceotide-nucleotide, blastp for protein-protein. For more information, see e.g. this [manual](https://www.animalgenome.org/bioinfo/resources/manuals/blast2.2.24/user_manual.pdf). In the following section you will use the file [prokaryotes_db](./DATA/Lab2/prokaryotes_db) which contains prokaryotic protein sequences in FASTA format.
 
 
 1. Make a database of the file using formatdb
