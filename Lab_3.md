@@ -28,7 +28,7 @@ Gene finding is a central aspect of bioinformatics, and a key issue when trying 
 
 The most simple and naïve way to search for genes is to search your input sequence for the initiation codon ATG followed by a stretch of DNA free from an in-frame stop codon. Since almost all gene products are larger than 50 amino acids, it is reasonable to set the minimum length of your ORFs to 150 nucleotides.  
 
-You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf) In order to use getorf with a minimum ORF size of 150 nucleotides and a search from ATG to stop, type  
+You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf). In order to use getorf with a minimum ORF size of 150 nucleotides and a search from ATG to stop, type  
 
 `getorf YOUR_FILE.fna -minsize 150 -find 3`  
 
