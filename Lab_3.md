@@ -10,7 +10,7 @@ Work alone or in pairs during this lab. As you progress, take notes of answers t
 
 ## The problem:
 
-For this session and the next, we are going to work with samples retrieved from real patients in the context of an Escherichia coli outbreak. The files we are going to work with contain the complete sequence of a plasmid. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share them via horizontal gene transfer in a process called "conjugation" and this plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With that in mind, we want to fully characterize these sequences, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
+For this session and the next, we are going to work with samples retrieved from real patients in the context of an Escherichia coli outbreak. The files we are going to work with contain the complete sequence of a plasmid. Plasmids are small sequences of DNA present in some bacteria outside the circular chromosome. Bacteria can share plasmids via horizontal gene transfer in a process called "conjugation". Plasmids have a huge influence on virulence, pathogenicity and antibiotic resistance. With this in mind, we want to fully characterize these sequences, in order to inform the doctors of how to properly combat this new outbreak of EHEC.
 
 <figure>
     <img src="/Figures/bacterial_conjugation.png" >
@@ -22,7 +22,7 @@ Choose **two** of the available sequences in `DATA/Lab3/` and copy them into you
 
 ## Gene identification tools
 
-Gene finding is a central aspect of bioinformatics, and a key issue when trying to make sense out of new and/or unknown sequence such as our plasmid. There are several different ways to do this and what is best will depend on what genome is being analyzed, especially whether it is prokaryotic or eukaryotic. Methods range from finding stretches without stop codons, via homology comparisons with other, closely related sequences, to highly sophisticated neural networks. Gene finding in eukaryotes is particularly difficult and typically requires cross-validation between several complex methods. In prokaryotes, though, it is quite more straightforward. In most cases a simple search for open reading frames (ORFs) is usually sufficient to get a good set of candidate genes for further analysis. 
+Gene finding is a central aspect of bioinformatics, and a key issue when trying to make sense of new and/or unknown sequence such as our plasmid. There are several different ways to do this and what is best will depend on what genome is being analyzed, especially whether it is prokaryotic or eukaryotic. Methods range from finding stretches without stop codons, via homology comparisons with other, closely related sequences, to highly sophisticated neural networks. Gene finding in eukaryotes is particularly difficult and typically requires cross-validation between several complex methods. In prokaryotes, though, it is more straightforward. In most cases a simple search for open reading frames (ORFs) is usually sufficient to get a good set of candidate genes for further analysis. 
 
 #### Simple ORF search 
 
