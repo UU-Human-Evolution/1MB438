@@ -77,6 +77,16 @@ If you have your new plasmid sequence in the file `plasmid.fna` and want to pred
 
 
 
+** Alternatively, if GeneMark does not work, we can use the program Prodigal instead **
+1. Start by downloading the program in the 1MB438/SRC/Lab3 directory.:
+    Navigate to the 1MB438/SRC/Lab3 directory.
+    Download the program by running: `git clone https://github.com/hyattpd/Prodigal`
+
+2. Now navigate back to your personal directory.
+    Run Prodigal in this way:
+    `prodigal -i YOUR_FILE.fna -d SOME_OUTPUT_NAME.fasta`
+
+
 ### Visualization  
 
 In order to visualize the differences between putative ORFs, there is a tool called `Artemis` that may be of use. If you have JAVA installed, you could use a web based launch from the same place. In order to convert the outputs from `getorf` and `GeneMarkS` to an Artemis format you need a script that can parse the program output into a format recognized by `Artemis`. In `Artemis` you can load in the sequence file and then on top of it display different feature files, in the following format (NB The number of spaces are important):  
