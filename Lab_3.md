@@ -84,7 +84,7 @@ If you have your new plasmid sequence in the file `plasmid.fna` and want to pred
 
 2. Now navigate back to your personal directory.
     Run Prodigal in this way:
-    `prodigal -i YOUR_FILE.fna -d SOME_OUTPUT_NAME.fasta`
+    `prodigal -i YOUR_FILE.fna -d SOME_OUTPUT_NAME.fasta > SOME_OUTPUT_NAME.artemis`
 
 
 ### Visualization  
