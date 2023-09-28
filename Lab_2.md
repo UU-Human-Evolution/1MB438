@@ -22,9 +22,7 @@ Search SwissProt database with [orf_serratia.fasta](./DATA/Lab2/orf_serratia.fas
 
 **Question 2**
 1. What protein do you think it is and what is its function?
-2. There are some hits that give a much higher E-value than the top hits. To which group of bacteria do these entries belong?
-3. What is the taxonomic placement of Serratia? Make a guess and then check the Taxonomy
-browser for the real answer.
+2. Investigate what is the E-value.
 
 ##### Search for coding regions
 
