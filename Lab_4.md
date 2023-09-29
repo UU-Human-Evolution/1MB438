@@ -18,7 +18,8 @@ We already started with this process in our previous session identifying putativ
 
 ### Workflow
 
-Today you are going to use the output from GeneMarkS together with BLAST-searches on curated databases of regions associated with phenotypes of interest. You will put the results from both GeneMarkS and BLAST in a SQLite database and query the database to study different set of genes. 
+Today you are going to use the output from GeneMarkS together with BLAST-searches on curated databases of regions associated with phenotypes of interest. You will put the results from both GeneMarkS and BLAST in a SQLite database and query the database to study different set of genes.
+**The output of GeneMarkS is located in the folder DATA/Lab4*
 
 ##### SQLite
 
@@ -155,7 +156,7 @@ Now you will run Blast2SQLite.py which takes your blast results and puts it in a
 #### Visualization
 To visualize the comparison between the finished genome and your contigs of choice you will use ACT (Artemis Comparison Tool). Artemis allows you to not only work with one sequence but also load in more sequences at the same time. This is very useful both for annotation and for comparative analysis, for example looking at the rearrangements. The principle is very similar to the 'art' program you have already used and you have to use 'act' in this case.
 
-If you do not have it installed, start by downloading and installing ACT. If you have JAVA
+When working on your own computer, start by downloading and installing ACT. If you have JAVA
 installed, you could use a web based launch.To start ACT on Linux, type:
  
  `% act &`
@@ -206,5 +207,5 @@ Does your sample contain any gene associated with a virulence factor that the do
 
 	
 
-**Submit your answers to Lab 4 Assignment on Studium**
+**Show your results to the TAs before the end of the lab**
 
