@@ -1,0 +1,17 @@
+# GeneMark.hmm-2 LST format
+# GeneMark.hmm-2 prokaryotic version: 1.25_lic
+# File with sequence: EColi_plasmid5.fasta
+# File with native parameters: GMS2.mod
+# Native species name and build: unspecified GeneMarkS-2-1.14_1.25_lic
+# File with MetaGeneMark parameters: /home/violanca/1MB438/SRC/Lab3/gms2_linux_64/mgm_11.mod
+# translation table: 11
+# output date start: Fri Sep 29 10:32:13 2023
+
+# sequence-region 1 1917
+SequenceID: Unknown
+     1   +    1038    1340     303 native  0 3
+     2   -    1596   >1916     321 atypical
+# Unknown	total_logodd	152.271	average_length	312	average_density	1.04
+
+# output date end: Fri Sep 29 10:32:13 2023
+# Done with file: EColi_plasmid5.fasta

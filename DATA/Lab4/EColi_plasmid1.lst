@@ -1,0 +1,101 @@
+# GeneMark.hmm-2 LST format
+# GeneMark.hmm-2 prokaryotic version: 1.25_lic
+# File with sequence: EColi_plasmid1.fasta
+# File with native parameters: GMS2.mod
+# Native species name and build: unspecified GeneMarkS-2-1.14_1.25_lic
+# File with MetaGeneMark parameters: /home/violanca/1MB438/SRC/Lab3/gms2_linux_64/mgm_11.mod
+# translation table: 11
+# output date start: Fri Sep 29 10:31:06 2023
+
+# sequence-region 1 92722
+SequenceID: unknown_plasmid1
+     1   +   <1    2661    2661 atypical
+     2   +    2748    3623     876 native AGCGTT 5 1
+     3   +    3639    5591    1953 native TCAGGA 5 1
+     4   +    5591    7096    1506 native GGAGAT 3 1
+     5   +    7098    8321    1224 native AGAGGA 5 1
+     6   +    8352    8786     435 native GGAGAA 4 1
+     7   +    8783    9337     555 native GCAGCC 0 1
+     8   +    9334    9699     366 native TGAGGT 6 1
+     9   +    9696    10295     600 native GCAGTG 10 1
+    10   +    10292    11269     978 native GGAGAC 6 1
+    11   +    11383    12480    1098 native GGAGCC 6 1
+    12   +    12467    12979     513 native AGAGTG 4 1
+    13   +    13037    13870     834 native GGAGGA 3 1
+    14   +    14542    14847     306 native GGTGCT 3 1
+    15   +    14874    15713     840 native AGAGCG 9 1
+    16   +    16254    16769     516 native ATTTAA 5 1
+    17   +    16771    19767    2997 native AGAAAA 5 1
+    18   +    19817    21937    2121 native GGAGGA 14 1
+    19   +    21941    23380    1440 native GCAGGC 7 1
+    20   +    23465    23641     177 native AAACAA 3 1
+    21   +    24475    25215     741 native CGTGAA 9 1
+    22   -    25500    26477     978 native GGCGAG 0 1
+    23   -    26885    27085     201 native GGAGGC 6 1
+    24   -    27082    27702     621 native GGTGAA 3 1
+    25   -    27699    28298     600 atypical GGAGCC 5 1
+    26   +    28841    29059     219 native AGAGGT 5 1
+    27   +    29061    29366     306 native GGTGAA 0 1
+    28   +    29403    30173     771 native GCAGTC 0 1
+    29   +    30367    30486     120 native AGTGTT 5 1
+    30   -    30896    31786     891 native GGAAAA 1 1
+    31   -    31783    32109     327 native AGAGGT 7 1
+    32   +    32254    32409     156 native AGTTAC 6 1
+    33   +    32997    34163    1167 native GGATGT 5 1
+    34   +    34163    35134     972 native GGAGAT 6 1
+    35   +    36821    38158    1338 native GGATAC 5 1
+    36   +    38235    39137     903 native CCCGAT 3 1
+    37   -    39290    39415     126 native TCAGGC 5 1
+    38   +    39523    40206     684 native GGAGTG 5 1
+    39   +    40207    40428     222 native GGAGGC 7 1
+    40   +    40442    40876     435 native GGAGAC 4 1
+    41   +    40922    41698     777 native GGAGAA 9 1
+    42   +    42116    42541     426 native GGAGGA 7 1
+    43   +    42588    43010     423 native GGAGAC 6 1
+    44   +    43007    43198     192 native GGAGCA 6 1
+    45   -    44212    44472     261 atypical GCTGAT 8 1
+    46   +    44476    45837    1362 native GGAGAA 6 1
+    47   +    45884    46447     564 native GGAGAT 6 1
+    48   +    47290    47742     453 native GGAGAC 5 1
+    49   +    47799    48032     234 native GGAGAG 6 1
+    50   +    48098    50056    1959 native GGAGGT 7 1
+    51   +    50108    50545     438 native GGAGAT 3 1
+    52   +    50542    51303     762 native GGAGGT 5 1
+    53   +    51875    53848    1974 native AGGGAA 12 1
+    54   +    53952    54347     396 native GGAGCA 4 1
+    55   -    54921    55280     360 native GCACAA 6 1
+    56   +    55486    55872     387 native AGAGGA 7 1
+    57   +    56141    65650    9510 native AGAGGG 7 1
+    58   +    65742    66014     273 native CGCGAA 7 1
+    59   -    65941    66444     504 native AGAGGT 7 1
+    60   +    66651    67889    1239 native GGTGAC 3 1
+    61   +    67909    68655     747 native ACAGGA 12 1
+    62   +    68714    69574     861 native ACAGGA 5 1
+    63   +    69677    70237     561 native AGAGTA 3 1
+    64   +    70370    70582     213 native AGAGGA 9 1
+    65   +    70827    71288     462 native GGAGAA 4 1
+    66   +    71581    71919     339 native GCAGAT 5 1
+    67   +    72159    72413     255 native GGAGGC 3 1
+    68   +    72716    73573     858 native GCAGGA 4 1
+    69   +    74491    74769     279 native GGATAT 4 1
+    70   +    74769    75044     276 native GGTGCC 6 1
+    71   +    75139    75345     207 atypical GGAGAT 3 1
+    72   -    75430    75651     222 native ACCGGA 4 1
+    73   -    75704    76144     441 native GGAGGG 4 1
+    74   -    76222    76686     465 native GGAGTT 14 1
+    75   +    76716    76955     240 atypical GGGGGA 14 1
+    76   +    77048    79258    2211 native GGAGCT 6 1
+    77   +    79302    79691     390 native GGAGAA 3 1
+    78   +    79697    79849     153 native AGATAA 5 1
+    79   +    79849    80736     888 native GGAAAA 4 1
+    80   +    80917    84819    3903 native GGAGCT 3 1
+    81   +    86557    86730     174 native GGGGCA 5 1
+    82   +    86998    87819     822 native ACAGAC 12 1
+    83   +    87819    88925    1107 native AGATAA 3 1
+    84   +    89015    90736    1722 native GGGGAC 5 1
+    85   +    90873    91808     936 native GCAGGC 14 1
+    86   -    92129    92239     111 atypical AGAGGT 4 1
+# unknown_plasmid1	total_logodd	9000.9	average_length	873	average_density	0.93
+
+# output date end: Fri Sep 29 10:31:06 2023
+# Done with file: EColi_plasmid1.fasta
