@@ -30,11 +30,11 @@ The most simple and naïve way to search for genes is to search your input seque
 
 You will deal with the program `getorf` in the EMBOSS suite (EMBOSS suite.pdf). In order to use getorf with a minimum ORF size of 150 nucleotides and a search from ATG to stop, type  
 
-`getorf YOUR_FILE.fna -minsize 150 -find 3`  
+`getorf YOUR_FILE.fasta -minsize 150 -find 3`  
 
 on the command line. Genes might be located on the opposite strand to the sequenced one, but this is not a problem since getorf will still find it and note the direction of the gene in its output. Note that STOP codons are not included in the output. That issue, however, will be fixed by the script that parses program output to a format that can be used in the visualization tool Artemis:
 
-`perl ./SRC/Lab3/GenePrediction2Artemis.pl -i getorf.file -o outputname.artemis -getorf`
+`perl ./<your_path>/GenePrediction2Artemis.pl -i getorf.file -o outputname.artemis -getorf`
 
 
 
@@ -57,27 +57,37 @@ starting point necessary to use trained models.  There is a third variant of `Ge
 
 ##### Example usage of the GeneMark suite  
 
-The first thing we need to do is untar (decompress) the folder in which the program is:
+The first thing we need to do is to download the license key for the program, founded here: http://exon.gatech.edu/genemark/license_download.cgi 
 
-`tar -xvf ./SRC/Lab3/gms2_linux_64.tar.gz`
+You need to select `GeneMarkS-2 version 1.14_1.25_lic` and select linux 64 as we are        going to upload it to the server.
+Next we need to upload the key to the server, there are multiple ways to share files        from your local computer to a server, easiest way is scp:
+    
+    `scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2`
 
-`gunzip ./SRC/Lab3/gm_key_64.gz`
+Think that you need to have the key in your root directory (you can find your root directory by typing cd and then pwd).
+**If you are working with your own personal computer this might not work, remember these labs were designed for you to work on the university computers**
+    
+The second thing we need to do is untar (decompress) the folder in which the program is:
+
+    `tar -xvf ./<your_path>/gms2_linux_64.tar.gz`
+
+    `gunzip ./<your_path>/gm_key_64.gz`
 
 If you have your new plasmid sequence in the file `plasmid.fna` and want to predict some ORFs in it, you can do it like this:  
 
 1. Generate the HMM by training on the genome with `gmsn.pl`. This will generate a new file called `GeneMark_hmm.mod`.
    In order for this command to work, you need to execute this command: 
 
-   `cp ./SRC/Lab3/gm_key_64 ~/.gmhmmp2_key`  
+   `cp ./<your_path>/gm_key_64 ~/.gmhmmp2_key`  
 
 2. Now we are ready to search for orfs in the genome:  
-   `perl ./SRC/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
+   `perl ./<your_path>/gms2_linux_64/gms2.pl --seq YOUR_FILE.fna --genome-type bacteria --output SOME_OUTPUT_NAME.lst`
 
-**Exercise: run the Genemark suite on the provided genome. Save the result and run the conversion script we also used with getorf to change the format. **
+**Exercise: run the Genemark suite on the provided genome. Save the result and run the conversion script we also used with getorf to change the format.**
 
 
 
-** Alternatively, if GeneMark does not work, we can use the program Prodigal instead **
+**Alternatively, if GeneMark does not work, we can use the program Prodigal instead**
 1. Start by downloading the program in the 1MB438/SRC/Lab3 directory.:
     Navigate to the 1MB438/SRC/Lab3 directory.
     Download the program by running: `git clone https://github.com/hyattpd/Prodigal`
@@ -105,10 +115,11 @@ To start Artemis on Linux, type
 
 In Windows or MacOS, do as prompted on the [Artemis web page](https://www.sanger.ac.uk/tool/artemis/).  
 
-In Artemis, click **"File"**, **"Open ..."**, then choose your genome file (usually the *.fna). In the new window, click 
+In Artemis, click **"File"**, **"Open ..."**, then choose your genome file (the original file with the whole plasmid sequence). In the new window, click 
 **"File"**, **"Read an Entry ..."** and then choose **"YourArtemisFile"** to see that gene search in the genome. Repeat this process for all the gene searches you want to compare. If you want to see them on 
 separate lines, click **"Display"** and check the box in front of **"Show One Line Per Entry View"** . 
 
+**CAREFUL: if you are working on your own computer in solander most likely you will get an incompatibility, if you don't want to switch to the university computers you can download the Artemis and the Java version for developers*
  
 
 ### Display options  
@@ -144,7 +155,7 @@ Use your knowledge about the strengths and weaknesses of the methods to answer t
 
 ##### Question   1   
 
-How many putative genes do each method find?   
+How many putative genes do each method find? You can find this with the command line.
 
 ##### Question 2   
 Look at the features (here a feature is a putative gene ) . Did both methods found the same genes? Is there any difference?  Choose 3 examples and explain why you believe the predictions of both programs differ.   
