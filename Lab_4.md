@@ -65,7 +65,7 @@ Further info
 
 #### Extracting our ORFs
 
-In order to annotate the regions we identified during the Gene Prediction in the last sessions, we need to extract the nucleotide sequence, the associated header and the coordinates. Something like this: 
+In order to annotate the regions we predicted during lab 3, we need to extract the nucleotide sequence, the associated header and the coordinates. Something like this: 
 
 ```
 >orf_1 23-455 
@@ -83,7 +83,9 @@ orf_1, orf_2, orf_3 etc, and puts the genome coordinates in the fasta header.
 
 1. Use `ExtractORFs.py` to extract the ORFs.
       ` python ExtractORFs.py <in_fasta_file> <genemark_file> `   
-2. Save  the output as a new file. 
+2. Save  the output as a new file.
+
+**You should look always when given a script at its structure! After understanding how the script was designed to call the inputs/outputs you also need to think on the path of the script, the path of the input files and where you are standing when running the script.**
 
 Now you want to load your results, as well as the translation of the ORFs into amino acids, into a 
 database. The first step is to create a database and a table in the database. This table should 
@@ -101,7 +103,7 @@ In the table that you will create the following information is required:
 This can be done with the following commands:  
 
 ```
-sqlite3 my.db 
+sqlite3 my_database.db
 create table orfs(orf_id CHAR, nucleotides CHAR, aminoacids CHAR, length INTEGER, PRIMARY KEY(orf_id)); 
 ```
 
@@ -112,15 +114,15 @@ create table orfs(orf_id CHAR, nucleotides CHAR, aminoacids CHAR, length INTEGER
 1. Create the ORFs table in your database that you named `my_database.db` (see above) 
 2. Next you want to populate the table. Use `Gene2SQLite.py` that both translates your ORFs 
    into peptides and insert the data into the table you just created. Inspect `Gene2SQLite.py` 
-   to see what arguments the scripts takes as input. OBS! Name the peptide translation as `x_orfs_peptides.fas` (where x is the plasmid you are looking at).  
-
-3. **(Optional)**  Take a look at  `Gene2SQLite.py` and follow what the script does.  
+   to see what arguments the scripts takes as input. OBS! Name the peptide translation as `x_orfs_peptides.fas` (where x is the plasmid you are looking at).
+   
+**You should look always when given a script at its structure! After understanding how the script was designed to call the inputs/outputs you also need to think on the path of the script, the path of the input files and where you are standing when running the script.**
 
 Check the translation file, same way you were checking the correct translation from the 6 
 possible ones in Lab 2, to make sure nothing went wrong! When you have the data in a 
 database many of these comparisons are easy.  
 
-You can check your beautiful table in sqlite by something like this :  
+You can check your beautiful table in sqlite with one of these commands:  
 
 ```
 sqlite> SELECT orf_id FROM orfs; -- you will print all the orf names listed in the table –  
@@ -134,10 +136,14 @@ The next step will be to determine what is encoded in these genes. We will use B
 
 **Exercise**
 1. Index the .fsa files for the virulence and resistance genes using `formatdb`.
-2. Blast your ORF nucleotide sequences against both files using the output format XML*, save the output to a new file. 
+   
+   **OBS: type formatdb --help to see how to run the command*
+   
+3. Check the databases to see if they are aminoacid or nucleotide sequences.
+4. Blast your ORF nucleotide sequences against both files using the output format XML*, save the output to a new file.
+   
+   **OBS: you have already ran blast, type blastall --help to see how to run the command, which type of blast you need to run thinking on the type of sequences you have on both predicted ORF (the last file you generated) and the two databases*
 
-*Hint: If you run blastall without arguments you will see the different output formats
-under the –m parameter.
 
 #### Inserting the results in a SQLite-database
 Now you will run Blast2SQLite.py which takes your blast results and puts it in a datbase table (run this for both contig blast files). The first argument should contain the contig blast xml-file and the second the blast table name for the config (which you can pick freely) like this:
@@ -152,12 +158,14 @@ Now you will run Blast2SQLite.py which takes your blast results and puts it in a
  * Length of hit sequence
  * Percent identity between the two sequences
 
+**OBS: if you get this error message: Index error: index out of range means you don't have any hits for that combination of plasmid/database*
+
 ### Annotation file
 #### Visualization
 To visualize the comparison between the finished genome and your contigs of choice you will use ACT (Artemis Comparison Tool). Artemis allows you to not only work with one sequence but also load in more sequences at the same time. This is very useful both for annotation and for comparative analysis, for example looking at the rearrangements. The principle is very similar to the 'art' program you have already used and you have to use 'act' in this case.
 
 When working on your own computer, start by downloading and installing ACT. If you have JAVA
-installed, you could use a web based launch.To start ACT on Linux, type:
+installed, you could use a web based launch. To start ACT on Linux, type:
  
  `% act &`
  
@@ -174,30 +182,31 @@ The order of files does not matter as long as they are of different length (that
 comment from).
 
 1. For this analysis we will use the antibiotic resistance genes in **.fsa** format that we have already indexed and the annotation in **.gbk**. 
-3. Run BLAST again, but this time using the whole plasmid
+2. Run BLAST again, but this time using the whole plasmid
 
 	`blastall -p blastn -i <contig.fasta> -d <resistance.fasta> -m 8 -o <contig_vs_resistance.blastn>`
-4. Run ACT
-	
-	either open an act window and use the menus "File->Open..." or specify the files to open in the command line:
-	`act <contig.fasta> <contig_vs_resistance.blastn> <resistance.gbk> &`
+
+3. Run ACT
+   Open an act window and use the menus "File->Open...", you should load the ORF file, the contig_vs_resistance.blastn and the resistance.gbk
+   
+	`act &`
 
 Like in Artemis you see the sequences with the annotated features (if any), except now you look at more than one at the same time. Scroll the bars to move along the genome, you might want to 'unlock' the positions to be able to move the two sequences independently. Try right-click and then find lock in the drop-down menu and turn it off.
 
-The window in the middle shows you the similarity between sequences. Intensity of the color corresponds to similarity. Red blocks have the same orientation (collinear parts) and blue ones have opposite orientations (rearranged). Click on the bars to check the details (score, length, evalue). You can filter out poor similarities by moving the middle bar and setting higher sScore. The broad overview immediately gives you an idea about large rearrangements or co-linearity of the two sequences.
+The window in the middle shows you the similarity between sequences. Intensity of the color corresponds to similarity. **Red blocks** have the same orientation (collinear parts) and **blue blocks** have opposite orientations (rearranged). Click on the bars to check the details (score, length, evalue). You can filter out poor similarities by moving the middle bar and setting higher sScore. The broad overview immediately gives you an idea about large rearrangements or co-linearity of the two sequences.
 
 Note the difference between BLAST blocks and genes. You can see similarity of a block shorter than one gene or containing several genes. You can read more in ACT manual [here](https://www.sanger.ac.uk/science/tools/artemis-comparison-tool-act).
 
 #####Question 1
-1. Describe the two contigs you chose. How long are they? How many genes were found?
-You can either use Artemis or the script fastaNamesSizes.py to figure out the contig
+1. Describe the two sequences you chose. How long are they? How many genes were found?
+You can either use Artemis or the script fastaNamesSizes.py to figure out the sequence
 lengths. Do not use Artemis to count genes, as this can be quite confusing.
-2. Compare the contigs with the genome of Bartonella grahammi using ACT and describe
+2. Compare the sequences with the genome of Bartonella grahammi using ACT and describe
 what you see: are they co-linear? Are there any rearrangements?
-3. For each contig what is the average blast length hit sequence?
-*Hint: use AVG()
+3. For each sequence what is the average blast length hit sequence?
+*Hint: work on the sqlite3 database you created and use AVG()*
 4. Which of the contigs have most significant blast hits?( eval >1e-10)?
-*Hint: look at the queries of the orfs-table, use COUNT()
+*Hint: look at the queries of the orfs-table, use COUNT()*
 
 
 #####Question 2
