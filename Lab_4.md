@@ -201,8 +201,11 @@ what you see: are they co-linear? Are there any rearrangements?
 
 
 #####Question 2
+
 Does your sample contain any gene associated with antibiotic resistance? Validate your results using [ResFinder](https://cge.food.dtu.dk/services/ResFinder/). Just select `Acquired antimicrobial resistance genes` the appropiate species name and upload your plasmid sequence. 
+
 #####Question 3
+
 Does your sample contain any gene associated with a virulence factor that the doctors should be aware of? Validate your results using [VirulenceFinder](https://cge.food.dtu.dk/services/VirulenceFinder/) with standard settings and the proper species. 
 
 	
