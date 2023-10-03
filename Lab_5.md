@@ -6,7 +6,7 @@
 
 ##### Introduction 
 
-In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial 6. You will try to answer a biological question by analyzing two mitochondrial genes:
+In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of the first day. You will try to answer a biological question by analyzing two mitochondrial genes:
 
 1. cytB, coding for the Cytochrome B protein (CYB), which is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
 
