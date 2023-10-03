@@ -37,7 +37,7 @@ You will start with compiling your datasets in lab 5. The following labs, 6 to 8
 By the end of lab 7, you should have done (for each of your two genes) the following analyses: 
 
 - [ ] A maximum parsimony (MP) tree, using `PAUP*`.Note: Make sure that in your NEXUS data file, datatype is set to dna, not protein. Also make sure that you save your tree(s) including the branch lengths! (savetrees file=tree_file.tre format=phylip brlens;) 
-- [ ] A maximum-likelihhod (ML) and a Neighbour-Joining (NJ) tree using `IQTree`, and a ML bootstrap analysis to test the robustness of the selected tree.
+- [ ] A maximum-likelihood (ML) and a Neighbour-Joining (NJ) tree using `IQTree`, and a ML bootstrap analysis to test the robustness of the selected tree.
 - [ ] A Bayesian phylogenetic reconstruction using `BEAST2`. You should use the model of molecular evolution that best corresponds to the model selected by `IQTree` model-selection tool. Note: Make sure that in your NEXUS data file, datatype is set to dna, not protein. 
 
 This list can serve as a potential checklist for you to structure your results that will justify you final answer. 
