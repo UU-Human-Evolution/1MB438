@@ -89,6 +89,7 @@ pscores calculates the tree lengths of trees in memory lscores calculates the li
  `exec primate_tree.nxs`
  
  `pscores` gives you the following tree length:
+ 
 `Tree # 1
 
 Length 1153
