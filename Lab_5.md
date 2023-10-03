@@ -17,7 +17,7 @@ In this project you will perform a complete phylogenetic analysis from gathering
 ##### The questions
 
 1. Are bats more closely related to horses than to cows?
-2. Do marsupials form a monophyletic group (i.e. clade)?
+2. Do marsupials form a monophyletic group (i.e. clade that does not include any non-marsupial species)?
 3. Both whales and dugongs originate from land-living animals. Did this land-to-water transition occur twice independently?
 4. Are salamanders more closely related to frogs than to lizards?
 5. What are the closest relatives of octopuses and squids?
@@ -29,7 +29,7 @@ In this project you will perform a complete phylogenetic analysis from gathering
 
 ##### Performing the analysis 
 
-You will start with compiling your datasets in lab 5. The following labs, 6 to 8, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built in error checking (hopefully you make different mistakes). OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.).
+You will start with compiling your datasets in lab 5. The following labs, 6 to 8, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built-in error checking (hopefully you make different mistakes). OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.).
 
 ##### Work on your own dataset
 
@@ -49,7 +49,7 @@ At the end of the last lab session we will meet each group individually for shor
 
 ### Gathering the data 
 
-The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species (a species we know for sure that is basal to anything else in the dataset). When selecting the species, be sure to make a good selection, not too wide and not too narrow. The [Taxonomy browser](https://www.ncbi.nlm.nih.gov/taxonomy) might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
+The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species (a species we know for sure that is basal to anything else in the dataset). You decide what species to include! When selecting the species, be sure to make a good selection, not too wide and not too narrow. The [Taxonomy browser](https://www.ncbi.nlm.nih.gov/taxonomy) might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
 
 ![](Figures/Outgroup.jpg)
 _By Ngilbert202 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=63950569_
@@ -69,7 +69,7 @@ Here are examples of the format of the two types of files you are supposed to cr
 
 Here is a small workflow for the data gathering. How many species you will find using strategy 1 or 2 depends on your questions (some animal groups are more studied than others).
 
-1. ##### Download your CytB and 16S regions from complete mitochondrial sequences 
+1. ##### Extract your CytB and 16S regions from complete mitochondrial sequences 
 
   Download CytB and 16S (l-rRNA, large subunit rRNA) from a number (5-10) of well selected species for your phylogenetic analysis. **Caution!** You need a unique identifier for each of your sequences (e.g. gi and/or accession number). In case this identifier stands for the entire mitochondria, you will need to specify the genomic location of the gene after the accession/gi number (e.g. NC_026542.1:14178-15317).
 
@@ -77,12 +77,12 @@ Here is a small workflow for the data gathering. How many species you will find 
 
 ​	The steps are:
 
-* [ ] Search for one of your taxonomic group in the Nucleotide browser - on the side panel after you start the search, go to "Genetic Compartments" and click on "Mitochondrion". Now all the sequences listed belong to mitochondria.
-- [ ] Search for "cytB" or "16S". Right click on the link "gene" or "rRNA" depending on what you find and choose "open link in new tab". It opens the page specific to your gene of interest. Click on "FASTA" on the upper left side, check that the identifier described above is present in the header and retrieve the sequence. Save your files with smart names!
+* [ ] Search for one species from your species list in the Nucleotide browser - on the side panel after you start the search, go to "Genetic Compartments" and click on "Mitochondrion". Now all the sequences listed belong to mitochondria.
+- [ ] Click on one entry containing a full mitochondrial genome for your species of interest. Search for "cytB" or "16S" on the next page. Right click on the link "gene" or "rRNA" depending on what you find and choose "open link in new tab". It opens the page specific to your gene of interest. Click on "FASTA" on the upper left side, check that the identifier described above is present in the header and retrieve the sequence. Save your files with names you can understand and still find later!
 
 2. ##### Download using BLAST 
 
-   It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found on the mitochondrial genomes homepage. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
+   It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found with your initial Genbank search. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
 
    **OBS!** Before choosing a sequence have a look at its length - the hits should not be much shorter than the query. Additionally, as a sanity check, you should see that all of your sequences have a relative similar position on the mitochondrial genome (except possibly your outgroup sequences).
 
@@ -98,7 +98,7 @@ Here is a small workflow for the data gathering. How many species you will find 
    - [ ] 
      `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta”`
 
-   The above command should print a 3-column tab-separated output to the terminal. Write the output to a file (e.g. cytB_all.tab). Each row contains information on each sequence in your data set, including: 
+   The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
 
    	1. A field to be manually modified after the file has been generated. This field should be maximum 8-character long (enough for you to identify the species: e.g. Hsapiens) 
    	1.  An easy-readable name (good for presentation to others: e.g. Homo_sapiens). You can manually modify this field too. DO NOT use spaces. 
