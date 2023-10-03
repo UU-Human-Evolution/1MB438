@@ -83,22 +83,19 @@ A PAUP* command usually has a range of options, which each can have a type. The 
 
 ####Calculate scores
 If you have trees in memory (i.e. if you have executed a trees block or have searched for one), you can evaluate them using parsimony (pscores) or likelihood (lscores).
-pscores calculates the tree lengths of trees in memory lscores calculates the likelihoods of trees in memory
- `exec primate-mtDNA-interleaved.nex`
+pscores calculates the tree lengths of trees in memory lscores calculates the likelihoods of trees in memory exec primate-mtDNA-interleaved.nex
  
  `exec primate_tree.nxs`
  
  `pscores` gives you the following tree length:
  
-`Tree # 1
+`Tree # 1`
+`Length 1153`
 
-Length 1153
+whereas `lscores` gives you the log likelihood of observing the data for the given model and tree:
 
-whereas lscores gives you the log likelihood of observing the data for the given model and tree:
-
-Tree 1
-
--ln L 5988.05924`
+`Tree 1`
+`-ln L 5988.05924`
 
 To set options for parsimony and likelihood, use the commands pset (set options for parsimony
 analysis), lset (set options for likelihood analysis). For example to specify parameters that correspond
