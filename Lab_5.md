@@ -8,7 +8,7 @@
 
 In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial 6. You will try to answer a biological question by analyzing two mitochondrial genes:
 
-1. cytB, coding for the Cytochrome B protein (CYB), that is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
+1. cytB, coding for the Cytochrome B protein (CYB), which is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
 
 2. 16S, ribosomal 16S gene, a non-coding structual rRNA gene.
 
@@ -74,7 +74,7 @@ Here is a small workflow for the data gathering. How many species you will find 
 
   Download CytB and 16S (l-rRNA, large subunit rRNA) from a number (5-10) of well selected species for your phylogenetic analysis. **Caution!** You need a unique identifier for each of your sequences (e.g. gi and/or accession number). In case this identifier stands for the entire mitochondria, you will need to specify the genomic location of the gene after the accession/gi number (e.g. NC_026542.1:14178-15317).
 
-  Comment: gi numbers are common identifiers. However they became less practical given to the advances in sequencing technologies. Therefore they have been discontinued by the [NCBI](https://www.ncbi.nlm.nih.gov/search/) in 2016.
+  Comment: gi numbers are common identifiers. However, they became less practical given to the advances in sequencing technologies. Therefore they have been discontinued by the [NCBI](https://www.ncbi.nlm.nih.gov/search/) in 2016.
 
 ​	The steps are:
 
@@ -85,7 +85,7 @@ Here is a small workflow for the data gathering. How many species you will find 
 
    It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found with your initial Genbank search. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
 
-   **OBS!** Before choosing a sequence have a look at its length - the hits should not be much shorter than the query. Additionally, as a sanity check, you should see that all of your sequences have a relative similar position on the mitochondrial genome (except possibly your outgroup sequences).
+   **OBS!** Before choosing a sequence have a look at its length - the hits should not be much shorter than the query. Additionally, as a sanity check, you should see that all of your sequences have a relatively similar position on the mitochondrial genome (except possibly your outgroup sequences).
 
    - [ ] Blast the CytB and 16S sequences and select new sequences from 5-10 different species (follow the sanity check mentioned above)
 
@@ -132,4 +132,4 @@ After gathering the sequences you need to align them before doing the phylogenet
      4. Poor alignment of correct sequences - sometimes kalign is not doing a very good job...
 *Technical hint: if you use `kalign` save the output in the default fasta format and then use your alignment converter to get it any other format you might need, like nexus for `Paup`.*
 
-**If you are using your own computer, most likely is not going to work `Jalview` in Solander, you can download the program and then scp all the necesary files to view it locally.**
+**If you are using your own computer, most likely is not going to work `Jalview` in Solander, you can [download](https://www.jalview.org/) the program and then scp all the necessary files to view it locally.**
