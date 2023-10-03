@@ -99,7 +99,7 @@ Here is a small workflow for the data gathering. How many species you will find 
    - [ ] 
      `python /<your path>/x5_create_tab-delimited_file_from_fasta.py <combined_fasta_file.fasta>`
 
-   The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
+   The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /<your path>/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
 
    	1. A field to be manually modified after the file has been generated. This field should be maximum 8-character long (enough for you to identify the species: e.g. Hsapiens) 
    	1.  An easy-readable name (good for presentation to others: e.g. Homo_sapiens). You can manually modify this field too. DO NOT use spaces. 
