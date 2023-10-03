@@ -6,7 +6,7 @@
 
 ##### Introduction 
 
-In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial 5. You will try to answer a biological question by analyzing two mitochondrial genes:
+In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial 6. You will try to answer a biological question by analyzing two mitochondrial genes:
 
 1. cytB, coding for the Cytochrome B protein (CYB), that is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
 
@@ -29,7 +29,8 @@ In this project you will perform a complete phylogenetic analysis from gathering
 
 ##### Performing the analysis 
 
-You will start with compiling your datasets in lab 5. The following labs, 6 to 8, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built-in error checking (hopefully you make different mistakes). OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.).
+You will start with compiling your datasets in lab 5. The following labs, 6 to 8, will introduce different phylogenetic methods, programs and tools that you will apply to the dataset you compiled. You will have to make notes and keep track of intermediate results along the way. Remember that each member of the group should run the analysis. One good effect for you in doing that is that you automatically have built-in error checking (hopefully you make different mistakes). 
+**OBS! Since you are going to produce quite a lot of files, try to use self-explanatory files names and a good structure of folders. It will make your work easier. It might be a good idea to write a short description (a README file) about how the archive is organized and where the files are (trees, scripts, alignments, etc.)**
 
 ##### Work on your own dataset
 
