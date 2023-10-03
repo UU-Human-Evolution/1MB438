@@ -97,7 +97,7 @@ Here is a small workflow for the data gathering. How many species you will find 
 
    - [ ] Create a tab-delimited file with three columns with the script called `x5_create_tab-delimited_file_from_fasta.py`
    - [ ] 
-     `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta”`
+     `python /<your path>/x5_create_tab-delimited_file_from_fasta.py <combined_fasta_file.fasta>`
 
    The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
 
@@ -111,7 +111,7 @@ Here is a small workflow for the data gathering. How many species you will find 
 
    - [ ] Rename your sequences in the FASTA files so that the headers contain the short-names from your conversion table. You can use this python script: 
 
-   `python /SRC/Lab5/x5_convert_to_short-names.py cytB_all.fasta cytB_all.tab`
+   `python /<your path>/x5_convert_to_short-names.py cytB_all.fasta cytB_all.tab`
 
    - [ ] Save the output with an appropriate name. 
 
