@@ -84,12 +84,11 @@ A PAUP* command usually has a range of options, which each can have a type. The 
 ####Calculate scores
 If you have trees in memory (i.e. if you have executed a trees block or have searched for one), you can evaluate them using parsimony (pscores) or likelihood (lscores).
 pscores calculates the tree lengths of trees in memory lscores calculates the likelihoods of trees in memory
- `exec primate-mtDNA-interleaved.nex
+ `exec primate-mtDNA-interleaved.nex`
  
- exec primate_tree.nxs
+ `exec primate_tree.nxs`
  
- pscores`
-gives you the following tree length:
+ `pscores` gives you the following tree length:
 `Tree # 1
 
 Length 1153
@@ -164,7 +163,7 @@ files. Save the trees as well as your PAUP* logfiles. In order to run *FigTree*:
 `figtree <tree.file>`
 
 
-#####Question 1
+##### Question 1
 * Which is the most parsimonious tree? Explain what it means to your phylogenetic question.
 
 **Submit your answer and the PAUP log file to Studium** 
