@@ -58,7 +58,7 @@ _By Ngilbert202 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.
 
 - [ ] **Write a few sentences on the selection of species and outgroup in your dataset. This will help you later to reflect upon the question and your results.**
 
-For simplicity, we will start looking for datafiles of completely sequenced mitochondrial genomes (these are not available for all species - try to get as many as you can). The browser for NCBI organelles genomes is [here](https://www.ncbi.nlm.nih.gov/genome/organelle/). We will then add more species to the dataset using BLAST to find homologous sequences.
+For simplicity, we will start looking for datafiles of completely sequenced mitochondrial genomes (these are not available for all species - try to get as many as you can). The browser for NCBI nucleotide sequences is [here](https://www.ncbi.nlm.nih.gov/nucleotide/). We will then add more species to the dataset using BLAST to find homologous sequences.
 
 Here are examples of the format of the two types of files you are supposed to create today: 
 
@@ -69,7 +69,7 @@ Here are examples of the format of the two types of files you are supposed to cr
 
 Here is a small workflow for the data gathering. How many species you will find using strategy 1 or 2 depends on your questions (some animal groups are more studied than others).
 
-1. ##### Download from complete mitochondrial sequences 
+1. ##### Download your CytB and 16S regions from complete mitochondrial sequences 
 
   Download CytB and 16S (l-rRNA, large subunit rRNA) from a number (5-10) of well selected species for your phylogenetic analysis. **Caution!** You need a unique identifier for each of your sequences (e.g. gi and/or accession number). In case this identifier stands for the entire mitochondria, you will need to specify the genomic location of the gene after the accession/gi number (e.g. NC_026542.1:14178-15317).
 
@@ -77,15 +77,12 @@ Here is a small workflow for the data gathering. How many species you will find 
 
 ​	The steps are:
 
-* [ ] Search for one of your taxonomic group in the browser - the "Type" column should
-  say mitochondrion.
-- [ ] Choose one of the species and click on the accession ("Replicons" column). You will
-  come to the page of the corresponding mitochondrial genome.
+* [ ] Search for one of your taxonomic group in the Nucleotide browser - on the side panel after you start the search, go to "Genetic Compartments" and click on "Mitochondrion". Now all the sequences listed belong to mitochondria.
 - [ ] Search for "cytB" or "16S". Right click on the link "gene" or "rRNA" depending on what you find and choose "open link in new tab". It opens the page specific to your gene of interest. Click on "FASTA" on the upper left side, check that the identifier described above is present in the header and retrieve the sequence. Save your files with smart names!
 
 2. ##### Download using BLAST 
 
-   It is very likely that there are far more sequenced genes that are homologous to your gene of interest then those found on the mitochondrial genomes homepage. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - privilege those for which both CytB and 16S are available. Download only one hit per species.
+   It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found on the mitochondrial genomes homepage. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
 
    **OBS!** Before choosing a sequence have a look at its length - the hits should not be much shorter than the query. Additionally, as a sanity check, you should see that all of your sequences have a relative similar position on the mitochondrial genome (except possibly your outgroup sequences).
 
@@ -101,10 +98,10 @@ Here is a small workflow for the data gathering. How many species you will find 
    - [ ] 
      `python /SRC/Lab5/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta”`
 
-   Either of the above should print a 3-column tab-separated output to the terminal. Write the output of one of the above to a file (e.g. cytB_all.tab). Each row contains information on each sequence in your data set, including: 
+   The above command should print a 3-column tab-separated output to the terminal. Write the output to a file (e.g. cytB_all.tab). Each row contains information on each sequence in your data set, including: 
 
-   	1. A field to be manually modified after the file has been generated. This field should be maximum 8-character long (enough for you to identify the species: e.g. H.sapien) 
-   	1.  An easy-readable name (good for presentation to others: e.g. Homo_Sapiens). You can manually modify this field too. DO NOT allow spaces. 
+   	1. A field to be manually modified after the file has been generated. This field should be maximum 8-character long (enough for you to identify the species: e.g. Hsapiens) 
+   	1.  An easy-readable name (good for presentation to others: e.g. Homo_sapiens). You can manually modify this field too. DO NOT use spaces. 
    	1. A globally unique identifier (e.g. NC_026542.1:14178-15317)
 
    - [ ] Modify the tab-delimited file as stated above using the x5_create_tab-delimited_file_from_fasta.py
