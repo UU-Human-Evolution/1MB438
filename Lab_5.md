@@ -6,7 +6,7 @@
 
 ##### Introduction 
 
-In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial X6. You will try to answer a biological question by analyzing two mitochondrial genes:
+In this project you will perform a complete phylogenetic analysis from gathering the data to interpreting the results. You will work in groups of 2 or 3. Each small group will work on one of eight questions (see below). Questions will be assigned randomly once the groups are formed at the beginning of Tutorial 5. You will try to answer a biological question by analyzing two mitochondrial genes:
 
 1. cytB, coding for the Cytochrome B protein (CYB), that is a heme-binding protein involved in the electron transport of the mitochondrial respiratory chain.
 
@@ -49,7 +49,7 @@ At the end of the last lab session we will meet each group individually for shor
 
 ### Gathering the data 
 
-The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species (a species we know for sure that is basal to anything else in the dataset). When selecting the species, be sure to make a good selection, not too wide and not too narrow. The Taxonomy browser might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
+The first part of this project is to collect a dataset that you will use to perform a phylogenetic analysis for the rest of the course. The complete datasets should contain about 10-15 species including one appropriate outgroup species (a species we know for sure that is basal to anything else in the dataset). When selecting the species, be sure to make a good selection, not too wide and not too narrow. The [Taxonomy browser](https://www.ncbi.nlm.nih.gov/taxonomy) might be of help in the selection (even if it feels like cheating). If possible your two datasets (16S and cytB) should contain genes from the same set of species. Take your time to create the dataset, as it will impact directly whether you can answer the question you were given. You can ask us to validate your choice of species and outgroup.
 
 ![](Figures/Outgroup.jpg)
 _By Ngilbert202 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=63950569_
@@ -58,7 +58,7 @@ _By Ngilbert202 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.
 
 - [ ] **Write a few sentences on the selection of species and outgroup in your dataset. This will help you later to reflect upon the question and your results.**
 
-For simplicity, we will start looking for datafiles of completely sequenced mitochondrial genomes (these are not available for all species - try to get as many as you can). The browser for NCBI organelles genomes is here. We will then add more species to the dataset using BLAST to find homologous sequences.
+For simplicity, we will start looking for datafiles of completely sequenced mitochondrial genomes (these are not available for all species - try to get as many as you can). The browser for NCBI organelles genomes is [here](https://www.ncbi.nlm.nih.gov/genome/organelle/). We will then add more species to the dataset using BLAST to find homologous sequences.
 
 Here are examples of the format of the two types of files you are supposed to create today: 
 
