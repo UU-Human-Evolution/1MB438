@@ -94,9 +94,7 @@ pscores calculates the tree lengths of trees in memory lscores calculates the li
 
 Length 1153
 
-whereas lscores gives you the log likelihood of observing the data for the given model and 
-
-tree:
+whereas lscores gives you the log likelihood of observing the data for the given model and tree:
 
 Tree 1
 
