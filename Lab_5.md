@@ -131,4 +131,5 @@ After gathering the sequences you need to align them before doing the phylogenet
      3. Same gene in different orientations (+ and - strand instead of only +)
      4. Poor alignment of correct sequences - sometimes kalign is not doing a very good job...
 *Technical hint: if you use `kalign` save the output in the default fasta format and then use your alignment converter to get it any other format you might need, like nexus for `Paup`.*
-**If you are using your own computer, most likely is not going to work `Jalview`, you can download the program and then scp all the necesary files to view it locally.**
+
+**If you are using your own computer, most likely is not going to work `Jalview` in Solander, you can download the program and then scp all the necesary files to view it locally.**
