@@ -68,9 +68,9 @@ Here are examples of the format of the two types of files you are supposed to cr
 
 ### Workflow 
 
-Here is a small workflow for the data gathering. How many species you will find using strategy 1 or 2 depends on your questions (some animal groups are more studied than others).
+Here is a small workflow for the data gathering. How many species you will find in steps 1 or 2 depends on your questions (some animal groups are more studied than others).
 
-1. ##### Extract your CytB and 16S regions from complete mitochondrial sequences 
+1. ##### Extract your CytB and 16S regions from complete mitochondrial sequences from Genbank
 
   Download CytB and 16S (l-rRNA, large subunit rRNA) from a number (5-10) of well selected species for your phylogenetic analysis. **Caution!** You need a unique identifier for each of your sequences (e.g. gi and/or accession number). In case this identifier stands for the entire mitochondria, you will need to specify the genomic location of the gene after the accession/gi number (e.g. NC_026542.1:14178-15317).
 
@@ -81,9 +81,9 @@ Here is a small workflow for the data gathering. How many species you will find 
 * [ ] Search for one species from your species list in the Nucleotide browser - on the side panel after you start the search, go to "Genetic Compartments" and click on "Mitochondrion". Now all the sequences listed belong to mitochondria.
 - [ ] Click on one entry containing a full mitochondrial genome for your species of interest. Search for "cytB" or "16S" on the next page. Right click on the link "gene" or "rRNA" depending on what you find and choose "open link in new tab". It opens the page specific to your gene of interest. Click on "FASTA" on the upper left side, check that the identifier described above is present in the header and retrieve the sequence. Save your files with names you can understand and still find later!
 
-2. ##### Download using BLAST 
+2. ##### Download more sequences using online BLAST 
 
-   It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found with your initial Genbank search. Therefore, use a few of your CytB and 16S sequences to perform a BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
+   It is very likely that there are far more sequenced genes that are homologous to your gene of interest than those found with your initial Genbank search. Therefore, use a few of your CytB and 16S sequences to perform an online BLAST search. From your BLAST hits, select another 5-10 species to include in the dataset - aim for those for which both CytB and 16S are available. Download only one hit per species.
 
    **OBS!** Before choosing a sequence have a look at its length - the hits should not be much shorter than the query. Additionally, as a sanity check, you should see that all of your sequences have a relatively similar position on the mitochondrial genome (except possibly your outgroup sequences).
 
