@@ -181,7 +181,7 @@ least one annotated sequence, so you have to remember to run blast on fasta file
 The order of files does not matter as long as they are of different length (that's where you get the flip
 comment from).
 
-1. For this analysis we will use the antibiotic resistance genes in **.fsa** format that we have already indexed and the annotation in **.gbk**. 
+1. For this analysis we will use the antibiotic resistance database in **.fsa** format that we have already indexed and the annotation in **.gbk**. 
 2. Run BLAST again, but this time using the whole plasmid
 
 	`blastall -p blastn -i <contig.fasta> -d <resistance.fasta> -m 8 -o <contig_vs_resistance.blastn>`
