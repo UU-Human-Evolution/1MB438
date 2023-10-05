@@ -1,9 +1,11 @@
 
-# Session 2 - Aligning our sequences 
+# Lab 2 - Aligning our sequences 
 
-**Goals of the practical session:** In this exercise you will use BLAST (Basic Local Alignment Search Tool) to search for sequence similarity. First you will use an online server to search for similarities and then you will run the blast on your computer. Take a look at “HowTo_BLASTGuide.pdf” for how to use BLAST. Then you will learn to use different programs for multiple alignments: kalign, mafft,or muscle, and hmmalign. You will align two datasets (16S and EPHX1) with kalign, mafft or muscle, and you will learn how to use readseq to convert between different alignment formats. You will also run both perl and python script to manipulate your files.
+**Goals of the practical session:** 
+In this exercise you will use BLAST (Basic Local Alignment Search Tool) to search for sequence similarity. First you will use an online server to search for similarities and then you will run the blast on your computer. Take a look at “HowTo_BLASTGuide.pdf” for how to use BLAST. Then you will learn to use different programs for multiple alignments: kalign, mafft,or muscle, and hmmalign. You will align two datasets (16S and EPHX1) with kalign, mafft or muscle, and you will learn how to use readseq to convert between different alignment formats. You will also run both perl and python script to manipulate your files.
 
-**Assessment of the practical session:** Work alone or in pairs during this lab. As you progress, take notes of answers to the questions highlighted in red in the designated black boxes, or on a paper sheet. At the end of the lab, you should approach one of the teaching assistants present, and ask them to check your answers. They will discuss incorrect answers with you. Once the assistants have approved your answers, they will mark your attendance and the practical session is considered completed.
+**Assessment of the practical session:** 
+Work with your group for this lab, you need to submit your answers to the quizz in Studium individually. If you have any question feel free to ask any of the TAs!
 
 ## Local pairwise alignment
 ###Online-based BLAST exercise
