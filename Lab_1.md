@@ -6,7 +6,7 @@ In this exercise you will search in the NCBI sequence databases using the search
 
 ##### Assessment of the practical session: 
 
-Work alone or in pairs during this lab. As you progress, take notes of answers to the questions highlighted in red in the designated black boxes, or on a paper sheet. At the end of the lab, you should approach one of the teaching assistants present, and ask them to check your answers. They will discuss incorrect answers with you. Once the assistants have approved your answers, they will mark your attendance and the practical session is considered completed.
+Work with your group for this lab, you need to submit your answers to the quizz in Studium individually. If you have any question feel free to ask any of the TAs!
 
 
 ## Search for an accession number
@@ -90,5 +90,4 @@ You can find a detailed tutorial on Pairwise alignment [here](https://teaching.h
 ###### Question 7
 1. Submit all the answer to the questions in the tutorial. 
 
-**Submit the answers to all 7 questions to the Studium assignment.**
 
