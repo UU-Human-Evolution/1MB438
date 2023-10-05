@@ -59,19 +59,19 @@ starting point necessary to use trained models.  There is a third variant of `Ge
 
 The first thing we need to do is to download the license key for the program, founded here: http://exon.gatech.edu/genemark/license_download.cgi 
 
-You need to select `GeneMarkS-2 version 1.14_1.25_lic` and select linux 64 as we are        going to upload it to the server.
-Next we need to upload the key to the server, there are multiple ways to share files        from your local computer to a server, easiest way is scp:
+You need to select `GeneMarkS-2 version 1.14_1.25_lic` and select linux 64 as we are going to upload it to the server.
+Next we need to upload the key to the server, there are multiple ways to share files from your local computer to a server, easiest way is scp:
     
-    `scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2`
+`scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2`
 
 Think that you need to have the key in your root directory (you can find your root directory by typing cd and then pwd).
 **If you are working with your own personal computer this might not work, remember these labs were designed for you to work on the university computers**
     
 The second thing we need to do is untar (decompress) the folder in which the program is:
 
-    `tar -xvf ./<your_path>/gms2_linux_64.tar.gz`
+`tar -xvf ./<your_path>/gms2_linux_64.tar.gz`
 
-    `gunzip ./<your_path>/gm_key_64.gz`
+`gunzip ./<your_path>/gm_key_64.gz`
 
 If you have your new plasmid sequence in the file `plasmid.fna` and want to predict some ORFs in it, you can do it like this:  
 
