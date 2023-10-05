@@ -6,7 +6,7 @@ In this lab we well continue to work on our plasmid sequence. While in Lab 3 we 
 
 ##### Assessment of the practical session:
 
-You will need to answer the questions from the quizz in Studium individually.
+Work with your group for this lab, you need to submit your answers to the quizz in Studium individually. If you have any question feel free to ask any of the TAs!
 
 ### Genome annotation
 
