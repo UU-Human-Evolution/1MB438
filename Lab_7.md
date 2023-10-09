@@ -47,10 +47,10 @@ Now run IQ-TREE in your interactive session with the CytB data, and set your mod
 All the questions below refer only to the CytB output.
 
 #####Question 1: 
-**Which files do IQ-TREE output? Explain briefly what each of them is.** 
+1. **Which files do IQ-TREE output? Explain briefly what each of them is.** 
 
 #####Question 2:
-**IQ-TREE creates several tipes of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
+1. **IQ-TREE creates several tipes of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
 
 Now let's look at the *.iqtree* file. 
 
@@ -70,11 +70,11 @@ BEAST2 is a program for doing Bayesian phylogenetic analysis. The program uses a
 
 The first step is to decompress it.
 
-`tar fxz ./SRC/BEAST.v2.6.7.Linux.tgz`
+`tar fxz ./<your path>/BEAST.v2.6.7.Linux.tgz`
 
 To start BEAST2 apps, type
 
-`PATH_TO_BEAST_FOLDER/beast/bin/beast`
+`<your path>/beast/bin/beast`
 
 BEAST2 uses different GUI apps for the different steps, so we will need to change
 the name of the app accordingly.
@@ -82,7 +82,7 @@ the name of the app accordingly.
 
 Its input files are in the NEXUS or FASTA alignment format. You will work on your own two datasets (in nexus format). The first step is to create an XML file with the settings for our BEAST run. This is done with BEAUTi
 
-`./SRC/beast/bin/beauti`
+`./<your path>/beast/bin/beauti`
 
 Once the new window pops up, you have to import the alignment file. We want to do this for **both our alignments**. You can do it from the *File/ Import Dataset* menu or by clicking in the "+" symbol in the lower left corner.
 Once you have the alignment loaded, we need to specify the settings we are going to run BEAST with. BEAUTi offers a lot of different options, and we can even subdivide our alignment to apply different models to different regions, estimate split times, etc.
@@ -105,7 +105,7 @@ Then click on "Run" to start.
 We'll run the mitochondrial alignment and check the results for both in the next session. 
 
 #####Question 5: 
-**Which setup did you use in BEAST2?** 
+1. **Which setup did you use in BEAST2?** 
 
 
 ####OPTIONAL:
