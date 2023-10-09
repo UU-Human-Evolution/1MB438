@@ -124,7 +124,7 @@ cytB to nexus format.
 2. Use PAUP* to obtain a maximum parsimony tree for each of your genes.
 Run the following file in PAUP* (replacing input and output names!):
 
-`begin paup -l <name_log_file>;`
+`paup -l <name_log_file>;`
 
 `exec input.nxs;`
 
