@@ -20,7 +20,7 @@
 
 ## Details
 
-For this Session, we are going to use the files that we created in the previous one. Make sure you followed the instructions properly and that you have all the files located. 
+For this Session, we are going to use the files that we created in lab 5. Make sure you followed the instructions properly and that you have all the files located. 
 For our project, we are going to use an implementation of the Maximum Likelihood approach called [IQ-TREE](http://www.iqtree.org/doc/Tutorial#first-running-example). This software offers several methods to speed up the analysis. 
 
 As we mentioned earlier, any Maximum Likelihood approach is based on a substitution model. In phylogenetics, this model describes the probability of each substitution to happen. [Here](http://evomics.org/resources/substitution-models/nucleotide-substitution-models/) you can find a list of the more common models, and [here](http://www.iqtree.org/doc/Substitution-Models) the ones that are implemented in IQ-TREE. 
