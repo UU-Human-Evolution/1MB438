@@ -35,9 +35,9 @@ Repeat the steps followed on Session 7 to run BEAST2, but this time use the mito
 In Session 7 you performed a Maximum Likelihood and Bayesian analysis  on two alignments: *cytB* and the *16 S mitochondria sequence*. You answered  questions relative to the *cytB* run. Now, answer these same questions for the mitochondria run. You might be asked about these during the presentation.
 
 #####Question 1:
-**Which files does IQ-TREE output? Explain briefly what each of them is.**
+1. **Which files does IQ-TREE output? Explain briefly what each of them is.**
 #####Question 2:
-**IQ-TREE creates several types of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
+1. **IQ-TREE creates several types of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
 
 Now let's look at the .iqtree file.
 
@@ -61,7 +61,7 @@ The three important things you have to do are:
   
   1. Root the tree with your outgroup (select the branch and then select `Reroot`)
   2. Show the bootstrap values (using `Branch labels` or `Node labels` and selecting the right value to display)
-  3. Make sure the tree can be easily understood. For example, you might need to change the name of the species, if you are using the short names that you created in [Session 6](Lab6.md). 
+  3. Make sure the tree can be easily understood. For example, you might need to change the name of the species, if you are using the short names that you created in [Session 5](Lab5.md). 
 
 You can use the script we used in Session 6 to change the names in your treefiles.
 Once you are done with those, you can play around with the other options (for example Rotate & Different type of trees).
