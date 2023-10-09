@@ -113,7 +113,7 @@ BEAST offers many other options and tools to be sure our estimates are appropria
 
 
 
-# REPORT
+### REPORT
 
-Submit a file with the answers to all the questions and the *.iqtree* file for the CytB run. 
+You will need to answer all the questions in the Studium assignment and upload the *.iqtree* file for the CytB run. 
 
