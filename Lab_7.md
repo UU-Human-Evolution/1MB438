@@ -40,7 +40,6 @@ Under OUTGROUP you should put the name of your outrgroup as they appear in the a
 
 ```
 -o c_Vurs,H_sap
-
 ```
 
 Now run IQ-TREE in your interactive session with the CytB data, and set your model to *-m MFP*. *MFP* stands for ModelFinder Plus, and is an algorithm that automatically considers a list of substitution models and estimates which is the one that fits our data better. *-bb 1000* means that we want our algorithm to use [bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)).Remember to adapt the code above to run IQ-TREE  and be careful to not over-write your files. 
@@ -49,6 +48,7 @@ All the questions below refer only to the CytB output.
 
 #####Question 1: 
 **Which files do IQ-TREE output? Explain briefly what each of them is.** 
+
 #####Question 2:
 **IQ-TREE creates several tipes of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
 
