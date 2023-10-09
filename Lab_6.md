@@ -59,7 +59,9 @@ Input files for PAUP* are text files with blocks of data or PAUP commands in the
 You start PAUP from the command line:
 
  `paup`
- 
+
+**If PAUP does not work go to .bashrc and write this: `alias paup="TERMINFO=/usr/share/terminfo TERM=xterm /opt/bio/bin/paup"`
+
 At the PAUP prompt `>`, you type commands to PAUP. To get a list of all available commands, type
 
  `help`
