@@ -133,3 +133,5 @@ After gathering the sequences you need to align them before doing the phylogenet
 *Technical hint: if you use `kalign` save the output in the default fasta format and then use your alignment converter to get it any other format you might need, like nexus for `Paup`.*
 
 **If you are using your own computer, most likely is not going to work `Jalview` in Solander, you can [download](https://www.jalview.org/) the program and then scp all the necessary files to view it locally.**
+
+For this lab in Studium you need to submit the list of species you are going to use and the aligned fasta file from the 16S.
