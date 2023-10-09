@@ -144,7 +144,7 @@ You can run the code from above as a script if you save it into a file and then 
 
 `paup <script_from_above>`
 
-The trees are now in newick (also called phylip) format in the file output_pars.tre. In case you need
+The trees are now in newick (also called phylip) format in the file `output_pars.tre`. In case you need
 to convert the names in the output tree files you can use the tab-delimited file you generated in Session 5
 and use the script called [x6_fix_names.pl](./SRC/Lab6/x6_fix_names.pl) to convert the taxon names. 
 
@@ -152,7 +152,7 @@ and use the script called [x6_fix_names.pl](./SRC/Lab6/x6_fix_names.pl) to conve
 
 `perl x6_fix_names.pl <tree tile> <name_table>`
 
-* There can be more than one tree. Next, put each tree in one file and look at them
+**There can be more than one tree**. Next, put each tree in one file and look at them
 using *FigTree*. **Reroot the trees** with your outgroup species. Save them as pdf
 files. Save the trees as well as your PAUP* logfiles. In order to run *FigTree*:
 
