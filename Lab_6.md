@@ -122,23 +122,23 @@ cytB to nexus format.
 2. Use PAUP* to obtain a maximum parsimony tree for each of your genes.
 Run the following file in PAUP* (replacing input and output names!):
 
-`begin paup -l <name_log_file>;
+`begin paup -l <name_log_file>;`
 
-exec input.nxs;
+`exec input.nxs;`
 
-set criterion=parsimony;
+`set criterion=parsimony;`
 
-# Now that you have set all the parameters run this command to get the trees
+**Now that you have set all the parameters run this command to get the trees**
 
-hsearch;
+`hsearch;`
 
-# You will see an output, please save the parsimony score, you will need it for later
+**You will see an output, please save the parsimony score, you will need it for later**
 
-savetrees file=output_pars.tre format=phylip brlens;
+`savetrees file=output_pars.tre format=phylip brlens;`
 
-end;
+`end;`
 
-quit;`
+`quit;`
 
 You can run the code from above as a script if you save it into a file and then run:
 
@@ -148,7 +148,7 @@ The trees are now in newick (also called phylip) format in the file output_pars.
 to convert the names in the output tree files you can use the tab-delimited file you generated in Session 5
 and use the script called [x6_fix_names.pl](./SRC/Lab6/x6_fix_names.pl) to convert the taxon names. 
 
-* Change the names in you output tree
+**Change the names in you output tree**
 
 `perl x6_fix_names.pl <tree tile> <name_table>`
 
