@@ -8,7 +8,7 @@
 + Create phylogenetic trees meaningful for our project's question
 
 ## Input
-+ Aligned sequences of the complete mitochondrial DNA and CytB that we curated on Lab 6
++ Aligned sequences of the complete mitochondrial DNA and CytB that we curated on Lab 5
 
 ## Output(s)
 + IQTree file with relevant info on our analysis
