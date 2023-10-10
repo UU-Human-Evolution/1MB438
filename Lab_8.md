@@ -40,9 +40,9 @@ In Session 7 you performed a Maximum Likelihood and Bayesian analysis  on two al
 Now let's look at the .iqtree file.
 
 ##### Question 2:
-1. **Which model did ModelFinder choose for the 16S? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
+1. **Which model did ModelFinder choose for the 16S?**
 
-2. **Briefly explain the best-fitting model.**
+2. **Briefly explain the best-fitting model and compare it with the model from CytB.**
 
 ##### Question 3:
 1. **Now look at both your Maximum Likelihood tree and Consensus Tree. Are they the same? If not, where do they differ?**
