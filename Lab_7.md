@@ -50,19 +50,19 @@ All the questions below refer only to the CytB output.
 1. **Which files do IQ-TREE output? Explain briefly what each of them is.** 
 
 #####Question 2:
-1. **IQ-TREE creates several tipes of trees. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
+1. **IQ-TREE creates several tipes of trees for the CytB. Compare the *.bionj* tree with the ML tree. Are there any differences? If so, explain what they are and why do you believe they are there.**
 
 Now let's look at the *.iqtree* file. 
 
 #####Question 3:
-1. **Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
+1. **Which model did ModelFinder choose for the CytB? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
 
-2. **Briefly explain the best-fitting model.**
+2. **Briefly explain the best-fitting model for the CytB.**
 
 #####Question 4:
 1. **Now look at both your Maximum Likelihood tree and Consensus Tree. Are they the same? If not, where do they differ?**
 
-2. **In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?**
+2. **In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question in relation to the CytB?**
 
 
 ### Step 2:
