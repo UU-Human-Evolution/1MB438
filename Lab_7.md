@@ -101,6 +101,17 @@ Once we have our XML file, we can run BEAST2. For this session, we are **only go
 random seed (keep seeds consistent for reproducibility) and check the "Use BEAGLE library if
 available". This last step will make your analysis faster.
 Then click on "Run" to start.
+**Troubleshooting with BEAGLE**
+If BEAGLE does not work then we need to download and install it, here are instructions on how to do it:
+
+```
+git clone --depth=1 https://github.com/beagle-dev/beagle-lib.git
+cd beagle-lib
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME ..
+make install
+```
 
 We'll run the mitochondrial alignment and check the results for both in the next session. 
 
