@@ -93,7 +93,7 @@ The first one is the Evolution Model, which can be done through the Site Model t
 ![BEAST Model Setup table](./Figures/BEAST2-model-setup.png)
 
 If your model has some other letters, like "+I" or "+R", you can find what they mean here: www.iqtree.org/doc/Substitution-Models and modify the settings accordingly.
-Once we have everything set up in the Site Model, we move to the Priors tab, select Yule Model, and as a birth rate a Gamma distribution with an Alpha (shape) of 0.001 (which is in Site model, not in the Priors tab).
+Once we have everything set up in the Site Model, we move to the Priors tab, select Yule Model, and as a birth rate a Gamma distribution and **depending on your model** you should set Alpha (shape) to 0.001 (which is in Site model, not in the Priors tab) and Beta to 1000.
 The last step is to go to the MCMC tab to specify how many steps the MCM chain will take before stopping. This should be set to, at least, 100000.
 Once this is done, we can save the XML file and close BEAUTi.
 
