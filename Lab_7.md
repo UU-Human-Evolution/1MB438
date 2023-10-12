@@ -103,6 +103,10 @@ Once we have our XML file, we can run BEAST2. For this session, we are **only go
 random seed (keep seeds consistent for reproducibility) and check the "Use BEAGLE library if
 available". This last step will make your analysis faster.
 Then click on "Run" to start.
+
+**ERROR SAYING SOMETHING ABOUT THE SEED**
+- That is because you put parameters wrong. Check again!
+
 **Troubleshooting with BEAGLE**
 If BEAGLE does not work then we need to download and install it, here are instructions on how to do it:
 
