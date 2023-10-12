@@ -107,9 +107,7 @@ If BEAGLE does not work then we need to download and install it, here are instru
 ```
 git clone --depth=1 https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME ..
+cmake -DCMAKE_INSTALL_PREFIX:PATH=<your_path_to_where_you_have_the_beagle_downloaded>
 make install
 ```
 
