@@ -62,7 +62,7 @@ Now let's look at the *.iqtree* file.
 #####Question 4:
 1. **Now look at both your Maximum Likelihood tree and Consensus Tree. Are they the same? If not, where do they differ?**
 
-2. **In both trees you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question in relation to the CytB?**
+2. **In both trees you can see a number at the base of each branch. That is the number the percentage (iterations) that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question in relation to the CytB?**
 
 
 ### Step 2:
