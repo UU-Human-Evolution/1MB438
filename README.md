@@ -13,7 +13,7 @@ Finally, the labs you are working with this year are new or have been substantia
 
 The practical part of this course consists of five computer sessions (or labs), each lasting up to four hours. The overarching goals of these labs are to familiarize yourselves with modern bioinformatic tools and best practices, and to illustrate-by-doing the most important topics discussed in class. By completing all sessions and the final project, you will get a good idea of the work of bioinformaticians. To improve the flow and the logic of each step in the bioinformatic workflow, we have designed most labs to be connected to each other; however, should you have troubles completing one lab, we will help you (for example by providing intermediate results) so you are not penalized for the following sessions.
 
-Each session has four scheduled hours with the TAs in the computer rooms. **At the beginning of first session, the TAs will give a quick introduction to the content.**
+Each session has four scheduled hours with the TAs in the computer rooms. **At the beginning of each session, the TAs will give a quick introduction to the content.**
 
 You will be working in groups and all exercises will revolve around one research question per group. In session 5, you will present your results to the rest of the class.
 Even though the exercises are done in groups, every student still has to submit responses to the different assignments individually in Studium. This helps us to keep track of the progress and also enables us to see that all group members are actively involved in the work.
