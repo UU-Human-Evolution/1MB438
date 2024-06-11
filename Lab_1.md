@@ -93,6 +93,7 @@ Your task for today is to gather:
 * Repeat the last two steps for *cytB*.
   * One option is to search for entries called `cytochrome b` and `complete cds`.
   * The second option is to take a full mitochondrial genome sequence that is annotated (scroll down and see if there are genes and coding sequences listed). Search for "cytB", right click on the link "gene" and choose "open link in new tab". It opens a separate Genbank page specific to your gene of interest which you can then download as described above.
+  * **Make sure to really only obtain the gene sequence, *cytB* should be much shorter than the 17000 bp of the full mitogenome.**
 
 **Save your files with clever, distinguishable names.**
 
