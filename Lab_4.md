@@ -115,19 +115,21 @@ Before you export your tree, think about what else you can do to show your resul
 **Do not forget to export your trees as image files. You will have to show them during the presentation.**
 
 
-**Question 1: Which files do IQ-TREE output? Explain briefly what each of them is.**
+**Question 1:** Which files do IQ-TREE output? Explain briefly what each of them is.
 
-IQ-TREE creates several types of trees (e.g. a Neighbour Joining tree saved as .bionj file and an ML tree saved as .treefile). In order to properly visualize your tree, you'll need to use specific software, as trees are not represented in a way we can easily understand in our files. In order to plot them, we are going to use [FigTree](SRC/FigTree_v1.4.4). Download it onto your computer and start it. 
+IQ-TREE creates several types of trees (e.g. a Neighbour Joining tree saved as .bionj file and an ML tree saved as .treefile). In order to properly visualize your tree, you'll need to use specific software, as trees are not represented in a way we can easily understand in our files. In order to plot them, we are going to use FigTree. You can simply start the graphical interfacte with the command:
+
+```
+figtree
+```
 
 
-#####Question 2:
-1. **Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?**
+**Question 2:**
+1. Which model did ModelFinder choose? From all the criteria calculated by this software, which was used to determine the best-fitting model?
 
-2. **Briefly explain the best-fitting model.**
+2. Briefly explain the best-fitting model.
 
-#####Question 4:
-
-2. **In your tree, you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?**
+**Question 3:** In your tree, you can see a number at the base of each branch. That is the number of iterations that supported that branching during bootstrapping. Which is your least supported branch? What does that mean to your question?
 
 
 **Repeat these steps for the full mitochondrial genome alignments. Remember to adapt the command above to run IQ-TREE and be careful to not over-write your files.** 
