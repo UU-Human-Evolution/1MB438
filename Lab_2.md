@@ -25,7 +25,7 @@ In this session, you will focus on alignments. As you have seen in the lecture, 
 
   + Online alignment tools
   + Alignment program: [mafft](https://mafft.cbrc.jp/alignment/software/)
-  + Alignment visualization program: clustalw / clustalx
+  + Alignment visualization program: Jalview
 
 ## Steps
 
@@ -73,10 +73,20 @@ Nowadays there is an abundance of genomic data available, for organelles and ent
 
 Proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the entire genome.
 
-We are using the tool `clustalx` to view the alignment. In "File", choose "Load Sequences" and choose your alignment. Can you make sense of what you see? What do you think the bottom window shows?
+You can look at alignments with the program Jalview.
+**CAREFULL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*
+
+`java -jar ./<your_path>/jalview.jar`
 
 **Question 2-2. Visually inspect your alignment. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
 
+  1. Correctly aligned sequences should have highly similar or even identical blocks;
+  2. If you have one strange sequence which seems badly aligned either remove it or keep it but make a note which one it was;
+  3. If you can't see identical blocks you should inspect the situation, you might have:
+     1. Highly diverged sequences - then it's ok
+     2. Mixture of sequences from different genes - then you might have a problem...
+     3. Same gene in different orientations (+ and - strand instead of only +)
+     4. Poor alignment of correct sequences - sometimes alignment algorithms are not doing a very good job...
 
 **Question 2-3. Show your new alignment to a teaching assistant. If you cannot show it, submit the corresponding alignment file (.fasta).**
 
@@ -84,8 +94,7 @@ The main take-home message from this step is that it is important to examine you
 
 #### Back to Step 2a
 
-
-By now the alignment of the entire mitochondria should be ready for you to look at! Open it with `clustalx`. What do you see?
+By now the alignment of the entire mitochondria should be ready for you to look at! Open it with `jalview`. What do you see?
 
 **Question 2-4. Visually inspect the alignment of the full mitochondrial genome the same way you did for cytB in Q2-4. What do you notice? Are the same species standing out?**
 
