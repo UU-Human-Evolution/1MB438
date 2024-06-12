@@ -1,5 +1,9 @@
-# 1MB438 Sequence Bioinformatics -- Computer practicals
+# 1MB438 Period 1 -- Computer practicals
 Repository for the course 1MB438 Introduction to Bioinformatics, a Masters course at Uppsala University.
+
+The repo contains instructions for the "Introduction to Linux" sessions as well as the computer labs complementing the "Sequence Bioinformatics" lectures.
+
+## Sequence Bioinformatics
 
 You are now starting the computer practicals of the course. The practical is split into several sessions. Each session comes with its own assignments, either text submissions in Studium or (group) presentations, these assignments need to be passed to complete this part of the course. *Most exercises are done in groups and the final presentation is done in a group but all written assignments are graded per student.*
 
@@ -9,7 +13,7 @@ You are now starting the computer practicals of the course. The practical is spl
 
 Finally, the labs you are working with this year are new or have been substantially modified compared to previous versions of this course. We did our best to make them informative and interesting, and for them to run smoothly. We welcome any comments and suggestions for improvement - do not hesitate to write them down as we go along as you might have forgotten a lot of comments by the time you fill the course evaluation! This will be very helpful for the teachers and future students. Thank you!
 
-## Overview of the sessions
+### Overview of the sessions
 
 The practical part of this course consists of five computer sessions (or labs), each lasting up to four hours. The overarching goals of these labs are to familiarize yourselves with modern bioinformatic tools and best practices, and to illustrate-by-doing the most important topics discussed in class. By completing all sessions and the final project, you will get a good idea of the work of bioinformaticians. To improve the flow and the logic of each step in the bioinformatic workflow, we have designed most labs to be connected to each other; however, should you have troubles completing one lab, we will help you (for example by providing intermediate results) so you are not penalized for the following sessions.
 
