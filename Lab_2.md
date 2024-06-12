@@ -74,7 +74,7 @@ Nowadays there is an abundance of genomic data available, for organelles and ent
 Proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the entire genome.
 
 You can look at alignments with the program Jalview.
-**CAREFULL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*
+**CAREFUL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*
 
 `java -jar ./<your_path>/jalview.jar`
 
