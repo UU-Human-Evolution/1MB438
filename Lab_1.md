@@ -71,9 +71,9 @@ In the end, you should have around 10-15 species in your dataset.
 This will help you later to reflect upon the question and your results. It also help us (the teaching assistants) to check that you will be able to answer the question you were given.
 
 
-## Getting the sequences
+**Excercise 1** - Getting the sequences
 
-Your task for today is to gather:
+Your first task for today is to gather:
 - the full **mitochondrial** genome sequences for all the species in your dataset.
 - the **CytB** (Cytochrome b) gene (which is a gene in the ) for all the species in your dataset.
 *In the end, you should end up with two fasta files per species! Ex. Monkey_mt.fasta & Monkey_cytB.fasta*
@@ -131,7 +131,7 @@ P.S. There are smarter ways than doing it manually one by one (think about combi
    - [ ] Save the output with an appropriate name. 
 
 
-**Question 2** Now you should create a Python script that: 
+**Excercise 2** Now you should create a Python script that: 
 - takes one of your merged fasta file as input (which at that point has one of the three types of headers in the conversion table);
 - uses your conversion table;
 - and has the option to switch between the three different header types, depending on your choice (short name/easy name/full header). It should be able to change which types of header is saved by an **option from the user**, from one to another and back again; 
