@@ -78,7 +78,7 @@ You can look at alignments with the program Jalview.
 
 `java -jar ./<your_path>/jalview.jar`
 
-**Question 2-2. Visually inspect your alignment. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
+**Question 2-2. Visually inspect your alignment for cytB. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
 
   1. Correctly aligned sequences should have highly similar or even identical blocks;
   2. If you have one strange sequence which seems badly aligned either remove it or keep it but make a note which one it was;
