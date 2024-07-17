@@ -88,7 +88,7 @@ You can look at alignments with the program Jalview.
      3. Same gene in different orientations (+ and - strand instead of only +)
      4. Poor alignment of correct sequences - sometimes alignment algorithms are not doing a very good job...
 
-**Question 2-3. Show your new alignment to a teaching assistant. If you cannot show it, submit the corresponding alignment file (.fasta).**
+**Question 2-3. Submit the alignment files in the quizz (the files have to be a .fasta).**
 
 The main take-home message from this step is that it is important to examine your alignments well. Sometimes some sequences will genuinely be longer or shorter than other sequences; however, it might also be due to some errors!
 
