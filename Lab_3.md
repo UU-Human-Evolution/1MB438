@@ -53,7 +53,7 @@ Now we can perform the BLAST search for our first protein, let's start with *Cyt
 tblastn -query CYTB.fasta -db full_nonaligned_mitogenomes.fasta -outfmt 6 -out CYTB.blast
 ```
 
-Make sure to use the names of your respective files. Open the output file. What do you see? Can you make sense of the different columns?
+Reflect yourself on the results. Make sure to use the names of your respective files. Open the output file. What do you see? Can you make sense of the different columns?
 
 ```
 Column_name	Description
