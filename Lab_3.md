@@ -1,3 +1,4 @@
+# Session 3 - BLAST
 During the last sessions, you collected and aligned mitochondrial sequences from databases that you will be using for the remaining sessions. Today, you will attempt to find genes in them using a simple similarity-based approach with BLAST.
 
 ## Goals
