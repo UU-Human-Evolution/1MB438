@@ -74,7 +74,7 @@ bitscore	bit score
 
 Now repeat these steps for *COX1* and *ND6* using informative names for the output files so you don't overwrite your previous results.
 
-**Question 4.** Answer the same questions as for Q3 for these other two proteins. Is one of the proteins standing out from the others?
+**Question 4.** You don't need to submit an answer to this one in the quizz, but it will help you later during the presentation of the. Answer the same questions as for Q3 for these other two proteins. Is one of the proteins standing out from the others?
 
 Return to the Genbank entry for the full mitochondrial genome of your species of interest. Locate the position information of the three genes.
 
