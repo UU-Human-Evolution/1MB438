@@ -96,14 +96,14 @@ The main take-home message from this step is that it is important to examine you
 
 By now the alignment of the entire mitochondria should be ready for you to look at! Open it with `jalview`. What do you see?
 
-**Question 2-4. Visually inspect the alignment of the full mitochondrial genome the same way you did for cytB in Q2-4. What do you notice? Are the same species standing out?**
+**Question 2-4. Visually inspect the alignment of the full mitochondrial genome the same way you did for cytB in Q2-2. What do you notice? Are the same species standing out?**
 
 ---
-## REPORT
+## Summary of what to report in the quizz
 
-Pairwise alignment tutorial: submit answers to all questions (you can number them 1-1, 1-2, etc).
+Pairwise alignment tutorial: submit answers to all the questions in the quizz.
 
-Multiple alignment: submit answers to questions 2-1 through 2-4. For Question 2-2 and 2-4, it can be useful to include a screenshot of what you saw. Only submit the alignment (FASTA file) if you cannot show it to a teaching assistant.
+Multiple alignment: submit answers to questions 2-1 through 2-4. For Question 2-2 and 2-4, it can be useful to include a screenshot of what you saw. Only submit the alignment (FASTA file).
 
 
 ---
