@@ -59,7 +59,7 @@ On the day of the presentation, we will meet in a lecture hall instead of the co
 ---
 ## Back-up submission: Written report
 
-In case you could not finish in time or if you are unable to present, please let the teaching assistants know and submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium (there will be a quizz specifically designed for this). Do not forget to indicate which question you worked with and which species were included in the dataset.
+In case you could not finish in time or if you are unable to present, please let the teaching assistants know and submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium (there will be a quizz specifically designed for this). Each person should submit in the quizz, but as most likely you had worked in groups, the document can be done as a group. Do not forget to indicate which question you worked with and which species were included in the dataset.
 
 ---
 ## END OF LABS, PLEASE READ THIS PART
