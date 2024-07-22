@@ -3,7 +3,7 @@
 
 ## Introduction / Background information to session 5
 
-This is the last session of the bioinformatics project (and of the course). You will wrap up the project and present your results to the class on Friday Oct 18th. The first 4-hour session will be used to prepare for the presentation.
+This is the last session of the bioinformatics project (and of the course). You will wrap up the project today and present your results to the class on the next session. The first 4-hour session will be used to prepare for the presentation.
 
 ## Goals
 
@@ -44,12 +44,12 @@ At this stage, you should have two sets of trees: one for *cytB* and one for the
 
 - Do you think your choice of species (including the outgroup) was appropriate to answer the question? If you were to redo the analysis, would you change something?
 
-**Upload your slides to Studium before 10 am on Friday Oct 18th so we can download them to the computer that will be used for the presentations.**
+**Upload your slides to Studium before 10 am on the day before the presentation so we can download them to the computer that will be used for the presentations.**
 
 ---
 ## Presentation
 
-On March Friday Oct 18th, we will meet in a lecture hall instead of the computer room. Each group will give a 5-10 minutes presentation about their project, presented with slides. The presentation should include (but is not limited to):
+On the day of the presentation, we will meet in a lecture hall instead of the computer room. Each group will give a 5-10 minutes presentation about their project, presented with slides. The presentation should include (but is not limited to):
   + Introduce your question to the rest of the class
   + Briefly summarize the data you collected
   + Show your trees
@@ -59,7 +59,7 @@ On March Friday Oct 18th, we will meet in a lecture hall instead of the computer
 ---
 ## Back-up submission: Written report
 
-In case you could not finish in time or if you are unable to present on Friday Oct 18th, please let the teaching assistants know and submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium. Do not forget to indicate which question you worked with and which species were included in the dataset. Exceptionally one submission by group is allowed - but remember to state the people involved.
+In case you could not finish in time or if you are unable to present, please let the teaching assistants know and submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium (there will be a quizz specifically designed for this). Do not forget to indicate which question you worked with and which species were included in the dataset.
 
 ---
 ## END OF LABS, PLEASE READ THIS PART
