@@ -136,7 +136,7 @@ figtree
 
 # REPORT
 
-Submit a file with the answers to all the questions and the *.iqtree* file for the CytB run.
+Answer all the question in the quizz in Studium only for the CytB, remember to upload the .iqtree file in the quizz.
 
 ---
 
