@@ -40,7 +40,7 @@ We made a checklist to help you when a command does not do what you expect it to
 
 10. What type of wolves is the ancestor of domestic dogs?
 
-11. Are Porcupines closer to pigs or to hedgehogs?
+11. Are porcupines closer to pigs or hedgehogs?
 
 ## Session 1
 
@@ -104,42 +104,36 @@ Preferably you should get the two types of sequences for all species in your dat
 #### Create fasta files for the entire dataset
 
 Once you found all the sequences for your dataset, you will need to put them together in a single fasta file (OBS! One fasta file for the entire mitochondria and one for *cytB*). 
-P.S. There are smarter ways than doing it manually one by one (think about combining `cat`,`>>`,`*` for example.
+P.S. There are smarter ways than doing it manually one by one (think about combining `cat`,`>>`,`*` for example).
 
 ## Create a name conversion table file.
-
-   - [ ] Create a tab-delimited file with three columns with the script called `x5_create_tab-delimited_file_from_fasta.py`
+   - [ ] Locate the provided Python script called `x1_create_tab-delimited_file_from_fasta.py` in your directory ([should be stored in the SRC folder](SRC/x1_create_tab-delimited_file_from_fasta.py))
+   - [ ] Create a tab-delimited file with three columns with the script `x1_create_tab-delimited_file_from_fasta.py`
    - [ ] 
-     `python /<your path>/x5_create_tab-delimited_file_from_fasta.py <combined_fasta_file.fasta>`
+     `python /<your path>/x1_create_tab-delimited_file_from_fasta.py <combined_fasta_file.fasta>`
 
-   The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /<your path>/x5_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
+   The above command should print a 3-column tab-separated output to the terminal ([Example](DATA/Lab5/worms_example_name_table.txt)). Write the output to a file (e.g. `python /<your path>/x1_create_tab-delimited_file_from_fasta.py “combined_fasta_file.fasta” > cytB_all.tab`). Each row contains information on each sequence in your data set, including: 
 
    	1. A field to be manually modified after the file has been generated. This field should be maximum 8-character long (enough for you to identify the species: e.g. Hsapiens) 
    	1.  An easy-readable name (good for presentation to others: e.g. Homo_sapiens). You can manually modify this field too. DO NOT use spaces. 
    	1. A globally unique identifier (e.g. NC_026542.1:14178-15317)
 
-   - [ ] Modify the tab-delimited file as stated above using the x5_create_tab-delimited_file_from_fasta.py
+   - [ ] Modify the tab-delimited file as stated above using the x1_create_tab-delimited_file_from_fasta.py
 
 
 
 ## Edit FASTA headers
 
-   - [ ] Rename your sequences in the FASTA files so that the headers contain the short-names from your conversion table. You can use this python script: 
+   - [ ] Rename your sequences in the FASTA files so that the headers contain the short-names from your conversion table. You can use this [python script, also found in SRC](SRC/x1_convert_to_short-names.py): 
 
-   `python /<your path>/x5_convert_to_short-names.py cytB_all.fasta cytB_all.tab`
+   `python /<your path>/x1_convert_to_short-names.py cytB_all.fasta cytB_all.tab`
 
    - [ ] Save the output with an appropriate name. 
 
 
-**Excercise 2** Now you should create a Python script that: 
-- takes one of your merged fasta file as input (which at that point has one of the three types of headers in the conversion table);
-- uses your conversion table;
-- and has the option to switch between the three different header types, depending on your choice (short name/easy name/full header). It should be able to change which types of header is saved by an **option from the user**, from one to another and back again; 
-- your script should be able to change the original file you send in and should not create a new fasta file!
 
 
-
-## REPORT
+## REPORT AS QUIZ IN STUDIUM
 
 Please submit the answer to Question 1 (text).
 
