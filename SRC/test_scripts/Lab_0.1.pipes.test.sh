@@ -1,3 +1,20 @@
+#!/bin/bash -l
+
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+echo -e """${YELLOW} 
+#  ____ ___ ____  _____ ____  
+# |  _ \_ _|  _ \| ____/ ___| 
+# | |_) | || |_) |  _| \___ \ 
+# |  __/| ||  __/| |___ ___) |
+# |_|  |___|_|   |_____|____/ 
+#                             
+# STARTING PIPES
+${NC}
+"""
+
+
 # crash on errors and print commands used
 set -x
 set -e
@@ -32,6 +49,16 @@ samtools view sample_1.bam | cut -f 1,10
 
 
 
+echo -e """${GREEN} 
+#  ____ ___ ____  _____ ____  
+# |  _ \_ _|  _ \| ____/ ___| 
+# | |_) | || |_) |  _| \___ \ 
+# |  __/| ||  __/| |___ ___) |
+# |_|  |___|_|   |_____|____/ 
+#                             
+# FINISHED PIPES
+${NC}
+"""
 
 
 

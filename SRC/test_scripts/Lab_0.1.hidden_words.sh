@@ -1,3 +1,19 @@
+#!/bin/bash -l
+
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+echo -e """${YELLOW}
+#  _   _ ___ ____  ____  _____ _   _
+# | | | |_ _|  _ \|  _ \| ____| \ | |
+# | |_| || || | | | | | |  _| |  \| |
+# |  _  || || |_| | |_| | |___| |\  |
+# |_| |_|___|____/|____/|_____|_| \_|
+#
+# STARTING HIDDEN
+${NC}
+"""
+
 # crash on errors and print commands used
 set -x
 set -e
@@ -39,6 +55,16 @@ cd ../exercise_4/
 grep bioinformatics text.txt  | wc -l
 perl get_last2char.pl 36
 
+echo -e """${GREEN}
+#  _   _ ___ ____  ____  _____ _   _ 
+# | | | |_ _|  _ \|  _ \| ____| \ | |
+# | |_| || || | | | | | |  _| |  \| |
+# |  _  || || |_| | |_| | |___| |\  |
+# |_| |_|___|____/|____/|_____|_| \_|
+#                                    
+# FINISHED HIDDEN
+${NC}
+"""
 
 
 

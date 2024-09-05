@@ -1,3 +1,20 @@
+#!/bin/bash -l
+
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+echo -e """${YELLOW} 
+#  ___ _   _ _____ ____   ___  
+# |_ _| \ | |_   _|  _ \ / _ \ 
+#  | ||  \| | | | | |_) | | | |
+#  | || |\  | | | |  _ <| |_| |
+# |___|_| \_| |_| |_| \_\____/ 
+#                              
+# STARTING INTRO
+${NC}
+"""
+
+
 # crash on errors and print commands used
 set -x
 set -e
@@ -52,7 +69,16 @@ head a_better_name/large_file
 mv part_2/*.txt part_1/
 ll many_files/*.txt
 
-
+echo -e """${GREEN} 
+#  ___ _   _ _____ ____   ___
+# |_ _| \ | |_   _|  _ \ / _ \ 
+#  | ||  \| | | | | |_) | | | |
+#  | || |\  | | | |  _ <| |_| |
+# |___|_| \_| |_| |_| \_\____/
+#
+# FINISHED INTRO
+${NC}
+"""
 
 
 
