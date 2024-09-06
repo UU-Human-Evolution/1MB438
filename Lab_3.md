@@ -84,7 +84,7 @@ Some genes might start at a higher position and end at a lower one. Any idea why
 
 ---
 ## Report:
-Please submit a text file with the answers to the following questions: 1, 2, 3 and 5.
+Please submit a text file in the quizz with the answers to the following questions: 1, 2, 3 and 5.
 
 ---
 
