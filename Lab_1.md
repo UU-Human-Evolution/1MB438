@@ -135,7 +135,7 @@ P.S. There are smarter ways than doing it manually one by one (think about combi
 
 ## REPORT AS QUIZ IN STUDIUM
 
-Please submit the answer to Question 1 (text).
+Please submit the answer in the quizz to Question 1 (text).
 
 ---
 
