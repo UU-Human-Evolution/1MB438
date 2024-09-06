@@ -103,7 +103,7 @@ By now the alignment of the entire mitochondria should be ready for you to look 
 
 Pairwise alignment tutorial: submit answers to all the questions in the quizz.
 
-Multiple alignment: submit answers to questions 2-1 through 2-4. For Question 2-2 and 2-4, it can be useful to include a screenshot of what you saw. Only submit the alignment (FASTA file).
+Multiple alignment: submit answers to questions 2-1 through 2-4. For Question 2-2 and 2-4, it can be useful to include a screenshot of what you saw. Only submit the alignment (FASTA file) in the quizz.
 
 
 ---
