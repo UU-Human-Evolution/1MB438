@@ -61,11 +61,11 @@ In the directory `exercise_2/`, you will find the text file `solution_2.1.txt`. 
 
 
 ### 2.2 Edit text files
-To find character number six, you will need to create a text file in the `exercise_2` directory. On Linux and MacOS, you can do this using for example the editor `nano`. You can start this program by typing the name of the program followed by the name of the file you want to create (we will name this file solution_2.2.txt): 
+To find character number six, you will need to create a text file in the `exercise_2` directory. On Linux and MacOS, you can do this using for example the editor `nano`. You can start this program by typing the name of the program followed by the name of the file you want to create (we will name this file `solution_2.2.txt`): 
 ```
 nano solution_2.2.txt
 ```
- Add now the exact text `Please give me solution 2.2`, then save and quit `nano`. To save a file in `nano`, press `Ctrl+o`, to quit `Ctrl+x`. Afterwards, run the Perl program `text_file_check.pl`.
+Write the exact text `Please give me solution 2.2` in the file, then save and quit `nano`. To save a file in `nano`, press `Ctrl+o`, to quit `Ctrl+x`. Afterwards, run the Perl program `text_file_check.pl`.
 
 ## 3 Copy and remove files
 Please go to the directory `exercise_3`.
