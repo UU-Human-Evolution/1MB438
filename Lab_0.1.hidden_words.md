@@ -42,13 +42,13 @@ NOTE: In these exercises, you will run several small Perl scripts. If you are cu
 ## 1 Directories and files
 
 ### 1.1 Navigating directories
-The first character is hidden in a file somewhere in the `exercise_1` directory. Use the commands `cd` and `ls` to find the directory with the name `solution_1.1`. If you went to a wrong directory, you can always type `cd ..` to go back one level, or `cd` to go back to the beginning.
+The first character is hidden in a file somewhere in the `exercise_1` directory. Use the commands `cd` and `ls` to find the directory with the name `solution_1.1`, and look inside of it. If you went to a wrong directory, you can always type `cd ..` to go back one level, or `cd` to go back to the beginning.
 
 ### 1.2 Show a hidden file
 Some files are not visible immediately but are instead hidden. Hidden files are recognized by the `.` in front of their name. To see hidden files, you need to issue the `ls -a` command. This will allow you to find the second character, hidden in the same directory as the first character.
 
 ### 1.3 Execute a program
-Go back to the directory `exercise_1/directoryB/`. When listing its contents, you should see a Perl program. To find the next character, you need to execute the program. You can do this with the command `perl <program_name>` and the character should appear on your Terminal window.
+Go back to the directory `exercise_1/directoryB/`. When listing its contents, you should see a Perl file. To find the next character, you need to execute the file. You can do this with the command `perl file.pl` (replace `file.pl` with the name of the file you want to run) and the character should appear on your Terminal window.
 
 ### 1.4 Find out how big a file is
 Go now to `exercise_1/directoryC/`. To find the fourth character, you first need to find out how big the `text_file.txt` in the directory is. This is done with the command `ls -l`. This will produce a long format list, where you can see the file size (in bytes), the file's owner, permissions to read and modify it, and the date/time of the last modification. To obtain the fourth character, execute the Perl program `file_size_check.pl` - the program will ask you to enter the size of the file.
