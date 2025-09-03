@@ -1,4 +1,4 @@
-a Linux introduction
+# Linux introduction
 
 This lab assumes you are already have a Linux terminal up and running. If you are on a computer that is already connected to the server the course is run at, great! You can now proceed to the next part, [Getting the files for the course](#getting-the-files-for-the-course).
 
