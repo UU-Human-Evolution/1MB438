@@ -39,12 +39,12 @@ Start your terminal, go to the folder where we store the lab files, make an empt
 cd ~/1MB438/RESULTS/
 mkdir linux_permissions
 cd linux_permissions
-touch  filename
+touch filename
 ll
 
 # output:
 total 0
--rw-rw-r-- 1 dahlo staff 0 Aug 19 15:15 filename
+-rw-rw-r-- 1 martdahl teachers 0 Aug 19 15:15 filename
 ```
 
 This shows us a cryptic line for each file/folder, where the columns are as following:
@@ -52,8 +52,8 @@ This shows us a cryptic line for each file/folder, where the columns are as foll
 ```
 -rw-rw-r--   : permissions
 1            : number of linked hard-links
-dahlo        : owner of the file
-staff        : to which group this file belongs to
+martdahl     : owner of the file
+teachers     : to which group this file belongs to
 0            : file size
 Aug 19 15:15 : modification/creation date and time
 filename     : file/directory name
@@ -90,8 +90,8 @@ ll
 
 # output:
 total 4,0K
-drwxrwxr-x 2 dahlo staff 4,0K Aug 19 15:19 directoryname
--rw-rw-r-- 1 dahlo staff    0 Aug 19 15:15 filename
+drwxrwxr-x 2 martdahl teachers 4,0K Aug 19 15:19 directoryname
+-rw-rw-r-- 1 martdahl teachers    0 Aug 19 15:15 filename
 ```
 
 As you can see the first character correctly identifies it as **`d`**, a directory, and all user groups have **`x`**, execute permissions, on the directory by default. The execute permission is needed on directories to be able to see what is inside them (list the files in it).
@@ -109,14 +109,14 @@ Lets revisit our example file and directory to test this.
 ```bash
 ll
 total 0
-drwxr-xr-x  2 dahlo  staff    68B Sep 21 14:41 directoryname
--rw-rw-r--  1 dahlo  staff     0B Sep 21 13:54 filename
+drwxr-xr-x  2 martdahl  teachers    68B Sep 21 14:41 directoryname
+-rw-rw-r--  1 martdahl  teachers     0B Sep 21 13:54 filename
 
 chmod a=x filename
 ll
 total 0
-drwxr-xr-x  2 dahlo  staff    68B Sep 21 14:41 directoryname
----x--x--x  1 dahlo  staff     0B Sep 21 13:54 filename
+drwxr-xr-x  2 martdahl  teachers    68B Sep 21 14:41 directoryname
+---x--x--x  1 martdahl  teachers     0B Sep 21 13:54 filename
 ```
 
 As you can see this affected all three, **`a`**, it wiped the previous permissions, **`=`**, and added an executable permission, **`x`**, to all three groups.
@@ -198,8 +198,8 @@ ln -s stuff/linkfile
 ls -l
 
 total 8
-lrwxr-xr-x  1 dahlo  staff    14B Sep 21 15:38 linkfile -> stuff/linkfile
-drwxr-xr-x  3 dahlo  staff   102B Sep 21 15:36 stuff
+lrwxr-xr-x  1 martdahl  teachers    14B Sep 21 15:38 linkfile -> stuff/linkfile
+drwxr-xr-x  3 martdahl  teachers   102B Sep 21 15:36 stuff
 ```
 
 Notice that we see the type of the file is `l`, for symbolic link, and that we have a pointer after the links name for where the link goes, `-> stuff/linkfile`.
@@ -235,11 +235,11 @@ touch a b c d e
 ll
 
 total 0
--rw-r--r--  1 dahlo  staff     0B Sep 21 16:11 a
--rw-r--r--  1 dahlo  staff     0B Sep 21 16:11 b
--rw-r--r--  1 dahlo  staff     0B Sep 21 16:11 c
--rw-r--r--  1 dahlo  staff     0B Sep 21 16:11 d
--rw-r--r--  1 dahlo  staff     0B Sep 21 16:11 e
+-rw-r--r--  1 martdahl  teachers     0B Sep 21 16:11 a
+-rw-r--r--  1 martdahl  teachers     0B Sep 21 16:11 b
+-rw-r--r--  1 martdahl  teachers     0B Sep 21 16:11 c
+-rw-r--r--  1 martdahl  teachers     0B Sep 21 16:11 d
+-rw-r--r--  1 martdahl  teachers     0B Sep 21 16:11 e
 ```
 
 Return to our starting folder and create a symbolic link to folder three.
@@ -250,8 +250,8 @@ ln -s one/two/three
 ll
 
 total 8
-drwxr-xr-x  3 dahlo  staff   102B Sep 21 16:11 one
-lrwxr-xr-x  1 dahlo  staff    13B Sep 21 16:13 three -> one/two/three
+drwxr-xr-x  3 martdahl  teachers   102B Sep 21 16:11 one
+lrwxr-xr-x  1 martdahl  teachers    13B Sep 21 16:13 three -> one/two/three
 ```
 
 Once again, we see that it is correctly identified as a symbolic link, `l`, that it's default name is the same as the directory it is pointing to, same as the files link had the same name as the file by default previously, and that we have the additional pointer after the links name showing us where it's going.
@@ -486,6 +486,3 @@ do
   mv $f ${f/.sam}.bam;
 done
 ```
-
-***
-

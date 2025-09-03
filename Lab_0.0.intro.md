@@ -1,4 +1,4 @@
-# Linux introduction
+a Linux introduction
 
 This lab assumes you are already have a Linux terminal up and running. If you are on a computer that is already connected to the server the course is run at, great! You can now proceed to the next part, [Getting the files for the course](#getting-the-files-for-the-course).
 
@@ -46,19 +46,24 @@ ls -l
 
 This is how my home folder looks like, and yours should look somewhat similar:
 
-```bash
-[12:56:32] dahlo@rackham1 ~ $ ls -l
-total 4384
-drwxr-xr-x  3 dahlo b2014068    2048 Apr 27  2017 1MB438
--rw-rw-r--  1 dahlo dahlo      49042 Sep 23  2016 bad.png
-drwxr-xr-x  2 dahlo dahlo       2048 Mar 18  2016 data
--rw-rw-r--  1 dahlo dahlo      60944 Sep 23  2016 good.png
-drwxr-xr-x  4 dahlo b2014209    2048 Oct 30  2014 igv
-drwxrwxr-x  5 dahlo dahlo       2048 Sep 20  2016 ngsintro
-drwx--S---  2 dahlo dahlo       2048 May  4  2010 private
-drwxr-xr-x 26 dahlo dahlo       4096 May 18 10:43 uppmaxScripts
-drwxrwxr-x  5 dahlo dahlo    2201600 May 14 14:02 work
-[12:57:36] dahlo@rackham1 ~ $
+```
+martdahl@solander:~> ls -l
+total 52
+drwxr-xr-x 8 martdahl teachers 4096 Sep  5  2024 1MB438
+drwx------ 2 martdahl teachers 4096 Sep 13  2024 desktop
+drwxr-xr-x 2 martdahl teachers 4096 Sep 12  2024 Desktop
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Documents
+drwxr-xr-x 2 martdahl teachers 4096 Sep 12  2024 Downloads
+drwx------ 4 martdahl teachers 4096 Aug 23 00:21 grading
+drwx-wx-wx 2 martdahl teachers 4096 Nov 19  2024 hand-in
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Music
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Pictures
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Public
+drwxr-xr-x 3 martdahl teachers 4096 Sep  7  2022 qol
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Templates
+drwxr-xr-x 2 martdahl teachers 4096 Sep 13  2024 Videos
+
+martdahl@solander:~>
 ```
 
 As seen in the lecture, the command for moving around is `cd`. The command stands for **C**hange **D**irectory and does exactly that. It is the equivalent of double clicking a folder in a GUI.
@@ -175,22 +180,22 @@ The command will always be the same for all tar.gz files you want to unpack. `-x
 Look in the folder again and see what we just unpacked:
 
 ```bash
-[user@milou2 linux_tutorial]$ ll
+[user@solander linux_tutorial]$ ll
 total 512
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 a_strange_name
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 backed_up_proj_folder
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 external_hdd
--rwxrwxr-x  1 user g20XXXXX  17198 Sep 24 13:19 files.tar.gz
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 important_results
-drwxrwsr-x  2 user g20XXXXX 129024 Sep 19  2012 many_files
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 old_project
--rwxrwxr-x  1 user g20XXXXX      0 Sep 24 13:19 other_file.old
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 part_1
-drwxrwsr-x  2 user g20XXXXX   2048 Sep 19  2012 part_2
-drwxrwsr-x  2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
-drwxrwsr-x  2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
--rwxrwxr-x  1 user g20XXXXX      0 Sep 19  2012 useless_file
-[user@milou2 linux_tutorial]$
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 a_strange_name
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 backed_up_proj_folder
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 external_hdd
+-rwxrwxr-x  1 user H20XX  17198 Sep 24 13:19 files.tar.gz
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 important_results
+drwxrwsr-x  2 user H20XX 129024 Sep 19  2012 many_files
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 old_project
+-rwxrwxr-x  1 user H20XX      0 Sep 24 13:19 other_file.old
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 part_1
+drwxrwsr-x  2 user H20XX   2048 Sep 19  2012 part_2
+drwxrwsr-x  2 user H20XX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x  2 user H20XX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x  1 user H20XX      0 Sep 19  2012 useless_file
+[user@solander linux_tutorial]$
 ```
 
 ## Copying and moving files
@@ -206,12 +211,12 @@ In this example, we want to move one of the result files only, located in the fo
 First, take a look inside the `important_results` folder:
 
 ```bash
-[user@milou2 linux_tutorial]$ ll important_results/
+[user@solander linux_tutorial]$ ll important_results/
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-1
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-2
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 temp_file-1
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 temp_file-2
+[user@solander linux_tutorial]$
 ```
 
 You see that there are some unimportant temporary files that you have no interest in. Just to demonstrate the move command, I will show you how to move one of these temporary files to your backed-up project folder:
@@ -229,12 +234,12 @@ mv important_results/temp_file-1  backed_up_proj_folder/
 Look in the backed-up project folder to make sure you moved the file correctly.
 
 ```bash
-[user@milou2 linux_tutorial]$ ll backed_up_proj_folder/
+[user@solander linux_tutorial]$ ll backed_up_proj_folder/
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 last_years_data
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 temp_file-1
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 dna_data_analysis_result_file_that_is_important-you_should_really_use_tab_completion_for_file_names.bam
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 last_years_data
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 temp_file-1
+[user@solander linux_tutorial]$
 ```
 
 Another use for the `move` command is to rename things. When you think of it, renaming is just a special case of moving. You move the file to a location and give the file a new name in the process. The location you move the file **to** can very well be the same folder the file already is in. To give this a try, we will rename the folder `a_strange_name` to a better name.
@@ -246,23 +251,23 @@ mv a_strange_name  a_better_name
 Look around to see that the name change worked.
 
 ```bash
-[user@milou2 linux_tutorial]$ mv a_strange_name  a_better_name
-[user@milou2 linux_tutorial]$ ll
+[user@solander linux_tutorial]$ mv a_strange_name  a_better_name
+[user@solander linux_tutorial]$ ll
 total 448
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 a_better_name
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 backed_up_proj_folder
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 external_hdd
--rwxrwxr-x 1 user g20XXXXX  17198 Sep 24 13:36 files.tar.gz
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 important_results
-drwxrwsr-x 2 user g20XXXXX 129024 Sep 19  2012 many_files
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 old_project
--rwxrwxr-x 1 user g20XXXXX      0 Sep 24 13:36 other_file.old
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_1
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_2
-drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
-drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
--rwxrwxr-x 1 user g20XXXXX      0 Sep 19  2012 useless_file
-[user@milou2 linux_tutorial]$
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 a_better_name
+drwxrwsr-x 2 user H20XX   2048 Sep 24 13:40 backed_up_proj_folder
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 external_hdd
+-rwxrwxr-x 1 user H20XX  17198 Sep 24 13:36 files.tar.gz
+drwxrwsr-x 2 user H20XX   2048 Sep 24 13:40 important_results
+drwxrwsr-x 2 user H20XX 129024 Sep 19  2012 many_files
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 old_project
+-rwxrwxr-x 1 user H20XX      0 Sep 24 13:36 other_file.old
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 part_1
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 part_2
+drwxrwsr-x 2 user H20XX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x 2 user H20XX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x 1 user H20XX      0 Sep 19  2012 useless_file
+[user@solander linux_tutorial]$
 ```
 
 Sometimes you don't want to move things, you want to copy them. Moving a file will remove the original file, whereas copying the file will leave the original untouched. An example when you want to do this could be that you want to give a copy of a file to a friend. Imagine that you have a external hard drive that you want to place the file on. The file you want to give to your friend is data from last years project, which is located in your backed up project folder, `backed_up_proj_folder/last_years_data`
@@ -277,11 +282,11 @@ cp backed_up_proj_folder/last_years_data  external_hdd/
 Take a look in the `external_hdd` to make sure the file got copied.
 
 ```bash
-[user@milou2 linux_tutorial]$ cp backed_up_proj_folder/last_years_data  external_hdd/
-[user@milou2 linux_tutorial]$ ll external_hdd/
+[user@solander linux_tutorial]$ cp backed_up_proj_folder/last_years_data  external_hdd/
+[user@solander linux_tutorial]$ ll external_hdd/
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Sep 24 13:46 last_years_data
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 0 Sep 24 13:46 last_years_data
+[user@solander linux_tutorial]$
 ```
 
 ## Deleting files
@@ -306,22 +311,22 @@ rm <file_to_remove> <file_to_remove> <file_to_remove> <file_to_remove> <file_to_
 Try it out by deleting the useless file in the folder you are standing in. First, look around in the folder to see the file.
 
 ```bash
-[user@milou2 linux_tutorial]$ ll
+[user@solander linux_tutorial]$ ll
 total 448
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 a_better_name
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 backed_up_proj_folder
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:46 external_hdd
--rwxrwxr-x 1 user g20XXXXX  17198 Sep 24 13:36 files.tar.gz
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 24 13:40 important_results
-drwxrwsr-x 2 user g20XXXXX 129024 Sep 19  2012 many_files
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 old_project
--rwxrwxr-x 1 user g20XXXXX      0 Sep 24 13:36 other_file.old
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_1
-drwxrwsr-x 2 user g20XXXXX   2048 Sep 19  2012 part_2
-drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_has_a_file
-drwxrwsr-x 2 user g20XXXXX   2048 Jan 28  2012 this_is_empty
--rwxrwxr-x 1 user g20XXXXX      0 Sep 19  2012 useless_file
-[user@milou2 linux_tutorial]$
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 a_better_name
+drwxrwsr-x 2 user H20XX   2048 Sep 24 13:40 backed_up_proj_folder
+drwxrwsr-x 2 user H20XX   2048 Sep 24 13:46 external_hdd
+-rwxrwxr-x 1 user H20XX  17198 Sep 24 13:36 files.tar.gz
+drwxrwsr-x 2 user H20XX   2048 Sep 24 13:40 important_results
+drwxrwsr-x 2 user H20XX 129024 Sep 19  2012 many_files
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 old_project
+-rwxrwxr-x 1 user H20XX      0 Sep 24 13:36 other_file.old
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 part_1
+drwxrwsr-x 2 user H20XX   2048 Sep 19  2012 part_2
+drwxrwsr-x 2 user H20XX   2048 Jan 28  2012 this_has_a_file
+drwxrwsr-x 2 user H20XX   2048 Jan 28  2012 this_is_empty
+-rwxrwxr-x 1 user H20XX      0 Sep 19  2012 useless_file
+[user@solander linux_tutorial]$
 ```
 
 Now remove it.
@@ -340,10 +345,10 @@ rmdir this_has_a_file
 If you look inside `this_has_a_file`,
 
 ```bash
-[user@milou2 linux_tutorial]$ ll this_has_a_file
+[user@solander linux_tutorial]$ ll this_has_a_file
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Jan 28  2012 file
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 0 Jan 28  2012 file
+[user@solander linux_tutorial]$
 ```
 
 you see that there is a file in there! Only directories that are completely empty can be deleted using `rmdir`. To be able to delete `this_has_a_file`, either delete the file manually and then remove the folder
@@ -368,12 +373,12 @@ Of course, this never happens because you **ALWAYS** name your files so that you
 :clipboard: Now, we are looking for that really good script we wrote a couple of months ago in that other project. Look in the project's folder, `old_project` and find the script.
 
 ```bash
-[user@milou2 linux_tutorial]$ ll old_project/
+[user@solander linux_tutorial]$ ll old_project/
 total 96
--rwxrwxr-x 1 user g20XXXXX 39904 Sep 19  2012 a
--rwxrwxr-x 1 user g20XXXXX     0 Sep 19  2012 stuff_1
--rwxrwxr-x 1 user g20XXXXX  1008 Sep 19  2012 the_best
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 39904 Sep 19  2012 a
+-rwxrwxr-x 1 user H20XX     0 Sep 19  2012 stuff_1
+-rwxrwxr-x 1 user H20XX  1008 Sep 19  2012 the_best
+[user@solander linux_tutorial]$
 ```
 
 Not so easy with those names.. We will have to use `less` to look at the files and figure out which is which.
@@ -453,17 +458,17 @@ mv  sample_1_*  my_other_folder
 We can try it out on the example files I have prepared. There are two folders called `part_1` and `part_2`. We want to collect all the `.txt` files from both these folders in one of the folders. Look around in both the folders to see what they contain.
 
 ```bash
-[user@milou2 linux_tutorial]$ ll part_1/
+[user@solander linux_tutorial]$ ll part_1/
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_1.txt
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_2.txt
-[user@milou2 linux_tutorial]$ ll part_2
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 file_1.txt
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 file_2.txt
+[user@solander linux_tutorial]$ ll part_2
 total 0
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_3.txt
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 file_4.txt
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 garbage.tmp
--rwxrwxr-x 1 user g20XXXXX 0 Sep 19  2012 incomplete_datasets.dat
-[user@milou2 linux_tutorial]$
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 file_3.txt
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 file_4.txt
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 garbage.tmp
+-rwxrwxr-x 1 user H20XX 0 Sep 19  2012 incomplete_datasets.dat
+[user@solander linux_tutorial]$
 ```
 
 We see that `part_1` only contains `.txt` files, and that `part_2` contains some other files as well. The best option seems to be to move all `.txt` files from `part_2` info `part_1`.
