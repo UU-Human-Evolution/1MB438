@@ -12,6 +12,28 @@ git pull
 
 If you get any error message, raise your hand and an assistant will come and help you out.
 
+## First things first
+
+Let's make sure nano has **syntax highlighting** enabled. What that will do is to paint the boring code in pretty colors, making it much easier to read it. See the difference for yourself by first looking at this file before you enable it:
+
+```bash
+nano ~/1MB438/Lab_0.2.scripts.md
+```
+
+Close down nano when you have seen how boing it looks without colors by pressing `ctrl+x`. Now, let's enable syntax highlighting. To do this, we will simply tell nano to include the syntax highlighting instructions from a bunch of files that are already installed on the computer. Run this command to do just that:
+
+```bash
+find /usr/share/nano/ -iname "*.nanorc"  -exec echo include {} \; >> ~/.nanorc
+```
+
+This command will put one line per language instructions (~30 of them, located in `/usr/share/nano/`), into the nano autostart file (`~/.nanorc`) and put the word 'include' infront of each file name. That will make nano include the instructions from each of those files whenever it starts. Now have a look at the same file as before and enjoy the colors:
+
+```bash
+nano ~/1MB438/Lab_0.2.scripts.md
+```
+
+Then close nano and continue with the lab.
+
 # Copy files for lab
 
 Now, you will need some files. To keep your files organized, make your own copy of the needed files. The files are located in the folder `~/1MB438/DATA/Lab0/linux_scripts`.

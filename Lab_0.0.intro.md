@@ -537,7 +537,9 @@ The column `%MEM` describes how much memory each program uses. The numbers mean 
 
 The area in the top describes the overall memory usage. **Total** tells you how much memory the computer has, **used** tells you how much of the memory is being used at the moment, and **free** tells you how much memory is free at the moment.
 
+```
 Total = Used + Free
+```
 
 A warning sign you can look for in top is when you are running an analysis which seems to take forever to complete, and you see that there is almost no cpu usage on the computer. That means that the computer is not doing any calculation, which could be bad. If you look at the memory usage at the same time, and see that it's maxed out (used 100% of total), you can more or less abort the analysis.
 
