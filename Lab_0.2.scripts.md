@@ -34,7 +34,7 @@ nano ~/1MB438/Lab_0.2.scripts.md
 
 Then close nano and continue with the lab.
 
-# Copy files for lab
+## Copy files for lab
 
 Now, you will need some files. To keep your files organized, make your own copy of the needed files. The files are located in the folder `~/1MB438/DATA/Lab0/linux_scripts`.
 
@@ -68,7 +68,7 @@ ll
 
 Now we are ready to continue with the rest of the lab.
 
-# Using variables
+## Using variables
 
 Variables are like small notes you write stuff on. If you want to save the value of something to be able to use it later, variables is the way to go. Let's try assigning values to some variables and see how we use them.
 
@@ -120,7 +120,7 @@ echo The volume of the rectangular cuboid with the sides $x,$y,$z is $(($x*$y*$z
 </details>
 
 
-# Exercises
+## Exercises
 
 First off, let's open another terminal so that you have 2 of them open. Scripting is a lot easier if you have one terminal on the command line ready to run commands and test things, and another one with a text editor where you write the actual code. That way you will never have to close down the text editor when you want to run the script you are writing on, and then open it up again when you want to continue editing the code.
 
@@ -159,7 +159,7 @@ do
 done  
 ```
 
-## Exercise 1
+### Exercise 1
 
 :clipboard: Let's say it's New Year's Eve and you want to impress your friends with a computerized countdown of the last 10 seconds of the year (don't we all?).
 
@@ -186,7 +186,7 @@ echo Happy New Year everyone!!
 
 </details>
 
-## Exercise 2
+### Exercise 2
 
 Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the [Pipes exercise](Lab_0.1.pipes.md), we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
 In real life you will never do this, instead you will most likely always do it the other way around. SAM files take up ~4x more space on the hard drive compared to the same file in BAM format, so as soon as you see a SAM file you should convert it to a BAM file instead to conserve hard drive space. If you have many SAM files that needs converting you don't want to sit there and type all the commands by hand like some kind of animal.
@@ -243,7 +243,7 @@ done
 ```
 </details>
 
-## Exercise 3
+### Exercise 3
 
 Let's add a small thing to the exercise we just did. If there already exists a BAM file with the same name as the SAM file it's not necessary to convert it again. Let's use an `if` statement to check if the file already exists before we do the conversion.
 
@@ -328,7 +328,7 @@ done
 ```
 </details>
 
-## Bonus exercise 1  
+### Bonus exercise 1  
 
 Math and programming are usually a very good combination, so many of the examples of programming you'll see involve some kind of math. Now we will write a loop that will calculate the factorial of a number. As [wikipedia will tell you](https://en.wikipedia.org/wiki/Factorial), *"the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n"*, i.e. multiply all the integers, starting from 1, leading up to and including a number with each other.
 
@@ -384,7 +384,7 @@ echo The factorial of $n is $factorial
 ```
 </details>
 
-## Bonus exercise 2
+### Bonus exercise 2
 
 Now, let's combine everything you've learned so far in this course.
 
