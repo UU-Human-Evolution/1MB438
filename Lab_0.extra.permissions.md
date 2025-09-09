@@ -369,11 +369,11 @@ Number of lines = 218450
 Number of words = 2839639
 Number of characters = 49212002
 
-To make this more meaningful, let's use the pipes and `grep` command seen previously to see how many lines and how many times the string of nucleotides `CATCATCAT` exist in this file.
+To make this more meaningful, let's use the pipes and `grep` command seen previously to see how many lines and how many times the string of nucleotides `CAT` exist in this file.
 
 ```bash
-grep "SN:chr" sample_1.sam | wc
-26      78     648
+grep "CAT" sample_1.sam | wc
+8     129    2038
 ```
 
 To see only the line count you can add `-l` after `wc`, and to count only characters use `-m`.
