@@ -2,6 +2,29 @@
 
 _This exercise was modifed from an original idea by Kristian Rother, see www.academis.eu._ 
 
+## Hand-in instructions
+:exclamation: **READ THIS PART:** Time to start working on the hand-in for the linux part of the course! The hand-in will be the commands used to complete the hidden word exersise below, as well as which word the letters form. Put them all in a text file which you name the same as your username. Once you are finished, copy this file to the following location: `/home/martdahl/hand-in/`
+
+We won't judge the formatting of the file or anything, so don't sweat it if the file is ugly :)
+
+Example of how it could look:
+```bash
+# first letter
+cd folder1
+ls -la
+
+# letter: a
+
+# second letter
+cd ../folder2
+tail file1
+
+# letter: b
+
+
+# word formed: ab
+```
+
 ## Introduction
 
 The goal of this exercise is to use and test what you have learned today about interacting with the command line on Unix/Linux.
