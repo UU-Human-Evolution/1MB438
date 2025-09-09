@@ -165,7 +165,7 @@ tail file1
 ```
 ### Hidden word exercise 
 
-:clipboard: Now that you have some basic UNIX tools at your disposal go and do the [hidden word_exercise](Lab_0.1.hidden_words.md).
+:clipboard: Now that you have some basic UNIX tools at your disposal go and do the [hidden word_exercise](Lab_0.1.1.hidden_words.md).
 Submit the hidden word and the commands used to find it as described in the [hand-in instructions](#hand-in-instructions) above.
 
 Do not continue with the next part of this lab until you are done with the hidden word exercise. 
