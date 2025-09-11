@@ -1,3 +1,7 @@
+# Data from the lecture
+
+Just as a note, if you want to try out the small examples shown during the lecture, you can find the files used in my home directory, `/home/martdahl/qol` or `~martdahl/qol`. You can `cd` the and you should be able to do everything shown during the lecture.
+
 # Pipes exercise
 
 The first thing we're going to do is to update the git repo in case there has been any changes to the lab instructions since you downloaded the repo in the first lab. It should be as easy as running this command while standing anywhere inside the course repo:
