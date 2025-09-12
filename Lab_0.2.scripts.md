@@ -166,7 +166,7 @@ echo Happy New Year everyone!!
 
 ### Exercise 2
 
-Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the [Pipes exercise](Lab_0.1.pipes.md), we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
+Let's try to do something similar to the example in the lecture slides, to run the same commands on multiple files. In the [Pipes exercise](Lab_0.1.0.pipes.md), we learned how to use samtools to convert BAM files to SAM files so that humans can read them.
 In real life you will never do this, instead you will most likely always do it the other way around. SAM files take up ~4x more space on the hard drive compared to the same file in BAM format, so as soon as you see a SAM file you should convert it to a BAM file instead to conserve hard drive space. If you have many SAM files that needs converting you don't want to sit there and type all the commands by hand like some kind of animal.
 
 :clipboard: Write a script that converts all the SAM files in a specified directory to BAM files. Incidentally, you can find 50 SAM files in need of conversion in the folder called `sam` in the folder you extracted to your folder earlier in this lab `~/1MB438/RESULTS/linux_scripts/sam`. Bonus points if you make the program take the specified directory as an argument, and another bonus point if you get the program to name the resulting BAM file to the same name as the SAM file but with a `.bam` ending instead of `.sam` (e.g. `sample_4.sam` -> `sample_4.bam`).
