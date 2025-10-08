@@ -18,7 +18,10 @@ During the last sessions, you collected and aligned mitochondrial sequences from
 + Sequence databases
 + (command line) BLAST
 
-![](https://upload.wikimedia.org/wikipedia/commons/1/15/Map_of_the_human_mitochondrial_genome.svg)
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Map_of_the_human_mitochondrial_genome.svg" width="800"/>
+</div>
+
 **Figure 2: Map of the Human mitochondira**
 By Emmanuel Douzery - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=46726514
 
@@ -31,7 +34,8 @@ Search the database for the **proteins**
 - *CytB*,
 - *COX1* and
 - *ND6*
-and download each sequence into a **separate FASTA file**. Make sure you mark them correctly.
+
+and download each sequence into a **separate FASTA file**. Make sure you name them correctly.
 
 We now want to search for these protein sequences **in our mitochondrial genomes** to identify the **corresponding coding regions in that nucleotide sequence**. 
 For obvious reasons, we cannot directly align protein sequences with a nucleotide sequence as they are composed from a **different alphabet** and there are often alternative codons in the translation process, so the assignment of an amino acid to three nucleotides is ambiguous. 
@@ -55,21 +59,22 @@ tblastn -query CYTB.fasta -db full_nonaligned_mitogenomes.fasta -outfmt 6 -out C
 
 Reflect yourself on the results. Make sure to use the names of your respective files. Open the output file. What do you see? Can you make sense of the different columns?
 
-```
-Column_name	Description
-qseqid	query (e.g., unknown gene) sequence id
-sseqid	subject (e.g., reference genome) sequence id
-pident	percentage of identical matches
-length	alignment length (sequence overlap)
-mismatch	number of mismatches
-gapopen	number of gap openings
-qstart	start of alignment in query
-qend	end of alignment in query
-sstart	start of alignment in subject
-send	end of alignment in subject
-evalue	expect value
-bitscore	bit score
-```
+| Column Name | Description                                           |
+|-------------|-------------------------------------------------------|
+| qseqid      | query (e.g., unknown gene) sequence id                |
+| sseqid      | subject (e.g., reference genome) sequence id          |
+| pident      | percentage of identical matches                       |
+| length      | alignment length (sequence overlap)                   |
+| mismatch    | number of mismatches                                  |
+| gapopen     | number of gap openings                                |
+| qstart      | start of alignment in query                           |
+| qend        | end of alignment in query                             |
+| sstart      | start of alignment in subject                         |
+| send        | end of alignment in subject                           |
+| evalue      | expect value                                          |
+| bitscore    | bit score                                             |
+
+
 **Question 3.** Did you find a good hit in your species of interest? Is this actually the best hit compared to the other species (in terms of how long the hit is, identity and E-value)?
 
 Now repeat these steps for *COX1* and *ND6* using informative names for the output files so you don't overwrite your previous results.
