@@ -73,10 +73,13 @@ Nowadays there is an abundance of genomic data available, for organelles and ent
 
 Proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the entire genome.
 
-You can look at alignments with the program Jalview.
-**CAREFUL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*
+You can look at alignments with the program Jalview.  
 
-`java -jar ./<your_path>/jalview.jar`
+`java -jar ./<your_path>/jalview.jar`  
+
+*CAREFUL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*  
+
+Alternatively, you can use this [online alignment visualization tool](https://alignmentviewer.org) through your web browser. You will first need to transfer the alignment fasta to your local computer (using `scp` or `rsync`) and then upload the file to the website.
 
 **Question 2-2. Visually inspect your alignment for cytB. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
 
