@@ -126,7 +126,7 @@ P.S. There are smarter ways than doing it manually one by one (think about combi
 
    - [ ] Rename your sequences in the FASTA files so that the headers contain the short-names from your conversion table. You can use this [python script, also found in SRC](SRC/x1_convert_to_short-names.py): 
 
-   `python /<your path>/x1_convert_to_short-names.py cytB_all.fasta cytB_all.tab`
+   `python /<your path>/x1_convert_to_short-names.py cytB_all.fasta cytB_all.tab > ANOTHER_NAME_FOR_THE_FASTA_FILE!`
 
    - [ ] Save the output with an appropriate name. 
 
