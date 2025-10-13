@@ -30,7 +30,7 @@ This is the last session of the bioinformatics project (and of the course). You 
 
 By now you have assembled a dataset to answer the question from Lab 1; you collected *cytB* sequences and entire mitochondrial genomes for all species in the dataset; you aligned the species; you performed phylogenetic analysis and looked at some aspects of it, for example the model chosen; and you obtained a visual representation of your rooted trees.
 
-Now it is time to reflect on all that you have done and to answer your phylogenetic question. The preferred method for that is to do it orally during Session 6. If for some reason this is not feasible, you will have to do it in a written form (details for the format are below).
+Now it is time to reflect on all that you have done and to answer your phylogenetic question. The preferred method for that is to do it orally during the next session. If for some reason this is not feasible, you will have to do it in a written form (details for the format are below).
 
 At this stage, you should have two sets of trees: one for *cytB* and one for the entire mitochondria. To prepare for the presentation, think about:
 
@@ -44,7 +44,7 @@ At this stage, you should have two sets of trees: one for *cytB* and one for the
 
 - Do you think your choice of species (including the outgroup) was appropriate to answer the question? If you were to redo the analysis, would you change something?
 
-**Upload your slides to Studium before 10 am on the day before the presentation so we can download them to the computer that will be used for the presentations.**
+**Upload your slides to Studium the day before the presentation so we can download them to the computer that will be used for the presentations.**
 
 ---
 
@@ -61,7 +61,9 @@ On the day of the presentation, we will meet in a lecture hall instead of the co
 
 ## Back-up submission: Written report
 
-In case you could not finish in time or if you are unable to present, please let the teaching assistants know and submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium (there will be a quizz specifically designed for this). Each person should submit in the quizz, but as most likely you had worked in groups, the document can be done as a group. Do not forget to indicate which question you worked with and which species were included in the dataset.
+In case you could not finish in time or if you are unable to present, please let the teaching assistants know (no doctors certificate or special permits needed). Then you'll need to submit a written document with your trees and 15-30 lines (or more if you are inspired) answering the questions through Studium (there will be a quiz specifically designed for this). 
+
+Depending on the exact reason for choosing (and the timing for the decision for) a written report, other group members might prefer to still present their results or to also submit a written report. We leave that decision up to each student. Each person should submit to the quiz, but as you most likely worked in groups, the document can be done as a group (i.e. each group member can submit the same document). Do not forget to indicate which question you worked with and which species were included in the dataset.
 
 ---
 
