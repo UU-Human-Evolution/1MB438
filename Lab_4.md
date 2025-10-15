@@ -111,6 +111,13 @@ The `-bb 1000` option will force the algorithm to use [bootstrapping](https://en
 
 In the `.iqtree` file, you have a representation of the trees. However, it is an unrooted tree. You can root the tree and customise its appearance, with the program `FigTree`.
 
+
+´´´
+Please open the session in Solander with ssh -X flag, which allows to use the monitor to Solander
+Then do java -jar <path_to_figtree_file>
+´´´
+
+
 *If you can't get `FigTree` to work through the terminal you can download it from [here](https://github.com/rambaut/figtree/releases) and install it locally on your computer. It's very simple to run.*
   
 When you call `FigTree`, a **visual interface will open**. In `File`, choose `Open` and select one of your Maximum Likelihood trees. If the software asks you to select a name for the labels on the tree, you can keep the default or choose a keyword, for example `bootstrap`. **Note that you do *not* want the `.iqtree` file, which is more of a logfile than an actual tree**.
