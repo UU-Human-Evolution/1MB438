@@ -1,112 +1,116 @@
 # Session 2 - Alignments of mitochondrial sequences
 
-## Introduction / Background information to Session 2
+## Introduction
 
-In this session, you will focus on alignments. As you have seen in the lecture, you can align two sequences (pairwise alignment) or multiple sequences (multiple alignments). Here, you will do a bit of both. For the pairwise alignment part, you will follow a tutorial that was developed by Rasmus Wernersson. For the multiple alignment part, you will continue to work with the mitochondrial genomes from the previous sessions. Obtaining a good alignment of your sequences will be essential for answering your groups question.
+In this session, you will focus on sequence alignments. As you have seen in the lectures, you can align two sequences (pairwise alignment) or multiple sequences (multiple alignments). Here, you will do a bit of both. For the pairwise alignment part, you will follow a tutorial that was developed by Rasmus Wernersson. For the multiple alignment part, you will continue to work with the mitochondrial genomes from the previous sessions. Obtaining a good alignment of your sequences will be essential for answering your groups question.
 
-## Goals
+### Goals
 
-  + Perform local and global pairwise alignments with different algorithms
-  + Explore parameters of pairwise alignments
+  + Perform local and global pairwise alignments
+  + Explore the effect of changing parameters in alignment algorithms
   + Perform multiple alignments and visualize them
   + Manipulate files
 
-## Input(s)
+### Input(s)
 
-  + complete mitochondrial genomes
-  + sequences for cytB
+  + Multi fasta of the full mitochondrial genome
+  + Multi fasta of the *CYTB* gene
 
-## Output(s)
+### Output(s)
 
-  + An alignment of mitochondrial genomes
-  + An alignment of cytB
+  + Alignment of the mitochondrial genomes
+  + Alignment of the *CYTB* gene
 
-## Tools
+### Tools
 
   + Online alignment tools
-  + Alignment program: [mafft](https://mafft.cbrc.jp/alignment/software/)
-  + Alignment visualization program: Jalview
+  + Alignment program [mafft](https://mafft.cbrc.jp/alignment/software/)
+  + Alignment visualization programs [Jalview](https://www.jalview.org/) and [AliView](https://ormbunkar.se/aliview/)
 
-## Steps
+### Key sections
 
-  + Step 1: Pairwise alignment exercise
-  + Step 2: Multiple alignment exercise
+  + Pairwise alignment exercise
+  + Multiple alignment exercise
 
-## Details
 
-### Step 1: Pairwise alignment
+## Pairwise alignment
 
-Please go through the tutorial on [this page](https://teaching.healthtech.dtu.dk/22111/index.php/ExPairwiseAlignment).
+Go through the tutorial on [this page](https://teaching.healthtech.dtu.dk/22111/index.php/ExPairwiseAlignment).
+Answer questions 1 to 14 and submit answers to all questions to the Quizz in Studium.
 
-Answer questions 1 to 14 (Not 0.0). Submit answers to all the questions to the Quiz in Studium.
+**OBS!** This part of the practical does not directly contribute to your research project but covers topics explained in the lectures and is a good preparation for the exam. Use it to further understand the alignment algorithms and how small parameter variations impact the alignment results.
 
-### Step 2: Multiple alignments
 
-You will now be working with the sequences you have collected last time. This also means that the results will depend on your selection. An outcome of today could also be that you decide to replace certain sequences as the alignment indicates some issues with them (e.g. they are not covering the full length or seem to show many mismatches/gaps). **During this session, we only perform the alignments, if you decide that you need to replace or add sequences, we will do that as part of a later session.**
+## Multiple alignments
 
-#### Step 2a: Align the entire mitochondria
+You will now be working with the sequences you collected on `Lab 1`. The results you obtain today could promt you to replace certain sequences as the alignment indicates some issues with them (e.g. they are not covering the full length of the gene/genome, they show many mismatches or gaps, etc.). **During this session, we only perform the alignments, if you decide that you need to replace or add sequences, we will do that as part of a later session.**
 
-Start by login into Solander.
+### Align the full mitochondria
 
-Finally, we will start by aligning your **full mitochondrial** genomes! We are going to use a software called `mafft`. 
+We will start by aligning your full mitochondrial genomes! For that, we use the software called `MAFFT` (visit the [website](https://mafft.cbrc.jp/alignment/server/index.html) or the [paper](https://doi.org/10.1093/nar/gkf436)).
 
-Aligning this set of mitochondrial genomes is a computationally intensive task. 
+Aligning a set of mitochondrial genomes can be computationally intensive. 
 
-In order to execute MAFFT, just type `mafft`. 
-You will be asked several questions, among others: 
-- the input file name (type in the fasta file you prepared),
-- the output file name (type in the name of the fasta file you want to be called after alignment and include the file extension, `.fasta` in this case),
-- output file format (sorted fasta),
-- algorithm (choose `FFT-NS-1 (fast)`).
+In order to execute `MAFFT`, just type `mafft` in the terminal logged in the Solander server.
 
-Once you have chosen all the options, the corresponding command-line will be printed on the screen.
+You will be asked several questions: 
 
-**Question 2-1. Write down the command.**
+- **Input file name** (type in the multi fasta file you prepared, e.g. `MT_ALL_SPECIES_nice_names`.fasta`),
+- **Output file name** (type in the desired name of the aligned fasta, including the `.fasta` file extension),
+- **Output file format** (we want a sorted fasta),
+- **Alignment algorithm** (choose `FFT-NS-1 (fast)`)
 
-Now, launch the alignment. It will take a while. In the meantime, you can work on the next step on another terminal window, which is another alignment, of a single gene. It is also a good time to take a break!
+Once you have chosen all the options, the corresponding command will be printed on the screen.
 
-#### Step 2b: Align the sequences for the cytochrome B gene (cytB)
+**Question 2.1**: **Write down the printed command.**
 
-Nowadays there is an abundance of genomic data available, for organelles and entire genomes, for a large number of species. This is why in this session and the bioinformatics project, you are aligning the entire mitochondria. However, for a long time, it was more common to work with alignments of single genes (and in some cases, for instance when exploring the diversity in a given environment, it is still a common approach). Aligning single genes might also be a good approach when working with diverse species. And of course, it is much faster!
+Now, launch the alignment. It might take a while. You can work on the next step on another terminal window or take a mini break.
 
-*Cytochrome b* is a gene found in the mitochondria of eukaryotic cells. The protein is part of the respiratory chain complex III, making it an essential part of the energy metabolism. Since all eukaryotes should have *cytB*, the gene can be used for species identification, and is often used to assess phylogenetic relationships between organisms
+### Align the *CYTB* gene
 
-Proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the entire genome.
+Today, there is an abundance of genomic data available, both for organelles and entire genomes, for a large number of species. However, for a long time, that was not the case, and it was more common to work with alignments of single genes. In some cases, it is still a common approach (e.g. when studying the ecological composition of an ecosystem, when working with very divergent species, etc). Of course, the computational resources used are less and all steps are much faster.
 
-You can look at alignments with the program Jalview.  
+*Cytochrome b* is a gene found in the mitochondria of eukaryotic cells. The protein is part of the respiratory chain complex III, making it an essential part of the energy metabolism. Since all eukaryotes should have a *CYTB* gene, its sequence can be used for species identification and to assess phylogenetic relationships between organisms
 
-`java -jar ./<your_path>/jalview.jar`  
+For this single gene alignment, you will also use `MAFFT`. You can take the same command as the one you created when aligning for the entire genome.
 
-*CAREFUL: if you are working on your own terminal most likely you are not going to be able to visualize it, the labs are designed to work on the university computers. You can [download](https://www.jalview.org/) the program to your own computer and then scp all the necessary files to view it locally.*  
+## Visualize alignments
 
-Alternatively, you can use this [online alignment visualization tool](https://alignmentviewer.org) through your web browser. You will first need to transfer the alignment fasta to your local computer (using `scp` or `rsync`) and then upload the file to the website.
+You can visualize alignments with many programs. `Jalview` and `AliView` are a very good options.
+If you are working on your own computer and not logged in to Solander, you won't be able to visualize the alignments unless you download the softwares: [download Jalview](https://www.jalview.org/), [download AliView](https://ormbunkar.se/aliview/). If you are working on the university computers, you can just type any of the commands below to open the programs:
 
-**Question 2-2. Visually inspect your alignment for cytB. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
+```
+java -jar ./<YOUR_PATH>/jalview.jar ## JALVIEW
+aliview  ## ALIVIEW
+``` 
 
-  1. Correctly aligned sequences should have highly similar or even identical blocks;
-  2. If you have one strange sequence which seems badly aligned either remove it or keep it but make a note which one it was;
-  3. If you can't see identical blocks you should inspect the situation, you might have:
-     1. Highly diverged sequences - then it's ok
-     2. Mixture of sequences from different genes - then you might have a problem...
-     3. Same gene in different orientations (+ and - strand instead of only +)
-     4. Poor alignment of correct sequences - sometimes alignment algorithms are not doing a very good job...
+Alternatively, you can use this [online alignment visualization tool](https://alignmentviewer.org) through your web browser. You will first need to transfer the alignment fasta to your local computer (using `scp` or `rsync`) and then upload the file to the website. The alignment visualization in this tool is much worse than in the previous options.
 
-**Question 2-3. Submit the alignment files in the quizz (the files have to be a .fasta).**
+**Question 2.2**: **Visually inspect your alignment for *CYTB*. Do you notice anything odd? Does any sequence stand out visually (e.g. the outgroup)?**
 
-The main take-home message from this step is that it is important to examine your alignments well. Sometimes some sequences will genuinely be longer or shorter than other sequences; however, it might also be due to some errors!
+  1. Correctly aligned sequences should have highly similar or even identical blocks.
+  2. If you have one strange sequence which seems badly aligned, either remove it or keep it but make a note which one it was.
+  3. If you can't see identical blocks you should inspect the situation. You might have:
+     - Highly diverged sequences - then it's ok.
+     - A mix of sequences from different genes - then you have a problem...
+     - The same gene in different orientations (`+` and `-` strand instead of only `+`)
+     - A poor alignment of correct sequences - sometimes alignment algorithms are not doing a very good job...
 
-#### Back to Step 2a
+**Question 2.3**: **Upload the alignment files (.fasta) in the Studium quizz.**
 
-By now the alignment of the entire mitochondria should be ready for you to look at! Open it with `jalview`. What do you see?
+The take-home message from this step is that it is important to examine your alignments well. Sometimes some sequences will genuinely be longer or shorter than other sequences; however, this might also be due to errors!
 
-**Question 2-4. Visually inspect the alignment of the full mitochondrial genome the same way you did for cytB in Q2-2. What do you notice? Are the same species standing out?**
+### Back to the mitochondria...
 
----
-## Summary of what to report in the quizz
+The alignment of the full mitochondrial genomes should be ready for you to look at! Open it with `JalView` or `AliView`. What do you see?
 
-Pairwise alignment tutorial: submit answers to all the questions in the quizz.
+**Question 2.4**: **Visually inspect the alignment of the full mitochondrial genome the same way you did for *CYTB* in question 2.2. What do you notice? Are the same species standing out?**
 
-Multiple alignment: submit answers to questions 2-1 through 2-4. For Question 2-2 and 2-4, it can be useful to include a screenshot of what you saw. Only submit the alignment (FASTA file) in the quizz.
 
+## STUDIUM QUIZZ
+
+**Pairwise alignment**: Submit answers to the tutorial questions 1-14.
+
+**Multiple alignment**: Submit answers to questions 2.1-2.4. For questions 2.2 and 2.4, it can be useful to include a screenshot of what you saw. Also submit the alignment file (`.fasta` format).
 
 ---
