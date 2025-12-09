@@ -123,7 +123,7 @@ With the name conversion table, you can now update the names in the multifasta v
    * You can use the `python` script `x1_convert_to_short-names.py` ([SRC folder](SRC/x1_convert_to_short-names.py)):
 
 ```ruby
-python /<YOUR_PATH>/x1_convert_to_short-names.py CYTB_ALL_SPECIES.fasta CYTB_species_names.tab > CYTB_ALL_SPECIES_nice_names.fasta!
+python /<YOUR_PATH>/x1_convert_to_short-names.py CYTB_ALL_SPECIES.fasta CYTB_species_names.tab > CYTB_ALL_SPECIES_nice_names.fasta
 ```
 
 - You can use any other name, but should remember what each file contains. 
