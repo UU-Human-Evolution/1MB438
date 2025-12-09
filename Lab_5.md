@@ -24,7 +24,7 @@ By now you have assembled a dataset to answer the question from `Lab 1`. You col
   + Slides for your presentation
 
 
-## Build a presentation
+## Slide presentation
 
 On the day of the presentation, we will meet in a lecture hall instead of the computer room. Each group will give a 5-10 minutes slide presentation about their project, where all students in each group should speak for 2-3 minutes each. Not all groups will have chosen the same research question nor they have seen your data before, so remember to be clear (e.g. include common species names instead of only scientific latin names, illustrate your speach with a clear figure, explain the reasoning to your conclusions, etc.).
 
@@ -51,7 +51,7 @@ For the discussion of results, here are some points you can pick up in your pres
    * Are there any uncertain clades? What could that mean?
 
 
-### Hand in the presentation
+### Hand in
 
 Each member of the group should upload the presentation slides to Studium at least one day before the presentation so we can download them in time. It's of course not a problem that the slides document will be the same among members of the group, but everyone should make a hand-in.
 
@@ -61,7 +61,7 @@ We encourage all groups to present their results orally in a presentation, so yo
 
 The written report should include the same information as the presentation (see instructions above) but should be structured as a scientific paper, meaning there should be sections for (i) **Introduction**, (ii) **Materials and Methods**, (iii) **Results** and (iv) **Discussion**. You should specify the authors, include citations and reference all figures in the report.
 
-### Hand in the written report
+### Hand in
 
 All students who choose to submit a report will have to upload it to Studium in `pdf` format. The deadline for this submission will be after the presentation day. 
 
