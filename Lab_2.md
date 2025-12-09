@@ -112,5 +112,3 @@ The alignment of the full mitochondrial genomes should be ready for you to look 
 **Pairwise alignment**: Submit answers to the tutorial questions 1-14.
 
 **Multiple alignment**: Submit answers to questions 2.1-2.4. For questions 2.2 and 2.4, it can be useful to include a screenshot of what you saw. Also submit the alignment file (`.fasta` format).
-
----
