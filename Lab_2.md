@@ -79,7 +79,7 @@ For this single gene alignment, you will also use `MAFFT`. You can take the same
 You can visualize alignments with many programs. `Jalview` and `AliView` are a very good options.
 If you are working on your own computer and not logged in to Solander, you won't be able to visualize the alignments unless you download the softwares: [download Jalview](https://www.jalview.org/), [download AliView](https://ormbunkar.se/aliview/). If you are working on the university computers, you can just type any of the commands below to open the programs:
 
-```
+```ruby
 java -jar ./<YOUR_PATH>/jalview.jar ## JALVIEW
 aliview  ## ALIVIEW
 ``` 
