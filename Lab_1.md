@@ -132,7 +132,3 @@ python /<YOUR_PATH>/x1_convert_to_short-names.py CYTB_ALL_SPECIES.fasta CYTB_spe
 # STUDIUM QUIZZ
 
 Submit the answer in the quizz to **Question 1** (text).
-
----
-
-This is the end of the lab, please make sure that you completed the answers to all of the questions.
