@@ -1,6 +1,8 @@
 # Linux introduction
 
-This lab assumes you are already have a Linux terminal up and running. If you are on a computer that is already connected to the server the course is run at, great! You can now proceed to the next part, [Getting the files for the course](#getting-the-files-for-the-course).
+This lab assumes you are already have a Linux terminal up and running. If you are on a computer in the computer lab that is already connected to the server the course is run at, great! You can now proceed to the next part, [Getting the files for the course](#getting-the-files-for-the-course).
+
+:exclamation: :exclamation: :exclamation: Remote connections to Solander is down for maintenance right now, and might be unavailable for the coming weeks. Please use a computer in the computer lab until further notice. Continue from the next part, [Getting the files for the course](#getting-the-files-for-the-course).
 
 If you are on a computer that only runs Windows you will have to get a terminal program. Depending on which version of Windows you are running, it should be possible to use `ssh` to connect to a Linux computer so that you can do the rest of the lab. See if you have either `Windows Terminal` or `PowerShell` installed by searching for them in the start menu. 
 
