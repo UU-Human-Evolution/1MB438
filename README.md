@@ -9,11 +9,9 @@ The overarching goals of these labs are to familiarize yourselves with bioinform
 
 ### Practical information
 
-The labs are split into five 4-hour computer sessions and a 2-hour presentation session. 
+The labs are split into five 4-hour computer sessions and a 2-hour presentation session. At the beginning of each session, the teaching assistants will give a quick introduction to the content, and then each group is free to work at their own pace.
 
 Each session comes with its own assignments, which need to be completed in order to pass this part of the course. This includes a final presentation or a written report. Most exercises are done in groups, as well as the final presentation, but *all written assignments and Studium submissions are graded per student and therefore need to be submitted individually*. 
-
-At the beginning of each session, the teaching assistants will give a quick introduction to the content, and then each group is free to work at their own pace.
 
 ### Use the provided computers
 
