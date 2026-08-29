@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the last sessions, you collected and aligned mitochondrial sequences from databases that you will be using for the remaining sessions. Today, you will attempt to find genes in them using a simple similarity-based approach with BLAST, a tool for local alignment. Most of this practical will not directly contribute to your research question, but will rather provide some experience and further learning of concepts presented in the lectures. Nevertheless, if your data set of species was a bit incomplete, this methodology will allow you to supplement it with new sequences. 
+In the last sessions, you collected and aligned mitochondrial sequences from databases that you will be using for the remaining sessions. Today, you will attempt to find genes in them using a simple similarity-based approach with BLAST, a tool for local alignment. Most of this practical will not directly contribute to your research question, but will rather provide some experience and further learning of concepts presented in the lectures. Nevertheless, if your data set of species was incomplete, or the alignment look bad, this methodology will allow you to supplement it with new sequences. 
 
 ### Goals
 
