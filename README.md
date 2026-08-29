@@ -15,7 +15,9 @@ Each session comes with its own assignments, which need to be completed in order
 
 ### Use the provided computers
 
-**IMPORTANT:** The exercises will work best with the University computers, by booting them into "Linux", from where you will connect to the IBG server "Solander" which has all the required tools set up. Working remotely on a server or cluster is a very realistic scenario for working as a bioinformatician. *If you decide to use your own computers for logging in to Solander, you are doing that at your own risk. There might be parts of the labs that won't work correclty.*  
+**IMPORTANT:** The exercises will work best with the University computers, by booting them into "Linux", from where you will connect to the IBG server "Solander" which has all the required tools set up. Working remotely on a server or cluster is a very realistic scenario for working as a bioinformatician.  
+
+If you decide to use your own computers for logging in to Solander, you are doing that at your own risk. There might be parts of the labs that won't work correctly.  
 
 ### Short list of tips
 
