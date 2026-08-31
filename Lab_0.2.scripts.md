@@ -306,6 +306,57 @@ done
 ```
 </details>
 
+##### :mortar_board: Advanced extension: harden the script
+
+The scripts above assume everything goes right: the argument is a real directory, `samtools` never fails, and nobody runs the script twice by accident. In a real pipeline that's asking for trouble — a failed conversion should stop the script loudly instead of silently continuing to the next file.
+
+:clipboard: Rewrite the Exercise 3 script so that it:
+* Exits immediately with a clear error message if no directory argument is given, or if the given directory doesn't exist.
+* Checks the exit status of `samtools` after each conversion and reports which file failed, instead of continuing silently.
+* Uses `getopts` to accept the directory via a proper `-d <dir>` flag instead of a positional `$1`.
+
+:bulb: `set -euo pipefail` at the top of a script is worth knowing for the rest of your career, not just this course: `-e` stops the script on the first command that fails, `-u` errors on unset variables, and `-o pipefail` makes a pipeline fail if *any* command in it fails, not just the last one. Look up `getopts` with `man bash` (search for the word within the page).
+
+<details>
+  <summary>Solution</summary>
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+usage() { echo "Usage: $0 -d <directory>"; exit 1; }
+
+while getopts "d:" opt; do
+    case $opt in
+        d) dir=$OPTARG ;;
+        *) usage ;;
+    esac
+done
+
+[ -z "${dir:-}" ] && usage
+[ -d "$dir" ] || { echo "Error: $dir is not a directory"; exit 1; }
+
+cd "$dir"
+
+for file in *.sam; do
+    filename_bam=$(basename "$file" .sam).bam
+
+    if [ -f "$filename_bam" ]; then
+        echo "Skipping $file, $filename_bam already exists"
+        continue
+    fi
+
+    if samtools view -b "$file" > "$filename_bam"; then
+        echo "Converted $file to $filename_bam"
+    else
+        echo "ERROR converting $file" >&2
+        exit 1
+    fi
+done
+```
+
+</details>
+
 ### Bonus exercise 1  
 
 Math and programming are usually a very good combination, so many of the examples of programming you'll see involve some kind of math. Now we will write a loop that will calculate the factorial of a number. As [wikipedia will tell you](https://en.wikipedia.org/wiki/Factorial), *"the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n"*, i.e. multiply all the integers, starting from 1, leading up to and including a number with each other.
@@ -436,6 +487,40 @@ done
 # remove intermediate files
 rm *.sam *.filtered.fastq
 ```
+</details>
+
+##### :mortar_board: Advanced extension: make it parallel
+
+The instructions above warn you that processing 120 samples serially takes about 20 minutes, roughly 12 seconds per sample. If your machine has more than one CPU core (`nproc` will tell you how many you have), there's no reason to process them one at a time.
+
+:clipboard: Modify your loop so multiple samples are processed concurrently instead of sequentially, and use the `time` command to measure the wall-clock difference.
+
+:bulb: Two common approaches:
+* Put `&` at the end of the commands inside the loop to send each sample's pipeline to the background, then `wait` after the loop for them all to finish. Careful: with 120 samples this would start 120 processes at once, which is not what you want.
+* Use `xargs -P <n>` or GNU `parallel` to cap how many samples run at the same time, e.g. `-P 4` for 4 concurrent samples.
+
+<details>
+  <summary>Solution using <code>xargs -P</code></summary>
+
+```bash
+export PATH=$PATH:~/1MB438/RESULTS/linux_pipelines/dummy_scripts
+
+process_sample() {
+    file=$1
+    file_prefix=$(basename "$file" .fastq)
+    filter_reads -i "$file" -o "$file_prefix.filtered.fastq"
+    align_reads -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i "$file_prefix.filtered.fastq" -o "$file_prefix.filtered.aligned.sam"
+    find_snps -r ~/1MB438/RESULTS/linux_pipelines/data/ref_data/Homo_sapiens.GRCh37.57.dna_rm.concat.fa -i "$file_prefix.filtered.aligned.sam" -o "$file_prefix.filtered.aligned.snpcalled.pileup"
+    rm "$file_prefix.filtered.fastq" "$file_prefix.filtered.aligned.sam"
+}
+export -f process_sample
+
+cd "$1"
+ls *.fastq | xargs -P 4 -I{} bash -c 'process_sample "$@"' _ {}
+```
+
+Compare `time bash your_script.sh <dir>` using 1, 4, and `nproc` concurrent processes. Why doesn't it keep getting faster the more you add?
+
 </details>
 
 Alright, all done! You should now know more than enough to complete the rest of the course.

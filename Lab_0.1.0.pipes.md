@@ -251,5 +251,24 @@ samtools view sample_1.bam | cut -f 1,10
 
 </details>
 
+##### :mortar_board: Advanced extension: `awk`
+
+If you already know your way around `cut`, `grep` and pipes, here's a tool that will actually be new to most people at this point: `awk`. It's a small text-processing language built into every Linux system, and it can do in one line what would otherwise take a small script.
+
+The SAM format stores the mapping quality of each read in column 5. Using only `awk` (no external scripts), calculate the **average mapping quality** of all reads in `sample_1.bam`.
+
+:bulb: Inside `awk`, `$1`, `$2`, etc. refer to the columns of the line currently being processed, and you can keep running totals across lines in ordinary variables. An `END { ... }` block runs once, after all lines have been read.
+
+<details>
+  <summary>Solution</summary>
+
+```bash
+samtools view sample_1.bam | awk '{ sum += $5; n++ } END { print sum/n }'
+```
+
+</details>
+
+:clipboard: Bonus: can you get the same answer using only `cut`, `sort`, and other tools you already know, without `awk`? Which approach do you prefer, and why?
+
 ## Extra material
-If you finish the previous exercises and want to learn more linux, feel free to continue on with the extra material [pipeline exercise](Lab_0.extra.pipelines.md)
+If you finish the previous exercises and want to learn more linux, feel free to continue on with the extra material [pipeline exercise](Lab_0.extra.pipelines.md), or the [extra material for experienced users](Lab_0.extra.advanced_track.md).

@@ -59,8 +59,41 @@ Write down the letters you acquire and the commands used to find them!
 
 NOTE: In these exercises, you will run several small Perl scripts. If you are curious, don't hesitate to open them and try to understand what they do.
 
+##### :mortar_board: Already fluent in the basics?
 
+If `cd`, `ls -a`, `cat`, `mkdir`/`cp` and `rm` are old news to you, raise the difficulty: try to solve each numbered exercise below using **a single pipeline**, chaining `find`, `grep -E` and similar tools, instead of `cd`-ing around and inspecting files by eye. For example, exercises 1.1 and 1.2 together can be solved without leaving your starting directory, by using `find` to locate `solution_1.1` and `grep` to pull out its contents, all in one line. See how far you can compress the whole hunt.
 
+<details>
+  <summary> :mortar_board: Compare your answer (spoilers, base64-encoded on purpose)</summary>
+
+```
+# 1.1 + 1.2
+ZmluZCBleGVyY2lzZV8xIC1pbmFtZSBzb2x1dGlvbl8xLjEgLWV4ZWMgbHMgLUEge30gXDs=
+
+# 1.3
+ZmluZCBleGVyY2lzZV8xL2RpcmVjdG9yeUIgLW5hbWUgIioucGwiIC1leGVjIHBlcmwge30gXDs=
+
+# 1.4
+cGVybCBleGVyY2lzZV8xL2RpcmVjdG9yeUMvZmlsZV9zaXplX2NoZWNrLnBsIDw8PCAkKHN0YXQgLWMlcyBleGVyY2lzZV8xL2RpcmVjdG9yeUMvdGV4dF9maWxlLnR4dCk=
+
+# 2.1
+Y2F0IGV4ZXJjaXNlXzIvc29sdXRpb25fMi4xLnR4dA==
+
+# 2.2 (note: text_file_check.pl looks for solution_2.2.txt in the *current* directory,
+# so this uses a subshell, (...), to cd into exercise_2 without affecting your own shell)
+KGNkIGV4ZXJjaXNlXzIgJiYgZWNobyAiUGxlYXNlIGdpdmUgbWUgc29sdXRpb24gMi4yIiA+IHNvbHV0aW9uXzIuMi50eHQgJiYgcGVybCB0ZXh0X2ZpbGVfY2hlY2sucGwp
+
+# 3.1 (same reasoning: check_code.pl looks for solution/codes.txt relative to the cwd)
+KGNkIGV4ZXJjaXNlXzMgJiYgbWtkaXIgc29sdXRpb24gJiYgY3AgY29kZXMudHh0IHNvbHV0aW9uLyAmJiBwZXJsIGNoZWNrX2NvZGUucGwp
+
+# 3.2 (same reasoning: check_junk.pl looks for junk.txt and data/ relative to the cwd)
+KGNkIGV4ZXJjaXNlXzMgJiYgZmluZCBkYXRhIC1uYW1lICJqdW5rKiIgLWRlbGV0ZSAmJiBybSBqdW5rLnR4dCAmJiBwZXJsIGNoZWNrX2p1bmsucGwp
+
+# 4.1
+cGVybCBleGVyY2lzZV80L2dldF9sYXN0MmNoYXIucGwgJChncmVwIC1jIGJpb2luZm9ybWF0aWNzIGV4ZXJjaXNlXzQvdGV4dC50eHQp
+```
+
+</details>
 
 ## 1 Directories and files
 

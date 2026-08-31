@@ -597,6 +597,4 @@ The `man` pages can be a bit tricky to understand at first, but you get used to 
 ## Extra material
 If you still have time left on the lab and you finished early, check out the extra material for [Linux file permissions](Lab_0.extra.permissions.md) if you want to learn more about how file permissions work.
 
-
-***
-
+:mortar_board: Already know your way around a Linux terminal? Skip ahead to the [extra material for experienced users](Lab_0.extra.advanced_track.md) instead, or look out for the :mortar_board: Advanced extension boxes sprinkled through the rest of the labs.
