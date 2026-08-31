@@ -143,3 +143,5 @@ git commit -m "First version of my SAM to BAM conversion scripts"
 :clipboard: Now write the hardened version of the script from the [scripts lab advanced extension](Lab_0.2.scripts.md), commit it as a second commit, and use `git log` and `git diff` to compare the two versions.
 
 :bulb: This is genuinely how you should track your own analysis scripts in real projects. It costs three commands and gives you a full history of every version, which matters a lot once "it worked last week" turns out to be important.
+
+If you want to collaborate on your git repo with others, you could push it to a hosted git service like [Codeberg](https://docs.codeberg.org/getting-started/first-repository/), [Gitlab](https://matthieu-bruneaux.gitlab.io/guide-r-rstudio-git-gitlab/030-setting-up-gitlab-repo.html), or [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). Once pushed to the hosted git service, you can share the URL with collaborators, and they can clone it to their own computers. You can also use `git pull` to get updates from them, and `git push` to send your changes to the hosted repository.
