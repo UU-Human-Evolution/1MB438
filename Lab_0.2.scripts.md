@@ -519,8 +519,6 @@ cd "$1"
 ls *.fastq | xargs -P 4 -I{} bash -c 'process_sample "$@"' _ {}
 ```
 
-Compare `time bash your_script.sh <dir>` using 1, 4, and `nproc` concurrent processes. Why doesn't it keep getting faster the more you add?
-
 </details>
 
 Alright, all done! You should now know more than enough to complete the rest of the course.
