@@ -1,4 +1,4 @@
-<img width="1547" height="1983" alt="image" src="https://github.com/user-attachments/assets/8af87a3c-1718-4f4c-b882-85747d752099" /># Session 4 - Phylogenetic Analysis
+# Session 4 - Phylogenetic Analysis
 
 ## Introduction
 
@@ -15,7 +15,7 @@ The underlying idea behind phylogenetics is quite simple. As populations diverge
 
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Phylogenetic_tree_for_wolves.jpg/468px-Phylogenetic_tree_for_wolves.jpg" width="500"/>
+  <img src="https://github.com/user-attachments/assets/8af87a3c-1718-4f4c-b882-85747d752099" width="500"/>
 </div>
 
 **Figure 5. A phylogenetic tree of wolves**  
