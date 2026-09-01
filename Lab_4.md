@@ -1,4 +1,4 @@
-# Session 4 - Phylogenetic Analysis
+<img width="1547" height="1983" alt="image" src="https://github.com/user-attachments/assets/8af87a3c-1718-4f4c-b882-85747d752099" /># Session 4 - Phylogenetic Analysis
 
 ## Introduction
 
