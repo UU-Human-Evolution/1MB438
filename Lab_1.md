@@ -5,7 +5,7 @@ Mitochondria are organelles present in all eukaryotic cells and their main funct
 In this lab, we will take advantage of these properties to conduct a small phylogenetic project from scratch.
 
 <div align="center">
-  <img src="[https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Mitochondrion_structure.svg/1600px-Mitochondrion_structure.svg.png?20130816165230](https://www.researchgate.net/publication/388510620/figure/fig2/AS:11431281388599233@1745186284998/Molecular-structure-of-mtDNA-Mitochondrial-DNA-mtDNA-is-a-circular-double-stranded_W640.jpg)" width="600"/>
+  <img src="https://www.researchgate.net/publication/388510620/figure/fig2/AS:11431281388599233@1745186284998/Molecular-structure-of-mtDNA-Mitochondrial-DNA-mtDNA-is-a-circular-double-stranded_W640.jpg" width="600"/>
 </div>
 
 **Figure 1: Simplified structure of a mitochondrion**  
