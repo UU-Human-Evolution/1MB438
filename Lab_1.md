@@ -21,6 +21,7 @@ We made a short checklist [here](Troubleshooting_checklist.md), which includes i
 
 ## Research questions
 
+(_Questions from previous years_)
 1. What non-flying mammals are closely related to bats?
 2. Both whales and sea cows originate from land-living animals. Do they have a common ancestor that transitioned from land-to-water or has this transition occurred twice independently?
 3. Are salamanders more closely related to frogs than to lizards?
@@ -32,10 +33,11 @@ We made a short checklist [here](Troubleshooting_checklist.md), which includes i
 9. Describe the phylogeny of primates, big and small.
 10. What type of wolves is the ancestor of domestic dogs?
 11. Are porcupines closer to pigs or hedgehogs?
-12. ...
-13. Do all deadly mushrooms share a common phylogenetic origin or do they form different groups?
+
+(_New ideas from this year_)
+13. Do all deadly mushrooms share a common phylogenetic origin or did they evolve their deadliness many times independently?
 14. Are Nile crocodiles more closely related to pigeons or geckos?
-15. What is the place for humans in the primate phylogeny? You can include extant humans (_Homo sapiens_) and archaic humans (Neanderthals and Denisovans).
+15. What is the place for humans in the primate phylogeny? You can include both extant humans (_Homo sapiens_) and archaic humans (Neanderthals and Denisovans).
 16. Describe the phylogenetic relationship between all fruits that you would use in [this fruit salad recipe](https://www.loveandlemons.com/fruit-salad-recipe/).
 
 
