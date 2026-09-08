@@ -35,10 +35,10 @@ We made a short checklist [here](Troubleshooting_checklist.md), which includes i
 11. Are porcupines closer to pigs or hedgehogs?
 
 (_New ideas from this year_)
-13. Do all deadly mushrooms share a common phylogenetic origin or did they evolve their deadliness many times independently?
-14. Are Nile crocodiles more closely related to pigeons or geckos?
-15. What is the place for humans in the primate phylogeny? You can include both extant humans (_Homo sapiens_) and archaic humans (Neanderthals and Denisovans).
-16. Describe the phylogenetic relationship between all fruits that you would use in [this fruit salad recipe](https://www.loveandlemons.com/fruit-salad-recipe/).
+1. Do all deadly mushrooms share a common phylogenetic origin or did they evolve their deadliness many times independently?  
+2. Are Nile crocodiles more closely related to pigeons or geckos?
+3. What is the place for humans in the primate phylogeny? You can include both extant humans (_Homo sapiens_) and archaic humans (Neanderthals and Denisovans).  
+4. Describe the phylogenetic relationship between all fruits that you would use in [this fruit salad recipe](https://www.loveandlemons.com/fruit-salad-recipe/).  
 
 
 # Session 1 - Database search
