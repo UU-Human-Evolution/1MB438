@@ -29,9 +29,14 @@ We made a short checklist [here](Troubleshooting_checklist.md), which includes i
 6. What other cat-like animal is most closely related to the cheetah?
 7. Are egg-laying mammals (platypus and echidna) more closely related to birds than to placental mammals?
 8. Are moose more closely related to reindeer than to other deer species?
-9. Describe the phylogeny of primates!
+9. Describe the phylogeny of primates, big and small.
 10. What type of wolves is the ancestor of domestic dogs?
 11. Are porcupines closer to pigs or hedgehogs?
+12. ...
+13. Do all deadly mushrooms share a common phylogenetic origin or do they form different groups?
+14. Are Nile crocodiles more closely related to pigeons or geckos?
+15. What is the place for humans in the primate phylogeny? You can include extant humans (_Homo sapiens_) and archaic humans (Neanderthals and Denisovans).
+16. Describe the phylogenetic relationship between all fruits that you would use in [this fruit salad recipe](https://www.loveandlemons.com/fruit-salad-recipe/).
 
 
 # Session 1 - Database search
