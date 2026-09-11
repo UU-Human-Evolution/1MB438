@@ -37,7 +37,7 @@ We made a short checklist [here](Troubleshooting_checklist.md), which includes i
 (_New ideas from this year_)
 1. Do all deadly mushrooms share a common phylogenetic origin or did they evolve their deadliness many times independently?  
 2. Are Nile crocodiles more closely related to pigeons or geckos?
-3. 9. Describe the phylogeny of primates, big and small... and include humans (modern humans and archaic humans: Neanderthals and Denisovans).  
+3. Describe the phylogeny of primates... and include humans (modern and archaic humans: Neanderthals and Denisovans).  
 4. Describe the phylogenetic relationship between all fruits that you would use in [this fruit salad recipe](https://www.loveandlemons.com/fruit-salad-recipe/).  
 
 
