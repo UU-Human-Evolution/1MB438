@@ -109,7 +109,7 @@ Please submit the answers in the quizz to the following questions: 1, 2, 3 and 5
 
 ## Collect additional mitochondrial genomes using online BLAST
 
-**This section only applies to those who did not find at least 10 sequences when performing their database searches in `Lab 1`**
+**This section only applies to those who want to complement their database obtained in `Lab 1`**
 
 You may not have found at least 10 sequences in `Lab 1`, e.g. due to the quality of annotation of certain entries. It is very likely that there are far more sequences that are homologous to your sequences of interest than those found with your initial Genbank search. Therefore, use a few of your full mitochondrial genomes and *CYTB* sequences to perform an [online BLAST search](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome). You can copy the sequence from your fasta file and paste it into the query field on the BLAST website. From your BLAST hits, download enough sequences in fasta format to fill up your dataset to a total of 10. Download only one hit per species.
 
