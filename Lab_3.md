@@ -48,7 +48,7 @@ You now want to search for these protein sequences **in the selected mitochondri
 
 ## Aligning protein to DNA sequences
 
-Of course, we cannot directly align protein sequences with a nucleotide sequences as these systems are coded in a **different alphabet**. We use A, C, T and G to describe nucleotides in DNA sequences, while protein sequences are coded by letters corresponding to each possible aminoacid (A, V, K, T, R, etc.). Additionally, there are often alternative codons in the translation process, so the assignment of an amino acid to three nucleotides is ambiguous. 
+Of course, we cannot directly align protein sequences with nucleotide sequences as these systems are coded in a **different alphabet**. We use A, C, T and G to describe nucleotides in DNA sequences, while protein sequences are coded by letters corresponding to each possible aminoacid (A, V, K, T, R, etc.). Additionally, there are often alternative codons in the translation process, so the assignment of an amino acid to three nucleotides is ambiguous. 
 
 T-BLAST-N ([tblastn](https://ftp.ncbi.nlm.nih.gov/pub/factsheets/HowTo_BLASTGuide.pdf)) is a handy tool for this purpose, as it takes an input protein sequence and compares it to a nucleotide database. As part of the process, the nucleotides in the database are translated into hypothetical proteins using all six possible reading frames. Therefore, the actual alignment does not take place between the protein and the nucleotide sequences, but rather the protein and all possible proteins generated from the nucleotide sequences.
 
@@ -103,7 +103,7 @@ Return to the Genbank entry for the full mitochondrial genome of your species of
 
 
 # STUDIUM QUIZZ
-Please submit the answers in the quizz to the following questions: 1, 2, 3 and 5.
+Please submit the answers in the quiz to the following questions: 1, 2, 3 and 5.
 
 ---
 
