@@ -59,7 +59,7 @@ BLAST can be run online or on the command line, and it can align the input seque
 Before the alignment can start, you need to prepare your reference database to include only those sequences you want to align the input to. For this, you use the function `makeblastdb`. This pre-processing of the database for multiple searches is one of the main reasons why BLAST is a great search algorithm.
 
 ```ruby
-makeblastdb -in CYTB_ALL_SPECIES_nice_names.fasta -dbtype nucl 
+makeblastdb -in MT_ALL_SPECIES_nice_names.fasta -dbtype nucl 
 ```
 
 **Question 2**: **How many new files are created? Can you read them? Try to find out what they are.**
@@ -70,7 +70,7 @@ makeblastdb -in CYTB_ALL_SPECIES_nice_names.fasta -dbtype nucl
 Now you can perform the BLAST search for your first protein. Let's start with *CYTB*, and make sure to use the names of your respective files:
 
 ```ruby
-tblastn -query CYTB_protein.fasta -db CYTB_ALL_SPECIES_nice_names.fasta -outfmt 6 -out CYTB_protein.blast
+tblastn -query CYTB_protein.fasta -db MT_ALL_SPECIES_nice_names.fasta -outfmt 6 -out CYTB_protein.blast
 ```
 
 Reflect yourself on the results. Open the output file (`.blast`). What do you see? Can you make sense of the different columns?
