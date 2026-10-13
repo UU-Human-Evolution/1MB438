@@ -71,7 +71,7 @@ Authors: [Nascimento *et al*. (2017)](https://dx.doi.org/10.1038%2Fs41559-017-02
 
 
 <div align="center">
-  <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrg3186/MediaObjects/41576_2012_Article_BFnrg3186_Fig1_HTML.jpg?as=webp" width="700"/>
+  <img src="https://www.nature.com/articles/nrg3186/figures/1" width="700"/>
 </div>
 
 **Figure 7. Graphical representation of three substitution models**  
